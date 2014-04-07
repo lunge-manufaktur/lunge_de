@@ -6,7 +6,6 @@ ruby '2.1.0'
 gem 'rails', '4.0.3'
 
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
 gem 'pg'
 
 # Use SCSS for stylesheets
@@ -57,7 +56,6 @@ gem 'nested_form'
 
 # maps
 gem "geocoder"
-gem 'mapbox-rails'
 
 # heroku
 group :production do
