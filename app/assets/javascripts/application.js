@@ -15,7 +15,6 @@
 //= require foundation
 //= require jquery_nested_form
 //= require dropzone
-//= require mapbox.js
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

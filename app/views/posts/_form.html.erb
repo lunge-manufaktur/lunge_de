@@ -1,0 +1,62 @@
+<%= form_for(@post) do |f| %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="row">
+
+    <div class="small-12 medium-8 large-8 columns">
+
+      <h4>Inhalt</h4>
+
+      <div class="field">
+        <%= f.label :title, "Titel" %><br>
+        <%= f.text_field :title %>
+      </div>
+      <div class="field">
+        <%= f.label :subtitle, "Untertitel (optional)" %><br>
+        <%= f.text_field :subtitle %>
+      </div>
+      <div class="field">
+        <%= f.label :content, "Inhalt" %><br>
+        <%= f.text_area :content, rows: 20 %>
+      </div>
+      <div class="field">
+        <%= f.check_box :is_published %>
+        <%= f.label :is_published, "Veröffentlichen" %>
+      </div>
+      <div class="actions">
+        <%= f.submit "Speichern", class: "button" %>
+      </div>
+      
+    </div>
+    
+    <div class="small-12 medium-4 large-3 large-offset-1 columns">
+      
+      <h4>Einordnung</h4>
+
+      <% if @categories.any? %>
+        <%= label_tag("Kategorien") %>
+        <ul>
+          <% @categories.each do |category| %>
+            <li>
+              <%= check_box_tag "post[category_ids][]", category.id, @post.category_ids.include?(category.id) %>
+              <%= f.label category.name %>
+            </li>
+          <% end %>
+        </ul>
+      <% end %>
+
+    </div>
+
+  </div>
+
+<% end %>

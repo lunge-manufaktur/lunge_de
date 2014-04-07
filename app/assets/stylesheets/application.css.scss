@@ -12,7 +12,6 @@
  *= require foundation_and_overrides
  += require ionicons
  *= require dropzone/dropzone
- *= require mapbox
  *= require_self
  */
 
@@ -208,6 +207,7 @@ input:hover {
 .item-card {
 	background-color: $secondary-color;
 	margin-bottom: 2rem;
+	height: 100%;
 	
 	&:hover {
 		@extend .inverted;

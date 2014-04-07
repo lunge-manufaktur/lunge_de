@@ -48,12 +48,6 @@
 
 			<%= render "/products/card", collection: @products %>
 
-			<h5>Marken</h5>
-			<ul class="inline-list">
-				<% @brands.each do |brand| %>
-					<li><%= link_to brand.name, brand_path(brand) %></li>
-				<% end %>
-			</ul>
 
 		</section>
 

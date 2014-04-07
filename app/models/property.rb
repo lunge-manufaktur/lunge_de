@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: attributes
+# Table name: properties
 #
 #  id         :integer          not null, primary key
 #  product_id :integer

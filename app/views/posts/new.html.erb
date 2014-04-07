@@ -1,0 +1,9 @@
+<!-- title bar -->
+<%= content_for :title_bar do %>
+  <h1>Neuer Beitrag</h1>
+  <h2 class="subtitle"><small>Erstelle einen neuen Beitrag</small></h2>
+<% end %>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', posts_path %>

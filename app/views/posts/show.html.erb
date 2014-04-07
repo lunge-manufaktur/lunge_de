@@ -1,0 +1,14 @@
+<!-- title bar -->
+<%= content_for :title_bar do %>
+  <h1><%= @post.title %></h1>
+  <h2 class="subtitle"><small><%= @post.subtitle %></small></h2>
+<% end %>
+
+<div class="row">
+	<div class="small-12 medium-8 large-8 columns">
+		<p><%= simple_format(@post.content) %></p>		
+	</div>
+</div>
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>

@@ -1,7 +1,7 @@
-<div class="row" data-equalizer>
+<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
 	<% @products.each do |product| %>
 
-		<div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+		<li>
 			
 			<div class="item-card">
 				<div class="card-section-full">
@@ -14,7 +14,7 @@
 					<h6><%= number_to_currency(product.current_price, unit: "€ ") %></h6>
 				</div>
 			</div>
-		</div>
+		</li>
 
 	<% end %>
-</div>
+</ul>
