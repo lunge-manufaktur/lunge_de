@@ -1,0 +1,41 @@
+# == Schema Information
+#
+# Table name: stores
+#
+#  id           :integer          not null, primary key
+#  name         :string(255)
+#  address_name :string(255)
+#  street       :string(255)
+#  zip          :string(255)
+#  city         :string(255)
+#  phone        :string(255)
+#  email        :string(255)
+#  active       :boolean          default(TRUE)
+#  created_at   :datetime
+#  updated_at   :datetime
+#  latitude     :float
+#  longitude    :float
+#  description  :text
+#
+
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  address_name: MyString
+  street: MyString
+  zip: MyString
+  city: MyString
+  phone: MyString
+  email: MyString
+  active: false
+
+two:
+  name: MyString
+  address_name: MyString
+  street: MyString
+  zip: MyString
+  city: MyString
+  phone: MyString
+  email: MyString
+  active: false

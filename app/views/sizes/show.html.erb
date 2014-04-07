@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @size.name %>
+</p>
+
+<p>
+  <strong>G1:</strong>
+  <%= @size.g1 %>
+</p>
+
+<p>
+  <strong>G1h:</strong>
+  <%= @size.g1h %>
+</p>
+
+<%= link_to 'Edit', edit_size_path(@size) %> |
+<%= link_to 'Back', sizes_path %>

@@ -1,0 +1,391 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"q",
+				"quantity"
+			],
+			[
+				"line_",
+				"line_item_temp_id"
+			],
+			[
+				"g1h",
+				"g1h"
+			],
+			[
+				"ion",
+				"ion-ios7-plus-outline"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"g2h",
+				"g2h"
+			],
+			[
+				"id",
+				"product_id"
+			],
+			[
+				"sess",
+				"sessions_path"
+			],
+			[
+				"gravatar",
+				"gravatar_url"
+			],
+			[
+				"H",
+				"HelveticaNeue-Light"
+			],
+			[
+				"San",
+				"sans-serif"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 400.0,
+		"selected_items":
+		[
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 601.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/ulflunge/Library/Caches/Cleanup At Startup/Transmit/3350808D-2D2D-48AB-8F73-B7C616D32A18/wp-config.php",
+		"/Users/ulflunge/projects/manufaktur/app/assets/javascripts/orders.js.erb",
+		"/Users/ulflunge/projects/manufaktur/app/assets/stylesheets/ionicons.css.css",
+		"/Users/ulflunge/projects/manufaktur/app/assets/stylesheets/foundation_and_overrides.scss",
+		"/Users/ulflunge/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/ulflunge/projects/manufaktur/app/controllers/products_controller.rb",
+		"/Users/ulflunge/projects/manufaktur/config/routes.rb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/show.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/models/order.rb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/toolbar/_show.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/layouts/application.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/toolbar/_index.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/contacts/index.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/layouts/_flash.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/assets/stylesheets/application.scss",
+		"/Users/ulflunge/projects/manufaktur/app/assets/javascripts/application.js",
+		"/Users/ulflunge/projects/manufaktur/app/assets/stylesheets/custom.css.scss",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/_line_item_fields.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/show/_line_item.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/models/line_item.rb",
+		"/Users/ulflunge/projects/manufaktur/app/views/layouts/_header.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/layouts/_footer.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/index.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/_line_item.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/controllers/orders_controller.rb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/_form.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/controllers/line_items_controller.rb",
+		"/Users/ulflunge/projects/manufaktur/app/views/line_items/change_quantity.js.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/line_items/select_product.js.erb",
+		"/Users/ulflunge/projects/manufaktur/app/assets/javascripts/line_items.js.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/products/get_product_price.js.erb",
+		"/Users/ulflunge/projects/manufaktur/Gemfile",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/update_addresses.js.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/update.js.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/line_items/get_product_attributes.js.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/new.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/models/product.rb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/toolbar/_edit.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/edit.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/_select_addresses.erb",
+		"/Users/ulflunge/projects/manufaktur/app/helpers/icon_helper.rb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/actions/_show.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/ajax/update_addresses.js.erb",
+		"/Users/ulflunge/projects/manufaktur/config/application.rb",
+		"/Users/ulflunge/projects/manufaktur/app/helpers/application_helper.rb",
+		"/Users/ulflunge/projects/manufaktur/app/helpers/ui_helper.rb",
+		"/Users/ulflunge/projects/manufaktur/app/helpers/toolbar_helper.rb",
+		"/Users/ulflunge/projects/manufaktur/app/controllers/application_controller.rb",
+		"/Users/ulflunge/projects/manufaktur/app/helpers/action_helper.rb",
+		"/Users/ulflunge/projects/manufaktur/app/views/layouts/breadcrumbs/_sections.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/products/index.html.erb",
+		"/Users/ulflunge/projects/manufaktur/db/migrate/20140226124620_add_marked_to_orders.rb",
+		"/Users/ulflunge/projects/manufaktur/config/environments/production.rb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/_select_delivery_address.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/assets/stylesheets/orders.css.scss",
+		"/Users/ulflunge/projects/manufaktur/app/models/size.rb",
+		"/Users/ulflunge/projects/manufaktur/app/views/products/edit.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/products/_form.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/products/show.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/models/address.rb",
+		"/Users/ulflunge/projects/manufaktur/app/models/contact.rb",
+		"/Users/ulflunge/projects/manufaktur/app/controllers/addresses_controller.rb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/form/_contact_panel.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/models/update.js.erb",
+		"/Users/ulflunge/projects/manufaktur/app/controllers/contacts_controller.rb",
+		"/Users/ulflunge/projects/manufaktur/app/assets/javascripts/line_items.js.coffee",
+		"/Users/ulflunge/projects/manufaktur/app/assets/javascripts/contacts.js",
+		"/Users/ulflunge/projects/manufaktur/app/controllers/product_images_controller.rb",
+		"/Users/ulflunge/projects/manufaktur/app/views/contacts/_search.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/products/_search.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/layouts/_sidebar.html.erb",
+		"/Users/ulflunge/projects/manufaktur/public/assets/active_admin-20b4ef31a6373d8661d52f1648c16c18.js",
+		"/Users/ulflunge/projects/manufaktur/config/s3.yml",
+		"/Users/ulflunge/projects/manufaktur/app/views/contacts/_form.html.erb",
+		"/Users/ulflunge/Desktop/transfers.csv",
+		"/Users/ulflunge/projects/manufaktur/app/views/products/new.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/contacts/new.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/products/_product_image_fields.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/line_item_fields.html.erb",
+		"/Users/ulflunge/projects/manufaktur/app/models/product_image.rb",
+		"/Users/ulflunge/projects/manufaktur/app/assets/stylesheets/gridforms.css.scss",
+		"/Users/ulflunge/projects/manufaktur/app/assets/stylesheets/gridforms.css",
+		"/Users/ulflunge/projects/manufaktur/app/assets/stylesheets/gridforms.sass",
+		"/Users/ulflunge/projects/manufaktur/db/migrate/20130604175405_create_products.rb",
+		"/Users/ulflunge/projects/manufaktur/db/migrate/20140203123656_create_line_items.rb",
+		"/Users/ulflunge/projects/manufaktur/db/migrate/20130608173051_add_price_to_products.rb",
+		"/Users/ulflunge/projects/manufaktur/db/migrate/20130608173909_change_products.rb",
+		"/Users/ulflunge/projects/manufaktur/lib/tasks/import.rake",
+		"/Users/ulflunge/projects/manufaktur/db/migrate/20140203102536_create_orders.rb",
+		"/Users/ulflunge/projects/manufaktur/app/views/orders/_search.html.erb",
+		"/Users/ulflunge/projects/manufaktur/.gitignore",
+		"/Users/ulflunge/projects/manufaktur/app/views/layouts/breadcrumbs/_contact_items.html.erb",
+		"/Users/ulflunge/projects/manufaktur/config/database.yml",
+		"/Users/ulflunge/projects/manufaktur/manufaktur.sublime-project",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/layouts/_header.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/assets/stylesheets/ionicons.css",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/assets/stylesheets/application.css.scss",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/assets/stylesheets/custom.css.scss",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/products/show.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/layouts/application.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/layouts/_sidenav.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/home/index.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/products/shared/_form.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/products/new.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/products/index.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/controllers/products_controller.rb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/config/environments/development.rb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/config/application.rb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/Gemfile",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/models/product.rb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/assets/stylesheets/foundation_and_overrides.css.scss",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/layouts/shared/_sidebar.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/products/shared/_sidebar.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/layouts/backup/application.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/layouts/sidebar_test.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/config/routes.rb",
+		"/Users/michaelfeihstel/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/products/shared/_quickfilter.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/brands/index.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/controllers/application_controller.rb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/controllers/home_controller.rb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/views/layouts/_footer.html.erb",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/assets/stylesheets/products.css.scss",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/assets/javascripts/application.js",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/config/environments/production.rb",
+		"/Applications/Pro Evolution Soccer 2014.app/Contents/Resources/drive_c/Program Files/KONAMI/Pro Evolution Soccer 2014/x360ce.ini",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/app/assets/stylesheets/application.css",
+		"/Users/michaelfeihstel/Rails/projects/manufaktur/config/environments/test.rb"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"alert",
+			"label",
+			"tool",
+			"search",
+			"flash",
+			"toolbar",
+			"lightness",
+			"list",
+			"transparent",
+			"scale-color",
+			"transparen",
+			"size: 1",
+			"label",
+			"delivery",
+			"semantic",
+			"link",
+			"side",
+			"seconda",
+			"+",
+			"img",
+			"top",
+			"top-bar",
+			"right",
+			"panel",
+			"side",
+			"nav",
+			"button",
+			"column",
+			"columns",
+			"padding",
+			"1000",
+			"max-width",
+			"secret",
+			"active",
+			"row",
+			".row",
+			"block-post",
+			"none",
+			"title",
+			"playlist",
+			"progress",
+			"track-info",
+			"next",
+			"playlist",
+			"cssse",
+			"metroplayer",
+			"basedir",
+			"+",
+			"'",
+			"jplayer",
+			"png",
+			"height",
+			"light",
+			"bglight",
+			"miso",
+			"alis:1",
+			"library",
+			"Location",
+			"fn",
+			"cite",
+			"entry-title",
+			"tabs"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"size: 2",
+			"billing",
+			", ",
+			"div",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"user_spe",
+				"spec/models/user_spec.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 390.0,
+	"status_bar_visible": true
+}

@@ -1,0 +1,35 @@
+<section>
+	<div class="row">
+		<div class="small-12 columns">
+			<h4>Verfügbarkeit</h4>
+			<table width="100%" class="text-center">
+			  <thead>
+			    <tr>
+			    	<th class="text-center"><%= "Größe (#{@product.size.name})" %></th>
+			      <th class="text-center"><%= link_to "Lämmersieth", "#" %></th>
+			      <th class="text-center"><%= link_to "Ferdinandstraße", "#" %></th>
+			      <th class="text-center"><%= link_to "Bahrenfeld", "#" %></th>
+			      <th class="text-center"><%= link_to "Hohenzollerndamm", "#" %></th>
+			    </tr>
+			  </thead>
+			  <tbody>
+
+					<% @product.stocks.first.sizes_hash.each do |key, value| %>
+
+						<% if value.present? %>
+							<tr>
+								<td class="header-left"><%= value %></td>
+								<% ["l", "f", "s", "b1"].each do |store| %>
+									<td><%= @product.stock_icon(store.to_s, key.to_s) %></td>
+								<% end %>
+							</tr>
+						<% end %>
+
+
+					<% end %>
+
+			  </tbody>
+			</table>			
+		</div>
+	</div>
+</section>

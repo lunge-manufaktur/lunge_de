@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "Lunge Laufladen" %></title>
+
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= csrf_meta_tags %>
+    <script type="text/javascript" src="//use.typekit.net/acr5efa.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA_3E7YMmLy53LwlEY9SQfUtubAhkSZ4JU&sensor=false"></script>
+  </head>
+
+  <body>
+
+    <%= render "layouts/header" %>
+    <%= render "layouts/breadcrumbs" %>
+    <%= yield :search %>
+    <%= yield :full_width_content %>
+
+    <div class="row ">
+      <div class="small-12 columns">
+
+      	<div class="title_bar">
+      		<%= yield :title_bar %>	
+      	</div>
+
+        <%= yield %>
+      </div>
+    </div>
+
+    <%= render "layouts/footer" %>
+
+    <%= javascript_include_tag "application", "data-turbolinks-track" => false %>
+
+  </body>
+</html>

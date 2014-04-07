@@ -1,0 +1,11 @@
+Let ([
+	$header = BE_HTTP_Set_Custom_Header ( "Content-Type" ; "application/json" );
+
+	$new_product = "{ \"product\": { \"name\":\"A new Product\",\"fmid\":null,\"sku\":\"GLS100CCG\",\"description\":\"This is a description!\" } }";
+	
+	$url = "http://localhost:3000/products.json"
+];
+
+BE_HTTP_POST ( $url; $new_product )
+
+)

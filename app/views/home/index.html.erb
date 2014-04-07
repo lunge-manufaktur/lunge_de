@@ -1,0 +1,61 @@
+<!-- full width image -->
+<%= content_for :full_width_content do %>
+	<%= image_tag "http://placehold.it/2000x400&text=Image", class: "featured_image"
+	%>
+<% end %>
+
+
+
+<!-- Features -->
+<div class="row">
+	<div class="small-12 columns">
+
+		<section class="text-center">
+			<h2 class="text-center">Über uns</h2>
+			<ul class="small-block-grid-1 medium-block-grid-3" data-equalizer>
+
+				<li class="text-center" data-equalizer-watch>
+					<a class="ion-ios7-cart-outline ion-xxlarge"></a>
+					<p>
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+					</p>
+					<%= link_to "Weiterlesen...", "#", class: "button" %>
+				</li>
+
+				<li class="text-center">
+					<a class="ion-ios7-help-outline ion-xxlarge"></a>
+					<p>
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+					</p>
+					<%= link_to "Mehr erfahren...", "#", class: "button" %>
+				</li>
+
+				<li class="text-center">
+					<a class="ion-map ion-xxlarge"></a>
+					<p>
+						Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+					</p>
+					<%= link_to "Anzeigen...", "#", class: "button" %>
+				</li>		
+
+			</ul>
+		</section>
+
+		<section>
+			<h2 class="text-center">Sortiment</h2>
+
+			<h5>Highlights</h5>
+
+			<%= render "/products/card", collection: @products %>
+
+			<h5>Marken</h5>
+			<ul class="inline-list">
+				<% @brands.each do |brand| %>
+					<li><%= link_to brand.name, brand_path(brand) %></li>
+				<% end %>
+			</ul>
+
+		</section>
+
+	</div>
+</div>

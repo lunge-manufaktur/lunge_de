@@ -1,0 +1,20 @@
+<div class="row" data-equalizer>
+	<% @products.each do |product| %>
+
+		<div class="small-12 medium-6 large-3 columns" data-equalizer-watch>
+			
+			<div class="item-card">
+				<div class="card-section-full">
+					<%= link_to (image_tag product.default_image("card"), class: "card-image-top"), product_path(product) %>
+				</div>
+				<div class="card-section-narrow">
+					<h4 class="subtitle"><small><%= product.brand.name %></small></h4>
+					<h4><%= link_to product.name, product_path(product) %></h4>
+					<p><%= product.short_description(100) %></p>
+					<h6><%= number_to_currency(product.current_price, unit: "€ ") %></h6>
+				</div>
+			</div>
+		</div>
+
+	<% end %>
+</div>

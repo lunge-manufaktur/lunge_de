@@ -1,0 +1,289 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+ *= require foundation_and_overrides
+ += require ionicons
+ *= require dropzone/dropzone
+ *= require mapbox
+ *= require_self
+ */
+
+@import "bourbon";
+
+$primary-color: #2698C4;
+$secondary-color: #f3f3f3;
+$body-bg: mintcream;
+$alert-color: #E40D46;
+
+
+
+/* ----- VARIABLES ----- */
+
+$inverted-text: #fff;
+
+.title_bar {
+	margin: 2rem 0;
+}
+
+
+
+
+
+/* ----- MAP ----- */
+
+#map,
+#map-google {
+	height: 50%;
+
+	img {
+		max-width: none;
+	}
+
+}
+
+.leaflet-top,
+.leaflet-bottom {
+	z-index: 97;
+}
+
+
+
+
+
+
+/* ----- TYPOGRAPHY ----- */
+
+.subtitle {
+	margin-bottom: -0.5rem;
+}
+
+.light {
+	opacity: 0.6;
+}
+
+blockquote,
+blockquote p {
+	color: #999;
+}
+
+
+
+
+
+/* ----- LAYOUT ----- */
+
+section {
+	margin-bottom: 3rem;
+}
+
+.with-border {
+	border: 5px solid $secondary-color;
+}
+
+a .with-border:hover {
+	border-color: $primary-color;
+}
+
+
+
+
+
+/* ----- TABLES ----- */
+
+.header-left {
+	border-right: 2px solid $secondary-color;
+}
+
+
+
+
+
+
+
+/* ----- FORMS ----- */
+
+select {
+	font-family: "proxima-nova"
+}
+
+select,
+select:hover {
+	background-color: transparent !important;
+}
+
+select:hover,
+input:hover {
+	border-color: $primary-color;
+}
+
+
+
+
+
+/* ----- SEARCH ----- */
+
+.searchbar {
+	background-color: scale-color($primary-color, $lightness: -30%);
+	color: #fff;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+
+.searchbar:hover {
+	background-color: scale-color($primary-color, $lightness: -40%);
+}
+
+#search {
+	background-color: scale-color($primary-color, $lightness: -30%);
+	color: #fff;
+	padding: 2rem 0;
+
+}
+
+.inverted {
+	color: $inverted-text;
+	
+	h1,	h2, h3, h4, h5, h6,
+	input,
+	p,
+	a,
+	select {
+		color: $inverted-text !important;
+	}
+
+
+	label,
+	.subtitle small {
+		color: $inverted-text;
+		opacity: 0.6;
+	}
+}
+
+
+
+
+
+/* ----- PAGE ----- */
+
+.featured_image {
+	border-bottom: 5px solid $primary-color;
+}
+
+
+
+
+
+
+/* ----- LIST VIEW / ITEMS ----- */
+
+.item-container {
+	padding: 3rem 0;
+	border-bottom: 1px solid #eee;
+}
+
+.item-box-content {
+
+}
+
+.item-box-aside-right {
+	position: absolute;
+	height: 180px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+
+	img {
+		height: 100%;
+	}
+}
+
+.item-card {
+	background-color: $secondary-color;
+	margin-bottom: 2rem;
+	
+	&:hover {
+		@extend .inverted;
+		background-color: $primary-color;
+		transition-duration: 0.2s;
+	}
+
+}
+
+
+.card-image-top {
+	border-bottom: 0px solid $primary-color;
+}
+
+.card-section-full {
+
+}
+
+.card-section-narrow {
+	padding: 1rem;
+	box-sizing: border-box;
+}
+
+
+
+/* ----- ACTIONS ----- */
+
+.actions {
+	margin: 3rem 0;
+}
+
+
+
+
+
+/* ----- DIRECTIONS ----- */
+
+.accordion dd {
+	border-bottom: 5px solid $body-bg;
+}
+
+.item-route {
+	margin-bottom: 1rem;
+}
+
+.transit-icon img {
+	max-width: none;
+	margin-right: 0.2rem;
+}
+
+.transit-icon:before {
+	content: " ";
+}
+
+.SUBWAY {
+	background-color: #0072BC;
+	color: #fff;
+}
+
+.COMMUTER_TRAIN {
+	background-color: #23B24B;
+	color: #fff;
+}
+
+.HEAVY_RAIL,
+.HIGH_SPEED_TRAIN {
+	background-color: #E32332;
+	color: #fff;
+}
+
+.BUS {
+	background-color: #231F20;
+	color: #fff;
+}
+
+.WALKING {
+	background-color: scale-color($secondary-color, $lightness: -20%);
+	color: #fff;
+}

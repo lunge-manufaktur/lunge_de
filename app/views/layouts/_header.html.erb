@@ -1,0 +1,59 @@
+<div class="fixed">
+
+  <nav class="top-bar" data-topbar>
+
+    <ul class="title-area">
+      <li class="name">
+        <h1><%= link_to "Lunge Laufladen", "/" %></h1>
+      </li>
+      <li class="toggle-topbar menu-icon"><a href="#"><span>menu</span></a></li>
+    </ul>
+
+    <section class="top-bar-section">
+      <ul class="right">
+
+        <li class="has-dropdown">
+          <%= link_to "Produkte", products_path %>
+          <ul class="dropdown">
+            <li><%= link_to "Schuhe", "#" %></li>
+            <li><%= link_to "Textilien", "#" %></li>
+            <li><%= link_to "Zubehör", "#" %></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <%= link_to "Beratung", "#" %>
+          <ul class="dropdown">
+            <li><%= link_to "Laufbandanalyse", "#" %></li>
+            <li><%= link_to "Ernährung", "#" %></li>
+            <li><%= link_to "Training", "#" %></li>
+            <li><%= link_to "Laufen", "#" %></li>
+            <li><%= link_to "Regeneration", "#" %></li>
+          </ul> 
+        </li>
+
+        <li class="has-dropdown">
+          <%= link_to "Service", "#" %>
+          <ul class="dropdown">
+            <li><%= link_to "Downloads", "#" %></li>
+          </ul>
+        </li>
+
+        <li class="has-dropdown">
+          <%= link_to "Filialen", stores_path %>
+          <ul class="dropdown">
+            <% Store.all.each do |store| %>
+              <li><%= link_to "#{store.name} / #{store.city}", store_path(store) %></li>
+            <% end %>
+          </ul>
+        </li>
+
+        <li>
+          <%= link_to "Kontakt", "#" %>
+        </li>
+
+      </ul>
+    </section>
+  </nav>
+
+</div>

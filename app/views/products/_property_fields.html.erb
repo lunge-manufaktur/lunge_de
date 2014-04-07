@@ -1,0 +1,21 @@
+<div class="row">
+	<div class="small-6 columns">
+		<p>
+		<%= f.label :name %>
+		<%= f.text_field :name %>
+		</p>
+	</div>
+	<div class="small-6 columns">
+		<p>
+		<%= f.label :value, "Wert" %>
+		<%= f.text_field :value %>
+		</p>
+	</div>
+</div>
+<div class="row">
+	<div class="small-12 columns">
+		<p>
+			<%= f.link_to_remove "Löschen", class: "tiny button alert expand" %>
+		</p>
+	</div>
+</div>

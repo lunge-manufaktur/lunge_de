@@ -1,0 +1,31 @@
+<h1>Listing attributes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Name</th>
+      <th>Value</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @attributes.each do |attribute| %>
+      <tr>
+        <td><%= attribute.product_id %></td>
+        <td><%= attribute.name %></td>
+        <td><%= attribute.value %></td>
+        <td><%= link_to 'Show', attribute %></td>
+        <td><%= link_to 'Edit', edit_attribute_path(attribute) %></td>
+        <td><%= link_to 'Destroy', property, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Attribute', new_property_path %>

@@ -1,0 +1,21 @@
+<h1>Marken</h1>
+
+  <% @brands.each do |brand| %>
+    <div class="row">
+      <div class="small-12 columns">
+        <h4><%= link_to brand.name, brand_path(brand) %></h4>
+        <% if brand.products.any? %>
+          <ul class="inline-list">
+            <% brand.products.limit(10).each do |product| %>
+              <li><%= link_to product.name, product_path(product) %></li>
+            <% end %> 
+          </ul>
+        <% end %>
+      </div>
+    </div>
+    <hr>
+  <% end %>
+
+<br>
+
+<%= link_to 'New Brand', new_brand_path %>

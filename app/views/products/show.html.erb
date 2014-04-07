@@ -1,0 +1,136 @@
+<%= render "products/search/index" %>
+
+<!-- full width image -->
+<%= content_for :full_width_content do %>
+	<%= image_tag @product.default_image("full_width"),
+		data: {
+			interchange: "[#{@product.default_image('full_width')}, (default)],
+			[#{@product.default_image('medium')}, (medium)],
+			[#{@product.default_image('small')}, (small)],
+			[#{@product.default_image('full_width')}, (large)]"
+		},
+		class: "featured_image"
+	%>
+<% end %>
+
+<!-- title bar -->
+<%= content_for :title_bar do %>
+	<h2 class="subtitle"><small><%= @product.brand.name %></small></h2>
+  <h1><%= @product.name %></h1>
+<% end %>
+
+
+<div class="row">
+
+	<div class="small-12 medium-8 large-8 columns">
+		
+		<section>
+			<div class="row">
+				<div class="small-12 columns">
+					
+					<h4>Beschreibung</h4>
+					<p>
+						<%= simple_format(@product.description) %>
+					</p>
+					
+					<% if @product.official_description.present? %>
+						<h6>Herstellerbeschreibung</h6>
+						<p>
+							<blockquote>
+								<%= simple_format(@product.official_description) %>
+								<cite><%= @product.brand.name %></cite>
+							</blockquote>
+						</p>
+					<% end %>
+
+				</div>
+			</div>
+		</section>
+		
+		<% if @product.product_images.any? %>
+			<section>
+				<div class="row">
+					<div class="small-12 columns">
+						<h4>Bilder</h4>
+						<ul class="clearing-thumbs small-block-grid-3" data-clearing>
+							<% @product.product_images.each do |product_image| %>				
+								<li><%= link_to (image_tag product_image.image.url(:small), class: "with-border"), product_image.image.url(:medium) %></li>
+							<% end %>
+						</ul>	
+					</div>
+				</div>
+			</section>	
+		<% end %>
+
+
+		<% if @product.stocks.any? %>
+			<%= render "products/show/availability" %>
+		<% end %>
+
+	</div>
+
+	<div class="small-12 medium-4 large-3 large-offset-1 columns">
+
+		<section>
+			<h4>Artikeldaten</h4>
+			<p>
+				<label>Artikelnummer</label>
+				<%= @product.sku %>
+			</p>
+			<p>
+				<label>Hersteller</label>
+				<%= link_to @product.brand.name, brand_path(@product.brand) %>
+			</p>
+			<p>
+				<label>Farbe</label>
+				<%= @product.color %>
+			</p>
+			<p>
+				<label>Preis</label>
+				<%= number_to_currency(@product.current_price, unit: "€ ") %>
+			</p>
+		</section>
+
+		<% if @product.properties.any? %>
+			<section>
+				<div class="row">
+					<div class="small-12 columns">
+						<h4>Eigenschaften</h4>
+						<% @product.properties.each do |property| %>
+							<p>
+								<label><%= property.name %></label>
+								<%= property.value %>
+							</p>
+						<% end %>
+					</div>
+				</div>
+			</section>
+		<% end %>
+
+		<section>
+			<div class="row">
+				<div class="small-12 columns">
+					<h4>Tags</h4>
+						<p>
+							<span class="label">Walking</span>
+							<span class="label">Bequemschuhe</span>
+							<span class="label">Komfort</span>
+							<span class="label">Gesundheitsschuhe</span>
+						</p>
+				</div>
+			</div>
+		</section>
+
+	</div>
+	
+</div>
+
+<div class="row">
+	<div class="small-12 columns">
+		<%= link_to 'Zurück', products_path, class: "button secondary" %>
+		<%= link_to 'Bearbeiten', edit_product_path(@product), class: "button" %>
+		<%= link_to 'Löschen', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</div>
+</div>
+
+

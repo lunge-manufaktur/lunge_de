@@ -1,0 +1,74 @@
+<%= render "products/search/index" %>
+
+<!-- title bar -->
+
+<%= content_for :title_bar do %>
+  <h1>Produkte</h1>
+  <dl class="sub-nav">
+    <dt>Filter:</dt>
+    <dd class="active"><a href="#">Alle</a></dd>
+    <dd><a href="#">Neueste</a></dd>
+    <dd><a href="#">Angebote</a></dd>
+    <dd><a href="#">Highlights</a></dd>
+  </dl>
+<% end %>
+
+<!-- content -->
+
+<div class="row">
+  <div class="small-12 medium-8 large-8 columns">   
+
+    <% @products.each do |product| %>
+
+      <div class="row">
+        <div class="small-12 columns">
+
+          <div class="item-container">
+
+            <div class="row">
+
+              <div class="small-12 medium-4 large-3 columns">
+                <%= link_to (image_tag product.default_image("small"), class: "with-border"), product_path(product) %>
+              </div>
+
+              <div class="small-12 medium-8 large-9 columns">
+                <h3>
+                  <%= link_to product.name, product_path(product) %>
+                  <% if product.brand %>
+                    <small>von <%= product.brand.name %></small>
+                  <% end %>
+                </h3>
+                <p>
+                  <%= product.short_description %>
+                </p>
+
+                <div class="row">
+                  <div class="small-12 columns">
+                    <%= link_to "Anzeigen", product %> | 
+                    <%= link_to "Bearbeiten", edit_product_path(product) %> | 
+                    <%= link_to "Löschen", product, method: :delete, data: { confirm: 'Are you sure?' } %>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    <% end %>
+
+  </div>
+
+</div>
+
+<div class="row">
+  <div class="small-12 columns">
+    <div class="actions">
+      <%= link_to "Artikel hinzufügen", new_product_path, class: "button" %>
+    </div>
+  </div>
+</div>
