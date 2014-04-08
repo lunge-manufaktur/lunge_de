@@ -16299,9 +16299,9 @@ return jQuery;
 
 
 }).call(this);
-Dropzone.options.productImage = {
-  paramName: "product_image[image]"
-};
+// Dropzone.options.productImage = {
+//  paramName: "product_image[image]"
+// };
 $('#search-toggle').click(function() {
 
 	console.log('search-toggle clicked');
@@ -16448,4 +16448,4 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
-$(function(){ $(document).foundation(); });
+$(document).foundation();

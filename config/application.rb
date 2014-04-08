@@ -26,9 +26,6 @@ module LungeDe
     # Enable the asset pipeline
     config.assets.enabled = true
 
-    # Heroku wants this to be false
-    config.assets.initialize_on_precompile = false
-
     # add ionicons iconfont to asset pipline
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
   end
