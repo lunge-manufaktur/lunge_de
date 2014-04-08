@@ -19,6 +19,10 @@
     <%= f.label :slug %><br>
     <%= f.text_field :slug %>
   </div>
+  <div class="field">
+    <%= f.label :parent_id %><br>
+    <%= f.collection_select(:parent_id, Category.all, :id, :name) %>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

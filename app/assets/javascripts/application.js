@@ -10,12 +10,10 @@
 // Read Sprockets README (https://github.com/sstephenson/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require tinymce-jquery
 //= require jquery
 //= require jquery_ujs
 //= require foundation
 //= require jquery_nested_form
-//= require dropzone
 //= require_tree .
 
 $(function(){ $(document).foundation(); });

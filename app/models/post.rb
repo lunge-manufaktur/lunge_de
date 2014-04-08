@@ -20,4 +20,15 @@ class Post < ActiveRecord::Base
 
 	accepts_nested_attributes_for :categories, :categorizations
 
+	# Scopes
+
+	scope :published, -> { where(is_published: true) }
+
+	# Methods
+
+	def short_description(length=nil)
+		length ||= 200
+		content.truncate(length, separator: " ") unless content.nil?
+	end
+
 end

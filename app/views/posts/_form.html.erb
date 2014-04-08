@@ -30,10 +30,7 @@
         <%= f.label :content, "Inhalt" %><br>
         <%= f.text_area :content, rows: 20, class: "tinymce" %>
       </div>
-      <div class="field">
-        <%= f.check_box :is_published %>
-        <%= f.label :is_published, "Veröffentlichen" %>
-      </div>
+
       <div class="actions">
         <%= f.submit "Speichern", class: "button" %>
       </div>
@@ -41,20 +38,30 @@
     </div>
     
     <div class="small-12 medium-4 large-3 large-offset-1 columns">
-      
-      <h4>Einordnung</h4>
 
-      <% if @categories.any? %>
-        <%= label_tag("Kategorien") %>
-        <ul>
-          <% @categories.each do |category| %>
-            <li>
-              <%= check_box_tag "post[category_ids][]", category.id, @post.category_ids.include?(category.id) %>
-              <%= f.label category.name %>
-            </li>
-          <% end %>
-        </ul>
-      <% end %>
+      <section>
+        <h4>Status</h4>
+        <div class="field">
+          <%= f.check_box :is_published %>
+          <%= f.label :is_published, "Veröffentlichen" %>
+        </div>
+      </section>
+
+      <section>
+        <h4>Kategorien</h4>
+
+        <% if @categories.any? %>
+          <%= hidden_field_tag "product[category_ids][]", nil %>
+          <ul class="no-bullet">
+            <% @categories.each do |category| %>
+              <li>
+                <%= check_box_tag "post[category_ids][]", category.id, @post.category_ids.include?(category.id), id: dom_id(category) %>
+                <%= label_tag dom_id(category), category.name %>
+              </li>
+            <% end %>
+          </ul>
+        <% end %>
+      </section>
 
     </div>
 
