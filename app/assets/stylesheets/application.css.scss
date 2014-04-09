@@ -60,7 +60,7 @@ $inverted-text: #fff;
 /* ----- TYPOGRAPHY ----- */
 
 .subtitle {
-	margin-bottom: -0.5rem;
+	margin: -0.5rem 0;
 }
 
 .light {
@@ -92,6 +92,18 @@ a .with-border:hover {
 
 
 
+
+/* ----- FOOTER -----*/
+
+footer {
+	@extend .inverted;
+	margin-top: 5rem;
+	padding: 2rem 0;
+	width: 100%;
+	height: auto;
+	background-color: $primary-color;
+	bottom: 0px;
+}
 
 
 /* ----- TABLES ----- */

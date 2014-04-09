@@ -4,7 +4,7 @@ LungeDe::Application.configure do
   # In the development environment your application's code is reloaded on
   # every request. This slows down response time but is perfect for development
   # since you don't have to restart the web server when you make code changes.
-  config.cache_classes = true
+  config.cache_classes = false
 
   # Do not eager load code on boot.
   config.eager_load = false
@@ -26,14 +26,5 @@ LungeDe::Application.configure do
   # This option may cause significant delays in view rendering with a large
   # number of complex assets.
   config.assets.debug = true
-
-  # Do not fallback to assets pipeline if a precompiled asset is missed.
-  config.assets.compile = true
-
-  # Add Modernizr to asset pipeline
-  config.assets.precompile += %w( vendor/modernizr.js )
-
-  # Generate digests for assets URLs.
-  config.assets.digest = true
 
 end

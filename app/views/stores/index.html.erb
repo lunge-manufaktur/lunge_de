@@ -1,41 +1,24 @@
-<h1>Listing stores</h1>
+<!-- title bar -->
+<%= content_for :title_bar do %>
+  <h1>Filialen</h1>
+  <h2 class="subtitle"><small>3x in Hamburg / 1x in Berlin</small></h2>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Address name</th>
-      <th>Street</th>
-      <th>Zip</th>
-      <th>City</th>
-      <th>Phone</th>
-      <th>Email</th>
-      <th>Active</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @stores.each do |store| %>
-      <tr>
-        <td><%= store.name %></td>
-        <td><%= store.address_name %></td>
-        <td><%= store.street %></td>
-        <td><%= store.zip %></td>
-        <td><%= store.city %></td>
-        <td><%= store.phone %></td>
-        <td><%= store.email %></td>
-        <td><%= store.active %></td>
-        <td><%= link_to 'Show', store %></td>
-        <td><%= link_to 'Edit', edit_store_path(store) %></td>
-        <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
+<section>
+  <div class="row">
+    <div class="small-12 medium-6 columns">
+      <h4>Hamburg</h4>
+      <% @stores.where(city: "Hamburg").each do |store| %>
+        <%= render partial: "/stores/card", locals: { store: store } %>
+      <% end %>
+    </div>
+    <div class="small-12 medium-6 columns">
+      <h4>Berlin</h4>
+      <% @stores.where(city: "Berlin").each do |store| %>
+        <%= render partial: "/stores/card", locals: { store: store } %>
+      <% end %>
+    </div>
+  </div>
+</section>
 
 <%= link_to 'New Store', new_store_path %>
