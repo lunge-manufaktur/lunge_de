@@ -1,4 +1,24 @@
 LungeDe::Application.routes.draw do
+
+  namespace :api, defaults: {format: 'json'} do
+    # /api/...
+
+    resources :properties
+
+    resources :stocks
+
+    resources :stores
+
+    resources :brands
+
+    resources :sizes
+
+    resources :products
+
+  end
+
+  
+
   resources :categorizations
 
   resources :categories
