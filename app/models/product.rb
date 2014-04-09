@@ -89,4 +89,8 @@ class Product < ActiveRecord::Base
 		end
 	end
 
+	def stock_quantity(store, size)
+		eval("self.stocks.#{store}.#{size}?")
+	end
+
 end

@@ -33,3 +33,20 @@
 		</div>
 	</div>
 </section>
+
+<section>
+	<% ["l", "f", "s", "b1"].each do |store| %>
+		<section>
+			<div class="row">
+				<div class="small-12">
+					<h6><%= eval("@product.stocks.#{store}.store.full_address") %></h6>
+					<% @product.stocks.l.sizes_hash.each do |key, value| %>
+						<% if value.present? %>
+							<div class="size-bubble <%= @product.stock_quantity(store.to_s, key.to_s) %>"><%= value %></div>
+						<% end %>
+					<% end %>
+				</div>
+			</div>
+		</section>
+	<% end %>
+</section>

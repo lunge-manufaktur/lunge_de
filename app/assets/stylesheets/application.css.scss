@@ -244,6 +244,35 @@ input:hover {
 
 
 
+
+/* ----- STOCK ----- */
+
+.size-bubble {
+	font-size: 0.825rem;
+	padding: 0.6rem;
+	float: left;
+	min-width: 2rem;
+	height: 2rem;
+	text-align: center;
+	margin: 0 0.5rem 0.5rem 0;
+	border: 1px solid #bbb;
+}
+
+.true {
+	border-color: limegreen;
+	background-color: limegreen;
+	color: #fff;
+}
+
+.false {
+	color: #bbb;
+}
+
+
+
+
+
+
 /* ----- ACTIONS ----- */
 
 .actions {
