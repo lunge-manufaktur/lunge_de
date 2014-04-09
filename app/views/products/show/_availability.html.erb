@@ -1,52 +1,25 @@
 <section>
+	
+			
+
+<section>
 	<div class="row">
 		<div class="small-12 columns">
 			<h4>Verfügbarkeit</h4>
-			<table width="100%" class="text-center">
-			  <thead>
-			    <tr>
-			    	<th class="text-center"><%= "Größe (#{@product.size.name})" %></th>
-			      <th class="text-center"><%= link_to "Lämmersieth", "#" %></th>
-			      <th class="text-center"><%= link_to "Ferdinandstraße", "#" %></th>
-			      <th class="text-center"><%= link_to "Bahrenfeld", "#" %></th>
-			      <th class="text-center"><%= link_to "Hohenzollerndamm", "#" %></th>
-			    </tr>
-			  </thead>
-			  <tbody>
-
-					<% @product.stocks.first.sizes_hash.each do |key, value| %>
-
-						<% if value.present? %>
-							<tr>
-								<td class="header-left"><%= value %></td>
-								<% ["l", "f", "s", "b1"].each do |store| %>
-									<td><%= @product.stock_icon(store.to_s, key.to_s) %></td>
+			<% ["l", "f", "s", "b1"].each do |store| %>
+				<section>
+					<div class="row">
+						<div class="small-12 columns">
+							<h6><%= eval("@product.stocks.#{store}.store.full_address") %></h6>
+							<% @product.stocks.l.sizes_hash.each do |key, value| %>
+								<% if value.present? %>
+									<div class="size-bubble <%= @product.stock_quantity(store.to_s, key.to_s) %>"><%= value %></div>
 								<% end %>
-							</tr>
-						<% end %>
-
-
-					<% end %>
-
-			  </tbody>
-			</table>			
+							<% end %>
+						</div>
+					</div>
+				</section>
+			<% end %>
 		</div>
 	</div>
-</section>
-
-<section>
-	<% ["l", "f", "s", "b1"].each do |store| %>
-		<section>
-			<div class="row">
-				<div class="small-12 columns">
-					<h6><%= eval("@product.stocks.#{store}.store.full_address") %></h6>
-					<% @product.stocks.l.sizes_hash.each do |key, value| %>
-						<% if value.present? %>
-							<div class="size-bubble <%= @product.stock_quantity(store.to_s, key.to_s) %>"><%= value %></div>
-						<% end %>
-					<% end %>
-				</div>
-			</div>
-		</section>
-	<% end %>
 </section>
