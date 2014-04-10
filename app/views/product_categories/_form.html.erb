@@ -1,0 +1,45 @@
+<%= form_for(@product_category) do |f| %>
+
+	<div class="row">
+	  <div class="small-12 columns">
+	    <% if @product_category.errors.any? %>
+	      <div id="error_explanation">
+	        <h2><%= pluralize(@product_category.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+	        <ul>
+	        <% @product_category.errors.full_messages.each do |msg| %>
+	          <li><%= msg %></li>
+	        <% end %>
+	        </ul>
+	      </div>
+	    <% end %>
+	  </div>
+	</div>
+
+	<div class="row">
+		<div class="small-12 columns">
+			
+			<div class="field">
+				<p>
+					<%= f.label :name, "Bezeichnung" %>
+					<%= f.text_field :name %>
+				</p>
+			</div>
+
+			<div class="field">
+				<p>
+					<%= f.label :parent_id, "Übergeordnete Gruppe (optional)" %>
+					<%= f.collection_select(:parent_id, ProductCategory.all, :id, :name) %>
+				</p>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="small-12 columns">
+			<%= f.submit "Speichern" %>
+		</div>
+	</div>
+
+<% end %>

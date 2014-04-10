@@ -1,0 +1,28 @@
+<!-- title bar -->
+<%= content_for :title_bar do %>
+	<h1><%= @product_category.name %></h1>
+<% end %>
+
+
+<!-- content -->
+<section>
+	<p>
+		<%= label_tag("Bezeichnung") %>
+		<%= @product_category.name %>
+	</p>
+
+	<p>
+		<%= label_tag("Left") %>
+		<%= @product_category.lft %>
+	</p>
+
+	<p>
+		<%= label_tag("right") %>
+		<%= @product_category.rgt %>
+	</p>
+
+	<p>
+		<%= label_tag("Tiefe") %>
+		<%= @product_category.depth %>
+	</p>
+</section>

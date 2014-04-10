@@ -15,6 +15,9 @@
 #  color                :string(255)
 #  is_published         :boolean
 #  official_description :text
+#  is_on_sale           :boolean
+#  is_on_frontpage      :boolean
+#  is_featured          :boolean
 #
 
 class Product < ActiveRecord::Base
@@ -23,10 +26,13 @@ class Product < ActiveRecord::Base
 
 	belongs_to :brand
 	belongs_to :size
+	belongs_to :product_category
 	has_many :product_images
 	has_many :stocks, dependent: :destroy
 	has_many :stores, through: :stocks
 	has_many :properties, dependent: :destroy
+	has_many :product_categorizations, dependent: :destroy
+	has_many :product_categories, through: :product_categorizations
 
 	accepts_nested_attributes_for :product_images, :allow_destroy => true
 	accepts_nested_attributes_for :stocks, :allow_destroy => true
@@ -35,6 +41,8 @@ class Product < ActiveRecord::Base
 	# Scopes
 
 	scope :published, -> { where(is_published: true) }
+	scope :on_sale, -> { where(is_on_sale: true) }
+	scope :featured, -> { where(is_featured: true) }
 
 	# Methods
 

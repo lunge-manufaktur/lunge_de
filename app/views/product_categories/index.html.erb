@@ -1,0 +1,20 @@
+<!-- title bar -->
+<%= content_for :title_bar do %>
+	<h1>Produktgruppen</h1>
+<% end %>
+
+
+<!-- content -->
+<section>
+	<% @product_categories.roots.each do |root| %>
+		<h4><%= link_to root.name, product_category_path(root) %></h4>
+		<ul>
+		<% root.children.each do |child| %>
+			<%= child.name %>
+		<% end %>
+		</ul>
+	<% end %>
+
+	<% nested_set_options(ProductCategory) {|i| "#{'-' * i.level} #{i.name}" } %>
+
+</section>

@@ -1,0 +1,11 @@
+<!-- title bar -->
+
+<%= content_for :title_bar do %>
+	<h1>Produktgruppe erstellen</h1>
+<% end %>
+
+<section>
+	<%= render "form" %>
+</section>
+
+<%= link_to "Zurück", product_categories_path %>

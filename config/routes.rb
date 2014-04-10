@@ -15,6 +15,10 @@ LungeDe::Application.routes.draw do
 
     resources :products
 
+    resources :product_categories
+
+    resources :product_categorizations
+
   end
 
   
@@ -39,14 +43,20 @@ LungeDe::Application.routes.draw do
 
   resources :product_images
 
+  resources :product_categories
+
   resources :sizes
 
   resources :products do
+
+    get "featured" => "products#show_featured", :as => "featured"
+
     resources :product_images
 
     member do
       get :edit_product_images
     end
+
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

@@ -62,6 +62,8 @@ group :production do
 	gem 'rails_12factor'
 end
 
+# nested sets
+gem 'awesome_nested_set'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

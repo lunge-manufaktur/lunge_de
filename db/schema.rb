@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140408064950) do
+ActiveRecord::Schema.define(version: 20140410124536) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,29 @@ ActiveRecord::Schema.define(version: 20140408064950) do
     t.datetime "updated_at"
   end
 
+  create_table "product_categories", force: true do |t|
+    t.string  "name"
+    t.integer "parent_id"
+    t.integer "lft"
+    t.integer "rgt"
+    t.integer "depth"
+  end
+
+  add_index "product_categories", ["depth"], name: "index_product_categories_on_depth", using: :btree
+  add_index "product_categories", ["lft"], name: "index_product_categories_on_lft", using: :btree
+  add_index "product_categories", ["parent_id"], name: "index_product_categories_on_parent_id", using: :btree
+  add_index "product_categories", ["rgt"], name: "index_product_categories_on_rgt", using: :btree
+
+  create_table "product_categorizations", force: true do |t|
+    t.integer  "product_id"
+    t.integer  "product_category_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "product_categorizations", ["product_category_id"], name: "index_product_categorizations_on_product_category_id", using: :btree
+  add_index "product_categorizations", ["product_id"], name: "index_product_categorizations_on_product_id", using: :btree
+
   create_table "product_images", force: true do |t|
     t.integer  "product_id"
     t.datetime "created_at"
@@ -79,6 +102,9 @@ ActiveRecord::Schema.define(version: 20140408064950) do
     t.string   "color"
     t.boolean  "is_published"
     t.text     "official_description"
+    t.boolean  "is_on_sale"
+    t.boolean  "is_on_frontpage"
+    t.boolean  "is_featured"
   end
 
   add_index "products", ["brand_id"], name: "index_products_on_brand_id", using: :btree

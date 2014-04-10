@@ -15,6 +15,9 @@
 #  color                :string(255)
 #  is_published         :boolean
 #  official_description :text
+#  is_on_sale           :boolean
+#  is_on_frontpage      :boolean
+#  is_featured          :boolean
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
