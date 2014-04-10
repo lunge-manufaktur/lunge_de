@@ -1,5 +1,5 @@
 module Api
-	class ProductCategoryController
+	class ProductCategoryController < ApplicationController
 		respond_to :json
 
 		# GET /product_categories
