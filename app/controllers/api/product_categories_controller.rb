@@ -32,7 +32,7 @@ module Api
 		private
 
 		def product_category_params
-			params.require(:product_category).permit (
+			params.require(:product_category).permit(
 				:id,
 				:name,
 				:parent_id,
