@@ -28,9 +28,13 @@
 	    <dd><a href="#">Angebote</a></dd>
 	  </dl>
 
-		<% if @products %>
-			<%= render "products/card", collection: @products %>
-		<% end %>
+		
+		<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">		
+			<% @products.each do |product| %>
+				<%= render partial: "products/card", locals: { product: product } %>
+			<% end %>
+		</ul>
+
 
 	</div>
 

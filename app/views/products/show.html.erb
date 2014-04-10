@@ -2,15 +2,19 @@
 
 <!-- full width image -->
 <%= content_for :full_width_content do %>
-	<%= image_tag @product.default_image("full_width"),
-		data: {
-			interchange: "[#{@product.default_image('full_width')}, (default)],
-			[#{@product.default_image('medium')}, (medium)],
-			[#{@product.default_image('small')}, (small)],
-			[#{@product.default_image('full_width')}, (large)]"
-		},
-		class: "featured_image"
-	%>
+	<% if @product.product_images.any? %>
+		<div class="fade"></div>
+		<div class="featured_image">	
+			<%= image_tag @product.default_image("full_width"),
+				data: {
+					interchange: "[#{@product.default_image('full_width')}, (default)],
+					[#{@product.default_image('medium')}, (medium)],
+					[#{@product.default_image('small')}, (small)],
+					[#{@product.default_image('full_width')}, (large)]"
+				}
+			%>
+		</div>
+	<% end %>
 <% end %>
 
 <!-- title bar -->

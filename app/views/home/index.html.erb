@@ -43,12 +43,12 @@
 
 		<section>
 			<h2 class="text-center">Sortiment</h2>
-
 			<h5>Highlights</h5>
-
-			<%= render "/products/card", collection: @products %>
-
-
+			<ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+				<% @products.each do |product| %>
+					<%= render partial: "/products/card", locals: { product: product } %>
+				<% end %>
+			</ul>
 		</section>
 
 	</div>
