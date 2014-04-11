@@ -5,8 +5,20 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    @search = Product.search(params[:q])
-    @products = @search.result(distinct: true).order(created_at: :desc)
+    if params[:tag]
+      @tags = params[:tag].split("/")
+      @products = Product.tagged_with(@tags)
+      @search = Product.search(params[:q])
+    else
+      @search = Product.search(params[:q])
+      @products = @search.result(distinct: true).order(created_at: :desc)
+    end
+    
+  end
+
+  def index_with_tag
+    @products = Product.where(tag_list: params[:tag])
+    render "index"
   end
 
   # GET /products/1
@@ -101,6 +113,7 @@ class ProductsController < ApplicationController
         :current_price,
         :regular_price,
         :color,
+        :tag_list,
         stocks_attributes: [
           :id,
           :product_id,

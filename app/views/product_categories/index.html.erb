@@ -6,15 +6,15 @@
 
 <!-- content -->
 <section>
-	<% @product_categories.roots.each do |root| %>
-		<h4><%= link_to root.name, product_category_path(root) %></h4>
-		<ul>
-		<% root.children.each do |child| %>
-			<%= child.name %>
-		<% end %>
-		</ul>
+	<ul class="no-bullet">
+	<% nested_set_options(ProductCategory, @product_category) do |category| %>
+		<li><h6><%= link_to ("#{' ┄ ' * category.level} #{category.name}"), product_category_path(category) %></h6></li>
 	<% end %>
-
-	<% nested_set_options(ProductCategory) {|i| "#{'-' * i.level} #{i.name}" } %>
-
+	</ul>
 </section>
+
+<div class="row">
+	<div class="small-12 columns">
+		<%= link_to "Produktgrupper erstellen", new_product_category_path, class: "button" %>
+	</div>
+</div>

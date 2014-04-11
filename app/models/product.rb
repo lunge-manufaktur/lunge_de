@@ -38,6 +38,10 @@ class Product < ActiveRecord::Base
 	accepts_nested_attributes_for :stocks, :allow_destroy => true
 	accepts_nested_attributes_for :properties, :allow_destroy => true
 
+	# Acts as taggable on gem
+
+	acts_as_taggable
+
 	# Scopes
 
 	scope :published, -> { where(is_published: true) }

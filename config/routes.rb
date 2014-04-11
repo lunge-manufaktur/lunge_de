@@ -49,6 +49,10 @@ LungeDe::Application.routes.draw do
 
   resources :products do
 
+    collection do
+      get "/tags/*tag", to: "products#index", as: :tag
+    end
+
     get "featured" => "products#show_featured", :as => "featured"
 
     resources :product_images

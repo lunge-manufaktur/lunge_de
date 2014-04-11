@@ -12,9 +12,9 @@
  *= require foundation_and_overrides
  += require ionicons
  *= require_self
+ *= require products
  */
 
-@import "bourbon";
 
 $primary-color: #2698C4;
 $secondary-color: #f3f3f3;
@@ -70,6 +70,15 @@ $inverted-text: #fff;
 blockquote,
 blockquote p {
 	color: #999;
+}
+
+a.label {
+	background-color: $primary-color;
+	color: #fff;
+
+	&:hover {
+		background-color: scale-color($primary-color, $lightness: -20%);
+	}
 }
 
 

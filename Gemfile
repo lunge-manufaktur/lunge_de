@@ -34,9 +34,8 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# zurb foundation and bourbon
+# zurb foundation
 gem 'foundation-rails'
-gem 'bourbon'
 
 # ransack search
 gem 'ransack'
@@ -64,6 +63,9 @@ end
 
 # nested sets
 gem 'awesome_nested_set'
+
+# acts_As_taggable_on
+gem 'acts-as-taggable-on'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

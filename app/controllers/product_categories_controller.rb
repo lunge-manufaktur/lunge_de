@@ -22,6 +22,25 @@ class ProductCategoriesController < ApplicationController
 		@product_category = ProductCategory.find(params[:id])
 	end
 
+	def edit
+		@product_category = ProductCategory.find(params[:id])
+	end
+
+	def update
+		@product_category = ProductCategory.find(params[:id])
+		if @product_category.update(product_category_params)
+			redirect_to @product_category, notice: "Produktgruppe erfolgreich aktualisiert."
+		else
+			render action: "edit"
+		end
+	end
+
+	def destroy
+		@product_category = ProductCategory.find(params[:id])
+		@product_category.destroy
+		redirect_to product_categories_path
+	end
+
 
 
 	private

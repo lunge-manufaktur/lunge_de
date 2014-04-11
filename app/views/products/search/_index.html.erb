@@ -1,8 +1,6 @@
 <%= content_for :search do %>
 
-	<div class="searchbar" id="search-toggle">
-		<%= inline_icon("Artikel suchen...", "ion-ios7-search") %>
-	</div>
+	
 
 	<div id="search" class="inverted" style="display:none;">
 
@@ -35,20 +33,30 @@
 
 				</div>
 
-				<div class="small-12 medium-6 large-4 columns"></div>
+				<div id="tag-cloud" class="small-12 medium-6 large-8 columns">
+					<h4>Tags</h4>
+					<p>
+						<% tag_cloud Product.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class| %>
+							<%= link_to tag.name.upcase, tag_products_path(tag.name), class: "#{css_class} label" %>
+						<% end %>
+					</p>
+				</div>
 
-				<div class="small-12 medium-6 large-4 columns"></div>
 			</div>
 
 			<div class="row">
 				<div class="small-12 columns">
-					<%= f.submit "Suchen", class: "button" %>
+					<%= f.submit "Suchen", class: "button right" %>
 					<%= link_to "Alle anzeigen", products_path %>
 				</div>
 			</div>
 
 	  <% end %>
 
+	</div>
+
+	<div class="searchbar text-center" id="search-toggle">
+		<%= inline_icon("Suchen", "ion-ios7-search") %>
 	</div>
 
 <% end %>

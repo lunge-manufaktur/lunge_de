@@ -16,6 +16,15 @@
 <!-- content -->
 
 <section>
+  <p>
+    Aktive Filter: 
+    <% @tags.each do |tag| %>
+      <a class="label alert"><%= tag.upcase %> <%= inline_icon("", "ion-ios7-close-empty") %></a>
+    <% end %>
+  </p>
+</section>
+
+<section>
 
 <div class="row">
   <div class="small-12 columns">
@@ -44,8 +53,9 @@
       </div>
 
       <div class="row">
-        <div class="small-12 columns">
-          <%= f.submit "Suchen", class: "button right" %>
+        <div class="small-12 columns text-center">
+          <%= f.submit "Suchen", class: "button" %><br>
+          <%= link_to "Zurücksetzen", products_path %>
         </div>
       </div>
 

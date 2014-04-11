@@ -26,3 +26,13 @@
 		<%= @product_category.depth %>
 	</p>
 </section>
+
+
+<section>
+	<div class="row">
+		<div class="small-12 columns">
+			<%= link_to "Bearbeiten", edit_product_category_path(@product_category), class: "button" %>
+			<%= link_to "Löschen", product_category_path(@product_category), method: :delete, class: "button alert" %>			
+		</div>
+	</div>
+</section>

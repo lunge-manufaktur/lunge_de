@@ -112,17 +112,18 @@
 		<% end %>
 
 		<section>
+			<% if @product.tag_list.any? %>
 			<div class="row">
 				<div class="small-12 columns">
 					<h4>Tags</h4>
 						<p>
-							<span class="label">Walking</span>
-							<span class="label">Bequemschuhe</span>
-							<span class="label">Komfort</span>
-							<span class="label">Gesundheitsschuhe</span>
+							<% @product.tag_list.each do |tag| %>
+								<%= link_to tag.upcase, tag_products_path(tag), class: "label" %>
+							<% end %>
 						</p>
 				</div>
 			</div>
+			<% end %>
 		</section>
 
 	</div>
