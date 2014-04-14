@@ -266,6 +266,33 @@ input:hover {
 
 
 
+
+/* ----- PAGINATION ----- */
+
+ul.pagination {
+	li {
+
+		font-size: 1rem;
+		border: 1px solid #ccc;
+		height: auto;
+
+		&.current {
+			border-color: $primary-color;
+		}
+
+		a {
+			border-radius: 0px;
+			padding: 0.5rem 1rem;
+		}
+	}
+}
+
+
+
+
+
+
+
 /* ----- STOCK ----- */
 
 .size-bubble {

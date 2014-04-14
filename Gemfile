@@ -67,6 +67,9 @@ gem 'awesome_nested_set'
 # acts_As_taggable_on
 gem 'acts-as-taggable-on'
 
+# Pagination
+gem 'kaminari'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 

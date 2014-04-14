@@ -5,7 +5,7 @@ class BrandsController < ApplicationController
   # GET /brands
   # GET /brands.json
   def index
-    @brands = Brand.all.includes(:products)
+    @brands = Brand.active.order(:name).includes(:products)
   end
 
   # GET /brands/1
