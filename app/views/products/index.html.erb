@@ -15,14 +15,16 @@
 
 <!-- content -->
 
-<section>
-  <p>
-    Aktive Filter: 
-    <% @tags.each do |tag| %>
-      <a class="label alert"><%= tag.upcase %> <%= inline_icon("", "ion-ios7-close-empty") %></a>
-    <% end %>
-  </p>
-</section>
+<% if @tags %>
+  <section>
+    <p>
+      Aktive Filter: 
+      <% @tags.each do |tag| %>
+        <a class="label alert"><%= tag.upcase %> <%= inline_icon("", "ion-ios7-close-empty") %></a>
+      <% end %>
+    </p>
+  </section>
+<% end %>
 
 <section>
 

@@ -1,6 +1,8 @@
 <%= content_for :search do %>
 
-	
+	<div class="searchbar" id="search-toggle">
+		<%= inline_icon("Suchen", "ion-ios7-search") %>
+	</div>
 
 	<div id="search" class="inverted" style="display:none;">
 
@@ -53,10 +55,6 @@
 
 	  <% end %>
 
-	</div>
-
-	<div class="searchbar text-center" id="search-toggle">
-		<%= inline_icon("Suchen", "ion-ios7-search") %>
 	</div>
 
 <% end %>
