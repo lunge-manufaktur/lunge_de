@@ -13,7 +13,12 @@ class ProductsController < ApplicationController
       @search = Product.search(params[:q])
       @products = @search.result(distinct: true).order(created_at: :desc).page(params[:page]).per(12)
     end
-    
+  end
+
+  def remove_tag
+    @original_tags = params[:tags]
+    @tags = @original_tags.delete(params[:to_remove])
+    render action: index
   end
 
   def index_with_tag

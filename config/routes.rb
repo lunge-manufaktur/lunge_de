@@ -54,6 +54,7 @@ LungeDe::Application.routes.draw do
 
     collection do
       get "/tags/*tag", to: "products#index", as: :tag
+      get "remove_tag/:tag", :action => "remove_tag", :as => "remove_tag"
     end
 
     resources :product_images
