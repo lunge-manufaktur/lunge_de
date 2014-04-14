@@ -44,6 +44,7 @@ module Api
           :current_price,
           :regular_price,
           :color,
+          :tag_list,
           stocks_attributes: [
             :id,
             :product_id,

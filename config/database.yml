@@ -17,6 +17,9 @@ test:
 
 production:
   adapter: postgresql
-  database: db/production.sqlite3
+  host: ec2-54-195-240-203.eu-west-1.compute.amazonaws.com
+  database: dn7ejgo2anb4
+  user: kecqbmfqxiqfns
+  password: m7db0QsgCL6OMxw_y9NAg_sp14
   pool: 5
   timeout: 5000
