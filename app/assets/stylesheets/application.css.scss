@@ -175,7 +175,7 @@ input:hover {
 	p,
 	a,
 	select {
-		color: $inverted-text !important;
+		color: $inverted-text;
 	}
 
 
@@ -269,9 +269,12 @@ input:hover {
 
 /* ----- TAGS ----- */
 
-.remove-tag {
-	color: #fff;
-	padding: 0 0.25rem; 
+.suffix {
+	margin-left: 1px;
+}
+
+.tag-to-add {
+	opacity: 0.7;
 }
 
 
