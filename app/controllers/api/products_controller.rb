@@ -20,6 +20,7 @@ module Api
 
     # PATCH/PUT /products/1
     def update
+      Property.find_or_create_by(params[:product]["properties_attributes"]["id"])
       respond_with Product.update(params[:id], product_params)
     end
 

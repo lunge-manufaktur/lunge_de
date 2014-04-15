@@ -100,7 +100,7 @@
 				<div class="row">
 					<div class="small-12 columns">
 						<h4>Eigenschaften</h4>
-						<% @product.properties.each do |property| %>
+						<% @product.properties.order(:name).each do |property| %>
 							<p>
 								<label><%= property.name %></label>
 								<%= property.value %>
