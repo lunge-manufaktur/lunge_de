@@ -7,9 +7,14 @@ module ProductsHelper
 							products_path
 						end
 
-		
-		content_tag(:span, tag_name.upcase,	class: "label").concat(
-		link_to inline_icon("", "ion-close"), link, class: "label tag-to-remove suffix")
+		link_to(
+			(
+				content_tag(:span, tag_name.upcase).concat(
+				content_tag(:span, "", class: "ion-close suffix"))
+			),
+			link,
+			class: "label tag-to-remove"
+		)
 	end
 
 
@@ -17,8 +22,14 @@ module ProductsHelper
 	def tag_to_add(tag_name)
 		link = "#{tag_products_path(@tags)+'/'+tag_name}"
 
-		content_tag(:span, tag_name.upcase,	class: "label tag-to-add").concat(
-		link_to inline_icon("", "ion-plus"), link, class: "label tag-to-add suffix")
+		link_to(
+			(
+				content_tag(:span, tag_name.upcase).concat(
+				content_tag(:span, "", class: "ion-plus suffix"))
+			),
+			link,
+			class: "label tag-to-add"
+		)
 	end
 
 
@@ -26,8 +37,14 @@ module ProductsHelper
 	def first_tag_to_add(tag_name)
 		link = tag_products_path(tag_name)
 
-		content_tag(:span, tag_name.upcase,	class: "label").concat(
-		link_to inline_icon("", "ion-plus"), link, class: "label suffix")
+		link_to(
+			(
+				content_tag(:span, tag_name.upcase).concat(
+				content_tag(:span, "", class: "ion-plus suffix"))
+			),
+			link,
+			class: "label tag-to-add"
+		)
 	end
 
 

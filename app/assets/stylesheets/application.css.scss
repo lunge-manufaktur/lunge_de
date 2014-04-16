@@ -194,6 +194,10 @@ input:hover {
 
 .featured_image {
 	border-bottom: 5px solid $primary-color;
+
+	img {
+		width: 100%;
+	}
 }
 
 .fade {
@@ -270,11 +274,19 @@ input:hover {
 /* ----- TAGS ----- */
 
 .suffix {
-	margin-left: 1px;
+	border-left: 1px solid #fff;
+	font-size: 90%;
+	margin-left: 0.5rem;
+	padding-left: 0.5rem;
 }
 
 .tag-to-add {
-	opacity: 0.7;
+}
+
+a.tag-to-remove,
+span.tag-to-remove {
+	background-color: darksalmon;
+	color: #fff;
 }
 
 
