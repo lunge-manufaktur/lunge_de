@@ -253,9 +253,40 @@ input:hover {
 
 }
 
+.item-horizontal-card {
+	background-color: $secondary-color;
+	position: relative;
+	width: 100%;
+	height: 150px;
+	
+	&:hover {
+		@extend .inverted;
+		background-color: $primary-color;
+		transition-duration: 0.2s;
+	}
+
+
+}
+
 
 .card-image-top {
 	border-bottom: 0px solid $primary-color;
+}
+
+.card-image-left {
+	position: absolute;
+	width: 150px;
+	height: auto;
+}
+
+.card-content-right {
+	padding: 1rem;
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 150px;
 }
 
 .card-section-full {

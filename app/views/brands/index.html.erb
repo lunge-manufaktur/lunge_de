@@ -1,19 +1,27 @@
 <h1>Marken</h1>
 
   <% @brands.each do |brand| %>
+  <section>
     <div class="row">
       <div class="small-12 columns">
         <h4><%= link_to brand.name, brand_path(brand) %></h4>
-        <% if brand.products.any? %>
-          <ul class="inline-list">
-            <% brand.products.limit(10).each do |product| %>
-              <li><%= link_to product.name, product_path(product) %></li>
-            <% end %> 
+        
+          <% brand.products.tag_counts_on(:tags).each do |tag| %>
+            <%= link_to "#{tag.name.upcase}", tag_products_path(tag.name), class: "label" %>
+          <% end %>
+
+        <hr>
+        <% if brand.products.any? %> 
+          <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+            <% brand.products.limit(9).each do |product| %>
+              <%= render partial: "products/minicard", locals: { product: product } %>
+            <% end %>
           </ul>
         <% end %>
       </div>
     </div>
-    <hr>
+    <%= link_to "Alle Artikel von #{brand.name} anzeigen...", brand_path(brand), class: "button right" %>
+  </section>
   <% end %>
 
 <br>
