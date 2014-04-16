@@ -9412,9 +9412,9 @@ th.hide-for-touch {
 }
 
 @font-face {
-  font-family: "Ionicons";
-  src: url(/assets/ionicons.eot);
-  src: url(/assets/ionicons.eot#iefix) format("embedded-opentype"), url(/assets/ionicons.ttf) format("truetype"), url(/assets/ionicons.woff) format("woff"), url(/assets/ionicons.svg) format("svg");
+  font-family: "ionicons";
+  src: url(/assets/ionicons-4dfdbf5ad73845d01bdc63ac4dc393ed.eot);
+  src: url(/assets/ionicons-4dfdbf5ad73845d01bdc63ac4dc393ed.eot#iefix) format("embedded-opentype"), url(/assets/ionicons-bedba454bf7b6dafb52a9d96d85aa139.ttf) format("truetype"), url(/assets/ionicons-6cd1b8b68c419e288630c6e5649a729d.woff) format("woff"), url(/assets/ionicons-371b210837271b98256af841adcfdb9c.svg) format("svg");
   font-weight: normal;
   font-style: normal;
 }
