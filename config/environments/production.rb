@@ -30,7 +30,7 @@ LungeDe::Application.configure do
   config.assets.compile = false
 
   # Add Modernizr to asset pipeline
-  config.assets.precompile += %w( vendor/modernizr.js )
+  config.assets.precompile += %w(vendor/modernizr.js .svg .eot .woff .ttf)
 
   # Generate digests for assets URLs.
   config.assets.digest = true
