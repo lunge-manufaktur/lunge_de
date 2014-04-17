@@ -1,70 +1,6 @@
 LungeDe::Application.routes.draw do
 
-  namespace :api, defaults: {format: 'json'} do
-    # /api/...
-
-    resources :stocks
-
-    resources :stores
-
-    resources :brands
-
-    resources :sizes
-
-    resources :products
-
-    resources :product_categories
-
-    resources :product_categorizations
-
-    resources :properties
-
-  end
-
-  
-
-  resources :categorizations
-
-  resources :categories
-
-  resources :posts
-
-  resources :properties
-
-  resources :stocks
-
-  resources :stores do
-    member do
-      post :get_directions
-    end
-  end
-
-  resources :brands
-
-  resources :product_images
-
-  resources :product_categories
-
-  resources :sizes
-
-  resources :products do
-
-    get 'page/:page', :action => :index, :on => :collection
-    get "featured" => "products#show_featured", :as => "featured"
-
-    collection do
-      get "/tags/*tag", to: "products#index", as: :tag
-      get "remove_tag/:tag", :action => "remove_tag", :as => "remove_tag"
-    end
-
-    resources :product_images
-
-    member do
-      get :edit_product_images
-    end
-
-  end
-
+  devise_for :users
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -121,5 +57,70 @@ LungeDe::Application.routes.draw do
   #   end
 
   root :to => "home#index"
+
+  namespace :api, defaults: {format: 'json'} do
+    # /api/...
+
+    resources :brands
+
+    resources :products
+
+    resources :product_categories
+
+    resources :product_categorizations
+
+    resources :properties
+
+    resources :sizes
+
+    resources :stocks
+
+    resources :stores
+
+  end
+
+  
+
+  resources :categorizations
+
+  resources :categories
+
+  resources :posts
+
+  resources :properties
+
+  resources :stocks
+
+  resources :stores do
+    member do
+      post :get_directions
+    end
+  end
+
+  resources :brands
+
+  resources :product_images
+
+  resources :product_categories
+
+  resources :sizes
+
+  resources :products do
+
+    get 'page/:page', :action => :index, :on => :collection
+    get "featured" => "products#show_featured", :as => "featured"
+
+    collection do
+      get "/tags/*tag", to: "products#index", as: :tag
+      get "remove_tag/:tag", :action => "remove_tag", :as => "remove_tag"
+    end
+
+    resources :product_images
+
+    member do
+      get :edit_product_images
+    end
+
+  end
   
 end

@@ -1,0 +1,65 @@
+<h1>Mein Account</h1>
+
+<section>
+  <div class="row">
+    <div class="small-12 medium-6 columns">
+
+      <h4>Einstellungen</h4>
+      
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+        <%= devise_error_messages! %>
+
+        <div class="fields">
+          <%= f.label :email %>
+          <%= f.email_field :email, autofocus: true %>
+        </div>
+
+        <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+          <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+        <% end %>
+
+        <div class="fields">
+          <%= f.label :password %> (leave blank if you don't want to change it)
+          <%= f.password_field :password, autocomplete: "off" %>
+        </div>
+
+        <div class="fields">
+          <%= f.label :password_confirmation %>
+          <%= f.password_field :password_confirmation, autocomplete: "off" %>
+        </div>
+
+        <div class="fields">
+          <%= f.label :current_password %> (we need your current password to confirm your changes)
+          <%= f.password_field :current_password, autocomplete: "off" %>
+        </div>
+
+        <div><%= f.submit "Update", class: "button" %></div>
+      <% end %>
+
+    </div>
+
+    <div class="small-12 medium-4 columns">
+      <div class="panel">
+        <h4>API-Key</h4>
+
+        <p>Erstelle einen neuen API-Key</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr>
+
+<section>
+
+  <h4>Cancel my account</h4>
+
+  <p>Hiermit kannst Du Deinen Account löschen.</p>
+  <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button alert" %>
+
+</section>
+
+
+
+
+<%= link_to "Back", :back %>
