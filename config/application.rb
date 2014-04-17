@@ -20,9 +20,6 @@ module LungeDe
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     config.i18n.default_locale = :de
 
-    # Generate digests for assets URLs.
-    config.assets.digest = true
-
     # Enable the asset pipeline
     config.assets.enabled = true
 

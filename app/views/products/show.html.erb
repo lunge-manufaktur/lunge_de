@@ -56,7 +56,7 @@
 				<div class="row">
 					<div class="small-12 columns">
 						<h4>Bilder</h4>
-						<ul class="clearing-thumbs small-block-grid-3" data-clearing>
+						<ul class="clearing-thumbs small-block-grid-3 medium-block-grid-5" data-clearing>
 							<% @product.product_images.each do |product_image| %>				
 								<li><%= link_to (image_tag product_image.image.url(:small), class: "with-border"), product_image.image.url(:medium) %></li>
 							<% end %>
@@ -70,6 +70,15 @@
 		<% if @product.stocks.any? %>
 			<%= render "products/show/availability" %>
 		<% end %>
+
+		<section>
+			<h4>Vorschläge & Alternativen</h4>
+			<ul class="small-block-grid-1 large-block-grid-2">
+				<% @related_products.each do |related_product| %>
+					<%= render partial: "products/minicard", locals: { product: related_product } %>
+				<% end %>
+			</ul>
+		</section>
 
 	</div>
 
@@ -125,6 +134,7 @@
 			</div>
 			<% end %>
 		</section>
+
 
 	</div>
 	

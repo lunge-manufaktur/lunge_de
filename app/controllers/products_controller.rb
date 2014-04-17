@@ -30,6 +30,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @search = Product.search(params[:q])
+    @related_products = @product.find_related_tags
   end
 
   # GET /products/new

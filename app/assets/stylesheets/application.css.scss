@@ -194,10 +194,6 @@ input:hover {
 
 .featured_image {
 	border-bottom: 5px solid $primary-color;
-
-	img {
-		width: 100%;
-	}
 }
 
 .fade {
@@ -305,9 +301,7 @@ input:hover {
 /* ----- TAGS ----- */
 
 .suffix {
-	border-left: 1px solid #fff;
 	font-size: 90%;
-	margin-left: 0.5rem;
 	padding-left: 0.5rem;
 }
 
