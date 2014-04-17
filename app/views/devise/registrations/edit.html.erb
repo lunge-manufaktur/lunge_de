@@ -41,8 +41,16 @@
     <div class="small-12 medium-4 columns">
       <div class="panel">
         <h4>API-Key</h4>
-
-        <p>Erstelle einen neuen API-Key</p>
+        <% if @user.api_keys.any? %>
+          <ul class="no-bullet">
+            <% @user.api_keys.each do |key| %>
+              <li><%= key.key %></li>
+            <% end %>
+          </ul>
+        <% else %>
+          <p>Für diesen Account wurden keine API-Keys erstellt. Hier kannst Du einen erstellen</p>
+          <%= button_to "Erstellen", api_keys_path("api_key" => {user_id: @user.id}), action: "create", method: "post", class: "button" %>
+        <% end %>
       </div>
     </div>
   </div>

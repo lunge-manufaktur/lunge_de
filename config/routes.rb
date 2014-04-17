@@ -79,7 +79,7 @@ LungeDe::Application.routes.draw do
 
   end
 
-  
+  resources :api_keys
 
   resources :categorizations
 

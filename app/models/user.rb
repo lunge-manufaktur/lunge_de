@@ -22,4 +22,10 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  # Associations
+  has_many :api_keys, dependent: :destroy
+
+  accepts_nested_attributes_for :api_keys
+
 end

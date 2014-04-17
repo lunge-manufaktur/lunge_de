@@ -1,6 +1,7 @@
 module Api
   class BrandsController < ApplicationController
     protect_from_forgery except: [:create, :update]
+    before_filter :restrict_access
     respond_to :json
 
     # GET /brands
@@ -40,6 +41,12 @@ module Api
         :name,
         :logo
       )
+    end
+
+    def restrict_access
+      authenticate_or_request_with_http_token do |token, options|
+        ApiKey.exists?(key: token)
+      end
     end
 
   end
