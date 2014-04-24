@@ -4,7 +4,11 @@ class PropertiesController < ApplicationController
   # GET /properties
   # GET /properties.json
   def index
-    @properties = Property.all
+    if params[:product_id]
+      @properties = Property.where(product_id: params[:product_id])
+    else
+      @properties = Property.all
+    end
   end
 
   # GET /properties/1

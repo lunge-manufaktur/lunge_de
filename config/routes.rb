@@ -116,9 +116,12 @@ LungeDe::Application.routes.draw do
     end
 
     resources :product_images
+    resources :properties
 
     member do
       get :edit_product_images
+      get :edit_properties
+      patch :save_properties
     end
 
   end

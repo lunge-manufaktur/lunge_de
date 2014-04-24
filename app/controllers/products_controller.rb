@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy, :edit_product_images]
+  before_action :set_product, only: [:show, :edit, :update, :destroy, :edit_product_images, :edit_properties, :save_properties]
   protect_from_forgery except: [:create, :update]
 
   # GET /products
@@ -45,6 +45,16 @@ class ProductsController < ApplicationController
   # GET /products/1/edit_product_images
   def edit_product_images
     render "edit_product_images", layout: false
+  end
+
+  # GET /products/1/edit_properties
+  def edit_properties
+    render "edit_properties", layout: false
+  end
+
+  def save_properties
+    @product.update(product_params)
+    redirect_to edit_properties_product_path(@product)
   end
 
   # POST /products
@@ -169,7 +179,8 @@ class ProductsController < ApplicationController
           :id,
           :product_id,
           :name,
-          :value
+          :value,
+          :_destroy
         ]
       )
     end

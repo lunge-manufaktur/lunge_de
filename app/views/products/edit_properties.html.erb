@@ -1,0 +1,44 @@
+<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => false %>
+<%= javascript_include_tag "vendor/modernizr" %>
+<%= csrf_meta_tags %>
+<script type="text/javascript" src="//use.typekit.net/acr5efa.js"></script>
+<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+<%= nested_form_for @product, :url => save_properties_product_path(@product) do |f| %>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <% if @product.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+          <ul>
+          <% @product.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns">
+
+      <%= f.fields_for :properties %>
+      <%= f.link_to_add "Eigenschaft hinzufügen", :properties, class: "tiny button" %>
+      
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="small-12 columns">
+      <div class="actions">
+        <%= f.submit "Speichern", class: "button expand" %>
+      </div>      
+    </div>
+  </div>
+
+<% end %>
+
+<%= javascript_include_tag "application", "data-turbolinks-track" => false %>
