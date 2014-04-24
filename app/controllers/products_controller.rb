@@ -122,6 +122,8 @@ class ProductsController < ApplicationController
         :id,
         :name,
         :is_published,
+        :is_featured,
+        :is_on_frontpage,
         :sku,
         :description,
         :brand_id,

@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 	def index
-		@products = Product.published.limit(20)
+		@products = Product.on_frontpage.limit(8)
 		@brands = Brand.active.order(:name)
 	end
 end

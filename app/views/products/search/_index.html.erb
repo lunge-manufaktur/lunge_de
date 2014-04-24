@@ -7,7 +7,7 @@
 			<div class="row">
 				<div class="small-12 medium-6 large-4 columns">
 
-					<h4>Artikel</h4>
+					<h4>Suchen</h4>
 
 					<p>
 						<%= f.label :name_cont, "Bezeichnung" %>
@@ -29,10 +29,16 @@
 						<%= f.collection_select(:brand_id_eq, Brand.active.distinct, :id, :name, {prompt: "Marke auswählen..."}) %>
 					</p>
 
+					<div class="row">
+						<div class="small-12 columns">
+							<%= f.submit "Suchen", class: "button" %><span> | </span><%= link_to "Alle anzeigen", products_path %>
+						</div>
+					</div>
 				</div>
 
+
 				<div id="tag-cloud" class="small-12 medium-6 large-8 columns">
-					<h4>Tags</h4>
+					<h4>Tags filtern</h4>
 					<% tag_cloud Product.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class| %>
 						<%= tag_cloud_item(tag.name) %>
 					<% end %>
@@ -40,12 +46,6 @@
 
 			</div>
 
-			<div class="row">
-				<div class="small-12 columns">
-					<%= f.submit "Suchen", class: "button right" %>
-					<%= link_to "Alle anzeigen", products_path %>
-				</div>
-			</div>
 
 	  <% end %>
 

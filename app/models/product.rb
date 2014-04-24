@@ -47,6 +47,7 @@ class Product < ActiveRecord::Base
 	scope :published, -> { where(is_published: true) }
 	scope :on_sale, -> { where(is_on_sale: true) }
 	scope :featured, -> { where(is_featured: true) }
+	scope :on_frontpage, -> { where(is_on_frontpage: true) }
 
 	# Methods
 
