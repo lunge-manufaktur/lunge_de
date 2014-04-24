@@ -1,6 +1,7 @@
 module Api
   class PropertiesController < ApplicationController
     protect_from_forgery except: [:create, :update]
+    before_filter :restrict_access
     respond_to :json
 
     # GET /stocks
@@ -33,15 +34,20 @@ module Api
 
     private
 
-      # Never trust parameters from the scary internet, only allow the white list through.
-      def property_params
-        params.require(:property).permit(
-          :id,
-          :product_id,
-          :name,
-          :value
-        )
+    def restrict_access
+      authenticate_or_request_with_http_token do |token, options|
+        ApiKey.exists?(key: token)
       end
+    end
+
+    def property_params
+      params.require(:property).permit(
+        :id,
+        :product_id,
+        :name,
+        :value
+      )
+    end
 
   end
 end

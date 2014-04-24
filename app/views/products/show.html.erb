@@ -8,8 +8,8 @@
 			<%= image_tag @product.default_image("full_width"),
 				data: {
 					interchange: "[#{@product.default_image('full_width')}, (default)],
-					[#{@product.default_image('medium')}, (medium)],
 					[#{@product.default_image('small')}, (small)],
+					[#{@product.default_image('medium')}, (medium)],
 					[#{@product.default_image('full_width')}, (large)]"
 				}
 			%>

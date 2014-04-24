@@ -193,7 +193,9 @@ input:hover {
 /* ----- PAGE ----- */
 
 .featured_image {
-	border-bottom: 5px solid $primary-color;
+	border-bottom: 3px solid $primary-color;
+	max-height: 405px;
+	overflow: hidden;
 }
 
 .fade {
