@@ -1,3 +1,5 @@
+<%= tinymce_assets %>
+
 <!-- title bar -->
 <%= content_for :title_bar do %>
 	<h2 class="subtitle"><small><%= @post.subtitle %></small></h2>
@@ -8,3 +10,5 @@
 
 <%= link_to 'Show', @post %> |
 <%= link_to 'Back', posts_path %>
+
+<%= tinymce :language => "de" %>

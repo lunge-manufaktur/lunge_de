@@ -14,6 +14,11 @@ gem 'puma'
 # Devise authentication
 gem 'devise'
 
+group :development, :test do
+	gem "rspec-rails"
+	gem "capybara"
+end
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -53,9 +58,6 @@ gem 'annotate'
 gem "paperclip", "~> 4.1"
 gem "paperclip-storage-ftp"
 
-# dropzone drag & drop file upload
-gem 'dropzonejs-rails'
-
 # nested_form
 gem 'nested_form'
 
@@ -75,6 +77,10 @@ gem 'acts-as-taggable-on'
 
 # Pagination
 gem 'kaminari'
+
+# WYSIWYG Editor
+gem "tinymce-rails"
+gem "tinymce-rails-langs"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
