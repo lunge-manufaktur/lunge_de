@@ -16,14 +16,12 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :slug %><br>
-    <%= f.text_field :slug %>
-  </div>
-  <div class="field">
-    <%= f.label :parent_id %><br>
-    <%= f.collection_select(:parent_id, Category.all, :id, :name) %>
+    <p>
+      <%= f.label :parent_id, "Übergeordnete Gruppe (optional)" %>
+      <%= f.select :parent_id, nested_set_options(Category, @category) {|i| "#{'-' * i.level} #{i.name}" }, prompt: "Wähle eine übergeordnete Kategorie..." %>
+    </p>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Speichern", class: "button" %>
   </div>
 <% end %>

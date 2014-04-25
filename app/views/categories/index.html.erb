@@ -1,29 +1,26 @@
-<h1>Listing categories</h1>
+<!-- title bar -->
+<%= content_for :title_bar do %>
+  <h1>Kategorien</h1>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Slug</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<ul class="no-bullet">
+  <% nested_set_options(Category, @category) do |category| %>
+    <li style="padding-left:<%= "#{category.level*2}rem" %>">
+      <div class="row">
+        <div class="small-7 columns">
+          <%= link_to category.name, category_path(category) %>
+        </div>
+        <div class="small-5 columns">
+          <% if current_user %>
+            <%= link_to 'Bearbeiten', edit_category_path(category) %> | 
+            <%= link_to 'Löschen', category, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+      </div>
+      <hr>
+    </li>
+  <% end %>
+</ul>
 
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.name %></td>
-        <td><%= category.slug %></td>
-        <td><%= link_to 'Show', category %></td>
-        <td><%= link_to 'Edit', edit_category_path(category) %></td>
-        <td><%= link_to 'Destroy', category, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
 
-<br>
-
-<%= link_to 'New Category', new_category_path %>
+<%= link_to "Neue Kategorie", new_category_path, class: "button" %>

@@ -8,6 +8,9 @@
 #  created_at :datetime
 #  updated_at :datetime
 #  parent_id  :integer
+#  lft        :integer
+#  rgt        :integer
+#  depth      :integer
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
