@@ -55,6 +55,7 @@ module Api
         :regular_price,
         :color,
         :tag_list,
+        :slug,
         stocks_attributes: [
           :id,
           :product_id,

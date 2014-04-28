@@ -9,6 +9,7 @@
 #  is_published :boolean
 #  created_at   :datetime
 #  updated_at   :datetime
+#  slug         :string(255)
 #
 
 class Post < ActiveRecord::Base
@@ -16,6 +17,7 @@ class Post < ActiveRecord::Base
 	# Associations
 	has_many :categories, through: :categorizations
 	has_many :categorizations
+	has_many :post_images
 
 	accepts_nested_attributes_for :categories, :categorizations
 

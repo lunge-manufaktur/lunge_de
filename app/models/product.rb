@@ -18,6 +18,7 @@
 #  is_on_sale           :boolean
 #  is_on_frontpage      :boolean
 #  is_featured          :boolean
+#  slug                 :string(255)
 #
 
 class Product < ActiveRecord::Base
