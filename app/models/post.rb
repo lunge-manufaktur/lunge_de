@@ -14,18 +14,19 @@
 class Post < ActiveRecord::Base
 
 	# Associations
-
 	has_many :categories, through: :categorizations
 	has_many :categorizations
 
 	accepts_nested_attributes_for :categories, :categorizations
 
-	# Scopes
+	# Friendly ID
+	include FriendlyId
+	friendly_id :title, :use => :slugged
 
+	# Scopes
 	scope :published, -> { where(is_published: true) }
 
 	# Methods
-
 	def short_description(length=nil)
 		length ||= 200
 		content.truncate(length, separator: " ") unless content.nil?

@@ -23,7 +23,6 @@
 class Product < ActiveRecord::Base
 
 	# Associations
-
 	belongs_to :brand
 	belongs_to :size
 	belongs_to :product_category
@@ -42,14 +41,12 @@ class Product < ActiveRecord::Base
 	acts_as_taggable
 
 	# Scopes
-
 	scope :published, -> { where(is_published: true) }
 	scope :on_sale, -> { where(is_on_sale: true) }
 	scope :featured, -> { where(is_featured: true) }
 	scope :on_frontpage, -> { where(is_on_frontpage: true) }
 
 	# Methods
-
 	include IconHelper
 
 	def default_image(size=nil)

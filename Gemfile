@@ -82,6 +82,9 @@ gem 'kaminari'
 gem "tinymce-rails"
 gem "tinymce-rails-langs"
 
+# Friendly URLs
+gem 'friendly_id'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
 
