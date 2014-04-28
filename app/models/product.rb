@@ -40,6 +40,10 @@ class Product < ActiveRecord::Base
 	# Acts as taggable on gem
 	acts_as_taggable
 
+	# Friendly ID
+	include FriendlyId
+	friendly_id :title, :use => :slugged
+
 	# Scopes
 	scope :published, -> { where(is_published: true) }
 	scope :on_sale, -> { where(is_on_sale: true) }
@@ -48,6 +52,10 @@ class Product < ActiveRecord::Base
 
 	# Methods
 	include IconHelper
+
+	def title
+		"#{self.brand.name} #{name} #{sku}"
+	end 
 
 	def default_image(size=nil)
     if self.product_images.any?
