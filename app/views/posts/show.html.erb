@@ -1,3 +1,20 @@
+<!-- full width image -->
+<%= content_for :full_width_content do %>
+	<% if @post.post_images.any? %>
+		<div class="fade show-for-xxlarge-up"></div>
+		<div class="featured_image">
+			<%= image_tag @post.default_image("full_width"),
+				data: {
+					interchange: "[#{@post.default_image('full_width')}, (default)],
+					[#{@post.default_image('small')}, (small)],
+					[#{@post.default_image('medium')}, (medium)],
+					[#{@post.default_image('full_width')}, (large)]"
+				}
+			%>
+		</div>
+	<% end %>
+<% end %>
+
 <!-- title bar -->
 <%= content_for :title_bar do %>
   <h1><%= @post.title %></h1>

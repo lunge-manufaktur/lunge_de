@@ -80,6 +80,13 @@ class PostsController < ApplicationController
         categorizations_attributes: [
           :product_id,
           :category_id
+        ],
+        post_images_attributes: [
+          :id,
+          :post_id,
+          :image,
+          :default,
+          :_destroy
         ]
       )
     end
