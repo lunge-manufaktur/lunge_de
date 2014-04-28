@@ -16,11 +16,9 @@
 class ProductImage < ActiveRecord::Base
 
 	# Associations
-
   belongs_to :product
 
   # Paperclip
-
   require "paperclip/storage/ftp"
 
   Paperclip.interpolates :product_id do |attachment, style|
@@ -61,7 +59,6 @@ class ProductImage < ActiveRecord::Base
 
 
   # Scopes
-
   scope :featured, -> { where(default: true) }
 
 end

@@ -39,7 +39,6 @@ class Product < ActiveRecord::Base
 	accepts_nested_attributes_for :properties, :allow_destroy => true
 
 	# Acts as taggable on gem
-
 	acts_as_taggable
 
 	# Scopes
