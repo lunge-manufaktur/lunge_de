@@ -1,33 +1,20 @@
-<h1>Listing posts</h1>
+<!-- title bar -->
+<%= content_for :title_bar do %>
+  <h1>Beiträge</h1>
+<% end %>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Subtitle</th>
-      <th>Content</th>
-      <th>Is published</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.subtitle %></td>
-        <td><%= post.content %></td>
-        <td><%= post.is_published %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<!-- content -->
+<div class="row">
+  <div class="small-12 columns">
 
-<br>
+    <ul class="small-block-grid-1 medium-block-grid-3">
+      <% @posts.each do |post| %>
+        <%= render partial: "posts/card", locals: { post: post } %>
+      <% end %>
+    </ul>
+
+  </div>
+</div>
 
 <%= link_to 'New Post', new_post_path %>

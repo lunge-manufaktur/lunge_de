@@ -1,0 +1,14 @@
+<li>
+	<a href="<%= post_path(post) %>">	
+	<div class="item-horizontal-card">
+		<div class="card-image-left">
+			<%= image_tag post.default_image("card"), class: "card-image-top" %>
+		</div>
+		<div class="card-content-right">
+			<h4><%= post.title %></h4>
+			<h6 class="subtitle"><%= post.subtitle %></h6>
+			<p><%= simple_format(post.short_description(100)) %></p>
+		</div>
+	</div>
+	</a>
+</li>
