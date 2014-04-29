@@ -6,8 +6,8 @@
 		</div>
 		<div class="card-section-narrow">
 			<h4><%= post.title %></h4>
-			<h6 class="subtitle"><%= post.subtitle %></h6>
-			<p><%= simple_format(post.short_description(200)) %></p>
+			<h6><%= post.subtitle %></h6>
+			<p><%= strip_tags(post.short_description(200)) %></p>
 			<ul class="no-bullet">
 				<% post.categories.each do |category| %>
 					<span class="label "><%= category.name %></span>
