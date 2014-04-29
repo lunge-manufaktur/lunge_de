@@ -3,14 +3,16 @@
 <!-- full width image -->
 <%= content_for :full_width_content do %>
 	<% if @product.product_images.any? %>
-		<div class="fade show-for-xxlarge-up"></div>
+		
 		<div class="featured_image">
+			<div class="fade show-for-xxlarge-up"></div>
 			<%= image_tag @product.default_image("full_width"),
 				data: {
 					interchange: "[#{@product.default_image('full_width')}, (default)],
 					[#{@product.default_image('small')}, (small)],
 					[#{@product.default_image('medium')}, (medium)],
-					[#{@product.default_image('full_width')}, (large)]"
+					[#{@product.default_image('full_width')}, (large)],
+					[#{@product.default_image('full_width')}, (xlarge)]"
 				}
 			%>
 		</div>
