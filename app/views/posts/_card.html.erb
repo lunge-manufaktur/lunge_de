@@ -2,12 +2,12 @@
 	<a href="<%= post_path(post) %>">	
 	<div class="item-card">
 		<div class="card-section-full">
-			<%= image_tag post.default_image("card"), class: "card-image-top" %>
+			<%= image_tag post.default_image("medium"), class: "card-image-top" %>
 		</div>
 		<div class="card-section-narrow">
-			<h4><%= post.title %></h4>
+			<h3><%= post.title %></h3>
 			<h6><%= post.subtitle %></h6>
-			<p><%= strip_tags(post.short_description(200)) %></p>
+			<p><%= strip_tags(post.short_description(300)) %></p>
 			<ul class="no-bullet">
 				<% post.categories.each do |category| %>
 					<span class="label "><%= category.name %></span>

@@ -4,7 +4,9 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.all
+    @search = Post.search(params[:q])
+    @posts = @search.result(distinct: true).order(created_at: :desc)
+    @categories = Category.all
   end
 
   # GET /posts/1
