@@ -14,4 +14,4 @@ de:
           one: "<b>1</b> %{entry_name} gefunden"
           other: "Displaying <b>all %{count}</b> %{entry_name}"
       more_pages:
-        display_entries: "Zeige <b>%{first}&nbsp;-&nbsp;%{last}</b> / <b>%{total}</b> gesamt"
+        display_entries: "Displaying %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> of <b>%{total}</b> in total"

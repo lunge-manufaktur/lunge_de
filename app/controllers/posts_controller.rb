@@ -78,6 +78,7 @@ class PostsController < ApplicationController
         :subtitle,
         :content,
         :is_published,
+        :is_on_homepage,
         :category_ids => [],
         categorizations_attributes: [
           :product_id,
