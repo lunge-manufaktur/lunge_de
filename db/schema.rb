@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140505052643) do
+ActiveRecord::Schema.define(version: 20140505054347) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,7 +43,10 @@ ActiveRecord::Schema.define(version: 20140505052643) do
     t.integer  "lft"
     t.integer  "rgt"
     t.integer  "depth"
+    t.string   "slug"
   end
+
+  add_index "categories", ["slug"], name: "index_categories_on_slug", using: :btree
 
   create_table "categorizations", force: true do |t|
     t.integer  "post_id"

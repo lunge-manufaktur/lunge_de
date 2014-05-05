@@ -22,9 +22,11 @@ class Category < ActiveRecord::Base
 	# awesome_nested_sets gem
 	acts_as_nested_set
 
+	# Friendly ID
+	include FriendlyId
+	friendly_id :name, :use => :slugged
+
 	# Methods
-	def slug
-		name.parameterize
-	end
+	
 	
 end

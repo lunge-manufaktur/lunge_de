@@ -28,6 +28,7 @@ class Post < ActiveRecord::Base
 
 	# Scopes
 	scope :published, -> { where(is_published: true) }
+    scope :homepage, -> { where(is_on_homepage: true) }
 
 	# Methods
 	def short_description(length=nil)
