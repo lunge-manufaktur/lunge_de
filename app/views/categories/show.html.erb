@@ -1,14 +1,53 @@
-<p id="notice"><%= notice %></p>
+<!-- title bar -->
+<%= content_for :title_bar do %>
+  <h6 class="subtitle">Beiträge aus der Kategorie</h6>
+  <h1><%= @category.name %></h1>
+<% end %>
 
-<p>
-  <strong>Name:</strong>
-  <%= @category.name %>
-</p>
 
-<p>
-  <strong>Slug:</strong>
-  <%= @category.slug %>
-</p>
+<!-- content -->
+<div class="row">
+	<div class="small-12 columns">
+		<p>
+			Hier finden Sie einige Beiträge zu den verschiedensten Themen rund um den Laufsport und gesunde Bewegung.
+		</p>
+	</div>
+</div>
+
+<div class="row">
+  <div class="small-12 medium-8 large-9 columns">
+
+    <ul class="small-block-grid-1 medium-block-grid-1">
+      <% @posts.each do |post| %>
+        <%= render partial: "posts/card", locals: { post: post } %>
+      <% end %>
+    </ul>
+
+  </div>
+
+  <div class="small-12 medium-4 large-3 columns">
+    <section>
+      <%= search_form_for @search do |f| %>
+        <div class="row collapse">
+          <div class="small-8 columns">
+            <%= f.search_field :title_or_subtitle_or_content_cont, placeholder: "In Beiträgen suchen..." %>
+          </div>
+          <div class="small-4 columns">
+            <%= f.submit "Suchen", class: "button postfix" %>
+          </div>
+        </div>
+      <% end %>
+    </section>
+    
+  	<section>
+  		<h4>Kategorien</h4>
+  		<%= render "categories/nested_list" %>
+  	</section>
+  </div>
+</div>
+
+<%= link_to 'New Post', new_post_path %>
+
 
 <%= link_to 'Edit', edit_category_path(@category) %> |
 <%= link_to 'Back', categories_path %>

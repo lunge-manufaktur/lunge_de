@@ -10,6 +10,9 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
+    @search = Post.search(params[:q])
+    @posts = @search.result(distinct: true).order(created_at: :desc)
+    @posts = Post.joins(:categories).where("categories.lft" => @category.lft..@category.rgt).distinct
   end
 
   # GET /categories/new

@@ -15,12 +15,12 @@
   <!-- content -->
   <% if @tags %>
     <section>
-      <p>
+      <div class="panel">
         Aktive Filter: 
         <% @tags.each do |tag| %>
           <%= tag_to_remove(tag) %>
         <% end %>
-      </p>
+      </div>
     </section>
   <% end %>
 
@@ -68,10 +68,18 @@
       <section>
         <h4>Tags</h4>
         <div id="tag-cloud">
-          <% tag_cloud Product.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class| %>
-            <%= tag_cloud_item(tag.name) %>
+          <% if @tags %>
+            <% tag_cloud Product.tagged_with(@tags).tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class| %>
+              <%= tag_cloud_item(tag.name) %>
+            <% end %>
+          <% else %>
+            <% tag_cloud Product.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class| %>
+              <%= tag_cloud_item(tag.name) %>
+            <% end %>  
           <% end %>
         </div>
+        <hr>
+        <%= link_to "Filter aufheben", products_path, class: "small alert button expand" %>
       </section>
     </div>
 

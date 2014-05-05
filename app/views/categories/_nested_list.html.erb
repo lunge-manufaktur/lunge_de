@@ -1,11 +1,7 @@
 <ul class="no-bullet">
-  <% nested_set_options(Category, @category) do |category| %>
-    <li style="padding-left:<%= "#{category.level*1}rem" %>">
-      <div class="row">
-        <div class="small-12 columns">
-          <%= link_to category.name, category_path(category) %>
-        </div>
-      </div>
+  <% nested_set_options(Category) do |category| %>
+    <li style="padding-left:<%= "#{category.level*1}rem" %>" class="<%= "active inverted" if category == @category %>">
+    	<%= link_to category.name, category_path(category) %>
     </li>
   <% end %>
 </ul>

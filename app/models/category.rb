@@ -15,6 +15,7 @@
 class Category < ActiveRecord::Base
 
 	# Associations
+	has_many :categorizations
 	has_many :posts, through: :categorizations
 	belongs_to :parent, class_name: "Category"
 	has_many :children, foreign_key: :parent_id, class_name: "Category"
