@@ -28,7 +28,7 @@ class Post < ActiveRecord::Base
 
 	# Scopes
 	scope :published, -> { where(is_published: true) }
-    scope :homepage, -> { where(is_on_homepage: true) }
+  scope :homepage, -> { where(is_on_homepage: true) }
 
 	# Methods
 	def short_description(length=nil)
@@ -54,7 +54,7 @@ class Post < ActiveRecord::Base
     		"http://placehold.it/300&text=Kein+Bild+vorhanden"
     	when "card"
     		"http://placehold.it/640&text=Kein+Bild+vorhanden"
-    	end	
+    	end
     end
 	end
 

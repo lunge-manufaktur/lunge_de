@@ -7,7 +7,7 @@
         <h1>Produkte</h1>
       </div>
     </div>
-    
+
   <% end %>
 
 
@@ -16,7 +16,7 @@
   <% if @tags %>
     <section>
       <div class="panel">
-        Aktive Filter: 
+        Aktive Filter:
         <% @tags.each do |tag| %>
           <%= tag_to_remove(tag) %>
         <% end %>
@@ -61,7 +61,7 @@
           </p>
 
           <p>
-            <%= f.submit "Suchen", class: "button postfix" %>
+            <%= f.submit "Suchen", class: "small button expand" %>
           </p>
         <% end %>
       </section>
@@ -75,7 +75,7 @@
           <% else %>
             <% tag_cloud Product.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class| %>
               <%= tag_cloud_item(tag.name) %>
-            <% end %>  
+            <% end %>
           <% end %>
         </div>
         <hr>
@@ -83,8 +83,8 @@
       </section>
     </div>
 
-  </div>
-
+  </div>  
+</div>
 
 <section>
   <%= paginate @products %>
