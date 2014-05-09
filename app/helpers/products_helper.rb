@@ -62,33 +62,3 @@ module ProductsHelper
 	end
 
 end
-
-
-
-# <% if @tags.include?(tag.name) %>
-# 	<span class="label alert"><%= tag.name.upcase %></span>							
-# 	<%= link_to inline_icon("", "ion-ios7-close-empty"),
-# 	  (if @tags.size > 1
-# 	    tag_products_path(@tags.reject{ |i| i == tag.name})
-# 	  else
-# 	    products_path
-# 	  end),
-# 	  class: "label alert remove-tag"
-# 	%>
-# <% else %>
-# 	<%= link_to link_to inline_icon(tag.name.upcase.to_s, "ion-ios7-plus-empty"), "#{tag_products_path(@tags)+'/'+tag.name}", class: "#{css_class} secondary label" %>
-# <% end %>
-
-
-
-# <span class="label">
-#   <%= tag.upcase %>
-# </span>
-#   <%= link_to inline_icon("", "ion-ios7-close-empty"),
-#     (if @tags.size > 1
-#       tag_products_path(@tags.reject{ |i| i == tag})
-#     else
-#       products_path
-#     end),
-#     class: "label remove-tag"
-#   %>
