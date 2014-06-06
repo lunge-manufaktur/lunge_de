@@ -7,8 +7,9 @@ class ProductsController < ApplicationController
   def index
     if params[:tag]
       @tags = params[:tag].split("/")
-      @products = Product.tagged_with(@tags).page(params[:page]).per(12)
+      # @products = Product.tagged_with(@tags).page(params[:page]).per(12)
       @search = Product.search(params[:q])
+      @products = @search.result.tagged_with(@tags).page(params[:page]).per(12)
     else
       @search = Product.search(params[:q])
       @products = @search.result(distinct: true).order(created_at: :desc).page(params[:page]).per(12)

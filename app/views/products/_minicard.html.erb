@@ -5,7 +5,7 @@
 			<%= image_tag product.default_image("card"), class: "card-image-top" %>
 		</div>
 		<div class="card-content-right">
-			<h6><%= product.name %></h6>
+			<h5><%= product.name %></h5>
 			<p><%= product.color.capitalize %></p>
 			<h6><%= number_to_currency(product.current_price, unit: "€ ") %></h6>
 		</div>
