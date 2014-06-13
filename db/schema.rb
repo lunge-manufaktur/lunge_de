@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140505054347) do
+ActiveRecord::Schema.define(version: 20140613082451) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -57,6 +57,22 @@ ActiveRecord::Schema.define(version: 20140505054347) do
 
   add_index "categorizations", ["category_id"], name: "index_categorizations_on_category_id", using: :btree
   add_index "categorizations", ["post_id"], name: "index_categorizations_on_post_id", using: :btree
+
+  create_table "events", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "store_id"
+    t.datetime "starts_at"
+    t.datetime "ends_at"
+    t.time     "pause"
+    t.boolean  "vacation",   default: false
+    t.boolean  "sick",       default: false
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "events", ["store_id"], name: "index_events_on_store_id", using: :btree
+  add_index "events", ["user_id"], name: "index_events_on_user_id", using: :btree
 
   create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false

@@ -10,6 +10,7 @@
 #  lft        :integer
 #  rgt        :integer
 #  depth      :integer
+#  slug       :string(255)
 #
 
 class Category < ActiveRecord::Base

@@ -455,3 +455,40 @@ ul.pagination {
 	background-color: scale-color($secondary-color, $lightness: -20%);
 	color: #fff;
 }
+
+
+/* ----- CALENDAR ----- */
+
+table.calendar {
+	width: 100%;
+	border: none;
+
+	tr {
+		background-color: transparent;
+		border-bottom: 1px solid $secondary-color;
+	}
+
+	td {
+		height: 200px;
+		position: relative;
+		border-top: 1px solid $secondary-color;
+	}
+
+	td.today {
+		background-color: $secondary-color;
+	}
+
+	.date-header {
+		position: absolute;
+    padding: 0.5rem;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+	}
+
+	.prev-month,
+	.next-month {
+		opacity: 0.4;
+	}
+
+}

@@ -1,0 +1,24 @@
+<!-- title bar -->
+<%= content_for :title_bar do %>
+  <div class="row">
+    <div class="small-12 medium-9 columns">
+      <h1>Arbeitsplan</h1>
+    </div>
+  </div>
+<% end %>
+
+<div class="row">
+	<div class="small-12 columns">
+		<%= month_calendar events: @events, table: {class: "calendar"} do |date, events| %>
+		  <div class="date-header">
+		  	<h5><%= l date, format: :calendar %></h5>
+		  </div>
+
+		  <% events.each do |event| %>
+		    <div>
+		      <h6><%= event.name %></h6>
+		    </div>
+		  <% end %>
+		<% end %>
+	</div>
+</div>

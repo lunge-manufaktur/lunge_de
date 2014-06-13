@@ -92,10 +92,10 @@
 	"buffers":
 	[
 		{
-			"file": "config/routes.rb",
+			"file": "app/controllers/products_controller.rb",
 			"settings":
 			{
-				"buffer_size": 2754,
+				"buffer_size": 4387,
 				"line_ending": "Unix"
 			}
 		},
@@ -104,6 +104,22 @@
 			"settings":
 			{
 				"buffer_size": 2131,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/product.rb",
+			"settings":
+			{
+				"buffer_size": 2878,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/products/index.html.erb",
+			"settings":
+			{
+				"buffer_size": 1297,
 				"line_ending": "Unix"
 			}
 		}
@@ -172,19 +188,28 @@
 	},
 	"file_history":
 	[
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/application.css.scss",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/scaffolds.css.scss",
+		"/Users/ulflunge/projects/lunge_de/app/views/stores/show.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/application.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/views/products/_minicard.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/application.css.scss",
+		"/Users/ulflunge/projects/lunge_de/app/views/stores/show/_directions.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/views/stores/_card.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/views/stores/index.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/stores_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/stores.js.erb",
+		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/application.js",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/stores.css.scss",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/api/products_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/config/routes.rb",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/foundation_and_overrides.scss",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/scaffolds.css.scss",
 		"/Users/ulflunge/projects/lunge_de/config/environments/production.rb",
 		"/Users/ulflunge/projects/lunge_de/Gemfile",
 		"/Users/ulflunge/projects/lunge_de/Gemfile.lock",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/ionicons.css.scss",
 		"/Users/ulflunge/projects/lunge_de/config/environments/development.rb",
-		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/application.js",
 		"/Users/ulflunge/projects/lunge_de/config/application.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/foundation_and_overrides.scss",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/api/products_controller.rb",
 		"/Users/ulflunge/Library/Application Support/Sublime Text 2/Packages/SublimeLinter/README.md",
 		"/Users/ulflunge/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/index.html.erb",
@@ -215,7 +240,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/categories/index.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/show.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/posts/_minicard.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/products/_minicard.html.erb",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20140326135552_dummy_migration.rb",
 		"/Users/ulflunge/Library/Caches/Cleanup At Startup/Transmit/12264997-1C89-4531-B74C-2D33DC11CAA8/header.php",
 		"/Users/ulflunge/projects/lunge_de/app/models/product_image.rb",
@@ -260,7 +284,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/properties/index.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/properties_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/edit_product_images.html.erb",
-		"/Users/ulflunge/projects/lunge_de/config/routes.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/edit_properties.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/edit.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/properties_controller.rb",
@@ -283,10 +306,6 @@
 		"/Users/ulflunge/projects/lunge_de/Procfile",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_footer.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/models/property.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/stores/show/_directions.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/stores/show.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/stores/index.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/stores.js.erb",
 		"/Users/ulflunge/projects/lunge_de/config/database.yml",
 		"/Users/ulflunge/projects/lunge_de/config.ru",
 		"/Users/ulflunge/projects/lunge_de/config/puma.rb",
@@ -296,10 +315,7 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_first_page.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_page.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_prev_page.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_paginator.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/models/brand.rb",
-		"/Users/ulflunge/projects/lunge_de/config/initializers/plugins.rb",
-		"/Users/ulflunge/projects/lunge_de/config/initializers/kaminari_config.rb"
+		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_paginator.html.erb"
 	],
 	"find":
 	{
@@ -317,6 +333,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"h1",
+			"nova-soft",
 			"sprocket",
 			"compress",
 			"labels",
@@ -423,122 +441,33 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "config/routes.rb",
+					"file": "app/controllers/products_controller.rb",
 					"settings":
 					{
-						"buffer_size": 2754,
+						"buffer_size": 4387,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1694,
-								1694
+								1268,
+								1268
 							]
 						],
 						"settings":
 						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
 							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1928.0,
+						"translation.y": 121.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -561,101 +490,66 @@
 						],
 						"settings":
 						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110.0
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": true,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2.0,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_gutter_marks_theme": "simple",
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": false,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
 							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 733.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/models/product.rb",
+					"settings":
+					{
+						"buffer_size": 2878,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 827.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/views/products/index.html.erb",
+					"settings":
+					{
+						"buffer_size": 1297,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"

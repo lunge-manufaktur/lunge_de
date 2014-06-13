@@ -2,14 +2,15 @@
 #
 # Table name: posts
 #
-#  id           :integer          not null, primary key
-#  title        :string(255)
-#  subtitle     :string(255)
-#  content      :text
-#  is_published :boolean
-#  created_at   :datetime
-#  updated_at   :datetime
-#  slug         :string(255)
+#  id             :integer          not null, primary key
+#  title          :string(255)
+#  subtitle       :string(255)
+#  content        :text
+#  is_published   :boolean
+#  created_at     :datetime
+#  updated_at     :datetime
+#  slug           :string(255)
+#  is_on_homepage :boolean
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

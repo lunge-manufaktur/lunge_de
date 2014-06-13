@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 
 ruby '2.1.0'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.3'
+
+gem 'rails-i18n', '~> 4.0.0'
 
 # Use sqlite3 as the database for Active Record
 gem 'pg'
@@ -84,6 +85,9 @@ gem "tinymce-rails-langs"
 
 # Friendly URLs
 gem 'friendly_id'
+
+# Calendar
+gem "simple_calendar", "~> 1.1.0"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

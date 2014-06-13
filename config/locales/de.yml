@@ -1,4 +1,7 @@
 de:
+  date:
+    formats:
+      calendar: "%d"
   views:
     pagination:
       first: "&laquo;"

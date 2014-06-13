@@ -58,25 +58,20 @@ LungeDe::Application.routes.draw do
 
   root :to => "home#index"
 
+  # /api/...
   namespace :api, defaults: {format: 'json'} do
-    # /api/...
-
     resources :brands
-
     resources :products
-
     resources :product_categories
-
     resources :product_categorizations
-
     resources :properties
-
     resources :sizes
-
     resources :stocks
-
     resources :stores
+  end
 
+  namespace :admin do
+    resources :events
   end
 
   resources :api_keys

@@ -1,0 +1,37 @@
+<!-- title bar -->
+<%= content_for :title_bar do %>
+  <div class="row">
+    <div class="small-12 medium-9 columns">
+      <h1>Arbeitsplan</h1>
+    </div>
+  </div>
+<% end %>
+
+
+
+<% form_for @event do %>
+	
+	<div class="row">
+	  <div class="small-12 columns">
+	    <% if @event.errors.any? %>
+	      <div id="error_explanation">
+	        <h2><%= pluralize(@event.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+	        <ul>
+	        <% @event.errors.full_messages.each do |msg| %>
+	          <li><%= msg %></li>
+	        <% end %>
+	        </ul>
+	      </div>
+	    <% end %>
+	  </div>
+	</div>
+
+	<div class="row">
+		<div class="small-12 columns">
+			
+		</div>
+	</div>
+
+<% end %>
+
