@@ -16,7 +16,7 @@
 
 		  <% events.each do |event| %>
 		    <div class="date-content">
-		      <span class="event-item <%= event.store.short_name %>"><%= "#{event.try(:employee).try(:name)}: #{l event.starts_at, format: :time_only} - #{l event.ends_at, format: :time_only}" %></span>
+		      <span class="event-item <%= event.try(:store).try(:short_name) %>"><%= "#{event.try(:employee).try(:name)}: #{l event.starts_at, format: :time_only} - #{l event.ends_at, format: :time_only}" %></span>
 		    </div>
 		  <% end %>
 		<% end %>
