@@ -18,8 +18,8 @@ module Admin
 
 			respond_to do |format|
 			  if @event.save
-			    format.html { redirect_to events_path, notice: 'Event was successfully created.' }
-			    format.json { render action: 'show', status: :created, location: @post }
+			    format.html { redirect_to admin_events_path, notice: 'Event was successfully created.' }
+			    format.json { render action: 'show', status: :created, location: @event }
 			  else
 			    format.html { render action: 'new' }
 			    format.json { render json: @events.errors, status: :unprocessable_entity }
@@ -33,7 +33,7 @@ module Admin
 		def event_params
 			params.require(:event).permit(
 				:id,
-				:user_id,
+				:employee_id,
 				:store_id,
 				:starts_at,
 				:ends_at,

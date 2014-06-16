@@ -61,6 +61,7 @@ LungeDe::Application.routes.draw do
   # /api/...
   namespace :api, defaults: {format: 'json'} do
     resources :brands
+    resources :employees
     resources :products
     resources :product_categories
     resources :product_categorizations
@@ -72,34 +73,24 @@ LungeDe::Application.routes.draw do
 
   namespace :admin do
     resources :events
+    resources :employees
   end
 
   resources :api_keys
-
   resources :categorizations
-
   resources :categories
-
   resources :posts
-
   resources :properties
-
   resources :stocks
-
   resources :stores do
     member do
       post :get_directions
     end
   end
-
   resources :brands
-
   resources :product_images
-
   resources :product_categories
-
   resources :sizes
-
   resources :products do
 
     get 'page/:page', :action => :index, :on => :collection

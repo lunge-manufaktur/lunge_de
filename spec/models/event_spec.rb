@@ -2,17 +2,17 @@
 #
 # Table name: events
 #
-#  id         :integer          not null, primary key
-#  user_id    :integer
-#  store_id   :integer
-#  starts_at  :datetime
-#  ends_at    :datetime
-#  pause      :time
-#  vacation   :boolean          default(FALSE)
-#  sick       :boolean          default(FALSE)
-#  comment    :text
-#  created_at :datetime
-#  updated_at :datetime
+#  id          :integer          not null, primary key
+#  employee_id :integer
+#  store_id    :integer
+#  starts_at   :datetime
+#  ends_at     :datetime
+#  pause       :time
+#  vacation    :boolean          default(FALSE)
+#  sick        :boolean          default(FALSE)
+#  comment     :text
+#  created_at  :datetime
+#  updated_at  :datetime
 #
 
 require 'spec_helper'

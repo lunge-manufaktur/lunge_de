@@ -43,4 +43,21 @@ class Store < ActiveRecord::Base
 		"#{address_name}, #{street}, #{zip} #{city}"
 	end
 
+	def short_name
+		case id
+		when 1
+			"l"
+		when 2
+			"c"
+		when 3
+			"f"
+		when 4
+			"s"
+		when 5
+			"b1"
+		when 6
+			"m"
+		end
+	end
+
 end

@@ -2,6 +2,9 @@ de:
   date:
     formats:
       calendar: "%d"
+  time:
+    formats:
+      time_only: "%H:%M"
   views:
     pagination:
       first: "&laquo;"

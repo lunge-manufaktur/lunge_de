@@ -21,6 +21,36 @@ $secondary-color: #f3f3f3;
 $body-bg: mintcream;
 $alert-color: #E40D46;
 
+.l {
+	background-color: #FF9999;
+	color: #fff;
+}
+
+.c {
+	background-color: #616E74;
+	color: #fff;
+}
+
+.f {
+	background-color: #35DD5F;
+	color: #fff;
+}
+
+.s {
+	background-color: #FF9966;
+	color: #fff;
+}
+
+.b1 {
+	background-color: #00CCFF;
+	color: #fff;
+}
+
+.m {
+	background-color: #4D2566;
+	color: #fff;
+}
+
 
 
 /* ----- VARIABLES ----- */
@@ -469,7 +499,7 @@ table.calendar {
 	}
 
 	td {
-		height: 200px;
+		vertical-align: top;
 		position: relative;
 		border-top: 1px solid $secondary-color;
 	}
@@ -479,11 +509,18 @@ table.calendar {
 	}
 
 	.date-header {
-		position: absolute;
-    padding: 0.5rem;
-    top: 0px;
-    left: 0px;
-    width: 100%;
+
+	}
+
+	.date-content {
+	}
+
+	.event-item {
+		font-size: 0.825rem;
+		width: 100%;
+		display: block;
+		padding: 0.2rem;
+		margin-bottom: 1px;
 	}
 
 	.prev-month,

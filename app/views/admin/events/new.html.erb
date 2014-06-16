@@ -7,20 +7,17 @@
   </div>
 <% end %>
 
-
-
-<% form_for @event do %>
+<%= form_for @event, url: admin_events_path do |f| %>
 	
 	<div class="row">
 	  <div class="small-12 columns">
 	    <% if @event.errors.any? %>
 	      <div id="error_explanation">
 	        <h2><%= pluralize(@event.errors.count, "error") %> prohibited this product from being saved:</h2>
-
 	        <ul>
-	        <% @event.errors.full_messages.each do |msg| %>
-	          <li><%= msg %></li>
-	        <% end %>
+		        <% @event.errors.full_messages.each do |msg| %>
+		          <li><%= msg %></li>
+		        <% end %>
 	        </ul>
 	      </div>
 	    <% end %>
@@ -29,7 +26,32 @@
 
 	<div class="row">
 		<div class="small-12 columns">
-			
+
+			<div class="fields">
+				<%= f.label :employee_id, "Mitarbeiter" %>
+				<%= f.collection_select :employee_id, Employee.all, :id, :name %>
+			</div>
+
+			<div class="fields">
+				<%= f.label :store, "Filiale" %>
+				<%= f.collection_select :store_id, Store.all, :id, :name, prompt: "Filiale auswählen..." %>
+			</div>
+
+			<div class="fields">
+				<%= f.label :starts_at, "Start" %>
+				<%= f.datetime_select :starts_at %>
+			</div>
+
+			<div class="fields">
+				<%= f.label :starts_at, "Ende" %>
+				<%= f.datetime_select :ends_at %>
+			</div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="small-12 columns">
+			<%= f.submit "Speichern", class: "button" %>
 		</div>
 	</div>
 
