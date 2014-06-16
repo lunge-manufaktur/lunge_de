@@ -14,7 +14,7 @@
 		  	<h5><%= l date, format: :calendar %></h5>
 		  </div>
 
-		  <% events.each do |event| %>
+		  <% events.sort_by{|e| e[:store_id]}.each do |event| %>
 		    <div class="date-content">
 		      <span class="event-item <%= event.try(:store).try(:short_name) %>"><%= "#{event.try(:employee).try(:name)}: #{l event.starts_at, format: :time_only} - #{l event.ends_at, format: :time_only}" %></span>
 		    </div>
