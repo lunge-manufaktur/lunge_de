@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140616093640) do
+ActiveRecord::Schema.define(version: 20140616122812) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -75,11 +75,13 @@ ActiveRecord::Schema.define(version: 20140616093640) do
     t.datetime "starts_at"
     t.datetime "ends_at"
     t.time     "pause"
-    t.boolean  "vacation",    default: false
-    t.boolean  "sick",        default: false
+    t.boolean  "vacation",      default: false
+    t.boolean  "sick",          default: false
     t.text     "comment"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "custom_status"
+    t.boolean  "manager",       default: false
   end
 
   add_index "events", ["employee_id"], name: "index_events_on_employee_id", using: :btree
