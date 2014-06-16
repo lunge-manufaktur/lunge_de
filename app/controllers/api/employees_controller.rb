@@ -30,7 +30,8 @@ module Api
 			params.require(:employee).permit(
 				:id,
 				:name,
-				:user_id
+				:user_id,
+				:active
 			)
 		end
 
