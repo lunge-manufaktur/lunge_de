@@ -9,7 +9,7 @@ module Api
 		end
 
 		# GET /api/employees/1
-		def index
+		def show
 			respond_with Employee.find(params[:id])
 		end
 
