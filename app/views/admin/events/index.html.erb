@@ -9,16 +9,26 @@
 
 <div class="row">
 	<div class="small-12 columns">
-		<%= month_calendar events: @events, table: {class: "calendar"} do |date, events| %>
+		<%= month_calendar events: @events, table: {class: "calendar"}, title: calendar_title, previous_link: calendar_previous do |date, events| %>
 		  <div class="date-header">
 		  	<h5><%= l date, format: :calendar %></h5>
 		  </div>
+			
+			<div class="date-content">
+			  <% events.sort_by{|e| e[:store_id]}.each do |event| %>
+		      <div id="event-trigger" class="event-item <%= event.try(:store).try(:short_name) %>" data-id="<%= event.id %>">
+			      <span><%= event.try(:employee).try(:name) %></span><br>
+			      <span><%= "#{l event.starts_at, format: :time_only} - #{l event.ends_at, format: :time_only}" %></span>
+            <div id="<%= event.id %>_content" class="event-details">
+      				<%= label_tag "Filiale" %>
+      				<%= event.store.name %>
 
-		  <% events.sort_by{|e| e[:store_id]}.each do |event| %>
-		    <div class="date-content">
-		      <span class="event-item <%= event.try(:store).try(:short_name) %>"><%= "#{event.try(:employee).try(:name)}: #{l event.starts_at, format: :time_only} - #{l event.ends_at, format: :time_only}" %></span>
-		    </div>
-		  <% end %>
+      				<%= label_tag "Krank" %>
+      				<%= event.sick %>
+            </div>
+		      </div> 
+			  <% end %>
+			</div>
 		<% end %>
 	</div>
 </div>

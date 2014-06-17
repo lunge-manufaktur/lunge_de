@@ -22,33 +22,39 @@ $body-bg: mintcream;
 $alert-color: #E40D46;
 
 .l {
-	background-color: #FF9999;
-	color: #fff;
+	border-left: 5px solid #FF9999;
+	//background-color: #FF9999;
+	//color: #fff;
 }
 
 .c {
-	background-color: #616E74;
-	color: #fff;
+	border-left: 5px solid #616E74;
+	// background-color: #616E74;
+	// color: #fff;
 }
 
 .f {
-	background-color: #35DD5F;
-	color: #fff;
+	border-left: 5px solid #35DD5F;
+	// background-color: #35DD5F;
+	// color: #fff;
 }
 
 .s {
-	background-color: #FF9966;
-	color: #fff;
+	border-left: 5px solid #FF9966;
+	// background-color: #FF9966;
+	// color: #fff;
 }
 
 .b1 {
-	background-color: #00CCFF;
-	color: #fff;
+	border-left: 5px solid #00CCFF;
+	// background-color: #00CCFF;
+	// color: #fff;
 }
 
 .m {
-	background-color: #4D2566;
-	color: #fff;
+	border-left: 5px solid #4D2566;
+	// background-color: #4D2566;
+	// color: #fff;
 }
 
 
@@ -505,7 +511,7 @@ table.calendar {
 	}
 
 	td.today {
-		background-color: $secondary-color;
+		background-color: linen;
 	}
 
 	.date-header {
@@ -516,11 +522,19 @@ table.calendar {
 	}
 
 	.event-item {
-		font-size: 0.825rem;
 		width: 100%;
 		display: block;
-		padding: 0.2rem;
-		margin-bottom: 1px;
+		padding: 0.2rem 0.5rem;
+		margin-bottom: 0.5rem;
+		
+		&:hover {
+			background-color: $secondary-color;
+		}
+	}
+
+	.event-details {
+		display: none;
+		font-size: 0.875rem;
 	}
 
 	.prev-month,

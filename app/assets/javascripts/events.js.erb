@@ -1,0 +1,9 @@
+$('body').on('click', '#event-trigger', function () {
+ 	var event_id = $(this).data("id");
+
+	$('#' + event_id + '_content').slideToggle(100);
+	$(this).toggleClass('enabled');
+
+	console.log(event_id + "was triggered.");
+
+});

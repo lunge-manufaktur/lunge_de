@@ -1,5 +1,6 @@
 module Api
 	class EventsController < ApplicationController
+		before_filter :restrict_access
 		respond_to :json
 		protect_from_forgery except: [:create, :update]
 
@@ -26,6 +27,13 @@ module Api
 
 
 		private
+
+		def restrict_access
+		  authenticate_or_request_with_http_token do |token, options|
+		    ApiKey.exists?(key: token)
+		  end
+		end
+
 		def event_params
 			params.require(:event).permit(
 				:id,

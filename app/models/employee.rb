@@ -11,6 +11,11 @@
 #
 
 class Employee < ActiveRecord::Base
+	# Associations
 	has_many :events
 	has_one :user
+
+	# Methods
+	
+
 end
