@@ -1,0 +1,29 @@
+<div class="event-item" data-id="<%= event.id %>">
+
+	<div class="event-header <%= event.try(:store).try(:short_name) %>">
+    <span><%= event.try(:employee).try(:name) %></span><br>
+    <span><%= "#{l event.starts_at, format: :time_only} - #{l event.ends_at, format: :time_only}" %></span>
+  </div>
+
+  <div id="<%= event.id %>_content" class="event-details">
+		<label>Filiale / Status</label>
+		<%= event.status %>
+
+		<label>Beginn</label>
+		<%= l event.starts_at, format: :time_only %>
+
+		<label>Ende</label>
+		<%= l event.ends_at, format: :time_only %>
+		
+		<% if event.pause %>
+			<label>Pause</label>
+			<%= l event.pause, format: :time_only %>
+		<% end %>
+
+		<hr>
+
+		<label>Stunden</label>
+		<%= event.working_hours %>
+  </div>
+  
+</div>

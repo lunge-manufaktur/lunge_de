@@ -18,10 +18,27 @@
 #
 
 class Event < ActiveRecord::Base
+	# simple_calendar gem
 	extend SimpleCalendar
 	has_calendar
 	
+	# associations
   belongs_to :user
   belongs_to :store
   belongs_to :employee
+
+  # methods
+  def status
+  	if store_id
+  		self.store.name
+  	else
+  		custom_status
+  	end
+  end
+
+  def working_hours
+  	Time.at(ends_at - starts_at - pause.to_f).utc.strftime("%H:%M")
+  end
+
+
 end

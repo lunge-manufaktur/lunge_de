@@ -1,0 +1,15 @@
+<h4>Suchen</h4>
+<%= search_form_for @search, url: admin_events_path do |f| %>
+	<ul class="small-block-grid-1 medium-block-grid-4">
+		<li>
+			<%= f.label :employee_id_eq, "Mitarbeiter" %>
+			<%= f.collection_select :employee_id_eq, Employee.all, :id, :name, prompt: "Mitarbeiter auswählen..." %>
+		</li>
+		<li>
+			<%= f.label :store_id_eq, "Filiale" %>
+			<%= f.collection_select :store_id_eq, Store.all, :id, :name, prompt: "Filiale auswählen..." %>
+		</li>
+	</ul>
+	<%= f.submit "Suchen", class: "button" %>
+	<%= link_to "Alle anzeigen", admin_events_path, class: "button secondary" %>
+<% end %>

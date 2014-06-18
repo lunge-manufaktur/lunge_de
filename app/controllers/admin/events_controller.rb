@@ -2,7 +2,8 @@ module Admin
 	class EventsController < ApplicationController
 
 		def index
-			@events = Event.all
+			@search = Event.search(params[:q])
+			@events = @search.result(distinct: true)
 		end
 
 		def show
