@@ -51,10 +51,10 @@ class Stock < ActiveRecord::Base
 
   # Scopes
 
-  scope :all_l, -> { where(store_id: 1) }
-	scope :all_f, -> { where(store_id: 3) }
-  scope :all_s, -> { where(store_id: 4) }
-  scope :all_b, -> { where(store_id: 5) }
+  scope :store, ->(store_id) { where("store_id = ?", store_id) }
+  scope :product, ->(product_id) { where("product_id = ?", product_id) }
+  scope :order_by_store, -> { order(:store_id) }
+  scope :in_stock, -> { where(:quantity => true) }
 
   # Methods
 
@@ -167,14 +167,18 @@ class Stock < ActiveRecord::Base
     self.where(store_id: 5).first
   end
 
-
+  def has_stock?(size)
+    send(size).to_i > 0
+  end
 
   def status_hash
   	sizes = sizes_array
   	h = Hash.new
+
     sizes.each do |key|
-      h[key] = ( eval("self.#{key}?") ? true : false )
+      h[key] = self.eval("key")
   	end
+
     h
   end
 

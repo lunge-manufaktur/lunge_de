@@ -8,7 +8,7 @@ class ProductsController < ApplicationController
     if params[:tag]
       @tags = params[:tag].split("/")
       # @products = Product.tagged_with(@tags).page(params[:page]).per(12)
-      @search = Product.published.search(params[:q])
+      @search = Product.published.includes(:brand, :product_images).search(params[:q])
       @products = @search.result.tagged_with(@tags).page(params[:page]).per(12)
     else
       @search = Product.published.search(params[:q])
@@ -30,8 +30,8 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
-    @search = Product.search(params[:q])
-    @related_products = @product.find_related_tags
+    @search = Product.includes(:brand, :product_images, :stocks, :sizes).search(params[:q])
+    @related_products = @product.find_related_tags.limit(10)
   end
 
   # GET /products/new

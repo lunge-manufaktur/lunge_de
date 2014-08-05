@@ -1,0 +1,11 @@
+li
+	a href = product_path(product)
+		.item-card
+			.card-section-full
+				= image_tag product.default_image("card"), class: "card-image-top"
+			.card-section-narrow
+				h4.subtitle
+					small = product.brand.name
+				h4 = product.name
+				p = product.short_description(100)
+				h6 = number_to_currency(product.current_price, unit: "€ ")

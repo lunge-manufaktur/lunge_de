@@ -107,8 +107,25 @@ class Product < ActiveRecord::Base
 		end
 	end
 
-	def stock_quantity(store, size)
-		eval("self.stocks.#{store}.#{size}?")
-	end
+	# def has_stock?(store_id, size)
+	# 	stock = Stock.where(store_id: store_id, product_id: id).first
+	# 	if eval("stock.#{size}?")
+	# 		true
+	# 	else
+	# 		false
+	# 	end
+	# end
 
+	def has_stock?(options={store: nil, size: nil})
+		product_id = id
+		store_id = options[:store] || "*"
+		size = options[:size]
+
+		stock = Stock.where(store_id: store_id, product_id: product_id).first
+		if size
+			eval("stock.#{size}?")
+		else
+			stock.quantity > 0
+		end
+	end
 end

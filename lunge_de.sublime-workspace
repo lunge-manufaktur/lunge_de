@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"boolean",
+				"boolean_icon"
+			],
+			[
+				"calendar_",
+				"calendar_title"
+			],
+			[
+				"cale",
+				"calendar_title"
+			],
+			[
 				"post",
 				"post"
 			],
@@ -92,34 +104,26 @@
 	"buffers":
 	[
 		{
-			"file": "app/controllers/products_controller.rb",
+			"file": "app/views/admin/events/index.html.erb",
 			"settings":
 			{
-				"buffer_size": 4387,
+				"buffer_size": 794,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/controllers/api/products_controller.rb",
+			"file": "app/assets/javascripts/events.js.erb",
 			"settings":
 			{
-				"buffer_size": 2131,
+				"buffer_size": 207,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/models/product.rb",
+			"file": "app/views/admin/events/_event.html.erb",
 			"settings":
 			{
-				"buffer_size": 2878,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/products/index.html.erb",
-			"settings":
-			{
-				"buffer_size": 1297,
+				"buffer_size": 742,
 				"line_ending": "Unix"
 			}
 		}
@@ -188,54 +192,83 @@
 	},
 	"file_history":
 	[
+		"/Users/ulflunge/projects/lunge_de/app/helpers/events_helper.rb",
+		"/Users/ulflunge/projects/lunge_de/config/locales/de.yml",
+		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_last_page.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_next_page.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_page.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_paginator.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/application.css.scss",
+		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/stores.js.erb",
+		"/Users/ulflunge/projects/lunge_de/Gemfile",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/posts_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/admin/events/_search.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/views/admin/events/index.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/views/admin/events/_event.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/models/event.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/products/search/_index.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/admin/events_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/config/initializers/ransack.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/posts/index.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/events.js.erb",
+		"/Users/ulflunge/projects/lunge_de/app/views/products/index.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/helpers/application_helper.rb",
+		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/products.js.erb",
+		"/Users/ulflunge/projects/lunge_de/db/migrate/20140616122812_add_custom_status_to_events.rb",
+		"/Users/ulflunge/projects/lunge_de/config/routes.rb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/api/events_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/api/stores_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/helpers/products_helper.rb",
+		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/application.js",
+		"/Users/ulflunge/projects/lunge_de/app/models/employee.rb",
+		"/Users/ulflunge/projects/lunge_de/app/helpers/brands_helper.rb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/api/products_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/models/store.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/posts/_form.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/views/admin/events/new.html.erb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/api/employees_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/db/migrate/20140616090929_create_employees.rb",
+		"/Users/ulflunge/projects/lunge_de/db/migrate/20140616093640_rename_user_i_din_events.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/posts/new.html.erb",
+		"/Users/ulflunge/projects/lunge_de/config/application.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/products/_form.html.erb",
+		"/Users/ulflunge/projects/lunge_de/db/migrate/20140613082451_rename_start_date_in_events.rb",
+		"/Users/ulflunge/projects/lunge_de/app/models/user.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/products/new.html.erb",
+		"/Users/ulflunge/projects/lunge_de/db/migrate/20140613081908_create_events.rb",
+		"/Users/ulflunge/projects/lunge_de/app/models/product.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/show.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/application.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/_minicard.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/application.css.scss",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/show/_directions.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/_card.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/index.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/stores_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/stores.js.erb",
-		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/application.js",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/stores.css.scss",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/api/products_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/config/routes.rb",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/foundation_and_overrides.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/scaffolds.css.scss",
 		"/Users/ulflunge/projects/lunge_de/config/environments/production.rb",
-		"/Users/ulflunge/projects/lunge_de/Gemfile",
 		"/Users/ulflunge/projects/lunge_de/Gemfile.lock",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/ionicons.css.scss",
 		"/Users/ulflunge/projects/lunge_de/config/environments/development.rb",
-		"/Users/ulflunge/projects/lunge_de/config/application.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
 		"/Users/ulflunge/Library/Application Support/Sublime Text 2/Packages/SublimeLinter/README.md",
 		"/Users/ulflunge/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
-		"/Users/ulflunge/projects/lunge_de/app/views/products/index.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/models/product.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/brands/index.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/helpers/products_helper.rb",
 		"/Users/ulflunge/Library/Application Support/Sublime Text 2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
 		"/Users/ulflunge/Library/Application Support/Sublime Text 2/Packages/User/SublimeLinter.sublime-settings",
 		"/Users/ulflunge/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
 		"/Volumes/Fabrikdaten/Applications/FileMaker 13/Pro Advanced/lizenz.txt",
 		"/Volumes/Fabrikdaten/Applications/FileMaker 13/Pro/lizenz.txt",
-		"/Users/ulflunge/projects/lunge_de/app/views/products/new.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_header.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/products/search/_index.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/posts/index.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/categories/show.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/posts_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/categories_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/posts/_form.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/models/post.rb",
 		"/Users/ulflunge/projects/lunge_de/app/models/category.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/categories/_nested_list.html.erb",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20140505052643_add_is_on_homepage_to_posts.rb",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20140505054347_add_slug_to_categories.rb",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/products.css.scss",
-		"/Users/ulflunge/projects/lunge_de/config/locales/de.yml",
 		"/Users/ulflunge/projects/lunge_de/app/views/posts/_card.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/categories/index.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/show.html.erb",
@@ -244,7 +277,6 @@
 		"/Users/ulflunge/Library/Caches/Cleanup At Startup/Transmit/12264997-1C89-4531-B74C-2D33DC11CAA8/header.php",
 		"/Users/ulflunge/projects/lunge_de/app/models/product_image.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/_product_image_fields.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/products/_form.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/posts/_post_image_fields.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/models/post_image.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/posts/show.html.erb",
@@ -252,7 +284,6 @@
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20140428124346_add_attachment_image_to_posts.rb",
 		"/Users/ulflunge/projects/lunge_de/db/schema.rb",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20140428121601_create_post_images.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/posts/new.html.erb",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20140428121800_add_attachment_to_posts.rb",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20140428083515_create_friendly_id_slugs.rb",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20140428093833_add_slug_to_products.rb",
@@ -288,34 +319,7 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/products/edit.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/properties_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/stocks_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/api/brands_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/api/stores_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/api/sizes_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/helpers/application_helper.rb",
-		"/Users/ulflunge/projects/lunge_de/app/models/user.rb",
-		"/Users/ulflunge/projects/lunge_de/app/models/api_key.rb",
-		"/Users/ulflunge/projects/lunge_de/db/migrate/20140417065243_devise_create_users.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/devise/registrations/new.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/brands_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/devise/registrations/edit.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/api_keys_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/db/migrate/20140417080402_create_api_keys.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/devise/passwords/edit.html.erb",
-		"/Users/ulflunge/projects/lunge_de/config/locales/devise.de.yml",
-		"/Users/ulflunge/projects/lunge_de/app/helpers/icon_helper.rb",
-		"/Users/ulflunge/projects/lunge_de/Procfile",
-		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_footer.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/models/property.rb",
-		"/Users/ulflunge/projects/lunge_de/config/database.yml",
-		"/Users/ulflunge/projects/lunge_de/config.ru",
-		"/Users/ulflunge/projects/lunge_de/config/puma.rb",
-		"/Users/ulflunge/projects/lunge_de/config/unicorn.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_next_page.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_last_page.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_first_page.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_page.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_prev_page.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_paginator.html.erb"
+		"/Users/ulflunge/projects/lunge_de/app/controllers/api/brands_controller.rb"
 	],
 	"find":
 	{
@@ -333,6 +337,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"label",
 			"h1",
 			"nova-soft",
 			"sprocket",
@@ -441,43 +446,15 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/controllers/products_controller.rb",
+					"file": "app/views/admin/events/index.html.erb",
 					"settings":
 					{
-						"buffer_size": 4387,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1268,
-								1268
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 121.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/controllers/api/products_controller.rb",
-					"settings":
-					{
-						"buffer_size": 2131,
+						"buffer_size": 794,
 						"regions":
 						{
 						},
@@ -490,9 +467,33 @@
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/assets/javascripts/events.js.erb",
+					"settings":
+					{
+						"buffer_size": 207,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								207,
+								2
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/JavaScript (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -502,51 +503,23 @@
 				},
 				{
 					"buffer": 2,
-					"file": "app/models/product.rb",
+					"file": "app/views/admin/events/_event.html.erb",
 					"settings":
 					{
-						"buffer_size": 2878,
+						"buffer_size": 742,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								307,
+								335
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 827.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/views/products/index.html.erb",
-					"settings":
-					{
-						"buffer_size": 1297,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -598,6 +571,22 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"postform",
+				"app/views/posts/_form.html.erb"
+			],
+			[
+				"postnew",
+				"app/views/posts/new.html.erb"
+			],
+			[
+				"eventnew",
+				"app/views/admin/events/new.html.erb"
+			],
+			[
+				"eventcontro",
+				"app/controllers/admin/events_controller.rb"
+			],
 			[
 				"product.rb",
 				"app/models/product.rb"
@@ -665,10 +654,6 @@
 			[
 				"dropzone",
 				"tmp/cache/assets/development/sass/b8e7370c30720766093102e4161c806de83131ba/dropzone.css.scssc"
-			],
-			[
-				"postform",
-				"app/views/posts/_form.html.erb"
 			],
 			[
 				"stores",

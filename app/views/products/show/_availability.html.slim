@@ -1,0 +1,13 @@
+section
+	.row
+		.small-12.columns
+			h4 Verfügbarkeit
+			- @product.stocks.includes(:store).order_by_store.each do |stock|
+				section
+					.row
+						.small-12.columns
+							h6 = stock.store.full_address
+							- stock.sizes_hash.each do |key, value|
+								- if value.present?
+									div class="size-bubble #{stock.has_stock?(key)}"
+										= value

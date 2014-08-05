@@ -1,18 +1,10 @@
 source 'https://rubygems.org'
 
 ruby '2.1.0'
-
-gem 'rails', '4.0.3'
-
-gem 'rails-i18n', '~> 4.0.0'
-
-# Use sqlite3 as the database for Active Record
+gem 'rails', '~> 4.0'
+gem 'rails-i18n'
 gem 'pg'
-
-# Puma web server
 gem 'puma'
-
-# Devise authentication
 gem 'devise'
 
 group :development, :test do
@@ -20,25 +12,12 @@ group :development, :test do
 	gem "capybara"
 end
 
-# Use SCSS for stylesheets
+
 gem 'sass-rails', '~> 4.0.0'
-
-# Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-
-# Use CoffeeScript for .js.coffee assets and views
 gem 'coffee-rails', '~> 4.0.0'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
 gem 'jquery-rails'
-
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
 gem 'turbolinks'
-
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
 group :doc do
@@ -46,47 +25,26 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# zurb foundation
 gem 'foundation-rails'
-
-# ransack search
 gem 'ransack'
-
-# annotate models
 gem 'annotate'
-
-# paperclip file attachments
 gem "paperclip", "~> 4.1"
 gem "paperclip-storage-ftp"
-
-# nested_form
 gem 'nested_form'
-
-# maps
 gem "geocoder"
+gem "slim-rails"
 
 # heroku
 group :production do
 	gem 'rails_12factor'
 end
 
-# nested sets
 gem 'awesome_nested_set'
-
-# acts_As_taggable_on
 gem 'acts-as-taggable-on'
-
-# Pagination
 gem 'kaminari'
-
-# WYSIWYG Editor
 gem "tinymce-rails"
 gem "tinymce-rails-langs"
-
-# Friendly URLs
 gem 'friendly_id'
-
-# Calendar
 gem "simple_calendar", "~> 1.1.0"
 
 # Use ActiveModel has_secure_password
