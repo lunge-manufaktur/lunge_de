@@ -2,7 +2,7 @@ module ProductsHelper
 
 	def tag_to_remove(tag_name)
 		link 	=	if @tags.size > 1
-							tag_products_path(@tags.reject{ |i| i == tag_name})
+							@tags.reject{ |i| i == tag_name }.join("+")
 						else
 							products_path
 						end
@@ -20,7 +20,7 @@ module ProductsHelper
 
 
 	def tag_to_add(tag_name)
-		link = "#{tag_products_path(@tags)+'/'+tag_name}"
+		link = "#{@tags.join("+")}+#{tag_name}"
 
 		link_to(
 			(

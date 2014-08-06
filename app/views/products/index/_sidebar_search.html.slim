@@ -1,5 +1,5 @@
 h4 Suchen
-= search_form_for @search do |f|
+= search_form_for @search, url: search_products_path, method: :post do |f|
   p
     = f.label :name_cont, "Bezeichnung"
     = f.text_field :name_cont

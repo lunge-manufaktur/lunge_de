@@ -51,8 +51,8 @@ class Stock < ActiveRecord::Base
 
   # Scopes
 
-  scope :store, ->(store_id) { where("store_id = ?", store_id) }
-  scope :product, ->(product_id) { where("product_id = ?", product_id) }
+  scope :for_store, ->(store_id) { where("store_id = ?", store_id) }
+  scope :for_product, ->(product_id) { where("product_id = ?", product_id) }
   scope :order_by_store, -> { order(:store_id) }
   scope :in_stock, -> { where(:quantity => true) }
 

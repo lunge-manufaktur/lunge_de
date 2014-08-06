@@ -9,5 +9,5 @@ section
 							h6 = stock.store.full_address
 							- stock.sizes_hash.each do |key, value|
 								- if value.present?
-									div class="size-bubble #{stock.has_stock?(key)}"
+									div class="availability-badge #{stock.has_stock?(key)}"
 										= value

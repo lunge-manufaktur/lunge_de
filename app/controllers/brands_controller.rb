@@ -11,7 +11,7 @@ class BrandsController < ApplicationController
   # GET /brands/1
   # GET /brands/1.json
   def show
-    @products = Product.where(brand_id: params[:id])
+    @products = Product.where(brand_id: params[:id]).includes(:brand, :product_images).page(params[:page]).per(20)
   end
 
   # GET /brands/new

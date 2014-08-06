@@ -5,15 +5,19 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    if params[:tag]
-      @tags = params[:tag].split("/")
-      # @products = Product.tagged_with(@tags).page(params[:page]).per(12)
-      @search = Product.published.includes(:brand, :product_images).search(params[:q])
-      @products = @search.result.tagged_with(@tags).page(params[:page]).per(12)
+    if params[:tags]
+      @tags = params[:tags].split("+")
+      @search = Product.published.search(params[:q])
+      @products = @search.result.includes(:brand, :product_images).tagged_with(@tags).page(params[:page]).per(12)
     else
       @search = Product.published.search(params[:q])
-      @products = @search.result(distinct: true).order(created_at: :desc).page(params[:page]).per(12)
+      @products = @search.result(distinct: true).includes(:brand, :product_images).order(created_at: :desc).page(params[:page]).per(12)
     end
+  end
+
+  def search
+    index
+    render "index"
   end
 
   def remove_tag

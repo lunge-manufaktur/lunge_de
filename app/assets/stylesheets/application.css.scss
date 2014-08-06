@@ -420,12 +420,11 @@ ul.pagination {
 
 /* ----- STOCK ----- */
 
-.size-bubble {
+.availability-badge {
+	display: inline-block;
 	font-size: 0.825rem;
-	padding: 0.6rem;
-	float: left;
+	padding: 0.25rem;
 	min-width: 2rem;
-	height: 2rem;
 	text-align: center;
 	margin: 0 0.5rem 0.5rem 0;
 	border: 1px solid #bbb;
