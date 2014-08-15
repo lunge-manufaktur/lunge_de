@@ -1,0 +1,17 @@
+- content_for :title_bar
+  h1 Filialen
+  h2.subtitle
+    small 3x in Hamburg / 1x in Berlin
+
+section
+  .row
+    .small-12.medium-6.columns
+      h4 Hamburg
+      - @stores.hamburg.each do |store|
+        = render "/stores/card", store: store
+    .small-12.medium-6.columns
+      h4 Berlin
+      - @stores.berlin.each do |store|
+        = render "/stores/card", store: store
+
+= link_to 'New Store', new_store_path

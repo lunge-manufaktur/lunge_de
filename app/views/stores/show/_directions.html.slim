@@ -1,0 +1,46 @@
+section
+	h4 = "#{@directions["routes"].count} gefundene Routen"
+
+	dl.accordion data-accordion=""
+		- i = 0
+		- @directions["routes"].each do |route|
+			- i += 1
+			dd
+				a href=("#route#{i}")
+					.row
+						.small-6.columns
+							= label_tag("Route")
+							- route_overview(route)
+							- @steps.each do |badge|
+								span class=("#{badge["type"]} label")
+									= badge["line"]
+						.small-3.columns
+							= label_tag(:duration, "Dauer")
+							h6 = route["legs"].first["duration"]["text"]
+						.small-3.columns
+							= label_tag(:distance, "Strecke")
+							h6 = route["legs"].first["distance"]["text"]
+				div id=("route#{i}") class="content"
+					- route["legs"].first["steps"].each do |step|
+						.row
+							.small-12.columns
+								.row
+									.small-2.large-1.columns.transit-icon
+										p
+											- if step["travel_mode"] == "TRANSIT"
+												span class=("#{step['transit_details']['line']['vehicle']['type']} label")
+													= step["transit_details"]["line"]["short_name"]
+											- else
+												| -
+									.small-4.large-5.columns
+										p
+											= step["html_instructions"]
+											- if step["travel_mode"] == "TRANSIT"
+												br
+												span.light = inline_icon("bis Station ", "ion-ios7-arrow-thin-right")
+												span class=("label #{step['transit_details']['line']['vehicle']['type']}")
+													= step['transit_details']['arrival_stop']['name']
+									.small-3.columns.right
+										p = step["distance"]["text"]
+									.small-3.columns.right
+										p = step["duration"]["text"]

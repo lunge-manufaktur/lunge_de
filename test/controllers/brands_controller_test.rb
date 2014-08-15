@@ -2,7 +2,7 @@ require 'test_helper'
 
 class BrandsControllerTest < ActionController::TestCase
   setup do
-    @brand = brands(:one)
+    @brand = brands(:asics)
   end
 
   test "should get index" do

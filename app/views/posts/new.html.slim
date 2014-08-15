@@ -1,0 +1,12 @@
+= tinymce_assets
+
+- content_for :title_bar do
+  h1 Neuer Beitrag
+  h2.subtitle
+  	small Erstelle einen neuen Beitrag
+
+= render "form"
+
+= link_to 'Back', posts_path
+| | 
+= tinymce :language => "de"

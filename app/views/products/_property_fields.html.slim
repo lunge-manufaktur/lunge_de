@@ -1,0 +1,14 @@
+p
+.row
+	.small-6.columns
+		p
+			= f.label :name, "Eigenschaft"
+			= f.text_field :name
+	.small-6.columns
+		p
+			= f.label :value, "Wert"
+			= f.text_field :value
+.row
+	.small-12.columns
+		p
+			= f.link_to_remove "Löschen", class: "secondary button tiny"

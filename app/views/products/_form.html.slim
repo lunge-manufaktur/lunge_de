@@ -1,0 +1,50 @@
+= nested_form_for(@product) do |f|
+  .row
+    .small-12.columns
+      - if @product.errors.any?
+        #error_explanation
+          h2 = pluralize(@product.errors.count, "error")
+           | prohibited this product from being saved:
+          ul.no-bullets
+            - @product.errors.full_messages.each do |msg|
+              li = msg
+
+  .row
+    .small-12.medium-6.columns
+      .field
+        = f.label :name, "Bezeichnung"
+        = f.text_field :name
+      .field
+        = f.label :sku, "Artikelnummer"
+        = f.text_field :sku
+      .field
+        = f.label :brand_id, "Hersteller"
+        = f.collection_select( :brand_id, Brand.all.sort_by { |brand| brand.name }, :id, :name )
+      .field
+        = f.label :size_id, "Größensystem"
+        = f.collection_select( :size_id, Size.all, :id, :name )
+      .field
+        = f.check_box :is_published
+        = f.label :is_published, "Veröffentlicht?"
+
+    .small-12.medium-6.columns
+      .field
+        = f.label :description, "Beschreibung"
+        = f.text_area :description, rows: 10
+      .field
+        = f.label :tag_list, "Tags"
+        = f.text_field :tag_list
+
+  .row
+    .small-12.medium-6.columns
+      = f.fields_for :product_images
+      = f.link_to_add "Bild hinzufügen", :product_images, class: "tiny button"
+
+    .small-12.medium-6.columns
+      = f.fields_for :properties
+      = f.link_to_add "Eigenschaft hinzufügen", :properties, class: "tiny button"
+
+  .row
+    .small-12.columns
+      .actions
+        = f.submit "Speichern", class: "button"

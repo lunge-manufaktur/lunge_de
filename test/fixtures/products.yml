@@ -23,14 +23,8 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  fmid: 1
-  sku: MyString
-  description: MyText
-
-two:
-  name: MyString
-  fmid: 1
-  sku: MyString
-  description: MyText
+default_product:
+  name: Regular Product
+  brand: asics
+  sku: <%= rand(1000) %>
+  description: This is a description

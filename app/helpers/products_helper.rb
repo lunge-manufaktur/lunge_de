@@ -1,15 +1,19 @@
 module ProductsHelper
 
+	def prepare_single_tag(tag:)
+		tag.gsub("/", "-")
+	end
+
 	def tag_to_remove(tag_name)
 		link 	=	if @tags.size > 1
-							@tags.reject{ |i| i == tag_name }.join("+")
+							@tags.reject{ |i| i == tag_name }.map{ |tag| tag.gsub("/", "-") }.join("+")
 						else
 							products_path
 						end
 
 		link_to(
 			(
-				content_tag(:span, tag_name.upcase).concat(
+				content_tag(:span, tag_name).concat(
 				content_tag(:span, "", class: "ion-close suffix"))
 			),
 			link,
@@ -20,11 +24,11 @@ module ProductsHelper
 
 
 	def tag_to_add(tag_name)
-		link = "#{@tags.join("+")}+#{tag_name}"
+		link = "#{@tags.map{ |tag| tag.gsub("/", "-") }.join("+")}+#{prepare_single_tag(tag: tag_name)}"
 
 		link_to(
 			(
-				content_tag(:span, tag_name.upcase).concat(
+				content_tag(:span, tag_name).concat(
 				content_tag(:span, "", class: "ion-plus suffix"))
 			),
 			link,
@@ -35,11 +39,11 @@ module ProductsHelper
 
 
 	def first_tag_to_add(tag_name)
-		link = tag_products_path(tag_name)
+		link = tag_products_path(prepare_single_tag(tag: tag_name))
 
 		link_to(
 			(
-				content_tag(:span, tag_name.upcase).concat(
+				content_tag(:span, tag_name).concat(
 				content_tag(:span, "", class: "ion-plus suffix"))
 			),
 			link,

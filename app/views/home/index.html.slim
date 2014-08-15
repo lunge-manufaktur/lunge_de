@@ -1,0 +1,31 @@
+= content_for :full_width_content do
+	= image_tag "http://placehold.it/2000x400&text=Image", class: "featured_image"
+
+.row
+	.small-12.columns
+		section.text-center
+			h2.text-center Über uns
+			ul.small-block-grid-1.medium-block-grid-3 data-equalizer=""
+				li.text-center data-equalizer-watch=""
+					a.ion-ios7-cart-outline.ion-xxlarge
+					p
+						| Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+					= link_to "Weiterlesen...", "#", class: "button"
+				li.text-center
+					a.ion-ios7-help-outline.ion-xxlarge
+					p
+						|	Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+					= link_to "Mehr erfahren...", "#", class: "button"
+				
+				li.text-center
+					a.ion-map.ion-xxlarge
+					p
+						| Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+					= link_to "Anzeigen...", "#", class: "button"
+
+		section
+			h2.text-center Sortiment
+			h5 Highlights
+			ul.small-block-grid-1.medium-block-grid-2.large-block-grid-4
+				- @products.each do |product|
+					= render "/products/card", product: product

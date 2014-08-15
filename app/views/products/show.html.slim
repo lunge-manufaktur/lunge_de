@@ -75,9 +75,8 @@
 				.row
 					.small-12.columns
 						h4 Tags
-						p
-							- @product.tag_list.each do |tag|
-								= link_to tag.upcase, tag_products_path(tag), class: "label"
+						- @product.tag_list.each do |tag|
+							= link_to tag, tag_products_path(tag), class: "label"
 
 .row
 	.small-12.columns

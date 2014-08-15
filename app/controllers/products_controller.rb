@@ -6,7 +6,7 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     if params[:tags]
-      @tags = params[:tags].split("+")
+      @tags = params[:tags].split("+").map{ |tag| tag.gsub("-", "/") }
       @search = Product.published.search(params[:q])
       @products = @search.result.includes(:brand, :product_images).tagged_with(@tags).page(params[:page]).per(12)
     else

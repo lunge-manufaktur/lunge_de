@@ -20,25 +20,25 @@
 
 class Store < ActiveRecord::Base
 
-	# Associations
+	# associations
 
 	has_many :stocks
 	has_many :products, through: :stocks
 	has_many :events
 
-	# Geocoder
-
+	# geocoder
 	geocoded_by :full_address
 
-	# Callbacks
-	
+	# callbacks
 	# Don't geocode for now, use rake task instead
 	# after_validation :geocode
 
 
-	# Scopes
+	# scopes
+	scope :hamburg, -> { where(city: "Hamburg") }
+	scope :berlin, -> { where(city: "Berlin") }
 
-	# Methods
+	# methods
 
 	def full_address
 		"#{address_name}, #{street}, #{zip} #{city}"

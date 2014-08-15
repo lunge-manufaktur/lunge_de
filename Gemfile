@@ -7,9 +7,8 @@ gem 'pg'
 gem 'puma'
 gem 'devise'
 
-group :development, :test do
-	gem "rspec-rails"
-	gem "capybara"
+group :test do
+	gem "minitest-rails-capybara"
 end
 
 
