@@ -3,4 +3,5 @@ class HomeController < ApplicationController
 		@products = Product.on_frontpage.limit(8)
 		@brands = Brand.active.order(:name)
 	end
+
 end
