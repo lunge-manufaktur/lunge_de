@@ -44,12 +44,26 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  product_id: 
-  store_id: 
-  g1: 1
-
-two:
-  product_id: 
-  store_id: 
-  g1: 1
+default_stock:
+  product: default_product
+  store: default_store
+  g1: 0
+  g1h: 0
+  g2: 0
+  g2h: 0
+  g3: 0
+  g3h: 0
+  g4: 0
+  g4h: 0
+  g5: 0
+  g5h: 0
+  g6: 0
+  g6h: 0
+  g7: 0
+  g7h: 0
+  g8: 2
+  g8h: 0
+  g9: 1
+  g9h: 3
+  g10: 1
+  g10h: 0

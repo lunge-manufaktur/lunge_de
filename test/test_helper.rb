@@ -13,4 +13,8 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+  def authenticate
+    @key = api_keys(:default_api_key).key
+    request.headers['Authorization'] = "Token token=#{@key}"
+  end
 end

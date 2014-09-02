@@ -6,12 +6,12 @@ module Api
 
     # GET /products
     def index
-      respond_with Product.all
+      respond_with @products = Product.all
     end
 
     # GET /products/1
     def show
-      respond_with Product.find(params[:id])
+      respond_with @product = Product.find(params[:id])
     end
 
     # POST /products
@@ -21,7 +21,6 @@ module Api
 
     # PATCH/PUT /products/1
     def update
-      # Property.find_or_create_by(params[:product]["properties_attributes"]["id"])
       respond_with Product.update(params[:id], product_params)
     end
 
@@ -39,23 +38,10 @@ module Api
         ApiKey.exists?(key: token)
       end
     end
-      
+
     def product_params
       params.require(:product).permit(
-        :id,
-        :name,
-        :is_published,
-        :is_featured,
-        :is_on_frontpage,
-        :sku,
-        :description,
-        :brand_id,
-        :size_id,
-        :current_price,
-        :regular_price,
-        :color,
-        :tag_list,
-        :slug,
+        :all,
         stocks_attributes: [
           :id,
           :product_id,

@@ -20,22 +20,12 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  address_name: MyString
-  street: MyString
-  zip: MyString
-  city: MyString
-  phone: MyString
-  email: MyString
-  active: false
-
-two:
-  name: MyString
-  address_name: MyString
-  street: MyString
-  zip: MyString
-  city: MyString
-  phone: MyString
-  email: MyString
-  active: false
+default_store:
+  name: Example
+  address_name: Example Store
+  street: Some Street 1b
+  zip: 12345
+  city: Some city
+  phone: 123 45687
+  email: mail@example.com
+  active: true

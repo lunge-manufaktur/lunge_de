@@ -15,14 +15,14 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  title: MyString
-  subtitle: MyString
-  content: MyText
-  is_published: false
+default_post:
+  title: A sample post
+  subtitle: with a subtitle
+  content: This is the content
+  is_published: true
 
-two:
-  title: MyString
-  subtitle: MyString
-  content: MyText
+draft:
+  title: A sample draft
+  subtitle: with a subtitle
+  content: This is the conten
   is_published: false

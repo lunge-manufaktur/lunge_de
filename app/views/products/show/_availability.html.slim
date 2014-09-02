@@ -9,5 +9,5 @@ section
 							h6 = stock.store.full_address
 							- stock.sizes_hash.each do |key, value|
 								- if value.present?
-									div class="availability-badge #{stock.has_stock?(key)}"
+									div class="availability-badge #{stock.has_stock?(key)}" data-tooltip="" title=(stock.stock_in_words(key))
 										= value

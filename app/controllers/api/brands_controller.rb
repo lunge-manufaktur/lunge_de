@@ -6,7 +6,7 @@ module Api
 
     # GET /brands
     def index
-      respond_with Brand.all
+      respond_with @brands = Brand.all
     end
 
     # GET /brands/1
@@ -37,9 +37,7 @@ module Api
     # Never trust parameters from the scary internet, only allow the white list through.
     def brand_params
       params.require(:brand).permit(
-        :id,
-        :name,
-        :logo
+        :all
       )
     end
 

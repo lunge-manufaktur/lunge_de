@@ -4,29 +4,29 @@ module Api
     before_filter :restrict_access
     respond_to :json
 
-    # GET /stocks
+    # GET /api/stocks
     def index
-      respond_with Stock.all
+      respond_with @stocks = Stock.all
     end
 
-    # GET /stocks/1
+    # GET /api/stocks/1
     def show
-      respond_with Stock.find(params[:id])
+      respond_with @stock = Stock.find(params[:id])
     end
 
-    # POST /stocks
+    # POST /api/stocks
     def create
-      respond_with Stock.create(stock_params)
+      respond_with @stock = Stock.create(stock_params)
     end
 
-    # PATCH/PUT /stocks/1
+    # PATCH/PUT /api/stocks/1
     def update
-      respond_with Stock.update(params[:id], stock_params)
+      respond_with @stock = Stock.update(params[:id], stock_params)
     end
 
-    # DELETE /stocks/1
+    # DELETE /api/stocks/1
     def destroy
-      respond_with Stock.destroy(params[:id])
+      respond_with @stock = Stock.destroy(params[:id])
       head :no_content
     end
 
@@ -42,42 +42,7 @@ module Api
 
     def stock_params
       params.require(:stock).permit(
-        :id,
-        :product_id,
-        :store_id,
-        :g1,
-        :g1h,
-        :g2,
-        :g2h,
-        :g3,
-        :g3h,
-        :g4,
-        :g4h,
-        :g5,
-        :g5h,
-        :g6,
-        :g6h,
-        :g7,
-        :g7h,
-        :g8,
-        :g8h,
-        :g9,
-        :g9h,
-        :g10,
-        :g10h,
-        :g11,
-        :g11h,
-        :g12,
-        :g12h,
-        :g13,
-        :g13h,
-        :g14,
-        :g14h,
-        :g15,
-        :g16,
-        :g17,
-        :g18,
-        :g19
+        :all
       )
     end
 

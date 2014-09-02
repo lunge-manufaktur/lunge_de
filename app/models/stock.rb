@@ -171,6 +171,14 @@ class Stock < ActiveRecord::Base
     send(size).to_i > 0
   end
 
+  def stock_in_words(size)
+    if has_stock?(size)
+      "Verfügbar"
+    else
+      "Nicht auf Lager"
+    end
+  end
+
   def status_hash
   	sizes = sizes_array
   	h = Hash.new
