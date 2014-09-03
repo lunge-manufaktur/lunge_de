@@ -93,11 +93,11 @@ LungeDe::Application.routes.draw do
   resources :product_categories
   resources :sizes
   resources :products do
-    get 'page/:page', :action => :index, :on => :collection
     get "featured" => "products#show_featured", :as => "featured"
     collection do
       post "search", to: "products#search", as: "search"
       get "tags/:tags", to: "products#index", as: :tag
+      get "page/:page", :action => :index
       get "remove_tag/:tag", :action => "remove_tag", :as => "remove_tag"
     end
 
