@@ -6,8 +6,12 @@ section
 				section
 					.row
 						.small-12.columns
-							h6 = stock.store.full_address
+							h6
+								= link_to stock.store.full_address, store_path(stock.store)
 							- stock.sizes_hash.each do |key, value|
 								- if value.present?
 									div class="availability-badge #{stock.has_stock?(key)}" data-tooltip="" title=(stock.stock_in_words(key))
 										= value
+			small
+				.availability-badge.true Verfügbar
+				.availability-badge.false Nicht verfügbar

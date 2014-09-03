@@ -8,7 +8,7 @@
 
 = content_for :title_bar
 	h2.subtitle
-		small = @product.brand.name
+		small = link_to @product.brand.name,  brand_path(@product.brand)
 	h1 = @product.name
 
 .row

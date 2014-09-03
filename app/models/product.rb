@@ -47,7 +47,7 @@ class Product < ActiveRecord::Base
 
   # Scopes
   scope :published, -> { where(is_published: true) }
-  scope :on_sale, -> { where(is_on_sale: true) }
+  scope :on_sale, -> { where("current_price < regular_price") }
   scope :featured, -> { where(is_featured: true) }
   scope :on_frontpage, -> { where(is_on_frontpage: true) }
 
@@ -80,7 +80,9 @@ class Product < ActiveRecord::Base
     end
   end
 
-
+  def is_on_sale?
+    current_price < regular_price
+  end
 
   def short_description(length=nil)
     @length = length || 200

@@ -1,11 +1,17 @@
 li
-	a href = product_path(product)
-		.item-card
-			.card-section-full
-				= image_tag product.default_image("card"), class: "card-image-top"
-			.card-section-narrow
-				h4.subtitle
-					small = product.brand.name
-				h4 = product.name
-				p = product.short_description(100)
-				h6 = number_to_currency(product.current_price, unit: "€ ")
+  a href = product_path(product)
+    .item-card
+      - if product.is_on_sale?
+        .folded-top-right
+          span.folded-top-right-text %
+      .card-section-full
+        = image_tag product.default_image("card"), class: "card-image-top"
+      .card-section-narrow
+        h4.subtitle
+          small = product.brand.name
+        h4 = product.name
+        p = product.short_description(100)
+        h4
+          = number_to_currency(product.current_price, unit: "€ ")
+        - if product.is_on_sale?
+          h6.strike = number_to_currency(product.try(:regular_price), unit: "€ ")

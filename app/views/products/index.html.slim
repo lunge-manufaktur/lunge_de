@@ -8,22 +8,24 @@
 - if @tags
 	section
 		.panel
-			| Aktive Filter: 
+			h4 Aktive Filter: 
 			- @tags.each do |tag|
 				= tag_to_remove(tag)
+			hr
+			= link_to "Alle Artikel anzeigen", products_path
 
 .row
-	.small-12.medium-8.large-9.columns
-		h4 = page_entries_info @products
-		ul.small-block-grid-1.medium-block-grid-2.large-block-grid-3
-			- @products.each do |product|
-				= render "products/card", product: product
-
-	.small-12.medium-4.large-3.columns
+	.small-12.medium-4.medium-push-8.large-3.large-push-9.columns
 		section
 			= render "products/index/sidebar_search"
 		section
 			= render "products/index/sidebar_tags"
+
+	.small-12.medium-8.medium-pull-4.large-9.large-pull-3.columns
+		h4 = page_entries_info @products
+		ul.small-block-grid-1.medium-block-grid-2.large-block-grid-3
+			- @products.each do |product|
+				= render "products/card", product: product
 
 .row
 	.small-12.columns

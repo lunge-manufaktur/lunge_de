@@ -147,6 +147,14 @@ a.label {
 	margin-bottom: 0.25rem;
 }
 
+.strike {
+	text-decoration: line-through;
+}
+
+.light {
+	opacity: 0.7;
+}
+
 
 
 
@@ -312,6 +320,7 @@ input:hover {
 	background-color: $secondary-color;
 	margin-bottom: 2rem;
 	height: 100%;
+	position: relative;
 	
 	&:hover {
 		@extend .inverted;
@@ -367,6 +376,26 @@ input:hover {
 }
 
 
+.folded-top-right {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  color: #fff;
+  border-top: solid 25px crimson;
+  border-right: solid 25px crimson;
+  border-left: solid 25px transparent;
+  border-bottom: solid 25px transparent;
+}
+
+.folded-top-right-text {
+	transform: rotate(45deg);
+	position: absolute;
+	top: -22px;
+	right: -17px;
+}
 
 
 
