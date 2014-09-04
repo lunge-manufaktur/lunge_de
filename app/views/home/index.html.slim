@@ -24,8 +24,15 @@
           = link_to "Anzeigen...", "#", class: "button"
 
     section
-      h2.text-center Sortiment 
-      h5 Highlights
-      ul.small-block-grid-1.medium-block-grid-2.large-block-grid-4
-        - @products.each do |product|
-          = render "/products/card", product: product
+      h2.text-center Sortiment
+      hr
+      h5.text-center Wonach suchst Du?
+      p.text-center
+        - tag_cloud Product.published.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class|
+          = tag_cloud_item(tag.name)
+      hr
+      h5.text-center Highlights
+      p
+        ul.small-block-grid-1.medium-block-grid-2.large-block-grid-4
+          - @products.each do |product|
+            = render "/products/card", product: product
