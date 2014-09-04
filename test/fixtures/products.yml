@@ -28,3 +28,5 @@ default_product:
   brand: asics
   sku: <%= rand(1000) %>
   description: This is a description
+  current_price: 120
+  regular_price: 150

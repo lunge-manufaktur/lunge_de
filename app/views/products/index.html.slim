@@ -23,6 +23,12 @@
 
 	.small-12.medium-8.medium-pull-4.large-9.large-pull-3.columns
 		h4 = page_entries_info @products
+		ul.inline-list
+			li.light Sortieren nach
+			li = sort_link @search, :created_at, "Hinzugefügt", default_order: :desc
+			li = sort_link @search, :current_price, "Preis"
+
+
 		ul.small-block-grid-1.medium-block-grid-2.large-block-grid-3
 			- @products.each do |product|
 				= render "products/card", product: product
