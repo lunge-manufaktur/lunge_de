@@ -6,15 +6,10 @@
 .row
 	.small-12.columns
 		h4 Artikel
-
-		dl.sub-nav
-			dt Filter:
-			dd.active
-				a href="#" Beliebteste
-			dd
-				a href="#" Frisch eingetroffen
-			dd
-				a href="#" Angebote
+		ul.inline-list.sort-section.light
+			li Sortieren nach
+			li = sort_link @search, :created_at, "Hinzugefügt", default_order: :desc
+			li = sort_link @search, :current_price, "Preis"
 
 .row
 	.small-12.columns

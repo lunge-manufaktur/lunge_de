@@ -8,10 +8,14 @@ class BrandsController < ApplicationController
     @brands = Brand.active.order(:name).includes(:products)
   end
 
+  def search
+
+  end
+
   # GET /brands/1
-  # GET /brands/1.json
   def show
-    @products = Product.where(brand_id: params[:id]).includes(:brand, :product_images).page(params[:page]).per(20)
+    @search = Product.published.where(brand_id: params[:id]).search(params[:q])
+    @products = @search.result(distinct: true).includes(:brand, :product_images).page(params[:page]).per(20)
   end
 
   # GET /brands/new
@@ -63,18 +67,19 @@ class BrandsController < ApplicationController
     end
   end
 
-  private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_brand
-      @brand = Brand.find(params[:id])
-    end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def brand_params
-      params.require(:brand).permit(
-        :id,
-        :name,
-        :logo
-      )
-    end
+
+  private
+
+  def set_brand
+    @brand = Brand.find(params[:id])
+  end
+
+  def brand_params
+    params.require(:brand).permit(
+      :id,
+      :name,
+      :logo
+    )
+  end
 end

@@ -399,6 +399,18 @@ input:hover {
 
 
 
+.sort-section {
+	font-size: 0.875rem;
+	font-weight: 300;
+}
+
+.sort_link.asc,
+.sort_link.desc {
+	font-style: italic;
+}
+
+
+
 /* ----- TAGS ----- */
 
 .suffix {
