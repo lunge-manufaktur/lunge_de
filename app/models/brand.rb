@@ -13,13 +13,14 @@
 #
 
 class Brand < ActiveRecord::Base
-
 	# Associations
-
 	has_many :products
 
-	# Paperclip
+  # FriendlyID
+  extend FriendlyId
+  friendly_id :name, use: :slugged
 
+	# Paperclip
   require "paperclip/storage/ftp"
 
   Paperclip.interpolates :name do |attachment, style|
@@ -28,18 +29,16 @@ class Brand < ActiveRecord::Base
 
   has_attached_file :logo,
   	:styles => {
-  		:thumb => "128x128>",
+  		:thumb => "120x120>",
   		:small => "300x300>",
   		:medium => "500x500>",
-  		:large => "1024x1024>",
-  		:full_width => "2000x400#"
+  		:large => "1024x1024>"
   	},
     :convert_options => {
-      :thumb => "-quality 90 -strip",
-      :small => "-quality 80 -strip",
+      :thumb => "-quality 100 -strip",
+      :small => "-quality 100 -strip",
       :medium => "-quality 80 -strip",
-      :large => "-quality 80 -strip",
-      :full_width => "-quality 80 -strip",
+      :large => "-quality 80 -strip"
     },
   	:default_url => "/images/:style/missing.png",
   	:storage => :ftp,
@@ -57,7 +56,6 @@ class Brand < ActiveRecord::Base
   validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
 
 	# Scopes
-
   scope :active, -> { joins(:products) }
 
 

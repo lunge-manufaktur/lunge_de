@@ -14,6 +14,9 @@
     = f.text_field :name
   .fields
     = f.label :logo
-    = f.file_field :logo
+    - if @brand.logo
+      = image_tag @brand.try(:logo).url(:thumb)
+    = f.file_field :logo, class: "button secondary"
+
   .actions
     = f.submit "Speichern", class: "button"

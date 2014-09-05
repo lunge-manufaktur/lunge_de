@@ -2,8 +2,6 @@ class BrandsController < ApplicationController
   before_action :set_brand, only: [:show, :edit, :update, :destroy]
   protect_from_forgery except: :create
 
-  # GET /brands
-  # GET /brands.json
   def index
     @brands = Brand.active.order(:name).includes(:products)
   end
@@ -12,23 +10,18 @@ class BrandsController < ApplicationController
 
   end
 
-  # GET /brands/1
   def show
-    @search = Product.published.where(brand_id: params[:id]).search(params[:q])
+    @search = Product.published.where(brand_id: @brand.id).search(params[:q])
     @products = @search.result(distinct: true).includes(:brand, :product_images).page(params[:page]).per(20)
   end
 
-  # GET /brands/new
   def new
     @brand = Brand.new
   end
 
-  # GET /brands/1/edit
   def edit
   end
 
-  # POST /brands
-  # POST /brands.json
   def create
     @brand = Brand.new(brand_params)
 
@@ -43,8 +36,6 @@ class BrandsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /brands/1
-  # PATCH/PUT /brands/1.json
   def update
     respond_to do |format|
       if @brand.update(brand_params)
@@ -57,8 +48,6 @@ class BrandsController < ApplicationController
     end
   end
 
-  # DELETE /brands/1
-  # DELETE /brands/1.json
   def destroy
     @brand.destroy
     respond_to do |format|
@@ -72,7 +61,7 @@ class BrandsController < ApplicationController
   private
 
   def set_brand
-    @brand = Brand.find(params[:id])
+    @brand = Brand.friendly.find(params[:id])
   end
 
   def brand_params
