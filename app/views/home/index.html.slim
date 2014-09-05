@@ -22,7 +22,12 @@
           = tag_cloud_item(tag.name)
       hr
       h5.text-center Highlights
-      p
-        ul.small-block-grid-1.medium-block-grid-2.large-block-grid-4
-          - @products.each do |product|
-            = render "/products/card", product: product
+      ul.small-block-grid-1.medium-block-grid-2.large-block-grid-4
+        - @products.each do |product|
+          = render "/products/card", product: product
+      hr
+      h5.text-center Marken
+      ul.small-block-grid-2.medium-block-grid-4.large-block-grid-5.text-center
+        - @brands.each do |brand|
+          li.text-center
+            = link_to image_tag(brand.logo.url(:thumb)), brand_path(brand), class: "brand_logo"
