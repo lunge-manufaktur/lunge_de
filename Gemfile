@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 
-ruby '2.1.0'
-gem 'rails', '~> 4.0'
-gem 'rails-i18n'
-gem 'pg'
-gem 'puma'
-gem 'devise'
+ruby "2.1.0"
+gem "rails", "~> 4.0"
+gem "rails-i18n"
+gem "pg"
+gem "puma"
+gem "devise"
+gem "pundit"
 
 group :test do
 	gem "minitest-rails-capybara"

@@ -1,18 +1,21 @@
 = content_for :full_width_content
-	- if @post.post_images.any?
-		.fade.show-for-large-up
-		.featured_image
-			= image_tag @post.default_image("full_width"), data: { interchange: "[#{@post.default_image('full_width')}, (default)], [#{@post.default_image('small')}, (small)], [#{@post.default_image('medium')}, (medium)], [#{@post.default_image('full_width')}, (large)]" }
+  - if @post.post_images.any?
+    .fade.show-for-large-up
+    .featured_image
+      = image_tag @post.default_image("full_width"), data: { interchange: "[#{@post.default_image('full_width')}, (default)], [#{@post.default_image('small')}, (small)], [#{@post.default_image('medium')}, (medium)], [#{@post.default_image('full_width')}, (large)]" }
 
 = content_for :title_bar
-	h1 = @post.title
-	h2.subtitle
-		small = @post.subtitle
+  h1 = @post.title
+  h2.subtitle
+    small = @post.subtitle
 
 .row
-	.small-12.medium-8.large-8.columns
-		p = simple_format(@post.content)
-
-= link_to 'Edit', edit_post_path(@post)
-span | 
-= link_to 'Back', posts_path
+  .small-12.medium-8.large-8.columns
+    = simple_format(@post.content)
+  .small-12.medium-3.large-3.columns
+    label Aufgaben
+    ul.no-bullet
+      - if policy(@post).edit?
+        li = link_to "Bearbeiten", edit_post_path(@post)
+      - if policy(@post).destroy?
+        li = link_to "Löschen", post_path(@post), method: :delete, data: { confirm: "Wirklich löschen? Diese Aktion ist nicht rückgängig zu machen." }, class: "alert"

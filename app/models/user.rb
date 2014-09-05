@@ -27,5 +27,4 @@ class User < ActiveRecord::Base
   has_many :api_keys, dependent: :destroy
 
   accepts_nested_attributes_for :api_keys
-
 end

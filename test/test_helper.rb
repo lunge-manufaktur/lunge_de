@@ -18,3 +18,30 @@ class ActiveSupport::TestCase
     request.headers['Authorization'] = "Token token=#{@key}"
   end
 end
+
+class PolicyTest < ActiveSupport::TestCase
+  
+  def assert_permissions(current_user, record, available_actions, permissions_hash = {})
+    permissions_hash.each do |action, should_be_permitted|
+      if should_be_permitted
+        assert_permit current_user, record, action
+      else
+        refute_permit current_user, record, action
+      end
+    end
+
+  end
+
+  def assert_permit(current_user, record, action)
+    assert permit(current_user, record, action), "User #{current_user} should be permitted #{action} on #{record}, but isn't."
+  end
+
+  def refute_permit(current_user, record, action)
+    assert refute(current_user, record, action), "User #{current_user} should NOT be permitted #{action} on #{record}, but is."
+  end
+
+  def permit(current_user, record, action)
+    self.class.to_s.gsub(/Test/, "").constantize.new(current_user, record).public_send("#{action.to_s}?")
+  end
+  
+end
