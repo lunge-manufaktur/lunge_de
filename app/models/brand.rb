@@ -56,7 +56,7 @@ class Brand < ActiveRecord::Base
   validates_attachment_content_type :logo, :content_type => /\Aimage\/.*\Z/
 
 	# Scopes
-  scope :active, -> { joins(:products).distinct }
+  scope :active, -> { joins(:products).distinct.merge(Product.published) }
 
 
 
