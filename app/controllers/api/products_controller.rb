@@ -41,7 +41,7 @@ module Api
 
     def product_params
       params.require(:product).permit(
-        :all,
+        :id,
         stocks_attributes: [
           :id,
           :product_id,
