@@ -42,6 +42,20 @@ module Api
     def product_params
       params.require(:product).permit(
         :id,
+        :name,
+        :sku,
+        :description,
+        :updated_at,
+        :size_id,
+        :brand_id,
+        :regular_price,
+        :current_price,
+        :color,
+        :is_published,
+        :official_description,
+        :is_on_sale,
+        :is_on_frontpage,
+        :is_featured,
         stocks_attributes: [
           :id,
           :product_id,

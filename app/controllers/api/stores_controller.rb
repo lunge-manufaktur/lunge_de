@@ -45,7 +45,18 @@ module Api
     # Never trust parameters from the scary internet, only allow the white list through.
     def store_params
       params.require(:store).permit(
-        :all
+        :id,
+        :name,
+        :address_name,
+        :street,
+        :zip,
+        :city,
+        :phone,
+        :email,
+        :active,
+        :latitude,
+        :longitude,
+        :description
       )
     end
   end

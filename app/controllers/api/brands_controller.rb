@@ -37,7 +37,8 @@ module Api
     # Never trust parameters from the scary internet, only allow the white list through.
     def brand_params
       params.require(:brand).permit(
-        :all
+        :id,
+        :name
       )
     end
 
