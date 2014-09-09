@@ -1,0 +1,17 @@
+= content_for :title_bar
+  h1 Kontakt
+
+= form_for @contact_form, url: "contact", method: "post" do |f|
+  .fields
+    = f.label :name, "Name"
+    = f.text_field :name
+
+  .fields
+    = f.label :email, "E-Mail"
+    = f.email_field :email
+
+  .fields
+    = f.label :message, "Mitteilung"
+    = f.text_area :message, rows: 10
+
+  = f.submit "Senden", class: "button"

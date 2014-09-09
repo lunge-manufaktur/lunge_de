@@ -12,6 +12,10 @@ group :test do
 	gem "minitest-rails-capybara"
 end
 
+group :development, :test do
+  gem "foreman"
+end
+
 
 gem 'sass-rails', '~> 4.0.0'
 gem 'uglifier', '>= 1.3.0'
@@ -33,6 +37,7 @@ gem "paperclip-storage-ftp"
 gem 'nested_form'
 gem "geocoder"
 gem "slim-rails"
+gem "mail_form"
 
 # heroku
 group :production do

@@ -100,16 +100,17 @@ LungeDe::Application.routes.draw do
       get "page/:page", :action => :index
       get "remove_tag/:tag", :action => "remove_tag", :as => "remove_tag"
     end
-
     resources :product_images
     resources :properties
-
     member do
       get :edit_product_images
       get :edit_properties
       patch :save_properties
     end
-
   end
+
+  # custom routes
+  get "contact", controller: "contact_form", action: "new"
+  post "contact", controller: "contact_form", action: "create"
   
 end
