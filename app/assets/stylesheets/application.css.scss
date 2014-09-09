@@ -177,6 +177,15 @@ a .with-border:hover {
 }
 
 
+/*----- NOTICE -----*/
+.notice {
+	background-color: scale-color($primary-color, $lightness: 20%);
+	color: #fff;
+	padding: 0.5rem;
+	text-align: center;
+}
+
+
 
 
 /* ----- FOOTER -----*/

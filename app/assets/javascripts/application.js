@@ -18,3 +18,6 @@
 //= require_tree
 
 $(document).foundation();
+
+// Hide notices after a few seconds
+$('.notice').slideDown(500).delay(5000).slideUp(500);

@@ -11,7 +11,7 @@
             = link_to image_tag(post.default_image("small")), post_path(post)
             h5 = post.title
             p = strip_tags(post.short_description)
-            = link_to "Weiterlesen...", "#", class: "button"
+            = link_to "Weiterlesen...", post_path(post)
 
     section
       h2.text-center Sortiment

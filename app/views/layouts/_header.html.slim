@@ -38,6 +38,6 @@
         - if current_user
           li = link_to "Logout", destroy_user_session_path, method: :delete
 
-  - if notice
-    .text-center.notice
-      p = notice
+- if notice
+  .notice
+    = notice
