@@ -1,0 +1,22 @@
+footer
+	.row
+		.small-12.medium-4.columns
+			h6 Filialen
+			ul.no-bullet
+				- Store.all.order(city: :desc).each do |store|
+					li = link_to "#{store.city} / #{store.street}", store_path(store), class: "inverted"
+
+		.small-12.medium-4.columns
+			h6 Öffnungszeiten
+			p
+				label Montag - Freitag:
+				| 10:30 Uhr - 19:00 Uhr
+			p
+				label Samstag
+				| 10:00 Uhr - 18:00 Uhr
+
+		.small-12.medium-4.columns
+			h6 Lunge Manufaktur
+			p
+				| Neben den Produkten etablierter Hersteller, finden Sie in unserem Sortiment natürlich auch unsere eigenen, in Deutschland gefertigten Lauf- und Bequemschuhe: Schadstofffrei, feinste Materialien und sorgfältige Verarbeitung.
+			= link_to "www.lunge.com", "http://www.lunge.com", class: "button small alert", target: "_blank"

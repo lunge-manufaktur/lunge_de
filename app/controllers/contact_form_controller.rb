@@ -1,6 +1,7 @@
 class ContactFormController < ApplicationController
   def new
     @contact_form = ContactForm.new
+    @stores = Store.active
   end
 
   def create

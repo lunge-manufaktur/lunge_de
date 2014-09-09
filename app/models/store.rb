@@ -21,7 +21,6 @@
 class Store < ActiveRecord::Base
 
 	# associations
-
 	has_many :stocks
 	has_many :products, through: :stocks
 	has_many :events
@@ -35,6 +34,7 @@ class Store < ActiveRecord::Base
 
 
 	# scopes
+	scope :active, -> { where(active: true) }
 	scope :hamburg, -> { where(city: "Hamburg") }
 	scope :berlin, -> { where(city: "Berlin") }
 

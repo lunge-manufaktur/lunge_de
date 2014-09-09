@@ -1,17 +1,51 @@
 = content_for :title_bar
   h1 Kontakt
 
-= form_for @contact_form, url: "contact", method: "post" do |f|
-  .fields
-    = f.label :name, "Name"
-    = f.text_field :name
+.row
+  .small-12.medium-8.columns
+    p
+      | Sie haben Fragen, Anregungen, Kritik oder Lob? Kontaktieren Sie uns einfach. 
+    = form_for @contact_form, url: "contact", method: "post" do |f|
+      .fields
+        = f.label :name, "Name"
+        = f.text_field :name
 
-  .fields
-    = f.label :email, "E-Mail"
-    = f.email_field :email
+      .fields
+        = f.label :email, "E-Mail"
+        = f.email_field :email
 
-  .fields
-    = f.label :message, "Mitteilung"
-    = f.text_area :message, rows: 10
+      .fields
+        = f.label :message, "Mitteilung"
+        = f.text_area :message, rows: 10
 
-  = f.submit "Senden", class: "button"
+      = f.submit "Senden", class: "button"
+
+  .small-12.medium-3.large-3.columns
+    p
+      label Anschrift
+      | Lunge Lauf- und Sportschuhe GmbH
+      br
+      | Lämmersieth 1
+      br
+      | 22305 Hamburg
+      br
+      | Deutschland
+
+    p
+      label Geschäftsführer
+      | Ulf Lunge, Lars Lunge
+    p
+      label Registergericht
+      | Hamburg
+    p
+      label Registernummer
+      | HRB 53652
+    p
+      label USt-ID
+      | DE158104096
+
+    p
+      label Filialen:
+      - @stores.each do |store|
+        = link_to "#{store.name} (#{store.city})", store_path(store)
+        br

@@ -1,0 +1,43 @@
+.fixed
+  nav.top-bar data-topbar=""
+    ul.title-area
+      li.name
+        h1 = link_to "Lunge Laufladen", :root
+      li.toggle-topbar.menu-icon
+        a href="#"
+          span menu
+
+    section.top-bar-section
+      ul.right
+        li.has-dropdown
+          = link_to "Sortiment", products_path
+          ul.dropdown
+            li = link_to "Artikel", products_path
+            li = link_to "Marken", brands_path
+        li.has-dropdown
+          = link_to "Beratung", "/categories/beratung"
+          ul.dropdown
+            li = link_to "Laufbandanalyse", "/categories/laufbandanalyse"
+            li = link_to "Ernährung", "/categories/ernahrung"
+            li = link_to "Training", "/categories/training"
+            li = link_to "Laufen", "/categories/laufen"
+            li = link_to "Regeneration", "/categories/regeneration"
+            li = link_to "Anatomie", "/categories/anatomie-ausflug"
+        li.has-dropdown
+          = link_to "Service", "#"
+          ul.dropdown
+            li = link_to "Downloads", "#"
+        li.has-dropdown
+          = link_to "Filialen", stores_path
+          ul.dropdown
+            - Store.all.each do |store|
+              li = link_to "#{store.name} / #{store.city}", store_path(store)
+
+        li = link_to "Kontakt", contact_path
+
+        - if current_user
+          li = link_to "Logout", destroy_user_session_path, method: :delete
+
+  - if notice
+    .text-center.notice
+      p = notice
