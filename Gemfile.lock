@@ -36,6 +36,9 @@ GEM
     awesome_nested_set (3.0.1)
       activerecord (>= 4.0.0, < 5)
     bcrypt (3.1.7)
+    bourbon (3.2.3)
+      sass (~> 3.2)
+      thor
     builder (3.2.2)
     capybara (2.4.1)
       mime-types (>= 1.16)
@@ -222,6 +225,7 @@ DEPENDENCIES
   acts-as-taggable-on
   annotate
   awesome_nested_set
+  bourbon
   coffee-rails (~> 4.0.0)
   devise
   foreman

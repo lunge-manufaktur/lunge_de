@@ -2,9 +2,9 @@
 
 = content_for :full_width_content do
   - if @product.product_images.any?
-    .featured_image
-      .fade.show-for-xxlarge-up
-      = image_tag @product.default_image("full_width"), data: { interchange: "[#{@product.default_image('full_width')}, (default)], [#{@product.default_image('small')}, (small)], [#{@product.default_image('medium')}, (medium)], [#{@product.default_image('full_width')}, (large)], [#{@product.default_image('full_width')}, (xlarge)]" }
+    .featured_image data-interchange="[#{@product.default_image('full')}, (default)], [#{@product.default_image('small')}, (small)], [#{@product.default_image('medium')}, (medium)], [#{@product.default_image('large')}, (large)]"
+      .fade-bottom
+      - # image_tag @product.default_image("full_width"), data: { interchange: "[#{@product.default_image('full_width')}, (default)], [#{@product.default_image('small')}, (small)], [#{@product.default_image('medium')}, (medium)], [#{@product.default_image('full_width')}, (large)], [#{@product.default_image('header')}, (xlarge)]" }
 
 = content_for :title_bar
   h2.subtitle

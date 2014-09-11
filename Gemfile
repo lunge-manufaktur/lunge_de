@@ -30,6 +30,7 @@ group :doc do
 end
 
 gem 'foundation-rails'
+gem "bourbon"
 gem 'ransack'
 gem 'annotate'
 gem "paperclip", "~> 4.1"

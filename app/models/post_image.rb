@@ -29,16 +29,14 @@ class PostImage < ActiveRecord::Base
   		:thumb => "300x300>",
   		:small => "640x640>",
   		:medium => "1024x1024>",
-  		:large => "1600x1600>",
-  		:full_width => "2000x400#",
+  		:large => "2000x2000>",
       :card => "640x640#"
   	},
     :convert_options => {
       :thumb => "-quality 75 -strip",
       :small => "-quality 80 -strip",
       :medium => "-quality 80 -strip",
-      :large => "-quality 90 -strip",
-      :full_width => "-quality 90 -strip",
+      :large => "-quality 80 -strip",
       :card => "-quality 80 -strip"
     },
   	:default_url => "/images/:style/missing.png",
