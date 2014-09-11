@@ -34,10 +34,10 @@ class ProductImage < ActiveRecord::Base
       :card => "640x640#"
   	},
     :convert_options => {
-      :thumb => "-quality 75 -strip",
+      :thumb => "-quality 80 -strip",
       :small => "-quality 80 -strip",
-      :medium => "-quality 80 -strip",
-      :large => "-quality 80 -strip",
+      :medium => "-quality 85 -strip",
+      :large => "-quality 90 -strip",
       :card => "-quality 80 -strip"
     },
   	:default_url => "/images/:style/missing.png",
