@@ -11,7 +11,7 @@ class ProductsController < ApplicationController
       @products = @search.result.includes(:brand, :product_images).tagged_with(@tags).page(params[:page]).per(12)
     else
       @search = Product.published.search(params[:q])
-      @products = @search.result(distinct: true).includes(:brand, :product_images).order(created_at: :desc).page(params[:page]).per(12)
+      @products = @search.result.includes(:brand, :product_images).page(params[:page]).per(12)
     end
   end
 
