@@ -9,6 +9,10 @@ LungeDe::Application.routes.draw do
     get '(search/page/:page)', action: :search, on: :collection, :as => 'search_page'
   end
 
+  concern :searchable do
+    match '(search)', action: :search, on: :collection, via: [:get, :post], as: :search
+  end
+
   # /api/...
   namespace :api, defaults: {format: 'json'} do
     resources :brands
@@ -45,10 +49,10 @@ LungeDe::Application.routes.draw do
   resources :product_images
   resources :product_categories
   resources :sizes
-  resources :products, concerns: :paginatable do
+  resources :products, concerns: [:paginatable, :searchable] do
     get "featured" => "products#show_featured", :as => "featured"
     collection do
-      match 'search' => 'products#search', via: [:get, :post], as: :search
+      
       get "tags/:tags", to: "products#index", as: :tag
       get "remove_tag/:tag", :action => "remove_tag", :as => "remove_tag"
     end
