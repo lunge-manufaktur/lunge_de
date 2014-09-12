@@ -9,13 +9,13 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
 
- *= require foundation_and_overrides
  += require ionicons
  *= require_self
  *= require products
  */
 
 @import "bourbon";
+@import "foundation_and_overrides";
 
 // $primary-color: #2698C4;
 $primary-color: #D82B4E;
@@ -299,12 +299,21 @@ input:hover {
 
 .featured_image {
 	position: relative;
-	background: no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   height: 66%;
+  @media #{$large-up} {
+		background: no-repeat center center fixed;
+  };
+  @media #{$small-only} {
+  	background: no-repeat center center stretch;
+  };
+  @media #{$medium-only} {
+  	background-position:top;
+  	background: no-repeat center center stretch;
+  };
 }
 
 .fade {
