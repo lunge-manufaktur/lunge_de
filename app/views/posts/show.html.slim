@@ -12,9 +12,16 @@
   .small-12.medium-8.large-8.columns
     = simple_format(@post.content)
   .small-12.medium-3.large-3.columns
-    label Aufgaben
-    ul.no-bullet
+    .fields
+      label Veröffentlicht am
+      = l @post.created_at, format: :date_only
+    .fields
+      label Eingeordnet in
+      - @post.categories.each do |category|
+        = link_to category.name, category_path(category), class: "link"
+    .fields
       - if policy(@post).edit?
-        li = link_to "Bearbeiten", edit_post_path(@post)
-      - if policy(@post).destroy?
-        li = link_to "Löschen", post_path(@post), method: :delete, data: { confirm: "Wirklich löschen? Diese Aktion ist nicht rückgängig zu machen." }, class: "alert"
+        label Bearbeiten
+        ul.no-bullet
+          li = link_to "Bearbeiten", edit_post_path(@post)
+          li = link_to "Löschen", post_path(@post), method: :delete, data: { confirm: "Wirklich löschen? Diese Aktion ist nicht rückgängig zu machen." }, class: "alert"

@@ -158,7 +158,7 @@ a.label {
 }
 
 a.link {
-	border-bottom: 1px dashed scale-color($primary-color, $lightness: 20%);
+	border-bottom: 1px dotted scale-color($primary-color, $lightness: 50%);
 
 	&:hover {
 		border-color: $primary-color;
@@ -224,6 +224,10 @@ footer {
 
 
 /* ----- FORMS ----- */
+
+.fields {
+	margin-bottom: 2rem;
+}
 
 select {
 	font-family: "ff-meta-web-pro";
