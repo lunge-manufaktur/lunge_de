@@ -1,8 +1,7 @@
 = content_for :full_width_content
   - if @post.post_images.any?
-    .fade.show-for-large-up
-    .featured_image
-      = image_tag @post.default_image("full_width"), data: { interchange: "[#{@post.default_image('full_width')}, (default)], [#{@post.default_image('small')}, (small)], [#{@post.default_image('medium')}, (medium)], [#{@post.default_image('full_width')}, (large)]" }
+    .featured_image data-interchange="[#{@post.default_image('full')}, (default)], [#{@post.default_image('small')}, (small)], [#{@post.default_image('medium')}, (medium)], [#{@post.default_image('large')}, (large)]"
+      .fade-bottom
 
 = content_for :title_bar
   h1 = @post.title
