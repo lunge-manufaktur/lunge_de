@@ -294,15 +294,17 @@ input:hover {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   height: 66%;
   @media #{$large-up} {
-		background: no-repeat center center fixed;
   };
   @media #{$small-only} {
-  	background: no-repeat center center scroll;
+  	background-attachment: scroll;
   };
   @media #{$medium-only} {
-  	background: no-repeat center center scroll;
+  	background-attachment: scroll;
   };
 }
 
