@@ -1,6 +1,13 @@
 = content_for :full_width_content do
-  .featured_image style="background: url(http://www.lunge.de/images/home/home_fullscreen__3200px.jpg) no-repeat center center fixed;"
-    .fade-bottom
+  .intro style="background: url(http://www.lunge.de/images/home/home03.jpg)"
+    .row
+      .small-12.columns
+        .logo
+          = image_tag "http://www.lunge.de/images/home/home_logo.png"
+        h4.text-center.inverted Wonach suchst Du?
+        p.text-center
+          - tag_cloud Product.published.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class|
+            = tag_cloud_item(tag.name)
 
 
 .row
@@ -17,11 +24,6 @@
 
     section
       h2.text-center Sortiment
-      hr
-      h5.text-center Wonach suchst Du?
-      p.text-center
-        - tag_cloud Product.published.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class|
-          = tag_cloud_item(tag.name)
       hr
       h5.text-center Highlights
       ul.small-block-grid-1.medium-block-grid-2.large-block-grid-4

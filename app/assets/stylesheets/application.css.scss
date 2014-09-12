@@ -288,15 +288,6 @@ input:hover {
 
 /* ----- PAGE ----- */
 
-/*
-.featured_image {
-	border-bottom: 3px solid $primary-color;
-	max-height: 405px;
-	overflow: hidden;
-	position: relative;
-}
-*/
-
 .featured_image {
 	position: relative;
   -webkit-background-size: cover;
@@ -308,11 +299,29 @@ input:hover {
 		background: no-repeat center center fixed;
   };
   @media #{$small-only} {
-  	background: no-repeat center center stretch;
+  	background: no-repeat center center scroll;
   };
   @media #{$medium-only} {
-  	background-position:top;
-  	background: no-repeat center center stretch;
+  	background: no-repeat center center scroll;
+  };
+}
+
+.intro {
+	padding: 5rem 0;
+	position: relative;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: auto;
+  @media #{$large-up} {
+		background: no-repeat center center fixed;
+  };
+  @media #{$small-only} {
+  	background: no-repeat center center scroll;
+  };
+  @media #{$medium-only} {
+  	background: no-repeat center center scroll;
   };
 }
 
@@ -339,6 +348,17 @@ input:hover {
 	    rgba(245, 255, 250,1) 100%
 	  )
 	);
+}
+
+.logo {
+	width: 300px;
+	margin: 0 auto 5rem auto;
+	@media #{$small-only} {
+		width: 240px;
+	};
+
+	img {
+	}
 }
 
 
