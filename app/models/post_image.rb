@@ -45,9 +45,9 @@ class PostImage < ActiveRecord::Base
   	:url => "http://www.lunge.de/images/:class/:post_id/:post_id_:id_:style.:extension",
   	:ftp_servers => [
       {
-        :host     => "www.lunge.de",
-        :user     => "webmin@lunge.de",
-        :password => "Pegasus#11",
+        :host     => ENV["FTP_HOST"],
+        :user     => ENV["FTP_USER"],
+        :password => ENV["FTP_PASSWORD"],
         :passive	=> true
       }
     ]
