@@ -449,6 +449,14 @@ input:hover {
 
 }
 
+.card-image {
+	width: 100%;
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .card-section-narrow {
 	padding: 1rem;
 	box-sizing: border-box;

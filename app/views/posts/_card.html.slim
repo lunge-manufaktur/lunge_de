@@ -1,0 +1,11 @@
+li
+  = link_to post_path(post)
+    .item-card
+      .card-image style="background-image: url(#{post.default_image('medium')});"
+      .card-section-narrow
+        h3 = post.title
+        h6 = post.subtitle
+        p = strip_tags(post.short_description(300))
+        ul.no-bullet
+          - post.categories.each do |category|
+            span.label = category.name
