@@ -55,5 +55,5 @@ class PostImage < ActiveRecord::Base
       }
     ]
 
-  validates_attachment_content_type :image, :content_type => ["/\Aimage\/.*\Z/", "image/svg+xml"]
+  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 end
