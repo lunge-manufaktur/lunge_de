@@ -4,7 +4,7 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @search = Post.search(params[:q])
+    @search = Post.published.search(params[:q])
     @posts = @search.result(distinct: true).order(created_at: :desc)
     @categories = Category.all
   end

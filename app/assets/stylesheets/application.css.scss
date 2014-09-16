@@ -316,6 +316,9 @@ input:hover {
 	position: relative;
 	height: 50%;
 	background-color: scale-color($primary-color, $lightness: 10%);
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: 120% 120%;
 }
 
 .featured_icon svg {
@@ -474,6 +477,7 @@ input:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: scale-color($primary-color, $lightness: 20%);
+  background-size: 66% 66%;
 }
 
 .card-section-narrow {
