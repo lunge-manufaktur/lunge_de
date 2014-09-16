@@ -82,7 +82,7 @@ class PostsController < ApplicationController
         :is_on_homepage,
         :category_ids => [],
         categorizations_attributes: [
-          :product_id,
+          :post_id,
           :category_id
         ],
         post_images_attributes: [
