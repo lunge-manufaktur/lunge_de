@@ -1,7 +1,10 @@
 li
   = link_to post_path(post)
     .item-card
-      .card-image style="background-image: url(#{post.default_image('medium')});"
+      - if post.post_images.default.image_content_type == "image/svg+xml"
+        .card-icon style="background-image: url(#{post.post_images.default.image.url(:original)});"
+      - else
+        .card-image style="background-image: url(#{post.default_image('medium')});"
       .card-section-narrow
         h3 = post.title
         h6 = post.subtitle

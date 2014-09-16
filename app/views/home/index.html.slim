@@ -17,7 +17,11 @@
       ul.small-block-grid-1.medium-block-grid-3 data-equalizer=""
         - @posts.each do |post|
           li data-equalizer-watch=""
-            = link_to image_tag(post.default_image("small")), post_path(post)
+            a href=post_path(post)
+              - if post.post_images.default.image_content_type == "image/svg+xml"
+                .card-icon style="background-image: url(#{post.post_images.default.image.url(:original)});"
+              - else
+                .card-image style="background-image: url(#{post.default_image("small")})"
             h5 = post.title
             p = strip_tags(post.short_description)
             = link_to "Weiterlesen...", post_path(post)

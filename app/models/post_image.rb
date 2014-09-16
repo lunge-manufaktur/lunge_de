@@ -17,6 +17,9 @@ class PostImage < ActiveRecord::Base
   # Associations
   belongs_to :post
 
+  # scopes
+  scope :default, -> { where(default: true).first }
+
   # Paperclip
   require "paperclip/storage/ftp"
 
@@ -52,5 +55,5 @@ class PostImage < ActiveRecord::Base
       }
     ]
 
-  validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+  validates_attachment_content_type :image, :content_type => ["/\Aimage\/.*\Z/", "image/svg+xml"]
 end
