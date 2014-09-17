@@ -29,5 +29,8 @@ module LungeDe
 
     # add ionicons iconfont to asset pipline
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+
+    # use the rails router to handle custom error pages
+    config.exceptions_app = self.routes
   end
 end

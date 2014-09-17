@@ -3,6 +3,11 @@ LungeDe::Application.routes.draw do
   devise_for :users
   root :to => "home#index"
 
+  # error pages
+  get "/404", to: "errors#not_found"
+  get "/422", to: "errors#unacceptable"
+  get "/500", to: "errors#internal_error"
+
   # concerns
   concern :paginatable do
     get '(page/:page)', action: :index, on: :collection, :as => ''
