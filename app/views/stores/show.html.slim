@@ -45,11 +45,11 @@
       h4 Kontakt
       p
         label Telefon:
-        | 040 1234567
+        = @store.phone
 
       p
         label Mail:
-        | mail@example.com
+        = @store.email
 
 = link_to 'Edit', edit_store_path(@store)
 |  | 
