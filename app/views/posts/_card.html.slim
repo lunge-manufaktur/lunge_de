@@ -9,7 +9,7 @@ li
       .card-section-narrow
         h3 = post.title
         h6 = post.subtitle
-        p = strip_tags(post.short_description(300))
+        p = strip_tags(post.short_description(300)).html_safe
         ul.no-bullet
           - post.categories.each do |category|
             span.label = category.name
