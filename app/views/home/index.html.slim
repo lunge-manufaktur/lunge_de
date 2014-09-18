@@ -3,7 +3,7 @@
     .row
       .small-12.columns
         .logo
-          = image_tag "http://www.lunge.de/images/home/home_logo.png"
+          = image_tag "http://www.lunge.de/images/home/logo-intro.png"
         h4.text-center.inverted Wonach suchst Du?
         p.text-center
           - tag_cloud Product.published.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class|
