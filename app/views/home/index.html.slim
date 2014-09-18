@@ -23,7 +23,7 @@
               - else
                 .card-image style="background-image: url(#{post.default_image("small")})"
             h5 = post.title
-            p = strip_tags(post.short_description)
+            p = strip_tags(post.short_description).html_safe
             = link_to "Weiterlesen...", post_path(post)
 
     section
