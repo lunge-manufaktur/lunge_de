@@ -20,10 +20,11 @@
     .fields
       label Veröffentlicht am
       = l @post.created_at, format: :date_only
-    .fields
-      label Eingeordnet in
-      - @post.categories.each do |category|
-        = link_to category.name, category_path(category), class: "link"
+    - if @post.categories.any?
+      .fields
+        label Eingeordnet in
+        - @post.categories.each do |category|
+          = link_to category.name, category_path(category), class: "link"
     .fields
       - if policy(@post).edit?
         label Bearbeiten
