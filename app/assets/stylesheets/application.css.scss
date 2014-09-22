@@ -171,7 +171,12 @@ a.link {
 
 /* ----- LAYOUT ----- */
 
-.main-content {
+.full-width {
+	display: table;
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: initial;
 }
 
 section {
@@ -318,7 +323,7 @@ input:hover {
 	background-color: scale-color($primary-color, $lightness: 10%);
 	background-position: center center;
 	background-repeat: no-repeat;
-	background-size: 120% 120%;
+	background-size: auto 120%;
 }
 
 .featured_icon svg {
@@ -342,6 +347,10 @@ input:hover {
   @media #{$medium-only} {
   	background: no-repeat center center scroll;
   };
+}
+
+.overlay {
+	padding: 5rem 0;
 }
 
 .fade {
@@ -477,7 +486,7 @@ input:hover {
   background-repeat: no-repeat;
   background-size: cover;
   background-color: scale-color($primary-color, $lightness: 20%);
-  background-size: 66% 66%;
+  background-size: auto 66%;
 }
 
 .card-section-narrow {

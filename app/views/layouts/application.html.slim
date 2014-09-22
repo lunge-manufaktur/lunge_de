@@ -16,13 +16,8 @@ html
 	body
 		= render "layouts/header"
 		= yield :full_width_content
-
-		.row.main-content
-			.small-12.columns
-				.title_bar
-					= yield :title_bar
-
-				= yield
+		= yield :title_bar
+		= yield
 
 		= render "layouts/footer"
 		= javascript_include_tag "application", "data-turbolinks-track" => true

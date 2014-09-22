@@ -19,6 +19,8 @@ class PostImage < ActiveRecord::Base
 
   # scopes
   scope :default, -> { where(default: true).first }
+  scope :svg, -> { where(image_content_type: "image/svg+xml").first }
+  scope :jpg, -> { where(image_content_type: "image/jpeg").first }
 
   # Paperclip
   require "paperclip/storage/ftp"
