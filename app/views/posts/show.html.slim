@@ -1,17 +1,17 @@
 = content_for :full_width_content
-  - if @post.post_images.any?
-    - if @post.post_images.default.image_content_type == "image/svg+xml"
-      .featured_icon style="background-image: url(#{@post.post_images.default.image.url(:original)})"
-    - else
-      .featured_image data-interchange="[#{@post.default_image('full')}, (default)], [#{@post.default_image('small')}, (small)], [#{@post.default_image('medium')}, (medium)], [#{@post.default_image('large')}, (large)]"
-        .fade-bottom
-      .row
-        .small-12.columns
+  - if @post.post_images
+    .image style="background-image: url(#{@post.post_images.jpg.image.url(:large)}); background-size: cover; background-position: center center"
+      .icon_with_overlay style="background-image: url(#{@post.icon.url(:original)});" 
+  - else
+    .featured_icon style="background-image: url(#{@post.post_images.svg.image.url(:original)})"
 
 = content_for :title_bar
-  h1 = @post.title
-  h2.subtitle
-    small = @post.subtitle
+  .title_bar
+    .row
+      .small-12.columns
+        h1 = @post.title
+        h2.subtitle
+          small = @post.subtitle
 
 .row
   .small-12.medium-8.large-8.columns

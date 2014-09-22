@@ -41,6 +41,9 @@
                 = check_box_tag "post[category_ids][]", category.id, @post.category_ids.include?(category.id), id: dom_id(category)
                 = label_tag dom_id(category), category.name
       section
+        h4 Icon
+        = f.file_field :icon
+      section
         h4 Bilder
         = f.fields_for :post_images
         = f.link_to_add "Bild hinzufügen", :post_images, class: "button expand"

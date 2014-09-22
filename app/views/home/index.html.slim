@@ -12,7 +12,7 @@
 section
   - @posts.each_with_index do |post, index|
     - if index.even?
-      .full-width style="background-image: url(#{post.post_images.svg.image.url(:original)}); background-size: auto 150%; background-position: center; background-color: rgba(250, 240, 230, 0.8); background-repeat: no-repeat; background-position-x: 5%;"
+      .full-width style="background-image: url(#{post.icon.url(:original)}); background-size: auto 150%; background-position: center; background-color: rgba(250, 240, 230, 0.8); background-repeat: no-repeat; background-position-x: 5%;"
         .overlay
           .row
             .small-12.large-3.columns
@@ -21,7 +21,7 @@ section
               p = strip_tags(post.short_description(300)).html_safe
               = link_to "Mehr...", post_path(post), class: "button"
     - else
-      .full-width style="background-image: url(#{post.post_images.svg.image.url(:original)}); background-size: auto 150%; background-position: center; background-color: rgba(250, 245, 240, 0.78); background-repeat: no-repeat; background-position-x: 95%;"
+      .full-width style="background-image: url(#{post.icon.url(:original)}); background-size: auto 150%; background-position: center; background-color: rgba(250, 245, 240, 0.78); background-repeat: no-repeat; background-position-x: 95%;"
         .overlay
           .row
             .small-12.large-8.columns

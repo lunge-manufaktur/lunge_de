@@ -31,6 +31,23 @@ class Post < ActiveRecord::Base
   scope :published, -> { where(is_published: true) }
   scope :homepage, -> { where(is_on_homepage: true) }
 
+  # Paperclip
+  require "paperclip/storage/ftp"
+  has_attached_file :icon,
+    storage: :ftp,
+    path: "/lunge.de/www/images/PostImage/:id/:id.:extension",
+    url: "http://www.lunge.de/images/PostImage/:id/:id.:extension",
+    ftp_servers: [
+      {
+        :host     => ENV["FTP_HOST"],
+        :user     => ENV["FTP_USER"],
+        :password => ENV["FTP_PASSWORD"],
+        :passive  => true
+      }
+    ]
+
+  validates_attachment_content_type :icon, :content_type => /\Aimage\/.*\Z/
+
   # Methods
   def short_description(length=nil)
     length ||= 200

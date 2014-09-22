@@ -80,6 +80,7 @@ class PostsController < ApplicationController
         :content,
         :is_published,
         :is_on_homepage,
+        :icon,
         :category_ids => [],
         categorizations_attributes: [
           :post_id,

@@ -1,18 +1,21 @@
 = render "products/search/index"
 
 = content_for :title_bar
-	.row
-		.small-12.medium-9.columns
-			h1 = Product.model_name.human(count: @products.count)
+	.title_bar
+		.row
+			.small-12.medium-9.columns
+				h1 = Product.model_name.human(count: @products.count)
 
 - if @tags
-	section
-		.panel
-			h4 Aktive Filter: 
-			- @tags.each do |tag|
-				= tag_to_remove(tag)
-			hr
-			= link_to "Alle Artikel anzeigen", products_path
+	.row
+		.small-12.columns
+			section
+				.panel
+					h4 Aktive Filter: 
+					- @tags.each do |tag|
+						= tag_to_remove(tag)
+					hr
+					= link_to "Alle Artikel anzeigen", products_path
 
 .row
 	.small-12.medium-4.medium-push-8.large-3.large-push-9.columns

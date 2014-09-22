@@ -2,9 +2,12 @@
   #map-google data-store-id=@store.id data-longitude=@store.longitude data-latitude=@store.latitude
 
 = content_for :title_bar
-  h2.subtitle
-    small Filiale
-  h1 = "#{@store.street} / #{@store.zip} #{@store.city}"
+  .title_bar
+    .row
+      .small-12.columns
+        h2.subtitle
+          small Filiale
+        h1 = "#{@store.street} / #{@store.zip} #{@store.city}"
 
 .row
   .small-12.medium-8.large-8.columns
@@ -50,7 +53,3 @@
       p
         label Mail:
         = @store.email
-
-= link_to 'Edit', edit_store_path(@store)
-|  | 
-= link_to 'Back', stores_path
