@@ -1,9 +1,9 @@
 = content_for :full_width_content
-  - if @post.post_images
+  - if @post.post_images.any?
     .image style="background-image: url(#{@post.post_images.jpg.image.url(:large)}); background-size: cover; background-position: center center"
       .icon_with_overlay style="background-image: url(#{@post.icon.url(:original)});" 
   - else
-    .featured_icon style="background-image: url(#{@post.post_images.svg.image.url(:original)})"
+    .featured_icon style="background-image: url(#{@post.icon.url(:original)})"
 
 = content_for :title_bar
   .title_bar
