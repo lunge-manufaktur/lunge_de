@@ -333,6 +333,13 @@ input:hover {
 .image {
 	height: 50%;
 	position: relative;
+	background-attachment: fixed;
+	@media #{$small-only} {
+		background-attachment: scroll;
+	};
+	@media #{$medium-only} {
+		background-attachment: scroll;
+	};
 }
 
 .icon_with_overlay {
