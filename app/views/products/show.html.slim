@@ -3,7 +3,6 @@
 = content_for :full_width_content do
   - if @product.product_images.any?
     .featured_image data-interchange="[#{@product.default_image('full')}, (default)], [#{@product.default_image('small')}, (small)], [#{@product.default_image('medium')}, (medium)], [#{@product.default_image('large')}, (large)]"
-      .fade-bottom
 
 = content_for :title_bar
   .title_bar
