@@ -19,7 +19,7 @@
 
 // $primary-color: #2698C4;
 $primary-color: #D82B4E;
-$secondary-color: #f3f3f3;
+$secondary-color: #F7F7F0;
 $body-bg: mintcream;
 $alert-color: #E40D46;
 
@@ -206,12 +206,11 @@ a .with-border:hover {
 /* ----- FOOTER -----*/
 
 footer {
-	@extend .inverted;
 	margin-top: 5rem;
 	padding: 2rem 0;
 	width: 100%;
 	height: auto;
-	background-color: $primary-color;
+	background-color: linen;
 	bottom: 0px;
 }
 
