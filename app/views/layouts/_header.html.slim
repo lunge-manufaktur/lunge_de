@@ -24,10 +24,6 @@
             li = link_to "Regeneration", "/categories/regeneration"
             li = link_to "Anatomie", "/categories/anatomie-ausflug"
         li.has-dropdown
-          = link_to "Service", "#"
-          ul.dropdown
-            li = link_to "Downloads", "#"
-        li.has-dropdown
           = link_to "Filialen", stores_path
           ul.dropdown
             - Store.all.each do |store|

@@ -56,6 +56,7 @@ module Api
         :is_on_sale,
         :is_on_frontpage,
         :is_featured,
+        :tag_list,
         stocks_attributes: [
           :id,
           :product_id,
