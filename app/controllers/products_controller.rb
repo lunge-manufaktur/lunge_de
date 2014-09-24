@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy, :edit_product_images, :edit_properties, :save_properties]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
   protect_from_forgery except: [:create, :update]
 
   # GET /products
@@ -27,7 +28,7 @@ class ProductsController < ApplicationController
   end
 
   def index_with_tag
-    @products = Product.where(tag_list: params[:tag])
+    @products = Product.published.where(tag_list: params[:tag])
     render "index"
   end
 

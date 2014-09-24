@@ -82,10 +82,12 @@
             - @product.tag_list.each do |tag|
               = link_to tag, tag_products_path(tag), class: "label"
 
-.row
-  .small-12.columns
-    = link_to 'Zurück', products_path, class: "button secondary"
-    = link_to 'Bearbeiten', edit_product_path(@product), class: "button"
-    = link_to 'Löschen', @product, method: :delete, data: { confirm: 'Are you sure?' }
+    - if policy(@product).update?
+      hr
+        .panel
+          label Bearbeiten
+          = link_to 'Bearbeiten', edit_product_path(@product)
+          br
+          = link_to 'Löschen', @product, method: :delete, data: { confirm: 'Are you sure?' }
 
 
