@@ -9,9 +9,11 @@ class ContactFormController < ApplicationController
     @contact_form.request = request
     if @contact_form.deliver
       flash.now[:notice] = "Ihre Nachricht wurde übermittelt."
+      new
       render :new
     else
       flash.now[:error] = "Fehler beim Senden Ihrer Nachricht"
+      new
       render :new
     end
   end

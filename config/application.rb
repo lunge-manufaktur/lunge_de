@@ -32,5 +32,18 @@ module LungeDe
 
     # use the rails router to handle custom error pages
     config.exceptions_app = self.routes
+
+    # Action Mailer setup
+    config.action_mailer.delivery_method = :smtp
+
+    config.action_mailer.smtp_settings = {
+      address: "smtp.artfiles.de",
+      port: 587,
+      domain: ENV["ARTFILES_DOMAIN"],
+      authentication: "plain",
+      enable_starttls_auto: true,
+      user_name: ENV["ARTFILES_USERNAME"],
+      password: ENV["ARTFILES_PASSWORD"]
+    }
   end
 end
