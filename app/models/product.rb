@@ -56,6 +56,10 @@ class Product < ActiveRecord::Base
 
   def title
     "#{self.try(:brand).try(:name)} #{name} #{sku}"
+  end
+
+  def meta_keywords
+    keywords = [ self.brand.name, name, sku, color, self.tag_list ].join(",")
   end 
 
   def default_image(size=nil)
@@ -108,15 +112,6 @@ class Product < ActiveRecord::Base
       inline_icon("", "ion-ios7-close", "lightgray")
     end
   end
-
-  # def has_stock?(store_id, size)
-  #   stock = Stock.where(store_id: store_id, product_id: id).first
-  #   if eval("stock.#{size}?")
-  #     true
-  #   else
-  #     false
-  #   end
-  # end
 
   def has_stock?(store: nil, size: nil)
     product_id = id
