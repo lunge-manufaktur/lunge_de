@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140922094742) do
+ActiveRecord::Schema.define(version: 20140925073652) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -298,7 +298,10 @@ ActiveRecord::Schema.define(version: 20140922094742) do
     t.float    "latitude"
     t.float    "longitude"
     t.text     "description"
+    t.string   "slug"
   end
+
+  add_index "stores", ["slug"], name: "index_stores_on_slug", unique: true, using: :btree
 
   create_table "taggings", force: true do |t|
     t.integer  "tag_id"

@@ -25,6 +25,10 @@ class Store < ActiveRecord::Base
 	has_many :products, through: :stocks
 	has_many :events
 
+	#friendly id
+	include FriendlyId
+	friendly_id :title, :use => :slugged
+
 	# geocoder
 	geocoded_by :full_address
 
@@ -39,6 +43,10 @@ class Store < ActiveRecord::Base
 	scope :berlin, -> { where(city: "Berlin") }
 
 	# methods
+
+	def title
+		"#{city}/#{street}"
+	end
 
 	def full_address
 		"#{address_name}, #{street}, #{zip} #{city}"
