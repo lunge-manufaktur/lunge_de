@@ -10,6 +10,23 @@
             = tag_cloud_item(tag.name)
 
 section
+  .full-width style="background-image: url(http://www.lunge.de/images/misc/icon_12638.svg); background-size: auto 120%; background-position: center; background-color: rgb(245, 237, 230); background-repeat: no-repeat; background-position-x: 95%;"
+    .overlay
+      .row
+        .small-12.large-6.columns.text-center
+          h1 Filialen
+          ul.no-bullet
+            - Store.all.order(city: :desc).each do |store|
+              li
+                = link_to "#{store.city} / #{store.street}", store_path(store), class: "link"
+        .small-12.large-6.columns.text-center
+          h1 Öffnungszeiten
+          p
+            label Montag - Freitag:
+            | 10:30 Uhr - 19:00 Uhr
+          p
+            label Samstag
+            | 10:00 Uhr - 18:00 Uhr
   - @posts.each_with_index do |post, index|
     - if index.even?
       .full-width style="background-image: url(#{post.icon.url(:original)}); background-size: auto 150%; background-position: center; background-color: rgba(250, 240, 230, 0.8); background-repeat: no-repeat; background-position-x: 5%;"
