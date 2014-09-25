@@ -1,10 +1,11 @@
-= render "products/search/index"
+- content_for :title
+  = @product.name_with_brand
 
-= content_for :full_width_content do
+- content_for :full_width_content do
   - if @product.product_images.any?
     .featured_image data-interchange="[#{@product.default_image('full')}, (default)], [#{@product.default_image('small')}, (small)], [#{@product.default_image('medium')}, (medium)], [#{@product.default_image('large')}, (large)]"
 
-= content_for :title_bar
+- content_for :title_bar
   .title_bar
     .row
       .small-12.columns
