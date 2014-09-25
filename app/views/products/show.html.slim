@@ -54,7 +54,7 @@
         = @product.sku
       p
         label Hersteller
-        = link_to @product.brand.name, brand_path(@product.brand)
+        = link_to @product.brand.name, brand_path(@product.brand), class: "link"
       p
         label Farbe
         = @product.color
