@@ -1,0 +1,61 @@
+/* ----- TYPOGRAPHY ----- */
+
+h1 {
+  font-weight: 700;
+}
+
+h6 {
+  font-weight: 400;
+}
+
+h5 {
+  font-weight: 700;
+}
+
+.subtitle {
+  margin: -0.5rem 0;
+}
+
+.light {
+  opacity: 0.6;
+}
+
+blockquote,
+blockquote p {
+  color: #999;
+}
+
+label {
+  font-size: 0.875rem;
+  color: inherit;
+  opacity: 0.7;
+  text-rendering: auto;
+}
+
+a.label {
+  background-color: $secondary-color;
+  color: #333;
+  text-transform: capitalize;
+
+  &:hover {
+    background-color: scale-color($secondary-color, $lightness: -5%);
+  }
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.light {
+  opacity: 0.7;
+}
+
+a.link {
+  border-bottom: 1px dotted scale-color($primary-color, $lightness: 50%);
+
+  &:hover {
+    border-color: $primary-color;
+  }
+}

@@ -1,0 +1,470 @@
+/* ----- VARIABLES ----- */
+
+$inverted-text: #fff;
+
+.title_bar {
+  margin: 2rem 0;
+}
+
+
+
+
+/* ----- LISTS ----- */
+
+li.active {
+  background-color: $primary-color;
+}
+
+
+
+
+/* ----- MAP ----- */
+
+#map,
+#map-google {
+  height: 50%;
+
+  img {
+    max-width: none;
+  }
+
+}
+
+.leaflet-top,
+.leaflet-bottom {
+  z-index: 97;
+}
+
+
+
+
+
+/* ----- TABLES ----- */
+
+.header-left {
+  border-right: 2px solid $secondary-color;
+}
+
+
+
+
+
+
+
+/* ----- FORMS ----- */
+
+.fields {
+  margin-bottom: 2rem;
+}
+
+select {
+  font-family: "ff-meta-web-pro";
+}
+
+select,
+select:hover {
+  background-color: transparent !important;
+}
+
+select:hover,
+input:hover {
+  border-color: $primary-color;
+}
+
+
+
+
+
+/* ----- SEARCH ----- */
+
+.searchbar {
+  background-color: scale-color($primary-color, $lightness: -30%);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.searchbar:hover {
+  background-color: scale-color($primary-color, $lightness: -40%);
+}
+
+#search {
+  background-color: scale-color($primary-color, $lightness: -30%);
+  color: #fff;
+  padding: 2rem 0;
+
+}
+
+.inverted {
+  color: $inverted-text;
+  
+  h1, h2, h3, h4, h5, h6,
+  input,
+  p,
+  a,
+  select {
+    color: $inverted-text;
+  }
+
+
+  label,
+  .subtitle small {
+    color: $inverted-text;
+    opacity: 0.6;
+  }
+}
+
+
+
+
+
+/* ----- LIST VIEW / ITEMS ----- */
+
+.item-container {
+  padding: 3rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.item-box-content {
+
+}
+
+.item-box-aside-right {
+  position: absolute;
+  height: 180px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+
+  img {
+    height: 100%;
+  }
+}
+
+.item-card {
+  background-color: $secondary-color;
+  margin-bottom: 2rem;
+  height: 100%;
+  position: relative;
+  
+  &:hover {
+    @extend .inverted;
+    background-color: $primary-color;
+    transition-duration: 0.2s;
+  }
+
+}
+
+.item-horizontal-card {
+  background-color: $secondary-color;
+  position: relative;
+  width: 100%;
+  height: 150px;
+  
+  &:hover {
+    @extend .inverted;
+    background-color: $primary-color;
+    transition-duration: 0.2s;
+  }
+
+
+}
+
+
+.card-image-top {
+  border-bottom: 0px solid $primary-color;
+}
+
+.card-image-left {
+  position: absolute;
+  width: 150px;
+  height: auto;
+}
+
+.card-content-right {
+  padding: 1rem;
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 150px;
+}
+
+.card-section-full {
+
+}
+
+.card-image {
+  width: 100%;
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-icon {
+  width: 100%;
+  height: 300px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: scale-color($primary-color, $lightness: 20%);
+  background-size: auto 66%;
+}
+
+.card-section-narrow {
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+
+.folded-top-right {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  right: 0;
+  color: #fff;
+  border-top: solid 25px crimson;
+  border-right: solid 25px crimson;
+  border-left: solid 25px transparent;
+  border-bottom: solid 25px transparent;
+}
+
+.folded-top-right-text {
+  transform: rotate(45deg);
+  position: absolute;
+  top: -22px;
+  right: -17px;
+}
+
+
+
+.sort-section {
+  font-size: 0.875rem;
+  font-weight: 300;
+}
+
+.sort_link.asc,
+.sort_link.desc {
+  font-style: italic;
+}
+
+
+
+/* ----- TAGS ----- */
+
+.suffix {
+  font-size: 90%;
+  padding-left: 0.5rem;
+}
+
+.tag-to-add {
+}
+
+a.tag-to-remove {
+  background-color: $primary-color;
+  color: #fff;
+
+  &:hover {
+    background-color: scale-color($primary-color, $lightness: -20%)
+  }
+}
+
+
+
+
+
+
+
+
+/* ----- PAGINATION ----- */
+
+ul.pagination {
+  li {
+
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    height: auto;
+
+    &.current {
+      border-color: $primary-color;
+    }
+
+    a {
+      border-radius: 0px;
+      padding: 0.5rem 1rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+/* ----- STOCK ----- */
+
+.availability-badge {
+  display: inline-block;
+  font-size: 0.825rem;
+  padding: 0.25rem;
+  min-width: 2rem;
+  text-align: center;
+  margin: 0 0.5rem 0.5rem 0;
+  border: 1px solid #bbb;
+}
+
+.true {
+  border-color: limegreen;
+  background-color: limegreen;
+  color: #fff;
+}
+
+.false {
+  color: #bbb;
+}
+
+
+
+
+
+
+/* ----- ACTIONS ----- */
+
+.actions {
+  margin: 3rem 0;
+}
+
+
+
+
+
+/* ----- DIRECTIONS ----- */
+
+.accordion dd {
+  border-bottom: 5px solid $body-bg;
+}
+
+.item-route {
+  margin-bottom: 1rem;
+}
+
+.transit-icon img {
+  max-width: none;
+  margin-right: 0.2rem;
+}
+
+.transit-icon:before {
+  content: " ";
+}
+
+.SUBWAY {
+  background-color: #0072BC;
+  color: #fff;
+}
+
+.COMMUTER_TRAIN {
+  background-color: #23B24B;
+  color: #fff;
+}
+
+.HEAVY_RAIL,
+.HIGH_SPEED_TRAIN {
+  background-color: #E32332;
+  color: #fff;
+}
+
+.BUS {
+  background-color: #231F20;
+  color: #fff;
+}
+
+.WALKING {
+  background-color: scale-color($secondary-color, $lightness: -20%);
+  color: #fff;
+}
+
+
+/* ----- CALENDAR ----- */
+
+table.calendar {
+  width: 100%;
+  border: none;
+
+  tr {
+    background-color: transparent;
+    border-bottom: 1px solid $secondary-color;
+  }
+
+  td {
+    vertical-align: top;
+    position: relative;
+    border-top: 1px solid $secondary-color;
+  }
+
+  td.today {
+    background-color: $secondary-color;
+  }
+
+  .date-header {
+
+  }
+
+  .date-content {
+  }
+
+  .event-item {
+    width: 100%;
+    display: block;
+    margin-bottom: 0.5rem;
+    
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+
+  .event-header {
+    padding: 0.2rem 0.5rem;
+  }
+
+  .event-details {
+    background-color: linen;
+    padding: 0.2rem 0.5rem;
+    display: none;
+    font-size: 0.875rem;
+  }
+
+  .prev-month,
+  .next-month {
+    opacity: 0.4;
+  }
+
+}
+
+#tag-cloud {
+  line-height: 1.5rem;
+
+  .tag-item {
+    padding: 0 0.5rem;
+
+    &:hover {
+      background-color: steelblue;
+    }
+  }
+
+  .xs {
+    opacity: 0.3;
+  }
+  .s {
+    opacity: 0.5;
+  }
+  .m { opacity: 0.7; }
+  .l { opacity: 0.8; }
+  .xl {
+    opacity: 1;
+  }
+}
