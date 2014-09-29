@@ -47,7 +47,7 @@ class PostImage < ActiveRecord::Base
   	:default_url => "/images/:style/missing.png",
   	:storage => :ftp,
   	:path => "/lunge.de/www/images/:class/:post_id/:post_id_:id_:style.:extension",
-  	:url => "http://www.lunge.de/images/:class/:post_id/:post_id_:id_:style.:extension",
+  	:url => "http://cdn.lunge.de/images/:class/:post_id/:post_id_:id_:style.:extension",
   	:ftp_servers => [
       {
         :host     => ENV["FTP_HOST"],
