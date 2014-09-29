@@ -2,19 +2,22 @@
   .featured_icon style="height: 33%; background-image: url(http://www.lunge.de/images/misc/icon_44040.svg)"
 
 - content_for :title_bar
-  h1 422
-  h4 Anfrage konnte nicht verarbeitet werden.
+  .title_bar
+    .row
+      .small-12.columns
+        h1 422
+        h4 Anfrage konnte nicht verarbeitet werden.
 
-  .row
-    .small-12.medium-9.large-8.columns
-      p
-        | Leider konnte Deine Anfrage nicht verarbeiten werden. Dafür kann es die verschiedensten Gründe geben.
-      p
-        | Wenn Du uns helfen möchtest, dieses Problem zu beheben, schreibe uns bitte eine e-Mail:
-      = link_to "Kontakt", contact_path, class: "button"
+.row
+  .small-12.medium-9.large-8.columns
+    p
+      | Leider konnte Deine Anfrage nicht verarbeiten werden. Dafür kann es die verschiedensten Gründe geben.
+    p
+      | Wenn Du uns helfen möchtest, dieses Problem zu beheben, schreibe uns bitte eine e-Mail:
+    = link_to "Kontakt", contact_path, class: "button"
 
-      hr
-      section
-        small
-          | Creative Commons: 
-          = link_to "Sick designed by Julien Deveaux from the Noun Project", "http://thenounproject.com/term/sick/44040/"
+    hr
+    section
+      small
+        | Creative Commons: 
+        = link_to "Sick designed by Julien Deveaux from the Noun Project", "http://thenounproject.com/term/sick/44040/"
