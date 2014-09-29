@@ -29,6 +29,13 @@ a .with-border:hover {
   text-align: center;
 }
 
+.permanent-notice {
+  background-color: scale-color($primary-color, $lightness: 20%);
+  color: #fff;
+  padding: 0.5rem;
+  text-align: center;
+}
+
 
 
 

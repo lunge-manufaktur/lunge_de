@@ -53,6 +53,7 @@ gem "tinymce-rails"
 gem "tinymce-rails-langs"
 gem 'friendly_id'
 gem "simple_calendar", "~> 1.1.0"
+gem "browser"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

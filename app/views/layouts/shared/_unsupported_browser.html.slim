@@ -1,0 +1,11 @@
+- if browser_unsupported?
+  .permanent-notice.inverted
+    | Du verwendest einen veralteten Browser, der diese Website nicht richtig darstellen kann und zudem ein Sicherheitsrisiko für Dein System ist. Bitte benutze stattdessen 
+    = link_to "Internet Explorer 11", "http://windows.microsoft.com/de-de/internet-explorer/ie-11-worldwide-languages", target: "_blank", class: "link"
+    | , 
+    = link_to "Google Chrome", "http://www.google.de/intl/de/chrome/browser/", target: "_blank", class: "link"
+    | , 
+    = link_to "Firefox", "https://www.mozilla.org/de/firefox/new/", target: "_blank", class: "link"
+    |  oder 
+    = link_to "Opera", "http://www.opera.com/de", target: "_blank", class: "link"
+    | .

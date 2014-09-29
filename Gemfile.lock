@@ -39,6 +39,7 @@ GEM
     bourbon (3.2.3)
       sass (~> 3.2)
       thor
+    browser (0.7.0)
     builder (3.2.2)
     capybara (2.4.1)
       mime-types (>= 1.16)
@@ -229,6 +230,7 @@ DEPENDENCIES
   annotate
   awesome_nested_set
   bourbon
+  browser
   coffee-rails (~> 4.0.0)
   devise
   foreman
