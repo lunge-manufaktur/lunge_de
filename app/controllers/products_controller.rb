@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy, :edit_product_images, :edit_properties, :save_properties]
-  before_action :authenticate_user!, only: [:new, :create, :edit, :edit_product_images, :edit_properties, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy]
+  before_action :sign_in_with_api_key, only: [:edit_product_images, :edit_properties]
   protect_from_forgery except: [:create, :update]
 
   # GET /products
@@ -120,6 +121,10 @@ class ProductsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_product
       @product = Product.friendly.find(params[:id])
+    end
+
+    def sign_in_with_api_key
+      authenticate_user! unless ApiKey.exists?(params[:api_key])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
