@@ -110,6 +110,7 @@ footer {
 }
 
 .intro {
+  background-image: url(http://cdn.lunge.de/images/home/home03.jpg);
   padding: 5rem 0;
   position: relative;
   -webkit-background-size: cover;
@@ -118,13 +119,19 @@ footer {
   background-size: cover;
   height: auto;
   @media #{$large-up} {
-    background: no-repeat center center fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
   };
   @media #{$small-only} {
-    background: no-repeat center center scroll;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
   };
   @media #{$medium-only} {
-    background: no-repeat center center scroll;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
   };
 }
 
