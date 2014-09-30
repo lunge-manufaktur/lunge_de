@@ -36,7 +36,7 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     @search = Product.includes(:brand, :product_images, :stocks, :sizes).search(params[:q])
-    @related_products = @product.find_related_tags.published.limit(10)
+    @related_products = @product.find_related_tags.published.limit(6)
   end
 
   # GET /products/new

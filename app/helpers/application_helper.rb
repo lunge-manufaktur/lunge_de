@@ -8,7 +8,7 @@ module ApplicationHelper
 	end
 
   def title_formatter(title, titleize: true)
-    suffix = " - Lunge Laufladen"
+    suffix = " | Lunge - Der Laufladen"
     title.titleize + suffix
   end
 

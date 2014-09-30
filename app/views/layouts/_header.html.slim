@@ -26,8 +26,15 @@
         li.has-dropdown
           = link_to "Filialen", stores_path
           ul.dropdown
-            - Store.all.each do |store|
+            li
+              label Hamburg
+            - Store.hamburg.each do |store|
               li = link_to "#{store.name} / #{store.city}", store_path(store)
+            li
+              label Berlin
+            - Store.berlin.each do |store|
+              li = link_to "#{store.name} / #{store.city}", store_path(store)
+
 
         li = link_to "Kontakt", contact_path
 
