@@ -40,7 +40,7 @@ LungeDe::Application.routes.draw do
   # /...
   resources :api_keys
   resources :categorizations
-  resources :categories
+  resources :categories, except: "index"
   resources :events
   resources :posts
   resources :properties
