@@ -43,7 +43,7 @@ class Brand < ActiveRecord::Base
   	:default_url => "/images/:style/missing.png",
   	:storage => :ftp,
   	:path => "/lunge.de/www/images/:class/:name/:name_:id_:style.:extension",
-  	:url => "http://www.lunge.de/images/:class/:name/:name_:id_:style.:extension",
+  	:url => "http://cdn.lunge.de/images/:class/:name/:name_:id_:style.:extension",
   	:ftp_servers => [
       {
         :host     => "www.lunge.de",
