@@ -7,7 +7,7 @@ class ContactForm < MailForm::Base
   def headers
     {
       subject: "Anfrage via lunge.de",
-      to: "info@lunge.com",
+      to: "info@lunge.de",
       from: "#{name} <#{email}>",
       reply_to: email
     }
