@@ -2,9 +2,14 @@ footer
 	.row
 		.small-12.medium-4.columns
 			h5 Filialen
+			label Hamburg
 			ul.no-bullet
-				- Store.all.order(city: :desc).each do |store|
-					li = link_to "#{store.city} / #{store.street}", store_path(store), class: "link"
+				- Store.hamburg.each do |store|
+					li = link_to store.name, store_path(store), class: "link"
+			label Berlin
+			ul.no-bullet
+				- Store.berlin.each do |store|
+					li= link_to store.name, store_path(store), class: "link"
 
 		.small-12.medium-4.columns
 			h5 Öffnungszeiten
