@@ -1,7 +1,7 @@
 LungeDe::Application.routes.draw do
 
   devise_for :users
-  root :to => "home#index"
+  root :to => "pages#home"
 
   # error pages
   get "/404", to: "errors#not_found"
@@ -73,5 +73,6 @@ LungeDe::Application.routes.draw do
   # custom routes
   get "contact", controller: "contact_form", action: "new"
   post "contact", controller: "contact_form", action: "create"
+  get "gutschein", controller: "pages", action: "gutschein"
   
 end
