@@ -11,9 +11,10 @@
 
 .row
   .small-12.medium-8.large-8.columns
-    section
-      h4 Beschreibung
-      p = simple_format(@store.description)
+    - if @store.description.presence
+      section
+        h4 Beschreibung
+        p = simple_format(@store.description)
 
     section
       h4 So finden Sie uns mit öffentlichen Verkehrsmitteln
