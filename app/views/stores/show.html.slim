@@ -11,7 +11,13 @@
 
 .row
   .small-12.medium-8.large-8.columns
-    - if @store.description.presence
+    - if @store.store_images.any?
+      section
+        ul.clearing-thumbs.small-block-grid-2.medium-block-grid-3.large-block-grid-4 data-clearing=""
+          - @store.store_images.each do |store_image|
+            li = link_to (image_tag store_image.image.url(:small), class: "with-border"), store_image.image.url(:large)
+
+    - if @store.description.present?
       section
         h4 Beschreibung
         p = simple_format(@store.description)

@@ -89,7 +89,12 @@ class StoresController < ApplicationController
         :email,
         :active,
         :latitude,
-        :longitude
+        :longitude,
+        store_images_attributes: [
+          :store_id,
+          :image,
+          :_destroy
+        ]
       )
     end
 end

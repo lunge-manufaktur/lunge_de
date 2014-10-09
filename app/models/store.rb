@@ -24,6 +24,9 @@ class Store < ActiveRecord::Base
 	has_many :stocks
 	has_many :products, through: :stocks
 	has_many :events
+	has_many :store_images, dependent: :destroy
+
+	accepts_nested_attributes_for :store_images, allow_destroy: true
 
 	#friendly id
 	include FriendlyId

@@ -1,0 +1,53 @@
+= nested_form_for(@store) do |f|
+  - if @store.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@store.errors.count, "error")} prohibited this store from being saved:"
+      ul
+      - @store.errors.full_messages.each do |msg|
+        li = msg
+
+  .row
+    .small-12.medium-8.large-9.columns
+      .fields
+        = f.label :active
+        = f.check_box :active
+      .fields
+        = f.label :name
+        = f.text_field :name
+      .fields
+        = f.label :description
+        = f.text_area :description
+      .fields
+        = f.label :address_name
+        = f.text_field :address_name
+      .fields
+        = f.label :street
+        = f.text_field :street
+      .fields
+        = f.label :zip
+        = f.text_field :zip
+      .fields
+        = f.label :city
+        = f.text_field :city
+      .fields
+        = f.label :phone
+        = f.text_field :phone
+      .fields
+        = f.label :email
+        = f.text_field :email
+      .fields
+        = f.label :latitude
+        = f.text_field :latitude
+      .fields
+        = f.label :longitude
+        = f.text_field :longitude
+    .small-12.medium-4.large-3.columns
+      h4 Bilder
+      = f.fields_for :store_images
+      = f.link_to_add "Bild hinzufügen", :store_images, class: "tiny button"
+
+
+  .row
+    .small-12.columns
+      .actions
+        = f.submit "Speichern", class: "button"
