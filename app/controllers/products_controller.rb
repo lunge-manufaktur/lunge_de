@@ -35,6 +35,7 @@ class ProductsController < ApplicationController
   # GET /products/1
   # GET /products/1.json
   def show
+    authorize @product
     @search = Product.includes(:brand, :product_images, :stocks, :sizes).search(params[:q])
     @related_products = @product.find_related_tags.published.limit(6)
   end
@@ -119,7 +120,11 @@ class ProductsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_product
-      @product = Product.friendly.find(params[:id])
+      if current_user
+        @product = Product.friendly.find(params[:id])
+      else
+        @product = Product.published.friendly.find(params[:id])
+      end
     end
 
     def valid_api_key?

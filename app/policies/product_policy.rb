@@ -1,4 +1,11 @@
 class ProductPolicy < ApplicationPolicy
+  attr_reader :user, :product
+
+  def initialize(user, product)
+    @user = user
+    @product = product
+  end
+
   def new?
     create?
   end
@@ -17,5 +24,9 @@ class ProductPolicy < ApplicationPolicy
 
   def destroy?
     user
+  end
+
+  def show?
+    user || product.is_published
   end
 end
