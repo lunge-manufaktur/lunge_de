@@ -40,7 +40,6 @@ class Brand < ActiveRecord::Base
       :medium => "-quality 80 -strip",
       :large => "-quality 80 -strip"
     },
-  	:default_url => "/images/:style/missing.png",
   	:storage => :ftp,
   	:path => "/lunge.de/www/images/:class/:name/:name_:id_:style.:extension",
   	:url => "http://cdn.lunge.de/images/:class/:name/:name_:id_:style.:extension",
