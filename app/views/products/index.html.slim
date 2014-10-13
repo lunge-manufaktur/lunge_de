@@ -1,5 +1,4 @@
-- content_for :title
-	= title_formatter("Sortiment")
+- meta_title(@tags ? @tags.join(", ") : "Sortiment")
 
 = content_for :title_bar
 	.title_bar
