@@ -23,7 +23,6 @@ class StoreImage < ActiveRecord::Base
       :large => "-quality 80 -strip",
       :card => "-quality 80 -strip"
     },
-    :default_url => "/images/:style/missing.png",
     :storage => :ftp,
     :path => "/lunge.de/www/images/:class/:store_id/:store_id_:id_:style.:extension",
     :url => "http://cdn.lunge.de/images/:class/:store_id/:store_id_:id_:style.:extension",

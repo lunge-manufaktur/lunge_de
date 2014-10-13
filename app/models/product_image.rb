@@ -40,7 +40,6 @@ class ProductImage < ActiveRecord::Base
       :large => "-quality 90 -strip",
       :card => "-quality 80 -strip"
     },
-  	:default_url => "/images/:style/missing.png",
   	:storage => :ftp,
   	:path => "/lunge.de/www/images/:class/:product_id/:product_id_:id_:style.:extension",
   	:url => "http://cdn.lunge.de/images/:class/:product_id/:product_id_:id_:style.:extension",
