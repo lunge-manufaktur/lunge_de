@@ -11,7 +11,7 @@ module Api
 
     # GET /brands/1
     def show
-      respond_with Brand.find(params[:id])
+      respond_with @brand = Brand.find(params[:id])
     end
 
     # POST /brands
@@ -27,7 +27,6 @@ module Api
     # DELETE /brands/1
     def destroy
       respond_with Brand.destroy(params[:id])
-      head :no_content
     end
 
 

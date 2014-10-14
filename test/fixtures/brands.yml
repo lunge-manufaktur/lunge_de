@@ -14,5 +14,5 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-asics:
-  name: Asics
+default_brand:
+  name: Default Brand

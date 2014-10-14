@@ -43,5 +43,8 @@ class PolicyTest < ActiveSupport::TestCase
   def permit(current_user, record, action)
     self.class.to_s.gsub(/Test/, "").constantize.new(current_user, record).public_send("#{action.to_s}?")
   end
-  
+end
+
+class ActionController::TestCase
+  include Devise::TestHelpers
 end

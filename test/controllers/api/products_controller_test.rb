@@ -14,7 +14,7 @@ class Api::ProductsControllerTest < ActionController::TestCase
 
   test "should create product" do
     assert_difference('Product.count') do
-      post :create, format: :json, product: @product.attributes
+      post :create, format: :json, product: { name: @product.name }
     end
   end
 
@@ -25,7 +25,7 @@ class Api::ProductsControllerTest < ActionController::TestCase
   end
 
   test "should update product" do
-    patch :update, format: :json, id: @product, product: @product.attributes
+    patch :update, format: :json, id: @product, product: { name: @product.attributes }
   end
 
   test "should destroy product" do

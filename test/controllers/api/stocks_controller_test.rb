@@ -16,7 +16,7 @@ class Api::StocksControllerTest < ActionController::TestCase
 
   test "should create stock" do
     assert_difference('Stock.count') do
-      post :create, format: :json, stock: @stock.attributes
+      post :create, format: :json, stock: { g1: @stock.g1 }
     end
   end
 
@@ -29,7 +29,7 @@ class Api::StocksControllerTest < ActionController::TestCase
   test "should update stock" do
     patch :update,
       id: @stock,
-      stock: @stock.attributes,
+      stock: { g1: @stock.g1 },
       format: :json
     assert_response :success
   end

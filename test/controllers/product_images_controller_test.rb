@@ -18,7 +18,7 @@ class ProductImagesControllerTest < ActionController::TestCase
 
   test "should create product_image" do
     assert_difference('ProductImage.count') do
-      post :create, product_image: { product_id: @product_image.product_id }
+      post :create, product_image: { product_id: @product_image.product }
     end
 
     assert_redirected_to product_image_path(assigns(:product_image))
@@ -43,7 +43,6 @@ class ProductImagesControllerTest < ActionController::TestCase
     assert_difference('ProductImage.count', -1) do
       delete :destroy, id: @product_image
     end
-
     assert_redirected_to product_images_path
   end
 end

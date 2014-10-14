@@ -1,4 +1,6 @@
-- meta_title(@tags ? @tags.join(", ") : "Sortiment")
+- meta_title(@tags ? "Alle Artikel mit den Tags #{@tags.join(", ").capitalize}" : "Sortiment")
+- if @tags
+	- meta_keywords(@tags.join(", "))
 
 = content_for :title_bar
 	.title_bar

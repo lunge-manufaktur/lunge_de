@@ -242,6 +242,7 @@ DEPENDENCIES
   jquery-turbolinks
   kaminari
   mail_form
+  minitest-rails
   minitest-rails-capybara
   nested_form
   paperclip (~> 4.1)

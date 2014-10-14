@@ -2,7 +2,7 @@ require 'test_helper'
 
 class Api::BrandsControllerTest < ActionController::TestCase
   setup do
-    @brand = brands(:asics)
+    @brand = brands(:default_brand)
     authenticate
   end
 
@@ -13,8 +13,8 @@ class Api::BrandsControllerTest < ActionController::TestCase
   end
 
   test "should create brand" do
-    assert_difference('Brand.count') do
-      post :create, format: :json, brand: @brand.attributes
+    assert_difference("Brand.count") do
+      post :create, format: :json, brand: { name: @brand.name }
     end
   end
 

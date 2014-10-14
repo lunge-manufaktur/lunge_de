@@ -7,6 +7,7 @@ gem "pg"
 gem "puma"
 gem "devise"
 gem "pundit"
+gem "minitest-rails"
 
 group :test do
 	gem "minitest-rails-capybara"
