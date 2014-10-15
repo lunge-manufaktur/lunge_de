@@ -46,6 +46,7 @@ gem "mail_form"
 group :production do
 	gem 'rails_12factor'
 end
+gem "rack-timeout"
 
 gem 'awesome_nested_set'
 gem 'acts-as-taggable-on'
