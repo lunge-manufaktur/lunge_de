@@ -15,3 +15,5 @@ li
           = number_to_currency(product.current_price, unit: "€ ")
         - if product.is_on_sale?
           h6.strike = number_to_currency(product.try(:regular_price), unit: "€ ")
+        - if product.eligible_for_running_course?
+          span.label Laufkurs inklusive

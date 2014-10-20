@@ -227,9 +227,23 @@ input:hover {
   top: 0;
   right: 0;
   color: #fff;
-  border-top: solid 25px crimson;
-  border-right: solid 25px crimson;
+  border-top: solid 25px $primary-color;
+  border-right: solid 25px $primary-color;
   border-left: solid 25px transparent;
+  border-bottom: solid 25px transparent;
+}
+
+.folded-top-left {
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 0;
+  left: 0;
+  color: #fff;
+  border-top: solid 25px $primary-color;
+  border-right: solid 25px transparent;
+  border-left: solid 25px $primary-color;
   border-bottom: solid 25px transparent;
 }
 

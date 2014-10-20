@@ -93,8 +93,6 @@ class Product < ActiveRecord::Base
     description.truncate(@length, separator: " ") unless description.nil?
   end
 
-
-
   def name_with_brand
     if self.brand
       "#{self.brand.name} #{name}"
@@ -123,6 +121,19 @@ class Product < ActiveRecord::Base
       eval("stock.#{size}?")
     else
       stock.quantity > 0
+    end
+  end
+
+  def eligible_for_running_course?
+    running_shoe_tag = "laufschuh"
+
+    is_running_shoe = self.tag_list.include?(running_shoe_tag)
+    is_not_reduced = current_price >= regular_price
+
+    if is_running_shoe && is_not_reduced
+      true
+    else
+      false
     end
   end
 end

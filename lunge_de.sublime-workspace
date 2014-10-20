@@ -131,6 +131,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "app/assets/stylesheets/layout.css.scss",
+			"settings":
+			{
+				"buffer_size": 3177,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -196,8 +204,9 @@
 	},
 	"file_history":
 	[
-		"/Users/ulflunge/projects/lunge_de/Procfile",
 		"/Users/ulflunge/projects/lunge_de/Gemfile",
+		"/Users/ulflunge/projects/lunge_de/config/initializers/timeout.rb",
+		"/Users/ulflunge/projects/lunge_de/Procfile",
 		"/Users/ulflunge/projects/lunge_de/config.ru",
 		"/Users/ulflunge/projects/lunge_de/config/puma.rb",
 		"/Users/ulflunge/projects/lunge_de/Procfile.dev",
@@ -322,8 +331,7 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/posts/_card.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/posts/_post_image_fields.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/posts/_form.html.slim",
-		"/Users/ulflunge/projects/lunge_de/db/migrate/20140922094742_add_attachment_icon_to_posts.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/products/_minicard.html.slim"
+		"/Users/ulflunge/projects/lunge_de/db/migrate/20140922094742_add_attachment_icon_to_posts.rb"
 	],
 	"find":
 	{
@@ -462,8 +470,37 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "app/assets/stylesheets/layout.css.scss",
+					"settings":
+					{
+						"buffer_size": 3177,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								139,
+								26
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],

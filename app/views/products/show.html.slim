@@ -14,6 +14,7 @@
           small = link_to @product.brand.name,  brand_path(@product.brand)
         h1 = @product.name
 
+
 .row
   .small-12.medium-8.large-8.columns
     section
@@ -28,6 +29,15 @@
               blockquote
                 = simple_format(@product.official_description)
                 cite = @product.brand.name
+          
+          - if @product.eligible_for_running_course?
+            .panel
+              p
+                em
+                  | Kostenloser Laufkurs bei Kauf dieses Artikels - 
+                  = link_to "Mehr erfahren...", "/gutschein", class: "link"
+
+          
 
     - if @product.product_images.any?
       section
