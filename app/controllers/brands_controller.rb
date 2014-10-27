@@ -1,5 +1,6 @@
 class BrandsController < ApplicationController
   before_action :set_brand, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :destroy], unless: :valid_api_key?
   protect_from_forgery except: :create
 
   def index
@@ -62,6 +63,10 @@ class BrandsController < ApplicationController
 
   def set_brand
     @brand = Brand.friendly.find(params[:id])
+  end
+
+  def valid_api_key?
+    ApiKey.exists?(key: params[:api_key])
   end
 
   def brand_params

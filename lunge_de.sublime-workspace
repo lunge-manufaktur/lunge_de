@@ -132,10 +132,26 @@
 	"buffers":
 	[
 		{
-			"file": "app/assets/stylesheets/layout.css.scss",
+			"file": "app/controllers/products_controller.rb",
 			"settings":
 			{
-				"buffer_size": 3177,
+				"buffer_size": 4850,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/products/index/_sidebar_search.html.slim",
+			"settings":
+			{
+				"buffer_size": 526,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 1956,
 				"line_ending": "Unix"
 			}
 		}
@@ -204,8 +220,25 @@
 	},
 	"file_history":
 	[
+		"/Users/ulflunge/projects/lunge_de/config/initializers/ransack.rb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/application_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/products/index/_sidebar_search.html.slim",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/posts_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/config/routes.rb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/brands_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/models/post.rb",
+		"/Users/ulflunge/projects/lunge_de/app/models/product.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/products/show.html.slim",
 		"/Users/ulflunge/projects/lunge_de/Gemfile",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/timeout.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/components.css.scss",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/layout.css.scss",
+		"/Users/ulflunge/projects/lunge_de/app/views/products/_card.html.slim",
+		"/Users/ulflunge/.bash_profile",
+		"/Users/ulflunge/projects/lunge_de/app/views/layouts/application.html.slim",
+		"/Users/ulflunge/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/ulflunge/projects/lunge_de/Procfile",
 		"/Users/ulflunge/projects/lunge_de/config.ru",
 		"/Users/ulflunge/projects/lunge_de/config/puma.rb",
@@ -218,8 +251,6 @@
 		"/Users/ulflunge/projects/lunge_de/test/controllers/api/brands_controller_test.rb",
 		"/Users/ulflunge/projects/lunge_de/test/controllers/product_images_controller_test.rb",
 		"/Users/ulflunge/projects/lunge_de/app/helpers/application_helper.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/products/show.html.slim",
-		"/Users/ulflunge/projects/lunge_de/config/routes.rb",
 		"/Users/ulflunge/projects/lunge_de/test/test_helper.rb",
 		"/Users/ulflunge/projects/lunge_de/test/fixtures/posts.yml",
 		"/Users/ulflunge/projects/lunge_de/test/fixtures/product_images.yml",
@@ -239,7 +270,6 @@
 		"/Users/ulflunge/projects/lunge_de/test/fixtures/users.yml",
 		"/Users/ulflunge/projects/lunge_de/test/helpers/products_helper_test.rb",
 		"/Users/ulflunge/projects/lunge_de/test/helpers/categories_helper_test.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/application_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/test/controllers/api/stores_controller_test.rb",
 		"/Users/ulflunge/projects/lunge_de/test/controllers/api/stocks_controller_test.rb",
 		"/Users/ulflunge/projects/lunge_de/test/fixtures/stocks.yml",
@@ -247,12 +277,9 @@
 		"/Users/ulflunge/projects/lunge_de/spec/models/event_spec.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/shared/_ga.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/models/store.rb",
-		"/Users/ulflunge/projects/lunge_de/app/models/product.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/errors_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/stocks_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/posts_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/policies/product_policy.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/stocks_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/stores_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/_product_image_fields.html.slim",
@@ -276,8 +303,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/models/contact_form.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/contact_form_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_footer.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/views/layouts/application.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/layout.css.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/application.css.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/foundation_and_overrides.scss",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/shared/_meta.html.slim",
@@ -291,12 +316,10 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/products/index/_sidebar_tags.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/helpers/products_helper.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/edit_product_images.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/models/post.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/shared/_unsupported_browser.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/application.js",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/globals.css.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/typography.css.scss",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/components.css.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/products.css.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/attributes.css.scss",
 		"/Users/ulflunge/projects/lunge_de/app/views/contact_form/new.html.slim",
@@ -324,14 +347,7 @@
 		"/Users/ulflunge/projects/lunge_de/config/database.yml",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/acts_as_taggable_on.rb",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/paperclip.rb",
-		"/Users/ulflunge/projects/lunge_de/config/initializers/kaminari_config.rb",
-		"/Users/ulflunge/projects/lunge_de/config/initializers/backtrace_silencers.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/brands/index.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/views/categories/show.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/views/posts/_card.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/views/posts/_post_image_fields.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/posts/_form.html.slim",
-		"/Users/ulflunge/projects/lunge_de/db/migrate/20140922094742_add_attachment_icon_to_posts.rb"
+		"/Users/ulflunge/projects/lunge_de/config/initializers/kaminari_config.rb"
 	],
 	"find":
 	{
@@ -470,28 +486,84 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/assets/stylesheets/layout.css.scss",
+					"file": "app/controllers/products_controller.rb",
 					"settings":
 					{
-						"buffer_size": 3177,
+						"buffer_size": 4850,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								139,
-								26
+								851,
+								851
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/products/index/_sidebar_search.html.slim",
+					"settings":
+					{
+						"buffer_size": 526,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								162,
+								162
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 1956,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1439,
+								1439
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},

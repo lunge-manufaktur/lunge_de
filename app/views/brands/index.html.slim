@@ -17,5 +17,3 @@
 						- brand.products.limit(9).each do |product|
 							= render partial: "products/minicard", locals: { product: product }
 				= link_to "Alle Artikel von #{brand.name} anzeigen...", brand_path(brand), class: "button right"
-
-= link_to 'New Brand', new_brand_path
