@@ -15,6 +15,7 @@
 //= require foundation
 //= require events
 //= require jquery_nested_form
+//= require morphext
 //= require_tree
 
 $(document).foundation();
@@ -22,7 +23,7 @@ $(document).foundation();
 // Hide notices after a few seconds
 $('.notice').slideDown(500).delay(5000).slideUp(500);
 
-// prevent links in iOS Webapp from openin gin new Safari tab
+// prevent links in iOS Webapp from openin in new Safari tab
 // Mobile Safari in standalone mode
 if(("standalone" in window.navigator) && window.navigator.standalone){
  

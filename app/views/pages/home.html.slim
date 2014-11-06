@@ -1,35 +1,79 @@
 = content_for :full_width_content do
-  .intro style="background: url(http://cdn.lunge.de/images/home/home03.jpg)"
+  .intro
     .row
       .small-12.columns
-        .logo
+        .logo.bounceInDown.animated
           = image_tag "http://cdn.lunge.de/images/home/logo-intro.png"
-        h4.text-center.inverted Wonach suchst Du?
-        p.text-center
-          - tag_cloud Product.published.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class|
-            = tag_cloud_item(tag.name)
-
-section
-  .full-width style="background-image: url(http://cdn.lunge.de/images/misc/icon_12638.svg); background-size: auto 120%; background-position: center; background-color: rgb(245, 237, 230); background-repeat: no-repeat; background-position-x: 50%;"
-    .overlay
+    .intro-middle
       .row
-        .small-12.large-6.columns.text-center
-          h1 Filialen
-          ul.no-bullet
-            - Store.all.order(city: :desc).each do |store|
-              li
-                = link_to "#{store.city} / #{store.street}", store_path(store), class: "link"
-        .small-12.large-6.columns.text-center
-          h1 Öffnungszeiten
-          p
-            label Montag - Freitag:
-            | 10:30 Uhr - 19:00 Uhr
-          p
-            label Samstag
-            | 10:00 Uhr - 18:00 Uhr
+        .small-12.columns
+          h3.inverted
+            span Mit individueller Fachberatung 
+            br
+            span#rotate.bold zum optimalen Laufschuh. | zu winterfester Laufbekleidung. | zum neuen Lieblingsshirt. | zur bequemsten Laufsocke. | dauerhaft beschwerdefrei Laufen.
+          hr
+          p.inverted Ganz gleich ob Einsteiger oder Profi - Unsere Fachberater führen Dich mit kompetenter Laufbandanalyse und langjähriger Erfahrung zu den besten Marken & Artikeln rund um den Laufsport.
+          = link_to "Sortiment zeigen", products_path, class: "button inverted"
+          = link_to "Warum Lunge?", post_path(@posts.first), class: "button inverted"
+    .intro-footer.bounceInUp.animated
+      .row
+        .small-12.columns
+          ul.intro-item-list
+            li
+              h3.bold.inverted Filialen
+              p
+                ul.no-bullet
+                  - Store.all.order(city: :desc).each do |store|
+                    li.inverted
+                      = link_to "#{store.city} / #{store.street}", store_path(store), class: "link inverted"
+            li
+              h3.bold.inverted Öffnungszeiten
+              p
+                label Montag - Freitag:
+                | 10:30 Uhr - 19:00 Uhr
+              p
+                label Samstag
+                | 10:00 Uhr - 18:00 Uhr
+
+section.space-top
+  .row
+    .small-12.columns
+      section
+        h1.text-center.space-bottom Sortiment
+        section.space-bottom
+          .row data-equalizer=""
+            .small-12.medium-3.columns data-equalizer-watch=""
+              h5 Tags
+              p Durchsuche unser Sortiment nach Stichworten - Du kannst beliebig viele Tags kombinieren um Deine Auswahl einzugrenzen
+            .small-12.medium-9.columns.border-left data-equalizer-watch=""
+              p
+                - tag_cloud Product.published.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class|
+                  = tag_cloud_item(tag.name)
+        section
+          .row data-equalizer=""
+            .small-12.medium-3.columns data-equalizer-watch=""
+              h5 Highlights
+              p Einige unserer beliebtesten Artikel
+            .small-12.medium-9.columns.border-left data-equalizer-watch=""
+              ul.small-block-grid-1.medium-block-grid-2.large-block-grid-3
+                - @products.each do |product|
+                  = render "/products/card", product: product
+        section
+          .row data-equalizer=""
+            .small-12.medium-3.columns data-equalizer-watch=""
+              h5 Marken
+              p 
+               = "Egal ob etablierte Marken, innovative Neulinge oder spezialisierte Hersteller von Nischenprodukten - wenn jemand den Laufsport mit seinen Produkten bereichert, ist er bei uns zu finden."
+            .small-12.medium-9.columns.border-left data-equalizer-watch=""
+              ul.small-block-grid-2.medium-block-grid-4.large-block-grid-5.text-center
+                - @brands.each do |brand|
+                  li.text-center
+                    = link_to image_tag(brand.logo.url(:thumb)), brand_path(brand), class: "brand_logo"
+
+.space-top style="margin-bottom: -5rem;"
   - @posts.each_with_index do |post, index|
     - if index.even?
-      .full-width style="background-image: url(#{post.icon.url(:original)}); background-size: auto 150%; background-position: center; background-color: rgba(250, 240, 230, 0.8); background-repeat: no-repeat; background-position-x: 5%;"
+      .post.full-width style="background-image: url(#{post.icon.url(:original)}); background-size: auto 150%; background-position: center; background-color: rgba(240, 240, 236, 0.8); background-repeat: no-repeat; background-position-x: 5%;"
         .overlay
           .row
             .small-12.large-3.columns
@@ -38,7 +82,7 @@ section
               p = strip_tags(post.short_description(300)).html_safe
               = link_to "Mehr...", post_path(post), class: "button"
     - else
-      .full-width style="background-image: url(#{post.icon.url(:original)}); background-size: auto 150%; background-position: center; background-color: rgba(250, 245, 240, 0.78); background-repeat: no-repeat; background-position-x: 95%;"
+      .post.full-width style="background-image: url(#{post.icon.url(:original)}); background-size: auto 150%; background-position: center; background-color: rgba(240, 240, 236, 0.8); background-repeat: no-repeat; background-position-x: 95%;"
         .overlay
           .row
             .small-12.large-8.columns
@@ -46,20 +90,3 @@ section
               p = strip_tags(post.short_description(300)).html_safe
               = link_to "Mehr...", post_path(post), class: "button"
             .small-12.large-3.columns
-
-
-.row
-  .small-12.columns
-    section
-      h1.text-center Sortiment
-      section
-        h5.text-center Highlights
-        ul.small-block-grid-1.medium-block-grid-2.large-block-grid-4
-          - @products.each do |product|
-            = render "/products/card", product: product
-      section
-        h5.text-center Marken
-        ul.small-block-grid-2.medium-block-grid-4.large-block-grid-5.text-center
-          - @brands.each do |brand|
-            li.text-center
-              = link_to image_tag(brand.logo.url(:thumb)), brand_path(brand), class: "brand_logo"

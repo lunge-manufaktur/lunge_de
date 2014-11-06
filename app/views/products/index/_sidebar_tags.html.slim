@@ -7,4 +7,4 @@ h4 Tags
 		- tag_cloud Product.published.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class|
 			= tag_cloud_item(tag.name)
 hr
-= link_to "Filter aufheben", products_path, class: "small alert button expand"
+= link_to "Filter aufheben", products_path, class: "small button expand"

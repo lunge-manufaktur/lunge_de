@@ -1,7 +1,11 @@
 $primary-color: #D82B4E;
 $secondary-color: #F7F7F0;
+$hairline-color: #DDD;
 $body-bg: mintcream;
 $alert-color: #E40D46;
+
+$body-font: "ff-meta-web-pro", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+$header-font: "freight-sans-pro","Helvetica Neue", "Helvetica", "Arial", "sans-serif";
 
 .l {
   background-color: #FF9999;
@@ -31,4 +35,9 @@ $alert-color: #E40D46;
 .m {
   background-color: #4D2566;
   color: #fff;
+}
+
+// animation
+#rotate > .fadeInUp {
+  @include animation-duration(400ms);
 }

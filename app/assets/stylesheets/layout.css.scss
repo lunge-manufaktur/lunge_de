@@ -110,18 +110,19 @@ footer {
 }
 
 .intro {
-  background-image: url(http://cdn.lunge.de/images/home/home03.jpg);
-  padding: 5rem 0;
+  @include display(flex);
+  @include flex-direction(column);
+  background: url(http://cdn.lunge.de/images/home/IMG_6565.JPG);
+  padding-top: 5rem;
   position: relative;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  height: auto;
+  min-height: 100%;
   @media #{$large-up} {
     background-repeat: no-repeat;
     background-position: center center;
-    background-attachment: fixed;
   };
   @media #{$small-only} {
     background-repeat: no-repeat;
@@ -133,6 +134,32 @@ footer {
     background-position: center center;
     background-attachment: scroll;
   };
+
+  &:before {
+    content: "";
+    position: absolute;
+    @include linear-gradient(top, #d82b4e, rgba(32, 36, 35, 0.68), $fallback: rgba(216, 43, 78, 0.0));
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.intro-footer {
+  @include flex(0 0 auto);
+  color: #fff !important;
+  padding: 4rem 0;
+}
+
+.intro-middle {
+  @include display(flex);
+  @include align-items(center);
+  @include flex (1 1 auto);
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .overlay {
@@ -173,4 +200,8 @@ footer {
 
   img {
   }
+}
+
+.post {
+  border-bottom: 5px solid $body-bg;
 }

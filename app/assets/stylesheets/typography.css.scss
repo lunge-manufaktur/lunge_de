@@ -20,6 +20,18 @@ h5 {
   opacity: 0.6;
 }
 
+.bold {
+  font-weight: 700;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.inverted {
+  color: mintcream;
+}
+
 blockquote,
 blockquote p {
   color: #999;
@@ -30,18 +42,6 @@ label {
   color: inherit;
   opacity: 0.7;
   text-rendering: auto;
-}
-
-a.label {
-  background-color: $secondary-color;
-  color: #333;
-  text-transform: capitalize;
-
-  &:hover {
-    background-color: scale-color($secondary-color, $lightness: -5%);
-  }
-  margin-right: 0.25rem;
-  margin-bottom: 0.25rem;
 }
 
 .strike {

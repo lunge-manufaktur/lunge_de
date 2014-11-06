@@ -132,6 +132,22 @@
 	"buffers":
 	[
 		{
+			"file": "app/views/brands/index.html.slim",
+			"settings":
+			{
+				"buffer_size": 648,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/brands_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1834,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "app/controllers/products_controller.rb",
 			"settings":
 			{
@@ -140,18 +156,18 @@
 			}
 		},
 		{
-			"file": "app/views/products/index/_sidebar_search.html.slim",
+			"file": "app/models/user.rb",
 			"settings":
 			{
-				"buffer_size": 526,
+				"buffer_size": 994,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "config/routes.rb",
+			"file": "config/puma.rb",
 			"settings":
 			{
-				"buffer_size": 1956,
+				"buffer_size": 382,
 				"line_ending": "Unix"
 			}
 		}
@@ -220,18 +236,19 @@
 	},
 	"file_history":
 	[
+		"/Users/ulflunge/projects/lunge_de/config/initializers/timeout.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/products/index/_sidebar_search.html.slim",
+		"/Users/ulflunge/projects/lunge_de/config/routes.rb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/brands_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/models/brand.rb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/ransack.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/application_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/products/index/_sidebar_search.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/posts_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/config/routes.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/brands_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/models/post.rb",
 		"/Users/ulflunge/projects/lunge_de/app/models/product.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/show.html.slim",
 		"/Users/ulflunge/projects/lunge_de/Gemfile",
-		"/Users/ulflunge/projects/lunge_de/config/initializers/timeout.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/components.css.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/layout.css.scss",
@@ -263,7 +280,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/models/product_image.rb",
 		"/Users/ulflunge/projects/lunge_de/app/models/post_image.rb",
 		"/Users/ulflunge/projects/lunge_de/app/models/store_image.rb",
-		"/Users/ulflunge/projects/lunge_de/app/models/brand.rb",
 		"/Users/ulflunge/projects/lunge_de/test/policies/post_policy_test.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/product_images_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_header.html.slim",
@@ -486,11 +502,66 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 4,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "app/views/brands/index.html.slim",
+					"settings":
+					{
+						"buffer_size": 648,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								317,
+								317
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/controllers/brands_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1834,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1726,
+								1726
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 635.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "app/controllers/products_controller.rb",
 					"settings":
 					{
@@ -501,8 +572,8 @@
 						"selection":
 						[
 							[
-								851,
-								851
+								3521,
+								3451
 							]
 						],
 						"settings":
@@ -512,32 +583,30 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 2599.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "app/views/products/index/_sidebar_search.html.slim",
+					"buffer": 3,
+					"file": "app/models/user.rb",
 					"settings":
 					{
-						"buffer_size": 526,
+						"buffer_size": 994,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								162,
-								162
+								831,
+								831
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -546,26 +615,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "config/routes.rb",
+					"buffer": 4,
+					"file": "config/puma.rb",
 					"settings":
 					{
-						"buffer_size": 1956,
+						"buffer_size": 382,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1439,
-								1439
+								0,
+								382
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
