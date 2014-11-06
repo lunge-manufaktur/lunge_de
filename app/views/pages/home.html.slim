@@ -65,7 +65,7 @@ section.space-top
               p 
                = "Egal ob etablierte Marken, innovative Neulinge oder spezialisierte Hersteller von Nischenprodukten - wenn jemand den Laufsport mit seinen Produkten bereichert, ist er bei uns zu finden."
             .small-12.medium-9.columns.border-left data-equalizer-watch=""
-              ul.small-block-grid-2.medium-block-grid-4.large-block-grid-5.text-center
+              ul.small-block-grid-2.medium-block-grid-3.large-block-grid-4.text-center
                 - @brands.each do |brand|
                   li.text-center
                     = link_to image_tag(brand.logo.url(:thumb)), brand_path(brand), class: "brand_logo"
