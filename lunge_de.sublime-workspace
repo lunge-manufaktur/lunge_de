@@ -132,10 +132,82 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/brands/index.html.slim",
+			"file": "app/views/pages/home.html.slim",
 			"settings":
 			{
-				"buffer_size": 648,
+				"buffer_size": 4472,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/utilities.css.scss",
+			"settings":
+			{
+				"buffer_size": 137,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/components.css.scss",
+			"settings":
+			{
+				"buffer_size": 7537,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/application.css.scss",
+			"settings":
+			{
+				"buffer_size": 747,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/globals.css.scss",
+			"settings":
+			{
+				"buffer_size": 680,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/foundation_and_overrides.scss",
+			"settings":
+			{
+				"buffer_size": 33957,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/typography.css.scss",
+			"settings":
+			{
+				"buffer_size": 625,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/layout.css.scss",
+			"settings":
+			{
+				"buffer_size": 3751,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/products/index/_sidebar_tags.html.slim",
+			"settings":
+			{
+				"buffer_size": 379,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/layouts/application.html.slim",
+			"settings":
+			{
+				"buffer_size": 807,
 				"line_ending": "Unix"
 			}
 		},
@@ -148,26 +220,10 @@
 			}
 		},
 		{
-			"file": "app/controllers/products_controller.rb",
+			"file": "app/policies/post_policy.rb",
 			"settings":
 			{
-				"buffer_size": 4850,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/models/user.rb",
-			"settings":
-			{
-				"buffer_size": 994,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/puma.rb",
-			"settings":
-			{
-				"buffer_size": 382,
+				"buffer_size": 187,
 				"line_ending": "Unix"
 			}
 		}
@@ -236,12 +292,30 @@
 	},
 	"file_history":
 	[
-		"/Users/ulflunge/projects/lunge_de/config/initializers/timeout.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_header.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/index/_sidebar_search.html.slim",
-		"/Users/ulflunge/projects/lunge_de/config/routes.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/brands_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/models/brand.rb",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/layout.css.scss",
+		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/home.js.erb",
+		"/Users/ulflunge/projects/lunge_de/vendor/assets/javascripts/morphext.js",
+		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/application.js",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/application.css.scss",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/foundation_and_overrides.scss",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/components.css.scss",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/pages_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/typography.css.scss",
+		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/globals.css.scss",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/morphext.css",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/animate.css",
+		"/Users/ulflunge/assets/Morphext-2.0.0/dist/morphext.css",
+		"/Users/ulflunge/projects/lunge_de/app/models/user.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/brands_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/brands/index.html.slim",
+		"/Users/ulflunge/projects/lunge_de/config/puma.rb",
+		"/Users/ulflunge/projects/lunge_de/config/initializers/timeout.rb",
+		"/Users/ulflunge/projects/lunge_de/config/routes.rb",
+		"/Users/ulflunge/projects/lunge_de/app/models/brand.rb",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/ransack.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/application_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/posts_controller.rb",
@@ -249,16 +323,12 @@
 		"/Users/ulflunge/projects/lunge_de/app/models/product.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/show.html.slim",
 		"/Users/ulflunge/projects/lunge_de/Gemfile",
-		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/components.css.scss",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/layout.css.scss",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/_card.html.slim",
 		"/Users/ulflunge/.bash_profile",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/application.html.slim",
 		"/Users/ulflunge/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
 		"/Users/ulflunge/projects/lunge_de/Procfile",
 		"/Users/ulflunge/projects/lunge_de/config.ru",
-		"/Users/ulflunge/projects/lunge_de/config/puma.rb",
 		"/Users/ulflunge/projects/lunge_de/Procfile.dev",
 		"/Users/ulflunge/projects/lunge_de/.env",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/index.html.slim",
@@ -282,7 +352,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/models/store_image.rb",
 		"/Users/ulflunge/projects/lunge_de/test/policies/post_policy_test.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/product_images_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_header.html.slim",
 		"/Users/ulflunge/projects/lunge_de/test/fixtures/users.yml",
 		"/Users/ulflunge/projects/lunge_de/test/helpers/products_helper_test.rb",
 		"/Users/ulflunge/projects/lunge_de/test/helpers/categories_helper_test.rb",
@@ -314,13 +383,10 @@
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20140417080402_create_api_keys.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/posts/show.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/pages/gutschein.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/pages_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/brands/show.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/models/contact_form.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/contact_form_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_footer.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/application.css.scss",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/foundation_and_overrides.scss",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/shared/_meta.html.slim",
 		"/Users/ulflunge/projects/lunge_de/public/robots.txt",
 		"/Users/ulflunge/projects/lunge_de/app/views/errors/not_found.html.slim",
@@ -328,14 +394,10 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/errors/unacceptable.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/home/index.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/devise/passwords/new.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/models/user.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/index/_sidebar_tags.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/helpers/products_helper.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/edit_product_images.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/shared/_unsupported_browser.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/application.js",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/globals.css.scss",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/typography.css.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/products.css.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/attributes.css.scss",
 		"/Users/ulflunge/projects/lunge_de/app/views/contact_form/new.html.slim",
@@ -357,13 +419,7 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/products/show/_availability.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/home_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/config/application.rb",
-		"/Users/ulflunge/projects/lunge_de/config/environments/production.rb",
-		"/Users/ulflunge/projects/lunge_de/config/environments/development.rb",
-		"/Users/ulflunge/projects/lunge_de/app/policies/application_policy.rb",
-		"/Users/ulflunge/projects/lunge_de/config/database.yml",
-		"/Users/ulflunge/projects/lunge_de/config/initializers/acts_as_taggable_on.rb",
-		"/Users/ulflunge/projects/lunge_de/config/initializers/paperclip.rb",
-		"/Users/ulflunge/projects/lunge_de/config/initializers/kaminari_config.rb"
+		"/Users/ulflunge/projects/lunge_de/config/environments/production.rb"
 	],
 	"find":
 	{
@@ -382,6 +438,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"home",
+			".label",
+			"label",
+			".label",
+			"tag",
+			"media",
+			"button",
+			"buttons",
+			"inverted",
 			"mini",
 			"missing.png",
 			",\n",
@@ -502,29 +567,30 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/brands/index.html.slim",
+					"file": "app/views/pages/home.html.slim",
 					"settings":
 					{
-						"buffer_size": 648,
+						"buffer_size": 4472,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								317,
-								317
+								3132,
+								3132
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
-							"translate_tabs_to_spaces": false
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -534,6 +600,251 @@
 				},
 				{
 					"buffer": 1,
+					"file": "app/assets/stylesheets/utilities.css.scss",
+					"settings":
+					{
+						"buffer_size": 137,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								129,
+								129
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/stylesheets/components.css.scss",
+					"settings":
+					{
+						"buffer_size": 7537,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4975,
+								4977
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1945.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/assets/stylesheets/application.css.scss",
+					"settings":
+					{
+						"buffer_size": 747,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								747,
+								747
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/assets/stylesheets/globals.css.scss",
+					"settings":
+					{
+						"buffer_size": 680,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								73,
+								73
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/assets/stylesheets/foundation_and_overrides.scss",
+					"settings":
+					{
+						"buffer_size": 33957,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								16881,
+								16886
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 12093.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/assets/stylesheets/typography.css.scss",
+					"settings":
+					{
+						"buffer_size": 625,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								414,
+								414
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 284.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/assets/stylesheets/layout.css.scss",
+					"settings":
+					{
+						"buffer_size": 3751,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3749,
+								3749
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 4080.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/views/products/index/_sidebar_tags.html.slim",
+					"settings":
+					{
+						"buffer_size": 379,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								365,
+								365
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/views/layouts/application.html.slim",
+					"settings":
+					{
+						"buffer_size": 807,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
 					"file": "app/controllers/brands_controller.rb",
 					"settings":
 					{
@@ -544,8 +855,8 @@
 						"selection":
 						[
 							[
-								1726,
-								1726
+								0,
+								0
 							]
 						],
 						"settings":
@@ -553,60 +864,6 @@
 							"syntax": "Packages/Ruby/Ruby.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 635.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/controllers/products_controller.rb",
-					"settings":
-					{
-						"buffer_size": 4850,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								3521,
-								3451
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 2599.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/models/user.rb",
-					"settings":
-					{
-						"buffer_size": 994,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								831,
-								831
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -615,11 +872,11 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "config/puma.rb",
+					"buffer": 11,
+					"file": "app/policies/post_policy.rb",
 					"settings":
 					{
-						"buffer_size": 382,
+						"buffer_size": 187,
 						"regions":
 						{
 						},
@@ -627,12 +884,14 @@
 						[
 							[
 								0,
-								382
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
