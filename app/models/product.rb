@@ -23,7 +23,7 @@
 
 class Product < ActiveRecord::Base
 
-  # Associations
+  # associations
   belongs_to :brand
   belongs_to :size
   belongs_to :product_category
@@ -38,20 +38,20 @@ class Product < ActiveRecord::Base
   accepts_nested_attributes_for :stocks, :allow_destroy => true
   accepts_nested_attributes_for :properties, :allow_destroy => true
 
-  # Acts as taggable on gem
+  # acts as taggable on gem
   acts_as_taggable
 
-  # Friendly ID
+  # friendly ID
   include FriendlyId
   friendly_id :title, :use => :slugged
 
-  # Scopes
+  # scopes
   scope :published, -> { where(is_published: true) }
   scope :on_sale, -> { where("current_price < regular_price") }
   scope :featured, -> { where(is_featured: true) }
   scope :on_frontpage, -> { where(is_on_frontpage: true) }
 
-  # Methods
+  # methods
   include IconHelper
 
   def title

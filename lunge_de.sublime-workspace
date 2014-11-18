@@ -226,6 +226,14 @@
 				"buffer_size": 187,
 				"line_ending": "Unix"
 			}
+		},
+		{
+			"file": "app/views/pages/gutschein.html.slim",
+			"settings":
+			{
+				"buffer_size": 6017,
+				"line_ending": "Unix"
+			}
 		}
 	],
 	"build_system": "",
@@ -567,7 +575,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 12,
 			"sheets":
 			[
 				{
@@ -895,6 +903,34 @@
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "app/views/pages/gutschein.html.slim",
+					"settings":
+					{
+						"buffer_size": 6017,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2591,
+								2591
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 569.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
