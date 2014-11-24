@@ -65,10 +65,6 @@ class BrandsController < ApplicationController
     @brand = Brand.friendly.find(params[:id])
   end
 
-  def valid_api_key?
-    ApiKey.exists?(key: params[:api_key])
-  end
-
   def brand_params
     params.require(:brand).permit(
       :id,

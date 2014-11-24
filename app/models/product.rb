@@ -80,7 +80,7 @@ class Product < ActiveRecord::Base
         "http://placehold.it/300&text=Kein+Bild+vorhanden"
       when "card"
         "http://placehold.it/640&text=Kein+Bild+vorhanden"
-      end 
+      end
     end
   end
 

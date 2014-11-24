@@ -15,4 +15,4 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 default_brand:
-  name: Default Brand
+  name: That very hip brand you heard about

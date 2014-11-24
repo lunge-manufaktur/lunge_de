@@ -1,10 +1,11 @@
 source 'https://rubygems.org'
 
 ruby "2.1.5"
+
 gem "rails", "~> 4.1"
 gem "rails-i18n"
 gem "pg"
-gem "puma"
+gem "puma", "~> 2.9.2"
 gem "devise"
 gem "pundit"
 gem "minitest-rails"

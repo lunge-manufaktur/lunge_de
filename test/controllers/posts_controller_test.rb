@@ -2,7 +2,9 @@ require 'test_helper'
 
 class PostsControllerTest < ActionController::TestCase
   setup do
+    @user = users(:default_user)
     @post = posts(:default_post)
+    sign_in @user
   end
 
   test "should get index" do
