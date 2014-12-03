@@ -33,4 +33,7 @@ LungeDe::Application.configure do
   # number of complex assets.
   config.assets.debug = true
 
+  # proper logging in Puma
+  config.logger = Logger.new(STDOUT)
+
 end

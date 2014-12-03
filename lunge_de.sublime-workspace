@@ -131,22 +131,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "config/routes.rb",
-			"settings":
-			{
-				"buffer_size": 1956,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/initializers/secret_token.rb",
-			"settings":
-			{
-				"buffer_size": 661,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -217,15 +201,19 @@
 	"expanded_folders":
 	[
 		"/Users/ulflunge/projects/lunge_de",
+		"/Users/ulflunge/projects/lunge_de/app",
+		"/Users/ulflunge/projects/lunge_de/app/assets",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets",
 		"/Users/ulflunge/projects/lunge_de/config",
-		"/Users/ulflunge/projects/lunge_de/config/initializers",
-		"/Users/ulflunge/projects/lunge_de/test/controllers",
-		"/Users/ulflunge/projects/lunge_de/test/fixtures",
-		"/Users/ulflunge/projects/lunge_de/test/integration",
-		"/Users/ulflunge/projects/lunge_de/test/policies"
+		"/Users/ulflunge/projects/lunge_de/config/environments"
 	],
 	"file_history":
 	[
+		"/Users/ulflunge/projects/lunge_de/config/application.rb",
+		"/Users/ulflunge/projects/lunge_de/config/environments/production.rb",
+		"/Users/ulflunge/projects/lunge_de/Gemfile",
+		"/Users/ulflunge/projects/lunge_de/config/routes.rb",
+		"/Users/ulflunge/projects/lunge_de/config/initializers/secret_token.rb",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/devise.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/brands_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/application_controller.rb",
@@ -233,7 +221,6 @@
 		"/Users/ulflunge/projects/lunge_de/test/policies/post_policy_test.rb",
 		"/Users/ulflunge/projects/lunge_de/test/policies/brand_policy_test.rb",
 		"/Users/ulflunge/projects/lunge_de/app/policies/application_policy.rb",
-		"/Users/ulflunge/projects/lunge_de/Gemfile",
 		"/Users/ulflunge/projects/lunge_de/app/policies/brand_policy.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/brands_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/categories_controller.rb",
@@ -271,7 +258,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/brands/index.html.slim",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/timeout.rb",
-		"/Users/ulflunge/projects/lunge_de/config/routes.rb",
 		"/Users/ulflunge/projects/lunge_de/app/models/brand.rb",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/ransack.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/posts_controller.rb",
@@ -350,14 +336,11 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_gap.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_paginator.html.slim",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20140925073652_add_slug_to_store.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_ga.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/products/search/_index.html.erb",
-		"/Users/ulflunge/projects/lunge_de/app/views/stores/index.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/policies/store_policy.rb"
+		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_ga.html.erb"
 	],
 	"find":
 	{
-		"height": 39.0
+		"height": 43.0
 	},
 	"find_in_files":
 	{
@@ -501,67 +484,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "config/routes.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1956,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "config/initializers/secret_token.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 661,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
