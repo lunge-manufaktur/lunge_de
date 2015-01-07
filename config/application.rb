@@ -4,7 +4,7 @@ require 'rails/all'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
-Bundler.require(:default, Rails.env)
+Bundler.require(*Rails.groups)
 
 module LungeDe
   class Application < Rails::Application
@@ -48,5 +48,8 @@ module LungeDe
       user_name: ENV["ARTFILES_USERNAME"],
       password: ENV["ARTFILES_PASSWORD"]
     }
+
+    # Do not hide errors in after_commit/after_rollback callbacks.
+    config.active_record.raise_in_transactional_callbacks = true
   end
 end

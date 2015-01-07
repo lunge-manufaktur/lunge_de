@@ -56,7 +56,4 @@ class Brand < ActiveRecord::Base
 
 	# Scopes
   scope :active, -> { joins(:products).distinct.merge(Product.published) }
-
-
-
 end

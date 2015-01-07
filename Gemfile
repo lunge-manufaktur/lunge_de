@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby "2.1.5"
+ruby "2.2.0"
 
-gem "rails", "~> 4.1"
+gem "rails", "4.2.0"
 gem "rails-i18n"
 gem "pg"
 gem "puma", "~> 2.9.2"
@@ -19,7 +19,7 @@ group :development, :test do
 end
 
 
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
@@ -32,7 +32,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'foundation-rails'
+gem 'foundation-rails', "~> 5.4"
 gem "bourbon"
 gem 'ransack'
 gem 'annotate'
