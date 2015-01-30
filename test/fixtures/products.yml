@@ -30,3 +30,13 @@ default_product:
   description: This is a description
   current_price: 120
   regular_price: 150
+  is_published: true
+
+hidden_product:
+  name: Regular Product
+  brand: default_brand
+  sku: <%= rand(1000) %>
+  description: This is a description
+  current_price: 120
+  regular_price: 150
+  is_published: false
