@@ -37,6 +37,7 @@
 
 
         li = link_to "Kontakt", contact_path
+        li = link_to "Jobs", jobs_path
 
         - if current_user
           li = link_to "Logout", destroy_user_session_path, method: :delete

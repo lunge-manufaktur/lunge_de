@@ -73,5 +73,6 @@ LungeDe::Application.routes.draw do
   get "contact", controller: "contact_form", action: "new"
   post "contact", controller: "contact_form", action: "create"
   get "gutschein", controller: "pages", action: "gutschein"
+  get "jobs", controller: "pages", action: "jobs"
   
 end

@@ -8,4 +8,7 @@ class PagesController < ApplicationController
   def gutschein
   end
 
+  def jobs
+  end
+
 end
