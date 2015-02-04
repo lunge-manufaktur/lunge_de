@@ -4,6 +4,7 @@ class ProductTest < ActiveSupport::TestCase
 
   setup do
     @product = products(:default_product)
+    @hidden_product = products(:hidden_product)
   end
 
   test "product should have stock" do
