@@ -9,10 +9,10 @@ class ProductsController < ApplicationController
     if params[:tags]
       @tags = params[:tags].split("+").map{ |tag| tag.gsub("-", "/") }
       @search = Product.published.search(params[:q])
-      @products = @search.result.includes(:brand, :product_images).tagged_with(@tags).page(params[:page]).per(12)
+      @products = @search.result.includes(:brand, :product_images, :tags).tagged_with(@tags).page(params[:page]).per(12)
     else
       @search = Product.published.search(params[:q])
-      @products = @search.result.includes(:brand, :product_images).page(params[:page]).per(12)
+      @products = @search.result.includes(:brand, :product_images, :tags).page(params[:page]).per(12)
     end
   end
 

@@ -127,7 +127,7 @@ class Product < ActiveRecord::Base
   def eligible_for_running_course?
     running_shoe_tag = "laufschuh"
 
-    is_running_shoe = self.tag_list.include?(running_shoe_tag)
+    is_running_shoe = self.tags.where(name: running_shoe_tag).any?
     is_not_reduced = current_price >= regular_price
 
     if is_running_shoe && is_not_reduced

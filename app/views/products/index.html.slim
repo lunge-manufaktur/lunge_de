@@ -1,44 +1,44 @@
 - meta_title(@tags ? "Alle Artikel mit den Tags #{@tags.join(", ").capitalize}" : "Sortiment")
 - if @tags
-	- meta_keywords(@tags.join(", "))
+  - meta_keywords(@tags.join(", "))
 
 = content_for :title_bar
-	.title_bar
-		.row
-			.small-12.medium-9.columns
-				h1 = Product.model_name.human(count: @products.count)
+  .title_bar
+    .row
+      .small-12.medium-9.columns
+        h1 = Product.model_name.human(count: @products.count)
 
 - if @tags
-	.row
-		.small-12.columns
-			section
-				.panel
-					h4 Aktive Filter: 
-					- @tags.each do |tag|
-						= tag_to_remove(tag)
-					hr
-					= link_to "Alle Artikel anzeigen", products_path
+  .row
+    .small-12.columns
+      section
+        .panel
+          h4 Aktive Filter: 
+          - @tags.each do |tag|
+            = tag_to_remove(tag)
+          hr
+          = link_to "Alle Artikel anzeigen", products_path
 
 .row
-	.small-12.medium-4.medium-push-8.large-3.large-push-9.columns
-		section
-			= render "products/index/sidebar_search"
-		section
-			= render "products/index/sidebar_tags"
+  .small-12.medium-4.medium-push-8.large-3.large-push-9.columns
+    section
+      = render "products/index/sidebar_search"
+    section
+      = render "products/index/sidebar_tags"
 
-	.small-12.medium-8.medium-pull-4.large-9.large-pull-3.columns
-		h4 = page_entries_info @products
-		ul.inline-list.sort-section.light
-			li Sortieren nach:
-			li = sort_link @search, :created_at, "Hinzugefügt", default_order: :desc
-			li = sort_link @search, :current_price, "Preis"
+  .small-12.medium-8.medium-pull-4.large-9.large-pull-3.columns
+    h4 = page_entries_info @products
+    ul.inline-list.sort-section.light
+      li Sortieren nach:
+      li = sort_link @search, :created_at, "Hinzugefügt", default_order: :desc
+      li = sort_link @search, :current_price, "Preis"
 
 
-		ul.small-block-grid-1.medium-block-grid-2.large-block-grid-3
-			- @products.each do |product|
-				= render "products/card", product: product
+    ul.small-block-grid-1.medium-block-grid-2.large-block-grid-3
+      - @products.each do |product|
+        = render "products/card", product: product
 
 .row
-	.small-12.columns
-		section
-			= paginate @products, params: { authenticity_token: nil, commit: nil, utf8: nil }
+  .small-12.columns
+    section
+      = paginate @products, params: { authenticity_token: nil, commit: nil, utf8: nil }
