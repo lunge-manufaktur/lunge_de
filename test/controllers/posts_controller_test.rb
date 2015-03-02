@@ -13,6 +13,11 @@ class PostsControllerTest < ActionController::TestCase
     assert_not_nil assigns(:posts)
   end
 
+  test "should show post" do
+    get :show, id: @post
+    assert_response :success
+  end
+
   test "should get new" do
     get :new
     assert_response :success
@@ -24,11 +29,6 @@ class PostsControllerTest < ActionController::TestCase
       post :create, post: @post.attributes
     end
     assert_redirected_to post_path(assigns(:post))
-  end
-
-  test "should show post" do
-    get :show, id: @post
-    assert_response :success
   end
 
   test "should get edit" do
