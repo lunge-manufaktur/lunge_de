@@ -16,6 +16,7 @@
 #  latitude     :float
 #  longitude    :float
 #  description  :text
+#  slug         :string(255)
 #
 
 class Store < ActiveRecord::Base

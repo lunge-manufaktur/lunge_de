@@ -5,10 +5,12 @@ ruby "2.2.0"
 gem "rails", "4.2.0"
 gem "rails-i18n"
 gem "pg"
-gem "puma", "~> 2.9.2"
+gem "puma", "~> 2.11.2"
+gem "rack-timeout"
 gem "devise"
 gem "pundit"
 gem "minitest-rails"
+gem "delayed_job_active_record"
 
 group :test do
 	gem "minitest-rails-capybara"
@@ -38,7 +40,8 @@ gem 'ransack'
 gem 'annotate'
 gem "paperclip", "~> 4.1"
 gem "paperclip-storage-ftp"
-gem 'nested_form'
+gem "delayed_paperclip"
+gem "nested_form"
 gem "geocoder"
 gem "slim-rails"
 gem "mail_form"
@@ -47,7 +50,6 @@ gem "mail_form"
 group :production do
 	gem 'rails_12factor'
 end
-gem "rack-timeout"
 
 gem 'awesome_nested_set'
 gem 'acts-as-taggable-on'

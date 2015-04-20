@@ -1,3 +1,26 @@
+# == Schema Information
+#
+# Table name: products
+#
+#  id                   :integer          not null, primary key
+#  name                 :string(255)
+#  sku                  :string(255)
+#  description          :text             default("Beschreibung folgt")
+#  created_at           :datetime
+#  updated_at           :datetime
+#  size_id              :integer
+#  brand_id             :integer
+#  regular_price        :decimal(8, 2)
+#  current_price        :decimal(8, 2)
+#  color                :string(255)
+#  is_published         :boolean
+#  official_description :text
+#  is_on_sale           :boolean
+#  is_on_frontpage      :boolean
+#  is_featured          :boolean
+#  slug                 :string(255)
+#
+
 require 'test_helper'
 
 class ProductTest < ActiveSupport::TestCase

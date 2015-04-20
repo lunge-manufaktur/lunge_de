@@ -11,6 +11,7 @@
 #  image_content_type :string(255)
 #  image_file_size    :integer
 #  image_updated_at   :datetime
+#  image              :string
 #
 
 class ProductImage < ActiveRecord::Base
@@ -27,17 +28,17 @@ class ProductImage < ActiveRecord::Base
 
   has_attached_file :image,
   	:styles => {
-  		:thumb => "300x300>",
-  		:small => "640x640>",
-  		:medium => "1024x1024>",
-  		:large => "2000x2000>",
-      :card => "640x640#"
+  		:thumb => ["300x300>", :jpg],
+  		:small => ["640x640>", :jpg],
+  		:medium => ["1024x1024>", :jpg],
+  		:large => ["2000x2000>", :jpg],
+      :card => ["640x640#", :jpg]
   	},
     :convert_options => {
       :thumb => "-quality 80 -strip",
       :small => "-quality 80 -strip",
       :medium => "-quality 85 -strip",
-      :large => "-quality 90 -strip",
+      :large => "-quality 85 -strip",
       :card => "-quality 80 -strip"
     },
   	:storage => :ftp,
@@ -53,6 +54,8 @@ class ProductImage < ActiveRecord::Base
     ]
 
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
+
+  process_in_background :image
 
 
   # Scopes
