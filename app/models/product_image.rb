@@ -28,17 +28,17 @@ class ProductImage < ActiveRecord::Base
 
   has_attached_file :image,
   	:styles => {
-  		:thumb => ["300x300>", :jpg],
-  		:small => ["640x640>", :jpg],
-  		:medium => ["1024x1024>", :jpg],
-  		:large => ["2000x2000>", :jpg],
-      :card => ["640x640#", :jpg]
+  		:thumb => "300x300>",
+  		:small => "640x640>",
+  		:medium => "1024x1024>",
+  		:large => "2000x2000>",
+      :card => "640x640#"
   	},
     :convert_options => {
       :thumb => "-quality 80 -strip",
       :small => "-quality 80 -strip",
-      :medium => "-quality 85 -strip",
-      :large => "-quality 85 -strip",
+      :medium => "-quality 80 -strip",
+      :large => "-quality 80 -strip",
       :card => "-quality 80 -strip"
     },
   	:storage => :ftp,
