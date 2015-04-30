@@ -211,14 +211,17 @@
 	[
 		"/Users/ulflunge/projects/lunge_de",
 		"/Users/ulflunge/projects/lunge_de/app",
-		"/Users/ulflunge/projects/lunge_de/app/models"
+		"/Users/ulflunge/projects/lunge_de/app/models",
+		"/Users/ulflunge/projects/lunge_de/config",
+		"/Users/ulflunge/projects/lunge_de/config/environments"
 	],
 	"file_history":
 	[
+		"/Users/ulflunge/projects/lunge_de/config/application.rb",
+		"/Users/ulflunge/projects/lunge_de/config/database.yml",
 		"/Users/ulflunge/projects/lunge_de/app/models/product_image.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/shared/_ga.html.erb",
 		"/Users/ulflunge/projects/lunge_de/Procfile",
-		"/Users/ulflunge/projects/lunge_de/config/application.rb",
 		"/Users/ulflunge/projects/lunge_de/Gemfile",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20150420081551_create_delayed_jobs.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
@@ -269,7 +272,6 @@
 		"/Users/ulflunge/projects/lunge_de/config/initializers/secret_token.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/products_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/brands_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/config/database.yml",
 		"/Users/ulflunge/projects/lunge_de/config/environments/test.rb",
 		"/Users/ulflunge/projects/lunge_de/bin/rails",
 		"/Users/ulflunge/projects/lunge_de/bin/rails20150106-71204-1pfffon",
