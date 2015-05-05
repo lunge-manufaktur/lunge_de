@@ -14,6 +14,6 @@
 				hr
 				- if brand.products.any?
 					ul.small-block-grid-1.medium-block-grid-2.large-block-grid-3
-						- brand.products.limit(9).each do |product|
+						- brand.products.published.limit(9).each do |product|
 							= render partial: "products/minicard", locals: { product: product }
 				= link_to "Alle Artikel von #{brand.name} anzeigen...", brand_path(brand), class: "button right"
