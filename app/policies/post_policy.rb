@@ -1,23 +1,23 @@
 class PostPolicy < ApplicationPolicy
 
   def new?
-    user
+    create?
   end
 
   def create?
-    user
+    user.admin?
   end
 
   def edit?
-    user
+    update?
   end
 
   def update?
-    user
+    user.admin?
   end
 
   def destroy?
-    user
+    user.admin?
   end
 
 end
