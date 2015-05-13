@@ -14,3 +14,7 @@
 default_api_key:
   key: secret
   user: default_user
+
+admin_api_key:
+  key: evenmoresecret
+  user: admin_user

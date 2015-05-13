@@ -267,7 +267,7 @@ DEPENDENCIES
   foundation-rails (~> 5.4)
   friendly_id
   geocoder
-  jbuilder (~> 1.2)
+  jbuilder
   jquery-rails
   jquery-turbolinks
   kaminari

@@ -1,0 +1,14 @@
+json.id store.id
+json.created_at store.created_at
+json.updated_at store.updated_at
+json.is_active store.active
+json.short_name store.name
+json.address_name store.address_name
+json.address_street store.street
+json.address_zip store.zip
+json.address_city store.city
+json.longitude store.longitude
+json.latitude store.latitude
+json.phone store.phone
+json.email store.email
+json.url store_url(store)

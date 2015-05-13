@@ -3,7 +3,7 @@ require 'test_helper'
 class Api::BrandsControllerTest < ActionController::TestCase
   setup do
     @brand = brands(:default_brand)
-    authenticate
+    authenticate(admin: true)
   end
 
   test "should get index" do

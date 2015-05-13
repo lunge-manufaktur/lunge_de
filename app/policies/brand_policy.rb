@@ -4,11 +4,11 @@ class BrandPolicy < ApplicationPolicy
   end
 
   def show?
-    scope.where(:id => record.id).exists?
+    true
   end
 
   def create?
-    user
+    user.try(:admin?)
   end
 
   def new?
@@ -16,7 +16,7 @@ class BrandPolicy < ApplicationPolicy
   end
 
   def update?
-    user
+    user.try(:admin?)
   end
 
   def edit?
@@ -24,6 +24,6 @@ class BrandPolicy < ApplicationPolicy
   end
 
   def destroy?
-    user
+    user.try(:admin?)
   end
 end

@@ -3,7 +3,7 @@ require 'test_helper'
 class Api::ProductsControllerTest < ActionController::TestCase
   setup do
     @product = products(:default_product)
-    authenticate
+    authenticate(admin: true)
   end
 
   test "should get index" do

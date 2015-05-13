@@ -43,12 +43,7 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  g1: MyString
-  g1h: MyString
-
-two:
+default:
   name: MyString
   g1: MyString
   g1h: MyString

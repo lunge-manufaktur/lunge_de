@@ -3,7 +3,7 @@ require 'test_helper'
 class Api::StoresControllerTest < ActionController::TestCase
   setup do
     @store = stores(:default_store)
-    authenticate
+    authenticate(admin: true)
   end
 
   test "should get index" do

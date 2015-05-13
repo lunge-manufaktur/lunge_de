@@ -1,41 +1,53 @@
 module Api
   class SizesController < ApplicationController
     protect_from_forgery except: [:create, :update]
-    before_filter :restrict_access
+    before_action :current_user
+    after_action :verify_authorized
     respond_to :json
 
     # GET /sizes
     def index
-      respond_with Size.all
+      @sizes = Size.all
+      authorize @sizes
     end
 
     # GET /sizes/1
     def show
-      respond_with Size.find(params[:id])
+      @size = Size.find(params[:id])
+      authorize @size
     end
 
     # POST /sizes
     def create
-      respond_with Size.create(size_params)
+      @size = Size.new(size_params)
+      authorize @size
+      if @size.save
+        render nothing: true, status: 201
+      end
     end
 
     # PATCH/PUT /sizes/1
     def update
-      respond_with Size.update(params[:id], size_params)
+      @size = Size.find(params[:id])
+      authorize @size
+      respond_with @size.update(size_params)
     end
 
     # DELETE /sizes/1
     def destroy
-      respond_with Size.destroy(params[:id])
+      @size = Size.find(params[:id])
+      authorize @size
+      respond_with @size.destroy
     end
 
 
 
     private
 
-    def restrict_access
+    def current_user
       authenticate_or_request_with_http_token do |token, options|
-        ApiKey.exists?(key: token)
+        key = ApiKey.find_by_key(token)
+        user = key.user if key
       end
     end
 

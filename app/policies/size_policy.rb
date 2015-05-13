@@ -1,10 +1,10 @@
-class ProductPolicy < ApplicationPolicy
+class SizePolicy < ApplicationPolicy
   def index?
     true
   end
 
   def show?
-    user || record.is_published
+    true
   end
 
   def new?
@@ -23,7 +23,7 @@ class ProductPolicy < ApplicationPolicy
     user.try(:admin?)
   end
 
-  def destroy?
+  def destroy
     user.try(:admin?)
   end
 end

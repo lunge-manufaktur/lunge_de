@@ -2,7 +2,7 @@ require 'test_helper'
 
 class SizesControllerTest < ActionController::TestCase
   setup do
-    @size = sizes(:one)
+    @size = sizes(:default)
   end
 
   test "should get index" do

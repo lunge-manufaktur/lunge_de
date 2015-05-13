@@ -31,6 +31,7 @@ default_product:
   current_price: 120
   regular_price: 150
   is_published: true
+  size: default
 
 hidden_product:
   name: Regular Product

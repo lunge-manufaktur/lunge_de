@@ -1,10 +1,18 @@
 class StorePolicy < ApplicationPolicy
+  def index
+    true
+  end
+
+  def show
+    true
+  end
+
   def new?
     create?
   end
 
   def create?
-    user
+    user.try(:admin?)
   end
 
   def edit?
@@ -12,10 +20,10 @@ class StorePolicy < ApplicationPolicy
   end
 
   def update?
-    user
+    user.try(:admin?)
   end
 
   def destroy?
-    user
+    user.try(:admin?)
   end
 end

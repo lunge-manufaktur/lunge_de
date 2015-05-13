@@ -1,45 +1,52 @@
 module Api
   class StoresController < ApplicationController
     protect_from_forgery except: [:create, :update]
-    before_filter :restrict_access
+    before_action :current_user
+    after_action :verify_authorized
     respond_to :json
 
     # GET /stores
     def index
-      respond_with @store = Store.all
+      @stores = Store.all
+      authorize @stores
     end
 
     # GET /stores/1
     def show
-      respond_with @store = Store.find(params[:id])
+      @store = Store.find(params[:id])
+      authorize @store
     end
 
     # POST /stores
     def create
-      respond_with @store = Store.create(store_params)
+      @store = Store.new(store_params)
+      authorize @store
+      if @store.save
+        render nothing: true, status: :created
+      end
     end
 
     # PATCH/PUT /stores/1
     def update
-      respond_with @store = Store.update(params[:id], store_params)
+      @store = Store.find(params[:id])
+      authorize @store
+      respond_with @store.update(store_params)
     end
 
     # DELETE /stores/1
     def destroy
-      respond_with @store = Store.destroy(params[:id])
-      head :no_content
+      @store = Store.find(params[:id])
+      authorize @store
+      respond_with @store.destroy
     end
 
     private
 
-    def restrict_access
+    def current_user
       authenticate_or_request_with_http_token do |token, options|
-        ApiKey.exists?(key: token)
+        key = ApiKey.find_by_key(token)
+        user = key.user if key
       end
-    end
-    
-    def set_store
-      @store = Store.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

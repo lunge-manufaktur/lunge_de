@@ -1,37 +1,55 @@
 module Api
   class BrandsController < ApplicationController
     protect_from_forgery except: [:create, :update]
-    before_filter :restrict_access
+    before_action :current_user
+    after_action :verify_authorized
     respond_to :json
 
     # GET /brands
     def index
-      respond_with @brands = Brand.all
+      @brands = Brand.order(:name)
+      authorize @brands
     end
 
     # GET /brands/1
     def show
-      respond_with @brand = Brand.find(params[:id])
+      @brand = Brand.find(params[:id])
+      authorize @brand
     end
 
     # POST /brands
     def create
-      respond_with Brand.create(brand_params)
+      @brand = Brand.create(brand_params)
+      authorize @brand
+      if @brand.save
+        render nothing: true, status: 201
+      end
     end
 
     # PATCH/PUT /brands/1
     def update
-      respond_with Brand.update(params[:id], brand_params)
+      @brand = Brand.find(params[:id])
+      authorize @brand
+      respond_with @brand.update(brand_params)
     end
 
     # DELETE /brands/1
     def destroy
-      respond_with Brand.destroy(params[:id])
+      @brand = Brand.find(params[:id])
+      authorize @brand
+      respond_with @brand.destroy
     end
 
 
 
     private
+
+    def current_user
+      authenticate_or_request_with_http_token do |token, options|
+        key = ApiKey.find_by_key(token)
+        user = key.user if key
+      end
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def brand_params

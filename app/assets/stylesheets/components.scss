@@ -569,3 +569,26 @@ table.calendar {
     opacity: 1;
   }
 }
+
+
+
+/* ----- SIDE-NAV ----- */
+.side-nav {
+  list-style: none;
+  margin-left: 0;
+}
+
+.side-nav li {
+  width: 100%;
+}
+
+.side-nav li a {
+  margin-bottom: 0;
+  padding: 0.25rem 0;
+
+  &:hover {
+    background-color: linen;
+    padding: 0 0.5rem;
+    margin: 0 -0.5rem;
+  }
+}

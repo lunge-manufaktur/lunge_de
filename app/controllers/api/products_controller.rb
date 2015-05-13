@@ -1,41 +1,55 @@
 module Api
   class ProductsController < ApplicationController
     protect_from_forgery except: [:create, :update]
-    before_filter :restrict_access
+    before_action :current_user
+    after_action :verify_authorized
     respond_to :json
 
     # GET /products
     def index
-      respond_with @products = Product.all
+      @products = Product.all.includes(:size, :stocks, :brand, :stores)
+      authorize @products
     end
 
     # GET /products/1
     def show
-      respond_with @product = Product.find(params[:id])
+      @product = Product.includes(:size, :stocks, :brand, :stores).find(params[:id])
+      authorize @product
     end
 
     # POST /products
     def create
-      respond_with Product.create(product_params)
+      @product = Product.new(product_params)
+      authorize @product
+      if @product.save
+        render nothing: true, status: :created
+      end
     end
 
     # PATCH/PUT /products/1
     def update
-      respond_with Product.update(params[:id], product_params)
+      @product = Product.find(params[:id])
+      authorize @product
+      respond_with @product.update(product_params)
     end
 
     # DELETE /products/1
     def destroy
-      respond_with Product.destroy(params[:id])
+      @product = Product.find(params[:id])
+      authorize @product
+      respond_with @product.destroy
     end
+
+
 
 
 
     private
 
-    def restrict_access
+    def current_user
       authenticate_or_request_with_http_token do |token, options|
-        ApiKey.exists?(key: token)
+        key = ApiKey.find_by_key(token)
+        user = key.user if key
       end
     end
 
