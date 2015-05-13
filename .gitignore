@@ -28,3 +28,6 @@ pickle-email-*.html
 # Environment variables
 .env
 Procfile.dev
+
+# Docs
+/docs

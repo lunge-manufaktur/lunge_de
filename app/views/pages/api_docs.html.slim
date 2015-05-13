@@ -22,14 +22,14 @@
       li = link_to "Sizes", "#sizes"
 
   .small-12.medium-9.columns.border-left
-    section
+    section#introduction
       h2 Getting Started
       h3 Introduction
       p == "This API is built on #{link_to 'REST', 'http://en.wikipedia.org/wiki/Representational_state_transfer'} principles and attempts to provide predictable endpoints and results with valid HTTP status codes."
 
       p All GET responses are delivered in JSON format. POST, PATCH and DELETE requests don't receive an answer with a content body, but their respective HTTP status codes - for successful requests that would be 200, 201 or 204.
 
-      h3 Authentication
+      h3#authentication Authentication
       p
         | We use HTTP authentication via API keys that are provided to you if we grant access to our API. Without or with an invalid API key you will receive a 401 error.
       p 
@@ -41,7 +41,7 @@
         pre
           code Authorization: Token token=[YOUR API KEY]
 
-      h3 General formats
+      h3#format General formats
       p
         | Our JSON responses are always wrapped in a root node, followed by the singular or plural object resource, depending of the method requested. For example, the 
         code SHOW
@@ -75,7 +75,7 @@
               }
     section
       h2 Resources
-    section
+    section#products
       h3 Products
       p
         | Products are the goods Lunge has in stock. Every requested product is provided with several related child and parent objects like the associated brand, size format and, most importantly, the available stock per store and size.
@@ -228,7 +228,7 @@
 
       hr
 
-    section
+    section#brands
       h3 Brands
       p 
         | Every product belongs to a brand. For now the 
@@ -280,7 +280,7 @@
       
       hr
 
-    section
+    section#stores
       h3 Stores
       p
         | These are our store locations. They are also nested within a product's 
