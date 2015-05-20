@@ -7,13 +7,13 @@ module Api
 
     # GET /products
     def index
-      @products = Product.all.includes(:size, :stocks, :brand, :stores)
+      @products = Product.all.includes(:size, :stocks, :brand, :stores, :product_images)
       authorize @products
     end
 
     # GET /products/1
     def show
-      @product = Product.includes(:size, :stocks, :brand, :stores).find(params[:id])
+      @product = Product.includes(:size, :stocks, :brand, :stores, :product_images).find(params[:id])
       authorize @product
     end
 

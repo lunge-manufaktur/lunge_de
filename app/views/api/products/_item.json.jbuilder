@@ -17,6 +17,10 @@ json.size_set do |size|
   json.id product.try(:size).try(:id)
   json.name product.try(:size).try(:name)
 end
+json.product_images product.product_images do |image|
+  json.id image.id
+  json.url image.image.url
+end
 json.availability product.stocks do |stock|
   json.id stock.id
   json.store do
