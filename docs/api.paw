@@ -141,7 +141,7 @@
     </object>
     <object type="LMREQUEST" id="z112">
         <attribute name="uuid" type="string">87102173-C032-428E-B9BE-92C6842193BD</attribute>
-        <attribute name="url" type="string">http://localhost:3000/api/products/39</attribute>
+        <attribute name="url" type="string">http://localhost:3000/api/products/17077</attribute>
         <attribute name="storecookies" type="bool">1</attribute>
         <attribute name="sendcookies" type="bool">1</attribute>
         <attribute name="redirectmethod" type="bool">0</attribute>
