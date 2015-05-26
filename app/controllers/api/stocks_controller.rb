@@ -1,7 +1,7 @@
 module Api
   class StocksController < ApplicationController
     protect_from_forgery except: [:create, :update]
-    before_filter :restrict_access
+    before_action :restrict_access
     respond_to :json
 
     # GET /api/stocks

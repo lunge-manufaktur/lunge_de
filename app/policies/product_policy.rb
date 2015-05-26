@@ -3,6 +3,10 @@ class ProductPolicy < ApplicationPolicy
     true
   end
 
+  def changed_since?
+    index?
+  end
+
   def show?
     user || record.is_published
   end

@@ -45,20 +45,25 @@
 class Stock < ActiveRecord::Base
 
 	# Associations
-
   belongs_to :product
   belongs_to :store
 
   # Scopes
-
   scope :for_store, ->(store_id) { where("store_id = ?", store_id) }
   scope :for_product, ->(product_id) { where("product_id = ?", product_id) }
   scope :order_by_store, -> { order(:store_id) }
   scope :in_stock, -> { where(:quantity => true) }
 
-  # Methods
+  # Callbacks
+  before_save :update_product
 
+
+  # Methods
   include IconHelper
+
+  def update_product
+    self.product.touch if self.changed?
+  end
 
   def quantity_array
     quantity_array = [g1, g1h, g2, g2h, g3, g3h, g4, g4h, g5, g5h, g6, g6h, g7, g7h, g8, g8h, g9, g9h, g10, g10h, g11, g11h, g12, g12h, g13, g13h, g14, g14h, g15, g16, g17, g18, g19]

@@ -8,13 +8,25 @@ module Api
     # GET /products
     def index
       if current_user.admin?
-        @search = Product.search(params[:q])
-        @products = @search.result(distinct: true).includes(:size, :stocks, :brand, :stores, :product_images)
+        @products = Product.all.includes(:size, :stocks, :brand, :stores, :product_images)
       else
         @products = Product.published.includes(:size, :stocks, :brand, :stores, :product_images)
       end
 
       authorize @products
+    end
+
+    def changed_since
+      date = params[:date].to_datetime
+
+      if current_user.admin?
+        @products = Product.where("updated_at > ?", date).includes(:size, :stocks, :brand, :stores, :product_images)
+      else
+        @products = Product.published.where("updated_at > ?", date).includes(:size, :stocks, :brand, :stores, :product_images)
+      end
+
+      authorize @products
+      render "index"
     end
 
     # GET /products/1

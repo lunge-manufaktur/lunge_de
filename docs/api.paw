@@ -784,7 +784,7 @@
     </object>
     <object type="LMREQUEST" id="z173">
         <attribute name="uuid" type="string">02D2EF3F-184C-4078-9400-D333576BED34</attribute>
-        <attribute name="url" type="string">http://localhost:3000/api/products/search/adagio</attribute>
+        <attribute name="url" type="string">http://localhost:3000/api/products/changed_since/2015-01-01</attribute>
         <attribute name="storecookies" type="bool">1</attribute>
         <attribute name="sendcookies" type="bool">1</attribute>
         <attribute name="redirectmethod" type="bool">0</attribute>
@@ -792,10 +792,10 @@
         <attribute name="method" type="string">GET</attribute>
         <attribute name="followredirects" type="bool">0</attribute>
         <attribute name="order" type="int64">1</attribute>
-        <attribute name="name" type="string">Search</attribute>
+        <attribute name="name" type="string">Index (Changed Since)</attribute>
         <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM" idrefs="z115"></relationship>
         <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM"></relationship>
-        <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z172 z174"></relationship>
+        <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z174 z172"></relationship>
     </object>
     <object type="LMKEYVALUE" id="z174">
         <attribute name="value" type="string">Token token=50d6df3c6c3d09d69ee1c97a63a2301f

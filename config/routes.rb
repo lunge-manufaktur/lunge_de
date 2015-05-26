@@ -23,7 +23,11 @@ LungeDe::Application.routes.draw do
     resources :brands
     resources :employees
     resources :events
-    resources :products
+    resources :products do
+      collection do
+        get "changed_since/:date", action: "changed_since", as: "recently_changed"
+      end
+    end
     resources :product_categories
     resources :product_categorizations
     resources :properties
