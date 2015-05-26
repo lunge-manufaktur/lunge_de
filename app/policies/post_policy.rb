@@ -5,7 +5,7 @@ class PostPolicy < ApplicationPolicy
   end
 
   def create?
-    user.admin?
+    user.try(:admin?)
   end
 
   def edit?
@@ -13,11 +13,11 @@ class PostPolicy < ApplicationPolicy
   end
 
   def update?
-    user.admin?
+    user.try(:admin?)
   end
 
   def destroy?
-    user.admin?
+    user.try(:admin?)
   end
 
 end

@@ -23,8 +23,9 @@
     - if @post.categories.any?
       .fields
         label Eingeordnet in
-        - @post.categories.each do |category|
-          = link_to category.name, category_path(category), class: "link"
+        ul.no-bullet
+          - @post.categories.each do |category|
+            li = link_to category.name, category_path(category), class: "link"
     .fields
       - if policy(@post).edit?
         label Bearbeiten

@@ -10,10 +10,10 @@
 #
 
 class ApiKey < ActiveRecord::Base
-	# Callbacks
-	before_create :generate_key
+  # Callbacks
+  before_create :generate_key
 
-	# Associations
+  # Associations
   belongs_to :user
 
   # Methods
@@ -23,9 +23,9 @@ class ApiKey < ActiveRecord::Base
   private
 
   def generate_key
-  	begin
-  		self.key = SecureRandom.hex
-  	end while self.class.exists?(key: key)
+    begin
+      self.key = SecureRandom.hex
+    end while self.class.exists?(key: key)
   end
   
 end

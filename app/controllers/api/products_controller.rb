@@ -8,7 +8,8 @@ module Api
     # GET /products
     def index
       if current_user.admin?
-        @products = Product.all.includes(:size, :stocks, :brand, :stores, :product_images)
+        @search = Product.search(params[:q])
+        @products = @search.result(distinct: true).includes(:size, :stocks, :brand, :stores, :product_images)
       else
         @products = Product.published.includes(:size, :stocks, :brand, :stores, :product_images)
       end

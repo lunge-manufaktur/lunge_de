@@ -69,7 +69,7 @@
     </object>
     <object type="LMREQUEST" id="z103">
         <attribute name="uuid" type="string">D9CCCDE0-7DA5-4670-B313-F2985565E59F</attribute>
-        <attribute name="url" type="string">http://localhost:3000/api/products</attribute>
+        <attribute name="url" type="string">["http:\\/\\/localhost:3000\\/api\\/products?q[sku_cont]=gls2"]</attribute>
         <attribute name="storecookies" type="bool">1</attribute>
         <attribute name="sendcookies" type="bool">1</attribute>
         <attribute name="redirectmethod" type="bool">0</attribute>
@@ -93,8 +93,7 @@
         <relationship name="request" type="0/1" destination="LMREQUEST" idrefs="z103"></relationship>
     </object>
     <object type="LMKEYVALUE" id="z105">
-        <attribute name="value" type="string">Token token=50d6df3c6c3d09d69ee1c97a63a2301f
-</attribute>
+        <attribute name="value" type="string">Token token=50d6df3c6c3d09d69ee1c97a63a2301f</attribute>
         <attribute name="order" type="int64">0</attribute>
         <attribute name="name" type="string">Authorization</attribute>
         <attribute name="enabled" type="bool">1</attribute>
@@ -141,7 +140,7 @@
     </object>
     <object type="LMREQUEST" id="z112">
         <attribute name="uuid" type="string">87102173-C032-428E-B9BE-92C6842193BD</attribute>
-        <attribute name="url" type="string">http://localhost:3000/api/products/17077</attribute>
+        <attribute name="url" type="string">http://localhost:3000/api/products/16315</attribute>
         <attribute name="storecookies" type="bool">1</attribute>
         <attribute name="sendcookies" type="bool">1</attribute>
         <attribute name="redirectmethod" type="bool">0</attribute>
@@ -152,7 +151,7 @@
         <attribute name="name" type="string">Show</attribute>
         <relationship name="parent" type="0/1" destination="LMREQUESTTREEITEM" idrefs="z115"></relationship>
         <relationship name="children" type="0/0" destination="LMREQUESTTREEITEM"></relationship>
-        <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z114 z113"></relationship>
+        <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z113 z114"></relationship>
     </object>
     <object type="LMKEYVALUE" id="z113">
         <attribute name="order" type="int64">1</attribute>
