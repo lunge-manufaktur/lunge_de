@@ -8,9 +8,9 @@ module Api
     # GET /products
     def index
       if current_user.admin?
-        @products = Product.all.includes(:size, :stocks, :brand, :stores, :product_images)
+        @products = Product.all.includes(:size, :stocks, :brand, :stores, :product_images, :tags)
       else
-        @products = Product.published.includes(:size, :stocks, :brand, :stores, :product_images)
+        @products = Product.published.includes(:size, :stocks, :brand, :stores, :product_images, :tags)
       end
 
       authorize @products
@@ -20,9 +20,9 @@ module Api
       date = params[:date].to_datetime
 
       if current_user.admin?
-        @products = Product.where("updated_at >= ?", date).includes(:size, :stocks, :brand, :stores, :product_images)
+        @products = Product.where("updated_at >= ?", date).includes(:size, :stocks, :brand, :stores, :product_images, :tags)
       else
-        @products = Product.published.where("updated_at > ?", date).includes(:size, :stocks, :brand, :stores, :product_images)
+        @products = Product.published.where("updated_at > ?", date).includes(:size, :stocks, :brand, :stores, :product_images, :tags)
       end
 
       authorize @products
@@ -32,9 +32,9 @@ module Api
     # GET /products/1
     def show
       if current_user.admin?
-        @product = Product.includes(:size, :stocks, :brand, :stores, :product_images).find(params[:id])
+        @product = Product.includes(:size, :stocks, :brand, :stores, :product_images, :tags).find(params[:id])
       else
-        @products = Product.published.includes(:size, :stocks, :brand, :stores, :product_images).find(params[:id])
+        @products = Product.published.includes(:size, :stocks, :brand, :stores, :product_images, :tags).find(params[:id])
       end
       
       authorize @product

@@ -784,7 +784,7 @@
     </object>
     <object type="LMREQUEST" id="z173">
         <attribute name="uuid" type="string">02D2EF3F-184C-4078-9400-D333576BED34</attribute>
-        <attribute name="url" type="string">http://localhost:3000/api/products/changed_since/2015-01-01</attribute>
+        <attribute name="url" type="string">http://www.lunge.de/api/products/changed_since/2015-05-01</attribute>
         <attribute name="storecookies" type="bool">1</attribute>
         <attribute name="sendcookies" type="bool">1</attribute>
         <attribute name="redirectmethod" type="bool">0</attribute>
@@ -798,7 +798,7 @@
         <relationship name="headers" type="0/0" destination="LMKEYVALUE" idrefs="z174 z172"></relationship>
     </object>
     <object type="LMKEYVALUE" id="z174">
-        <attribute name="value" type="string">Token token=50d6df3c6c3d09d69ee1c97a63a2301f
+        <attribute name="value" type="string">Token token=7ec6daf7ec0917988e729fa5ce359fd1
 </attribute>
         <attribute name="order" type="int64">0</attribute>
         <attribute name="name" type="string">Authorization</attribute>
