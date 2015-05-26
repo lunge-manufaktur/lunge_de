@@ -20,7 +20,7 @@ module Api
       date = params[:date].to_datetime
 
       if current_user.admin?
-        @products = Product.where("updated_at > ?", date).includes(:size, :stocks, :brand, :stores, :product_images)
+        @products = Product.where("updated_at >= ?", date).includes(:size, :stocks, :brand, :stores, :product_images)
       else
         @products = Product.published.where("updated_at > ?", date).includes(:size, :stocks, :brand, :stores, :product_images)
       end
