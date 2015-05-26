@@ -784,7 +784,7 @@
     </object>
     <object type="LMREQUEST" id="z173">
         <attribute name="uuid" type="string">02D2EF3F-184C-4078-9400-D333576BED34</attribute>
-        <attribute name="url" type="string">http://www.lunge.de/api/products/changed_since/2015-05-01</attribute>
+        <attribute name="url" type="string">http://www.lunge.de/api/products/changed_since/2015-05-25</attribute>
         <attribute name="storecookies" type="bool">1</attribute>
         <attribute name="sendcookies" type="bool">1</attribute>
         <attribute name="redirectmethod" type="bool">0</attribute>
