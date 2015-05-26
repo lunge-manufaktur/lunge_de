@@ -62,7 +62,7 @@ class Stock < ActiveRecord::Base
   include IconHelper
 
   def update_product
-    self.product.touch if self.changed?
+    self.try(:product).try(:touch) if self.changed?
   end
 
   def quantity_array
