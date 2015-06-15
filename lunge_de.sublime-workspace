@@ -143,22 +143,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "config/environments/development.rb",
-			"settings":
-			{
-				"buffer_size": 1586,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "config/application.rb",
-			"settings":
-			{
-				"buffer_size": 2004,
-				"line_ending": "Unix"
-			}
-		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -236,17 +220,30 @@
 		"/Users/ulflunge/projects/lunge_de",
 		"/Users/ulflunge/projects/lunge_de/app",
 		"/Users/ulflunge/projects/lunge_de/app/assets",
+		"/Users/ulflunge/projects/lunge_de/app/controllers",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/api",
+		"/Users/ulflunge/projects/lunge_de/app/policies",
 		"/Users/ulflunge/projects/lunge_de/config",
 		"/Users/ulflunge/projects/lunge_de/config/environments",
-		"/Users/ulflunge/projects/lunge_de/config/locales"
+		"/Users/ulflunge/projects/lunge_de/config/locales",
+		"/Users/ulflunge/projects/lunge_de/test/controllers",
+		"/Users/ulflunge/projects/lunge_de/test/controllers/api"
 	],
 	"file_history":
 	[
+		"/Users/ulflunge/projects/lunge_de/test/test_helper.rb",
+		"/Users/ulflunge/projects/lunge_de/test/controllers/api/stores_controller_test.rb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/application_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/config/environments/development.rb",
+		"/Users/ulflunge/projects/lunge_de/config/application.rb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/api/stores_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/policies/store_policy.rb",
+		"/Users/ulflunge/projects/lunge_de/app/policies/application_policy.rb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/api/products_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/.env",
 		"/Users/ulflunge/projects/lunge_de/Gemfile",
 		"/Users/ulflunge/projects/lunge_de/config/locales/de.yml",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/kaminari_config.rb",
-		"/Users/ulflunge/projects/lunge_de/app/policies/application_policy.rb",
 		"/Users/ulflunge/projects/lunge_de/app/policies/product_policy.rb",
 		"/Users/ulflunge/projects/lunge_de/app/models/product.rb",
 		"/Users/ulflunge/projects/lunge_de/app/models/store.rb",
@@ -257,22 +254,16 @@
 		"/Users/ulflunge/projects/lunge_de/app/models/stock.rb",
 		"/Users/ulflunge/projects/lunge_de/test/controllers/api/stocks_controller_test.rb",
 		"/Users/ulflunge/projects/lunge_de/config/routes.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/api/products_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/properties_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/test/fixtures/stocks.yml",
 		"/Users/ulflunge/projects/lunge_de/test/fixtures/products.yml",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/application_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/show.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/posts/show.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/policies/store_policy.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/api/products/show.json.jbuilder",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/categories_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/pages_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/test/fixtures/api_keys.yml",
-		"/Users/ulflunge/projects/lunge_de/test/test_helper.rb",
-		"/Users/ulflunge/projects/lunge_de/test/controllers/api/stores_controller_test.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/api/stores_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api_keys_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/models/api_key.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/devise/registrations/edit.html.slim",
@@ -330,7 +321,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/models/size.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/index.json.jbuilder",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/index.html.slim",
-		"/Users/ulflunge/projects/lunge_de/config/environments/development.rb",
 		"/Users/ulflunge/projects/lunge_de/config/environments/production.rb",
 		"/Users/ulflunge/projects/lunge_de/Gemfile.lock",
 		"/Users/ulflunge/projects/lunge_de/app/views/brands/index.json.jbuilder",
@@ -338,7 +328,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/policies/api/application_policy.rb",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20150506100754_add_admin_to_users.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/brands/index.html.slim",
-		"/Users/ulflunge/projects/lunge_de/config/application.rb",
 		"/Users/ulflunge/projects/lunge_de/config/database.yml",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/shared/_ga.html.erb",
 		"/Users/ulflunge/projects/lunge_de/Procfile",
@@ -534,69 +523,8 @@
 	"groups":
 	[
 		{
-			"selected": 1,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "config/environments/development.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1586,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "config/application.rb",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2004,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								792,
-								792
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 23.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],

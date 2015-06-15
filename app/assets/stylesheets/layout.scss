@@ -162,6 +162,15 @@ footer {
   margin-right: auto;
 }
 
+.intro-announcement {
+  background-color: $primary-color;
+  z-index: 98; 
+}
+
+.intro-announcement a.link:hover {
+  color: $body-bg;
+}
+
 .overlay {
   padding: 5rem 0;
 }

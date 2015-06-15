@@ -45,6 +45,7 @@ class Store < ActiveRecord::Base
 	scope :active, -> { where(active: true) }
 	scope :hamburg, -> { where(city: "Hamburg") }
 	scope :berlin, -> { where(city: "Berlin") }
+	scope :bismarck, -> { where(name: "Bismarckstraße").first }
 
 	# methods
 
