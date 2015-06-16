@@ -2,7 +2,7 @@
   - if f.object.new_record?
     = f.file_field :image, class: "button secondary"
   - else
-    = image_tag f.object.store_image.url(:small)
+    = image_tag f.object.image.url(:small)
 
 p
   = f.link_to_remove "Löschen", class: "tiny button"
