@@ -220,24 +220,27 @@
 		"/Users/ulflunge/projects/lunge_de",
 		"/Users/ulflunge/projects/lunge_de/app",
 		"/Users/ulflunge/projects/lunge_de/app/assets",
-		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts"
+		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets"
 	],
 	"file_history":
 	[
+		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/foundation_and_overrides.scss",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/components.scss",
+		"/Users/ulflunge/projects/lunge_de/Gemfile",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/globals.scss",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/_form.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/_store_image_fields.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/application.js",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/_product_image_fields.html.slim",
-		"/Users/ulflunge/projects/lunge_de/Gemfile",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/layout.scss",
-		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
 		"/Users/ulflunge/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/typography.scss",
 		"/Users/ulflunge/projects/lunge_de/app/models/store_image.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/edit.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/models/store.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/pages_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/globals.scss",
 		"/Users/ulflunge/projects/lunge_de/test/test_helper.rb",
 		"/Users/ulflunge/projects/lunge_de/test/controllers/api/stores_controller_test.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/application_controller.rb",
@@ -284,9 +287,7 @@
 		"/Users/ulflunge/projects/lunge_de/public/robots.txt",
 		"/Users/ulflunge/projects/lunge_de/test/controllers/products_controller_test.rb",
 		"/Users/ulflunge/projects/lunge_de/.gitignore",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/components.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/utilities.scss",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/foundation_and_overrides.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/application.scss",
 		"/Users/ulflunge/projects/lunge_de/app/views/pages/jobs.html.slim",
 		"/Users/ulflunge/projects/lunge_de/test/policies/product_policy_test.rb",
@@ -355,7 +356,7 @@
 	],
 	"find":
 	{
-		"height": 32.0
+		"height": 44.0
 	},
 	"find_in_files":
 	{
@@ -574,6 +575,10 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"home",
+				"app/views/pages/home.html.slim"
+			],
 			[
 				"product_imagefield",
 				"app/views/products/_product_image_fields.html.slim"
