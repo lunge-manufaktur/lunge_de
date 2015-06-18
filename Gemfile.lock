@@ -277,7 +277,7 @@ DEPENDENCIES
   puma (~> 2.11.2)
   pundit
   rack-timeout
-  rails (= 4.2.2)
+  rails
   rails-i18n
   rails_12factor
   ransack
