@@ -151,10 +151,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 184.0,
-		"last_filter": "",
+		"height": 375.0,
+		"last_filter": "Package Control: ",
 		"selected_items":
 		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
 			[
 				"themr",
 				"Themr: List themes"
@@ -190,13 +194,9 @@
 			[
 				"package",
 				"Package Control: Install Package"
-			],
-			[
-				"Package Control: ",
-				"Package Control: Install Package"
 			]
 		],
-		"width": 601.0
+		"width": 435.0
 	},
 	"console":
 	{
@@ -220,17 +220,24 @@
 		"/Users/ulflunge/projects/lunge_de",
 		"/Users/ulflunge/projects/lunge_de/app",
 		"/Users/ulflunge/projects/lunge_de/app/assets",
-		"/Users/ulflunge/projects/lunge_de/app/controllers",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/api",
-		"/Users/ulflunge/projects/lunge_de/app/policies",
-		"/Users/ulflunge/projects/lunge_de/config",
-		"/Users/ulflunge/projects/lunge_de/config/environments",
-		"/Users/ulflunge/projects/lunge_de/config/locales",
-		"/Users/ulflunge/projects/lunge_de/test/controllers",
-		"/Users/ulflunge/projects/lunge_de/test/controllers/api"
+		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts"
 	],
 	"file_history":
 	[
+		"/Users/ulflunge/projects/lunge_de/app/views/stores/_form.html.slim",
+		"/Users/ulflunge/projects/lunge_de/app/views/stores/_store_image_fields.html.slim",
+		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/application.js",
+		"/Users/ulflunge/projects/lunge_de/app/views/products/_product_image_fields.html.slim",
+		"/Users/ulflunge/projects/lunge_de/Gemfile",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/layout.scss",
+		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
+		"/Users/ulflunge/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/typography.scss",
+		"/Users/ulflunge/projects/lunge_de/app/models/store_image.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/stores/edit.html.slim",
+		"/Users/ulflunge/projects/lunge_de/app/models/store.rb",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/pages_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/globals.scss",
 		"/Users/ulflunge/projects/lunge_de/test/test_helper.rb",
 		"/Users/ulflunge/projects/lunge_de/test/controllers/api/stores_controller_test.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/application_controller.rb",
@@ -241,12 +248,10 @@
 		"/Users/ulflunge/projects/lunge_de/app/policies/application_policy.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/products_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/.env",
-		"/Users/ulflunge/projects/lunge_de/Gemfile",
 		"/Users/ulflunge/projects/lunge_de/config/locales/de.yml",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/kaminari_config.rb",
 		"/Users/ulflunge/projects/lunge_de/app/policies/product_policy.rb",
 		"/Users/ulflunge/projects/lunge_de/app/models/product.rb",
-		"/Users/ulflunge/projects/lunge_de/app/models/store.rb",
 		"/Users/ulflunge/projects/lunge_de/app/models/post.rb",
 		"/Users/ulflunge/projects/lunge_de/app/policies/post_policy.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/api/products/_item.json.jbuilder",
@@ -262,7 +267,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/posts/show.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/api/products/show.json.jbuilder",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/categories_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/pages_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/test/fixtures/api_keys.yml",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api_keys_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/models/api_key.rb",
@@ -281,7 +285,6 @@
 		"/Users/ulflunge/projects/lunge_de/test/controllers/products_controller_test.rb",
 		"/Users/ulflunge/projects/lunge_de/.gitignore",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/components.scss",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/typography.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/utilities.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/foundation_and_overrides.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/application.scss",
@@ -332,7 +335,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/shared/_ga.html.erb",
 		"/Users/ulflunge/projects/lunge_de/Procfile",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20150420081551_create_delayed_jobs.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/products/_product_image_fields.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/_form.html.slim",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/timeout.rb",
 		"/Users/ulflunge/projects/lunge_de/app/uploaders/image_uploader.rb",
@@ -347,22 +349,13 @@
 		"/Users/ulflunge/projects/lunge_de/public/assets/tinymce/langs/ml_IN.js",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/mime_types.rb",
 		"/Users/ulflunge/projects/lunge_de/test/controllers/product_images_controller_test.rb",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/layout.scss",
-		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_header.html.slim",
 		"/Users/ulflunge/projects/lunge_de/test/models/product_test.rb",
-		"/Users/ulflunge/projects/lunge_de/config/secrets.yml",
-		"/Users/ulflunge/projects/lunge_de/config/initializers/devise.rb",
-		"/Users/ulflunge/projects/lunge_de/config/initializers/secret_token.rb",
-		"/Users/ulflunge/projects/lunge_de/config/environments/test.rb",
-		"/Users/ulflunge/projects/lunge_de/bin/rails",
-		"/Users/ulflunge/projects/lunge_de/bin/rails20150106-71204-1pfffon",
-		"/Users/ulflunge/projects/lunge_de/bin/rails20150106-71204-o4yama",
-		"/Users/ulflunge/projects/lunge_de/config/initializers/session_store.rb"
+		"/Users/ulflunge/projects/lunge_de/config/secrets.yml"
 	],
 	"find":
 	{
-		"height": 41.0
+		"height": 32.0
 	},
 	"find_in_files":
 	{
@@ -377,6 +370,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"destroy",
 			"\")",
 			"has_stock?(\"",
 			"assert",
@@ -530,7 +524,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 0.0
+		"height": 32.0
 	},
 	"input":
 	{
@@ -571,7 +565,7 @@
 	"project": "lunge_de.sublime-project",
 	"replace":
 	{
-		"height": 78.0
+		"height": 60.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -580,6 +574,26 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"product_imagefield",
+				"app/views/products/_product_image_fields.html.slim"
+			],
+			[
+				"store_iamges",
+				"app/views/stores/_store_image_fields.html.slim"
+			],
+			[
+				"storesform",
+				"app/views/stores/_form.html.slim"
+			],
+			[
+				"storesedit",
+				"app/views/stores/edit.html.slim"
+			],
+			[
+				"storeima",
+				"app/models/store_image.rb"
+			],
 			[
 				"routes",
 				"config/routes.rb"
