@@ -221,10 +221,14 @@
 		"/Users/ulflunge/projects/lunge_de/app",
 		"/Users/ulflunge/projects/lunge_de/app/assets",
 		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets"
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets",
+		"/Users/ulflunge/projects/lunge_de/app/views",
+		"/Users/ulflunge/projects/lunge_de/app/views/pages"
 	],
 	"file_history":
 	[
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/layout.scss",
+		"/Users/ulflunge/projects/lunge_de/app/views/pages/gutschein.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/foundation_and_overrides.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/components.scss",
@@ -234,7 +238,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/_store_image_fields.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/application.js",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/_product_image_fields.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/layout.scss",
 		"/Users/ulflunge/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/typography.scss",
 		"/Users/ulflunge/projects/lunge_de/app/models/store_image.rb",
@@ -276,7 +279,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/devise/registrations/edit.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/models/user.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/sizes_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/pages/gutschein.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/pages/api_docs.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/models/product_image.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/devise/registrations/new.html.slim",
@@ -356,7 +358,7 @@
 	],
 	"find":
 	{
-		"height": 44.0
+		"height": 72.0
 	},
 	"find_in_files":
 	{
@@ -578,6 +580,10 @@
 			[
 				"home",
 				"app/views/pages/home.html.slim"
+			],
+			[
+				"layout",
+				"app/assets/stylesheets/layout.scss"
 			],
 			[
 				"product_imagefield",
