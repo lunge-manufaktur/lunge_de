@@ -219,20 +219,20 @@
 	[
 		"/Users/ulflunge/projects/lunge_de",
 		"/Users/ulflunge/projects/lunge_de/app",
-		"/Users/ulflunge/projects/lunge_de/app/assets",
-		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets",
-		"/Users/ulflunge/projects/lunge_de/app/views",
-		"/Users/ulflunge/projects/lunge_de/app/views/pages"
+		"/Users/ulflunge/projects/lunge_de/app/views"
 	],
 	"file_history":
 	[
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/layout.scss",
-		"/Users/ulflunge/projects/lunge_de/app/views/pages/gutschein.html.slim",
+		"/Users/ulflunge/projects/lunge_de/Gemfile",
+		"/Users/ulflunge/projects/lunge_de/config/application.rb",
+		"/Users/ulflunge/projects/lunge_de/test/models/size_test.rb",
+		"/Users/ulflunge/projects/lunge_de/test/models/brand_test.rb",
+		"/Users/ulflunge/projects/lunge_de/test/models/category_test.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
+		"/Users/ulflunge/projects/lunge_de/app/views/pages/gutschein.html.slim",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/layout.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/foundation_and_overrides.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/components.scss",
-		"/Users/ulflunge/projects/lunge_de/Gemfile",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/globals.scss",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/_form.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/_store_image_fields.html.slim",
@@ -248,7 +248,6 @@
 		"/Users/ulflunge/projects/lunge_de/test/controllers/api/stores_controller_test.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/application_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/config/environments/development.rb",
-		"/Users/ulflunge/projects/lunge_de/config/application.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/stores_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/policies/store_policy.rb",
 		"/Users/ulflunge/projects/lunge_de/app/policies/application_policy.rb",
@@ -351,10 +350,7 @@
 		"/Users/ulflunge/projects/lunge_de/spec/models/post_image_spec.rb",
 		"/Users/ulflunge/projects/lunge_de/public/assets/tinymce/langs/ml_IN.js",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/mime_types.rb",
-		"/Users/ulflunge/projects/lunge_de/test/controllers/product_images_controller_test.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_header.html.slim",
-		"/Users/ulflunge/projects/lunge_de/test/models/product_test.rb",
-		"/Users/ulflunge/projects/lunge_de/config/secrets.yml"
+		"/Users/ulflunge/projects/lunge_de/test/controllers/product_images_controller_test.rb"
 	],
 	"find":
 	{
@@ -577,6 +573,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"gem",
+				"Gemfile"
+			],
+			[
+				"applicatio",
+				"config/application.rb"
+			],
+			[
+				"gutschein",
+				"app/views/pages/gutschein.html.slim"
+			],
 			[
 				"home",
 				"app/views/pages/home.html.slim"

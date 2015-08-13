@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby "2.2.0"
+ruby "2.2.2"
 
-gem "rails"
+gem "rails", "~> 4.2"
 gem "rails-i18n"
 gem "pg"
 gem "puma", "~> 2.11.2"
@@ -49,6 +49,7 @@ gem "mail_form"
 # heroku
 group :production do
 	gem 'rails_12factor'
+  gem 'newrelic_rpm'
 end
 
 gem 'awesome_nested_set'
