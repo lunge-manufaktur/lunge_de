@@ -17,4 +17,4 @@ class TimeoutRecovery
   end
 end
 
-Rack::Timeout.timeout = 29  #seconds
+Rack::Timeout.timeout = 20
