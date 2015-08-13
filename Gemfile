@@ -38,7 +38,7 @@ gem 'foundation-rails', "~> 5.4"
 gem "bourbon"
 gem 'ransack'
 gem 'annotate'
-gem "paperclip", "~> 4.1"
+gem "paperclip", "~> 4.3"
 gem "paperclip-storage-ftp"
 gem "delayed_paperclip"
 gem "nested_form"
