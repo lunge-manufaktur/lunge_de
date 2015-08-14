@@ -204,7 +204,10 @@
 
       h5 Index
       code GET /api/products/
+      br
+      code GET /api/products/page/2
       p Returns a collection of products, each with the same data as described in the Show request above.
+
       .panel
         pre
           code
@@ -216,6 +219,10 @@
                   ...
                 ]
               }
+
+      p.italic Important: Product index actions are always paginated in order to keep the response time fast and snappy. That means products are listed in batches of 100. For example if you wanted to access products 201 - 300 your request should look like this:
+      code GET /api/products/page/3
+      p Without the page parameter in the URL your request will be answered with the first 100 products.
 
       h5 Create
       code POST /api/products/
