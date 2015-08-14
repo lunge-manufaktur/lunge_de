@@ -28,6 +28,7 @@ gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'
 gem 'jbuilder'
+gem "yajl-ruby"
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.

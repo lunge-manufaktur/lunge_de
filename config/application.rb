@@ -1,6 +1,7 @@
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
+require 'multi_json'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -54,5 +55,8 @@ module LungeDe
 
     # background jobs backend
     config.active_job.queue_adapter = :delayed_job
+
+    # Jbuilder
+    MultiJson.use :yajl
   end
 end

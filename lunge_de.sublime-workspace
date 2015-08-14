@@ -219,12 +219,25 @@
 	[
 		"/Users/ulflunge/projects/lunge_de",
 		"/Users/ulflunge/projects/lunge_de/app",
-		"/Users/ulflunge/projects/lunge_de/app/views"
+		"/Users/ulflunge/projects/lunge_de/app/models",
+		"/Users/ulflunge/projects/lunge_de/app/views/pages",
+		"/Users/ulflunge/projects/lunge_de/config",
+		"/Users/ulflunge/projects/lunge_de/config/environments"
 	],
 	"file_history":
 	[
 		"/Users/ulflunge/projects/lunge_de/Gemfile",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/config/initializers/timeout.rb",
+		"/Users/ulflunge/projects/lunge_de/app/models/product_image.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/pages/jobs.html.slim",
+		"/Users/ulflunge/projects/lunge_de/config/puma.rb",
 		"/Users/ulflunge/projects/lunge_de/config/application.rb",
+		"/Users/ulflunge/projects/lunge_de/config/environments/development.rb",
+		"/Users/ulflunge/projects/lunge_de/config/environments/production.rb",
+		"/Users/ulflunge/projects/lunge_de/.env",
+		"/Users/ulflunge/projects/lunge_de/config/newrelic.yml",
+		"/Users/ulflunge/projects/lunge_de/app/models/product.rb",
 		"/Users/ulflunge/projects/lunge_de/test/models/size_test.rb",
 		"/Users/ulflunge/projects/lunge_de/test/models/brand_test.rb",
 		"/Users/ulflunge/projects/lunge_de/test/models/category_test.rb",
@@ -247,16 +260,13 @@
 		"/Users/ulflunge/projects/lunge_de/test/test_helper.rb",
 		"/Users/ulflunge/projects/lunge_de/test/controllers/api/stores_controller_test.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/application_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/config/environments/development.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/stores_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/policies/store_policy.rb",
 		"/Users/ulflunge/projects/lunge_de/app/policies/application_policy.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/products_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/.env",
 		"/Users/ulflunge/projects/lunge_de/config/locales/de.yml",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/kaminari_config.rb",
 		"/Users/ulflunge/projects/lunge_de/app/policies/product_policy.rb",
-		"/Users/ulflunge/projects/lunge_de/app/models/product.rb",
 		"/Users/ulflunge/projects/lunge_de/app/models/post.rb",
 		"/Users/ulflunge/projects/lunge_de/app/policies/post_policy.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/api/products/_item.json.jbuilder",
@@ -264,7 +274,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/models/stock.rb",
 		"/Users/ulflunge/projects/lunge_de/test/controllers/api/stocks_controller_test.rb",
 		"/Users/ulflunge/projects/lunge_de/config/routes.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/properties_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/test/fixtures/stocks.yml",
 		"/Users/ulflunge/projects/lunge_de/test/fixtures/products.yml",
@@ -279,7 +288,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/models/user.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/sizes_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/pages/api_docs.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/models/product_image.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/devise/registrations/new.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/posts_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/test/controllers/posts_controller_test.rb",
@@ -290,7 +298,6 @@
 		"/Users/ulflunge/projects/lunge_de/.gitignore",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/utilities.scss",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/application.scss",
-		"/Users/ulflunge/projects/lunge_de/app/views/pages/jobs.html.slim",
 		"/Users/ulflunge/projects/lunge_de/test/policies/product_policy_test.rb",
 		"/Users/ulflunge/projects/lunge_de/test/policies/store_policy_test.rb",
 		"/Users/ulflunge/projects/lunge_de/app/policies/brand_policy.rb",
@@ -326,7 +333,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/models/size.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/index.json.jbuilder",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/index.html.slim",
-		"/Users/ulflunge/projects/lunge_de/config/environments/production.rb",
 		"/Users/ulflunge/projects/lunge_de/Gemfile.lock",
 		"/Users/ulflunge/projects/lunge_de/app/views/brands/index.json.jbuilder",
 		"/Users/ulflunge/projects/lunge_de/app/views/brands/show.json.jbuilder",
@@ -338,7 +344,6 @@
 		"/Users/ulflunge/projects/lunge_de/Procfile",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20150420081551_create_delayed_jobs.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/_form.html.slim",
-		"/Users/ulflunge/projects/lunge_de/config/initializers/timeout.rb",
 		"/Users/ulflunge/projects/lunge_de/app/uploaders/image_uploader.rb",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/carrierwave.rb",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20150417100721_add_image_to_product_image.rb",
@@ -348,9 +353,7 @@
 		"/Users/ulflunge/projects/lunge_de/test/fixtures/posts.yml",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20140411063858_add_missing_unique_indices.acts_as_taggable_on_engine.rb",
 		"/Users/ulflunge/projects/lunge_de/spec/models/post_image_spec.rb",
-		"/Users/ulflunge/projects/lunge_de/public/assets/tinymce/langs/ml_IN.js",
-		"/Users/ulflunge/projects/lunge_de/config/initializers/mime_types.rb",
-		"/Users/ulflunge/projects/lunge_de/test/controllers/product_images_controller_test.rb"
+		"/Users/ulflunge/projects/lunge_de/public/assets/tinymce/langs/ml_IN.js"
 	],
 	"find":
 	{
@@ -369,6 +372,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"p ",
+			"p",
 			"destroy",
 			"\")",
 			"has_stock?(\"",
@@ -574,7 +579,19 @@
 		"selected_items":
 		[
 			[
+				"productimage",
+				"app/models/product_image.rb"
+			],
+			[
 				"gem",
+				"Gemfile"
+			],
+			[
+				"productcontro",
+				"app/controllers/products_controller.rb"
+			],
+			[
+				"gemfil",
 				"Gemfile"
 			],
 			[
