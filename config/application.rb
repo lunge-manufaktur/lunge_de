@@ -40,13 +40,13 @@ module LungeDe
     config.action_mailer.delivery_method = :smtp
 
     config.action_mailer.smtp_settings = {
-      address: "smtp.artfiles.de",
+      address: "smtp.gmail.com",
       port: 587,
-      domain: ENV["ARTFILES_DOMAIN"],
-      authentication: "plain",
+      domain: ENV["GMAIL_DOMAIN"],
+      authentication: "login",
       enable_starttls_auto: true,
-      user_name: ENV["ARTFILES_USERNAME"],
-      password: ENV["ARTFILES_PASSWORD"]
+      user_name: ENV["GMAIL_USERNAME"],
+      password: ENV["GMAIL_PASSWORD"]
     }
 
     # Do not hide errors in after_commit/after_rollback callbacks.
