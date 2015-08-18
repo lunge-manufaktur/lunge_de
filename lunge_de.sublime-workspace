@@ -143,6 +143,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "config/initializers/timeout.rb",
+			"settings":
+			{
+				"buffer_size": 649,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -219,11 +227,8 @@
 	[
 		"/Users/ulflunge/projects/lunge_de",
 		"/Users/ulflunge/projects/lunge_de/app",
-		"/Users/ulflunge/projects/lunge_de/app/views",
-		"/Users/ulflunge/projects/lunge_de/app/views/api",
-		"/Users/ulflunge/projects/lunge_de/app/views/api/products",
 		"/Users/ulflunge/projects/lunge_de/config",
-		"/Users/ulflunge/projects/lunge_de/config/environments"
+		"/Users/ulflunge/projects/lunge_de/config/initializers"
 	],
 	"file_history":
 	[
@@ -522,8 +527,39 @@
 	"groups":
 	[
 		{
+			"selected": 0,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "config/initializers/timeout.rb",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 649,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								649,
+								649
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],

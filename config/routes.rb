@@ -11,11 +11,11 @@ LungeDe::Application.routes.draw do
   # concerns
   concern :paginatable do
     get '(page/:page)', action: :index, on: :collection, :as => ''
-    match '(search/page/:page)', action: :search, on: :collection, via: [:get, :post], as: :search_page
+    match 'search/page/:page', action: :search, on: :collection, via: [:get, :post], as: :search_page
   end
 
   concern :searchable do
-    match '(search)', action: :search, on: :collection, via: [:get, :post], as: :search
+    match 'search', action: :search, on: :collection, via: [:get, :post], as: :search
   end
 
   # /api/...
