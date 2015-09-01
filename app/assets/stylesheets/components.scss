@@ -8,16 +8,28 @@ $inverted-text: #fff;
 
 
 /* ----- PANELS ----- */
-.panel--transparent {
-  background-color: rgba(245, 255, 250, 0.22);
-  padding: 1.25rem;
+.panel {
+  background-color: $primary-color;
+  padding: 3rem 1.25rem;
   margin-bottom: 2.5rem;
   margin-top: -5rem;
   z-index: 98;
 }
 
+.panel--transparent {
+  background-color: rgba(245, 255, 250, 0.22);
+}
+
 .panel--inverted {
   color: #fff;
+}
+
+.panel--border-top {
+  border-top: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.panel--border-bottom {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.24);
 }
 
 
