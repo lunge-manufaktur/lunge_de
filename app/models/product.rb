@@ -63,24 +63,9 @@ class Product < ActiveRecord::Base
   end 
 
   def default_image(size=nil)
-    if self.product_images.any?
-      pi = self.product_images.featured.first || self.product_images.first
+    if product_images.exists?
+      pi = product_images.featured.first || product_images.first
       pi.image.url(size)
-    else
-      case size
-      when "full_width"
-        ""
-      when "large"
-        "http://placehold.it/1600&text=Kein+Bild+vorhanden"
-      when "medium"
-        "http://placehold.it/1024&text=Kein+Bild+vorhanden"
-      when "small"
-        "http://placehold.it/640&text=Kein+Bild+vorhanden"
-      when "thumb"
-        "http://placehold.it/300&text=Kein+Bild+vorhanden"
-      when "card"
-        "http://placehold.it/640&text=Kein+Bild+vorhanden"
-      end
     end
   end
 

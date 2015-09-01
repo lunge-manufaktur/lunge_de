@@ -16,7 +16,7 @@
 
 class ProductImage < ActiveRecord::Base
 
-	# Associations
+  # Associations
   belongs_to :product
 
   # Paperclip
@@ -27,29 +27,30 @@ class ProductImage < ActiveRecord::Base
   end
 
   has_attached_file :image,
-  	:styles => {
-  		:thumb => "300x300>",
-  		:small => "640x640>",
-  		:medium => "1024x1024>",
-  		:large => "2000x2000>",
-      :card => "640x640#"
-  	},
-    :convert_options => {
-      :thumb => "-quality 80 -strip",
-      :small => "-quality 80 -strip",
-      :medium => "-quality 80 -strip",
-      :large => "-quality 80 -strip",
-      :card => "-quality 80 -strip"
+    styles: {
+      thumb: "300x300>",
+      small: "640x640>",
+      medium: "1024x1024>",
+      large: "2000x2000>",
+      card: "640x640#"
     },
-  	:storage => :ftp,
-  	:path => "/lunge.de/www/images/:class/:product_id/:product_id_:id_:style.:extension",
-  	:url => "http://cdn.lunge.de/images/:class/:product_id/:product_id_:id_:style.:extension",
-  	:ftp_servers => [
+    default_url: "missing.png",
+    convert_options: {
+      thumb: "-quality 80 -strip",
+      small: "-quality 80 -strip",
+      medium: "-quality 80 -strip",
+      large: "-quality 80 -strip",
+      card: "-quality 80 -strip"
+    },
+    storage: :ftp,
+    path: "/lunge.de/www/images/:class/:product_id/:product_id_:id_:style.:extension",
+    url: "http://cdn.lunge.de/images/:class/:product_id/:product_id_:id_:style.:extension",
+    ftp_servers: [
       {
-        :host     => ENV["FTP_HOST"],
-        :user     => ENV["FTP_USER"],
-        :password => ENV["FTP_PASSWORD"],
-        :passive	=> true
+        host: ENV["FTP_HOST"],
+        user: ENV["FTP_USER"],
+        password: ENV["FTP_PASSWORD"],
+        passive: true
       }
     ]
 

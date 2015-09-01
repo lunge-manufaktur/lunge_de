@@ -4,7 +4,7 @@ class BrandsController < ApplicationController
   protect_from_forgery except: :create
 
   def index
-    @brands = Brand.active.order(:name).includes(:products)
+    @brands = Brand.active.order(:name).includes(products: :product_images)
   end
 
   def search
