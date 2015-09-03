@@ -63,6 +63,15 @@ a.link {
   }
 }
 
+a.link--inverted {
+  color: #fff;
+  border-bottom: 1px dotted #ccc;
+
+  &:hover {
+    border-color: #fff;
+  }
+}
+
 code {
   background-color: $secondary-color;
   border: none;

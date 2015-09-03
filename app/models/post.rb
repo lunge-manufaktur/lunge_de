@@ -59,25 +59,25 @@ class Post < ActiveRecord::Base
   end
 
   def default_image(size=nil)
-  if self.post_images.any?
-    pi = self.post_images.first || self.post_images.first
-    pi.image.url(size)
-  else
-    case size
-    when "full_width"
-      ""
-    when "large"
-      "http://placehold.it/1600&text=Kein+Bild+vorhanden"
-    when "medium"
-      "http://placehold.it/1024&text=Kein+Bild+vorhanden"
-    when "small"
-      "http://placehold.it/640&text=Kein+Bild+vorhanden"
-    when "thumb"
-      "http://placehold.it/300&text=Kein+Bild+vorhanden"
-    when "card"
-      "http://placehold.it/640&text=Kein+Bild+vorhanden"
+    if self.post_images.any?
+      pi = self.post_images.first || self.post_images.first
+      pi.image.url(size)
+    else
+      case size
+      when "full_width"
+        ""
+      when "large"
+        "http://placehold.it/1600&text=Kein+Bild+vorhanden"
+      when "medium"
+        "http://placehold.it/1024&text=Kein+Bild+vorhanden"
+      when "small"
+        "http://placehold.it/640&text=Kein+Bild+vorhanden"
+      when "thumb"
+        "http://placehold.it/300&text=Kein+Bild+vorhanden"
+      when "card"
+        "http://placehold.it/640&text=Kein+Bild+vorhanden"
+      end
     end
-  end
   end
 
 end
