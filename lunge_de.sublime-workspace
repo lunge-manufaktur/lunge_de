@@ -244,13 +244,14 @@
 		"/Users/ulflunge/projects/lunge_de",
 		"/Users/ulflunge/projects/lunge_de/app",
 		"/Users/ulflunge/projects/lunge_de/app/views",
-		"/Users/ulflunge/projects/lunge_de/app/views/pages"
+		"/Users/ulflunge/projects/lunge_de/app/views/stores"
 	],
 	"file_history":
 	[
-		"/Users/ulflunge/projects/lunge_de/.slim-lint.yml",
 		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/show.html.slim",
+		"/Users/ulflunge/projects/lunge_de/Gemfile.lock",
+		"/Users/ulflunge/projects/lunge_de/.slim-lint.yml",
 		"/Users/ulflunge/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
 		"/Users/ulflunge/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/brands_controller.rb",
@@ -367,7 +368,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/models/size.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/index.json.jbuilder",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/index.html.slim",
-		"/Users/ulflunge/projects/lunge_de/Gemfile.lock",
 		"/Users/ulflunge/projects/lunge_de/app/views/brands/index.json.jbuilder",
 		"/Users/ulflunge/projects/lunge_de/app/views/brands/show.json.jbuilder",
 		"/Users/ulflunge/projects/lunge_de/app/policies/api/application_policy.rb",
@@ -379,7 +379,7 @@
 	],
 	"find":
 	{
-		"height": 72.0
+		"height": 70.0
 	},
 	"find_in_files":
 	{
@@ -890,7 +890,7 @@
 		],
 		"width": 0.0
 	},
-	"selected_group": 1,
+	"selected_group": 0,
 	"settings":
 	{
 	},
