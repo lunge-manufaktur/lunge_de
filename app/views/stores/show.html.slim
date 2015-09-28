@@ -11,24 +11,11 @@
 
 .row
   .small-12.medium-8.large-8.columns
-    - if @store.id == 5
-      .panel
-        h5 Eröffnungsfeier am Samstag, 26.09.2015
-        p Wir freuen uns, Sie am 26.09.2015 - Samstag vor dem Berlin Marathon - zur Eröffnung der neuen Filiale in der Bismarckstraße begrüßen zu dürfen. Von 10:00 bis 18:00 Uhr erwartet Sie unter anderem:
-        ul
-          li Nike Testschuhläufe (11:00 Uhr und 13:00 Uhr)
-          li New Line Hot Dog Stand
-          li Ultra Sports Testausschank
-          li Große Verlosung
-          li Fingerfood
-
-        = link_to (image_tag 'flyer_esisteinlunge.jpg'), image_path('flyer_esisteinlunge.jpg')
-
     - if @store.store_images.any?
       section
         ul.clearing-thumbs.small-block-grid-2.medium-block-grid-3.large-block-grid-4 data-clearing=""
           - @store.store_images.each do |store_image|
-            li = link_to (image_tag store_image.image.url(:small), class: "with-border"), store_image.image.url(:large)
+            li = link_to image_tag(store_image.image.url(:small), class: 'with-border'), store_image.image.url(:large)
 
     - if @store.description.present?
       section
@@ -38,12 +25,12 @@
     section
       h4 So finden Sie uns mit öffentlichen Verkehrsmitteln
       = form_tag("/stores/#{@store.id}/get_directions")
-        = label_tag(:origin, "Geben Sie Ihren Wohnort, Straße oder ganze Adresse an")
+        = label_tag(:origin, 'Geben Sie Ihren Wohnort, Straße oder ganze Adresse an')
         = text_field_tag(:origin)
-        = submit_tag("Verbindungen suchen", class: "button")
+        = submit_tag('Verbindungen suchen', class: 'button')
 
     - if @directions
-      = render "/stores/show/directions"
+      = render '/stores/show/directions'
 
   .small-12.medium-4.large-3.large-offset-1.columns
     section
