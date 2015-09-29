@@ -244,10 +244,12 @@
 		"/Users/ulflunge/projects/lunge_de",
 		"/Users/ulflunge/projects/lunge_de/app",
 		"/Users/ulflunge/projects/lunge_de/app/views",
+		"/Users/ulflunge/projects/lunge_de/app/views/layouts",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores"
 	],
 	"file_history":
 	[
+		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_footer.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/show.html.slim",
 		"/Users/ulflunge/projects/lunge_de/Gemfile.lock",
@@ -374,8 +376,7 @@
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20150506100754_add_admin_to_users.rb",
 		"/Users/ulflunge/projects/lunge_de/config/database.yml",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/shared/_ga.html.erb",
-		"/Users/ulflunge/projects/lunge_de/Procfile",
-		"/Users/ulflunge/projects/lunge_de/db/migrate/20150420081551_create_delayed_jobs.rb"
+		"/Users/ulflunge/projects/lunge_de/Procfile"
 	],
 	"find":
 	{
