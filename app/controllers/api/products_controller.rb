@@ -7,11 +7,7 @@ module Api
 
     # GET /products
     def index
-      if current_user.admin?
-        @products = Product.all.includes(:size, :stocks, :brand, :stores, :product_images, :tags).page(params[:page]).per(100)
-      else
-        @products = Product.published.includes(:size, :stocks, :brand, :stores, :product_images, :tags).page(params[:page]).per(100)
-      end
+      @products = Product.all.includes(:size, :stocks, :brand, :stores, :product_images, :tags).page(params[:page]).per(100)
 
       authorize @products
     end
@@ -27,12 +23,8 @@ module Api
 
     # GET /products/1
     def show
-      if current_user.admin?
-        @product = Product.includes(:size, :stocks, :brand, :stores, :product_images, :tags).find(params[:id])
-      else
-        @products = Product.published.includes(:size, :stocks, :brand, :stores, :product_images, :tags).find(params[:id])
-      end
-      
+      @product = Product.includes(:size, :stocks, :brand, :stores, :product_images, :tags).find(params[:id])
+
       authorize @product
     end
 
