@@ -14,6 +14,10 @@ class ProductPolicy < ApplicationPolicy
     index?
   end
 
+  def stock_changed_since?
+    index?
+  end
+
   def show?
     user || record.is_published
   end

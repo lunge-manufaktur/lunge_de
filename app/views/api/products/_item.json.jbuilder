@@ -1,6 +1,7 @@
 json.id product.id
 json.created_at product.created_at
 json.updated_at product.updated_at
+json.stock_updated_at product.stock_updated_at
 json.published product.is_published
 json.url product_url(product)
 json.name product.name
@@ -27,6 +28,7 @@ json.product_images product.product_images do |image|
 end
 json.availability product.stocks do |stock|
   json.id stock.id
+  json.updated_at stock.updated_at
   json.store do
     json.id stock.store_id 
     json.short_name stock.store.name

@@ -27,6 +27,8 @@ LungeDe::Application.routes.draw do
       collection do
         get "changed_since/:date", action: "changed_since", as: "recently_changed"
         get "changed_since/:date/page/:page", action: "changed_since"
+        get "stock_changed_since/:date", action: "stock_changed_since", as: "recently_changed_stock"
+        get "stock_changed_since/:date/page/:page", action: "stock_changed_since"
       end
     end
     resources :product_categories

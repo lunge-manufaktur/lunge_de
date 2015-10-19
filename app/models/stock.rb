@@ -55,7 +55,6 @@ class Stock < ActiveRecord::Base
   scope :in_stock, -> { where(:quantity => true) }
 
   # Callbacks
-  before_save :update_product
 
 
   # Methods

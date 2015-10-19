@@ -21,6 +21,15 @@ module Api
       render "index"
     end
 
+    def stock_changed_since
+      date = params[:date].to_datetime
+
+      @products = Product.joins(:stocks).where("stocks.updated_at >= ?", date).includes(:size, :stocks, :brand, :stores, :product_images, :tags).page(params[:page]).per(100)
+
+      authorize @products
+      render "index"
+    end
+
     # GET /products/1
     def show
       @product = Product.includes(:size, :stocks, :brand, :stores, :product_images, :tags).find(params[:id])

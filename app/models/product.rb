@@ -121,4 +121,10 @@ class Product < ActiveRecord::Base
       false
     end
   end
+
+  def stock_updated_at
+    if stocks.present?
+      stocks.maximum(:updated_at).to_time
+    end
+  end
 end
