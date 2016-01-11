@@ -152,8 +152,7 @@ GEM
     pg (0.18.1)
     polyamorous (1.1.0)
       activerecord (>= 3.0)
-    puma (2.11.3)
-      rack (>= 1.1, < 2.0)
+    puma (2.15.3)
     pundit (0.3.0)
       activesupport (>= 3.0.0)
     rack (1.6.4)
@@ -279,7 +278,7 @@ DEPENDENCIES
   paperclip (~> 4.3)
   paperclip-storage-ftp
   pg
-  puma (~> 2.11.2)
+  puma
   pundit
   rack-timeout
   rails (~> 4.2)
@@ -297,4 +296,4 @@ DEPENDENCIES
   yajl-ruby
 
 BUNDLED WITH
-   1.10.5
+   1.11.2

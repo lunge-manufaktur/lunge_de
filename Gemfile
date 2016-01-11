@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
 
-ruby "2.2.2"
+ruby "2.3.0"
 
 gem "rails", "~> 4.2"
 gem "rails-i18n"
 gem "pg"
-gem "puma", "~> 2.11.2"
+gem "puma"
 gem "rack-timeout"
 gem "devise"
 gem "pundit"

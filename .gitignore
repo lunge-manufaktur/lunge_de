@@ -31,3 +31,6 @@ Procfile.dev
 
 # Docs
 /docs
+
+# Sublime Project Files
+/lunge_de.sublime-project
