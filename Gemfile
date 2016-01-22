@@ -20,6 +20,9 @@ group :development, :test do
   gem "foreman"
 end
 
+group :development do
+  gem 'meta_request'
+end
 
 gem 'sass-rails'
 gem 'uglifier', '>= 1.3.0'
