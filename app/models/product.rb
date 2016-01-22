@@ -50,6 +50,7 @@ class Product < ActiveRecord::Base
   scope :on_sale, -> { where("current_price < regular_price") }
   scope :featured, -> { where(is_featured: true) }
   scope :on_frontpage, -> { where(is_on_frontpage: true) }
+  scope :most_recently_added, -> { order(created_at: :desc) }
 
   # methods
   include IconHelper
