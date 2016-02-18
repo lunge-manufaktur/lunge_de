@@ -7,18 +7,24 @@ class ProductsController < ApplicationController
   # GET /products.json
   def index
     if params[:tags]
-      @tags = params[:tags].split("+").map{ |tag| tag.gsub("-", "/") }
+      @tags = params[:tags].split('+').map { |tag| tag.gsub('-', '/') }
       @search = Product.published.search(params[:q])
-      @products = @search.result.includes(:brand, :product_images, :tags).order(created_at: :desc).tagged_with(@tags).page(params[:page]).per(12)
+      @products = @search.result
+                         .includes(:brand, :product_images, :tags)
+                         .prefer_with_image.newest.tagged_with(@tags)
+                         .page(params[:page]).per(12)
     else
       @search = Product.published.search(params[:q])
-      @products = @search.result.includes(:brand, :product_images, :tags).order(created_at: :desc).page(params[:page]).per(12)
+      @products = @search.result
+                         .includes(:brand, :product_images, :tags)
+                         .prefer_with_image.newest
+                         .page(params[:page]).per(12)
     end
   end
 
   def search
     index
-    render "index"
+    render 'index'
   end
 
   def remove_tag
@@ -29,7 +35,7 @@ class ProductsController < ApplicationController
 
   def index_with_tag
     @products = Product.published.where(tag_list: params[:tag])
-    render "index"
+    render 'index'
   end
 
   # GET /products/1
@@ -51,12 +57,12 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit_product_images
   def edit_product_images
-    render "edit_product_images", layout: false
+    render 'edit_product_images', layout: false
   end
 
   # GET /products/1/edit_properties
   def edit_properties
-    render "edit_properties", layout: false
+    render 'edit_properties', layout: false
   end
 
   def save_properties
@@ -83,11 +89,8 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
-
     respond_to do |format|
-
       if @product.update(product_params)
-
         format.html do
           if params[:product][:stay_on_page] == '1'
             render action: 'edit_product_images', layout: false
@@ -95,17 +98,13 @@ class ProductsController < ApplicationController
             redirect_to @product, notice: 'Product was successfully updated.'
           end  
         end
-
         format.json { head :no_content }
-
       else
         format.html { render action: 'edit' }
         format.json { render json: @product.errors, status: :unprocessable_entity }
       end
     end
-
   end
-
 
   # DELETE /products/1
   # DELETE /products/1.json
@@ -118,86 +117,87 @@ class ProductsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_product
-      if current_user
-        @product = Product.friendly.find(params[:id])
-      else
-        @product = Product.published.friendly.find(params[:id])
-      end
-    end
 
-    def valid_api_key?
-      ApiKey.exists?(key: params[:api_key])
+  # Use callbacks to share common setup or constraints between actions.
+  def set_product
+    if current_user
+      @product = Product.friendly.find(params[:id])
+    else
+      @product = Product.published.friendly.find(params[:id])
     end
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def product_params
-      params.require(:product).permit(
+  def valid_api_key?
+    ApiKey.exists?(key: params[:api_key])
+  end
+
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def product_params
+    params.require(:product).permit(
+      :name,
+      :is_published,
+      :is_featured,
+      :is_on_frontpage,
+      :sku,
+      :description,
+      :brand_id,
+      :size_id,
+      :current_price,
+      :regular_price,
+      :color,
+      :tag_list,
+      stocks_attributes: [
+        :id,
+        :product_id,
+        :store_id,
+        :g1,
+        :g1h,
+        :g2,
+        :g2h,
+        :g3,
+        :g3h,
+        :g4,
+        :g4h,
+        :g5,
+        :g5h,
+        :g6,
+        :g6h,
+        :g7,
+        :g7h,
+        :g8,
+        :g8h,
+        :g9,
+        :g9h,
+        :g10,
+        :g10h,
+        :g11,
+        :g11h,
+        :g12,
+        :g12h,
+        :g13,
+        :g13h,
+        :g14,
+        :g14h,
+        :g15,
+        :g16,
+        :g17,
+        :g18,
+        :g19
+      ],
+      product_images_attributes: [
+        :id,
+        :product_id,
+        :image,
+        :default,
+        :_destroy
+      ],
+      properties_attributes: [
+        :id,
+        :product_id,
         :name,
-        :is_published,
-        :is_featured,
-        :is_on_frontpage,
-        :sku,
-        :description,
-        :brand_id,
-        :size_id,
-        :current_price,
-        :regular_price,
-        :color,
-        :tag_list,
-        stocks_attributes: [
-          :id,
-          :product_id,
-          :store_id,
-          :g1,
-          :g1h,
-          :g2,
-          :g2h,
-          :g3,
-          :g3h,
-          :g4,
-          :g4h,
-          :g5,
-          :g5h,
-          :g6,
-          :g6h,
-          :g7,
-          :g7h,
-          :g8,
-          :g8h,
-          :g9,
-          :g9h,
-          :g10,
-          :g10h,
-          :g11,
-          :g11h,
-          :g12,
-          :g12h,
-          :g13,
-          :g13h,
-          :g14,
-          :g14h,
-          :g15,
-          :g16,
-          :g17,
-          :g18,
-          :g19
-        ],
-        product_images_attributes: [
-          :id,
-          :product_id,
-          :image,
-          :default,
-          :_destroy
-        ],
-        properties_attributes: [
-          :id,
-          :product_id,
-          :name,
-          :value,
-          :_destroy
-        ]
-      )
-    end
+        :value,
+        :_destroy
+      ]
+    )
+  end
 end

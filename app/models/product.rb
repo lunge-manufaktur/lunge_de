@@ -50,7 +50,9 @@ class Product < ActiveRecord::Base
   scope :on_sale, -> { where("current_price < regular_price") }
   scope :featured, -> { where(is_featured: true) }
   scope :on_frontpage, -> { where(is_on_frontpage: true) }
-  scope :most_recently_added, -> { order(created_at: :desc) }
+  scope :newest, -> { order(created_at: :desc) }
+  scope :has_image, -> { includes(:product_images).where.not(product_images: { id: nil } ) }
+  scope :prefer_with_image, -> { includes(:product_images).order('product_images.id') }
 
   # methods
   include IconHelper
