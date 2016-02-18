@@ -52,7 +52,7 @@ class Product < ActiveRecord::Base
   scope :on_frontpage, -> { where(is_on_frontpage: true) }
   scope :newest, -> { order(created_at: :desc) }
   scope :has_image, -> { includes(:product_images).where.not(product_images: { id: nil } ) }
-  scope :prefer_with_image, -> { includes(:product_images).order('product_images.created_at DESC') }
+  scope :prefer_with_image, -> { includes(:product_images).order('product_images.created_at DESC NULLS LAST') }
 
   # methods
   include IconHelper

@@ -42,7 +42,9 @@ class ProductsController < ApplicationController
   # GET /products/1.json
   def show
     authorize @product
-    @search = Product.includes(:brand, :product_images, :stocks, :sizes).search(params[:q])
+    @search = Product
+              .includes(:brand, :product_images, :stocks, :sizes)
+              .search(params[:q])
     @related_products = @product.find_related_tags.published.limit(6)
   end
 
