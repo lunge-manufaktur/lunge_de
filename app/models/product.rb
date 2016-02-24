@@ -22,7 +22,6 @@
 #
 
 class Product < ActiveRecord::Base
-
   # associations
   belongs_to :brand
   belongs_to :size
@@ -62,7 +61,7 @@ class Product < ActiveRecord::Base
   end
 
   def meta_keywords
-    keywords = [ self.brand.name, name, sku, color, self.tag_list ].join(",")
+    [self.brand.name, name, sku, color, self.tag_list].join(",")
   end 
 
   def default_image(size=nil)
