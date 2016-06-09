@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 
 ruby "2.3.0"
 
-gem "rails", "~> 4.2"
+gem "rails", "~> 4.2.6"
 gem "rails-i18n"
+gem "rake", "~> 11.1"
 gem "pg"
 gem "puma"
 gem "rack-timeout"
@@ -38,7 +39,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'foundation-rails', "~> 5.4"
+gem 'foundation-rails', "~> 5.4.0"
 gem "bourbon"
 gem 'ransack'
 gem 'annotate'
@@ -53,7 +54,7 @@ gem "mail_form"
 # heroku
 group :production do
 	gem 'rails_12factor'
-  gem 'newrelic_rpm'
+  gem 'skylight'
 end
 
 gem 'awesome_nested_set'

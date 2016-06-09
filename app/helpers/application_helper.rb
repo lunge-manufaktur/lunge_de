@@ -25,7 +25,7 @@ module ApplicationHelper
   end
 
   def browser_unsupported?
-    if (browser.ie6? || browser.ie7? || browser.ie8? || browser.ie9?)
+    if (browser.ie?("<10"))
       true
     else
       false
