@@ -164,7 +164,10 @@ footer {
 
 .intro-announcement {
   background-color: $primary-color;
-  z-index: 98; 
+  z-index: 98;
+  color: #fff;
+  padding: 0.5rem;
+  text-align: center;  
 }
 
 .intro-announcement a.link:hover {

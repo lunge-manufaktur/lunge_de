@@ -144,10 +144,34 @@
 	"buffers":
 	[
 		{
-			"file": "app/models/product.rb",
+			"file": "app/views/pages/gutschein.html.slim",
 			"settings":
 			{
-				"buffer_size": 3489,
+				"buffer_size": 6541,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/pages/home.html.slim",
+			"settings":
+			{
+				"buffer_size": 4647,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/assets/stylesheets/layout.scss",
+			"settings":
+			{
+				"buffer_size": 3946,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "Gemfile",
+			"settings":
+			{
+				"buffer_size": 1375,
 				"line_ending": "Unix"
 			}
 		}
@@ -250,11 +274,17 @@
 	"expanded_folders":
 	[
 		"/Users/ulflunge/projects/lunge_de",
-		"/Users/ulflunge/projects/lunge_de/config",
-		"/Users/ulflunge/projects/lunge_de/config/initializers"
+		"/Users/ulflunge/projects/lunge_de/app",
+		"/Users/ulflunge/projects/lunge_de/app/assets",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets",
+		"/Users/ulflunge/projects/lunge_de/app/views",
+		"/Users/ulflunge/projects/lunge_de/app/views/pages"
 	],
 	"file_history":
 	[
+		"/Users/ulflunge/projects/lunge_de/db/migrate/20160428063734_change_collation_for_tag_names.acts_as_taggable_on_engine.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/pages/jobs.html.slim",
+		"/Users/ulflunge/projects/lunge_de/app/models/product.rb",
 		"/Users/ulflunge/projects/lunge_de/config/newrelic.yml",
 		"/Users/ulflunge/projects/lunge_de/Gemfile.lock",
 		"/Users/ulflunge/projects/lunge_de/config/initializers/devise.rb",
@@ -268,7 +298,6 @@
 		"/Users/ulflunge/projects/lunge_de/config/skylight.yml",
 		"/Users/ulflunge/projects/lunge_de/Gemfile",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/models/product.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/contact_form/new.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/show.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/models/contact_form.rb",
@@ -309,7 +338,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/models/product_image.rb",
 		"/Users/ulflunge/projects/lunge_de/config/application.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/contact_form_controller.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/pages/jobs.html.slim",
 		"/Users/ulflunge/projects/lunge_de/config/puma.rb",
 		"/Users/ulflunge/projects/lunge_de/config/environments/development.rb",
 		"/Users/ulflunge/projects/lunge_de/config/environments/production.rb",
@@ -381,8 +409,7 @@
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/properties_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/api/application_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/test/fixtures/users.yml",
-		"/Users/ulflunge/projects/lunge_de/test/controllers/pages_controller_test.rb",
-		"/Users/ulflunge/projects/lunge_de/app/views/products/show/_availability.html.slim"
+		"/Users/ulflunge/projects/lunge_de/test/controllers/pages_controller_test.rb"
 	],
 	"find":
 	{
@@ -555,37 +582,125 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/models/product.rb",
+					"file": "app/views/pages/gutschein.html.slim",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3489,
+						"buffer_size": 6541,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								3643,
+								3643
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1985.0,
+						"translation.y": 776.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/pages/home.html.slim",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4647,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1624,
+								1624
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/assets/stylesheets/layout.scss",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3946,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								771,
+								771
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 530.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "Gemfile",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1375,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								96,
+								96
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
 					"type": "text"
 				}
 			]
@@ -643,6 +758,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"gutsch",
+				"app/views/pages/gutschein.html.slim"
+			],
+			[
+				"jobs",
+				"app/views/pages/jobs.html.slim"
+			],
 			[
 				"produc",
 				"app/models/product.rb"
@@ -722,10 +849,6 @@
 			[
 				"compone",
 				"app/assets/stylesheets/components.scss"
-			],
-			[
-				"gemfile",
-				"Gemfile"
 			],
 			[
 				"compon",
