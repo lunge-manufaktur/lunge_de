@@ -8,7 +8,6 @@ class SizesControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:sizes)
   end
 
   test "should get new" do
@@ -18,32 +17,28 @@ class SizesControllerTest < ActionController::TestCase
 
   test "should create size" do
     assert_difference('Size.count') do
-      post :create, size: { g1: @size.g1, g1h: @size.g1h, name: @size.name }
+      post :create, params: { size: @size.attributes }
     end
-
-    assert_redirected_to size_path(assigns(:size))
   end
 
   test "should show size" do
-    get :show, id: @size
+    get :show, params: { id: @size }
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @size
+    get :edit, params: { id: @size }
     assert_response :success
   end
 
   test "should update size" do
-    patch :update, id: @size, size: { g1: @size.g1, g1h: @size.g1h, name: @size.name }
-    assert_redirected_to size_path(assigns(:size))
+    patch :update, params: { id: @size, size: @size.attributes }
   end
 
   test "should destroy size" do
     assert_difference('Size.count', -1) do
-      delete :destroy, id: @size
+      delete :destroy, params: { id: @size }
     end
-
     assert_redirected_to sizes_path
   end
 end

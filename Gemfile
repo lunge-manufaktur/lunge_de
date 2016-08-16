@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby "2.3.1"
 
-gem "rails", "~> 4.2.6"
+gem "rails", "~> 5.0.0"
 gem "rails-i18n"
 gem "rake"
 gem "pg"
@@ -26,8 +26,8 @@ group :development do
 end
 
 gem 'sass-rails'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.0.0'
+gem 'uglifier'
+gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'jquery-turbolinks'
 gem 'turbolinks'
@@ -43,7 +43,7 @@ gem 'foundation-rails', "~> 5.4.0"
 gem "bourbon"
 gem 'ransack'
 gem 'annotate'
-gem "paperclip", "~> 4.3"
+gem "paperclip"
 gem "paperclip-storage-ftp"
 gem "delayed_paperclip"
 gem "nested_form"

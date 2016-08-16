@@ -15,10 +15,6 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  name: MyString
-  slug: MyString
-
-two:
-  name: MyString
-  slug: MyString
+default:
+  name: This is a name
+  slug: this_is_a_name

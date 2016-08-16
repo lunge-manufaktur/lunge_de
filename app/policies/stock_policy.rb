@@ -1,0 +1,2 @@
+class StockPolicy < ApplicationPolicy
+end

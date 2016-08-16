@@ -22,7 +22,9 @@ module Api
       @size = Size.new(size_params)
       authorize @size
       if @size.save
-        render nothing: true, status: 201
+        render json: @size, status: :created
+      else
+        render json: @size.errors, status: :unprocessable_entity
       end
     end
 
@@ -30,7 +32,11 @@ module Api
     def update
       @size = Size.find(params[:id])
       authorize @size
-      respond_with @size.update(size_params)
+      if @size.update(size_params)
+        render json: @size
+      else
+        render json: @size.errors, status: :unprocessable_entity
+      end
     end
 
     # DELETE /sizes/1

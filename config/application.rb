@@ -1,4 +1,4 @@
-require File.expand_path('../boot', __FILE__)
+require_relative 'boot'
 
 require 'rails/all'
 require 'multi_json'
@@ -49,9 +49,6 @@ module LungeDe
       user_name: ENV["GMAIL_USERNAME"],
       password: ENV["GMAIL_PASSWORD"]
     }
-
-    # Do not hide errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
 
     # background jobs backend
     config.active_job.queue_adapter = :delayed_job

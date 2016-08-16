@@ -147,15 +147,15 @@
 			"file": "app/views/pages/gutschein.html.slim",
 			"settings":
 			{
-				"buffer_size": 6541,
+				"buffer_size": 6536,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "app/views/pages/home.html.slim",
+			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 4647,
+				"buffer_size": 2481,
 				"line_ending": "Unix"
 			}
 		},
@@ -275,13 +275,14 @@
 	[
 		"/Users/ulflunge/projects/lunge_de",
 		"/Users/ulflunge/projects/lunge_de/app",
-		"/Users/ulflunge/projects/lunge_de/app/assets",
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets",
 		"/Users/ulflunge/projects/lunge_de/app/views",
-		"/Users/ulflunge/projects/lunge_de/app/views/pages"
+		"/Users/ulflunge/projects/lunge_de/app/views/pages",
+		"/Users/ulflunge/projects/lunge_de/config"
 	],
 	"file_history":
 	[
+		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
 		"/Users/ulflunge/projects/lunge_de/db/migrate/20160428063734_change_collation_for_tag_names.acts_as_taggable_on_engine.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/pages/jobs.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/models/product.rb",
@@ -321,7 +322,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/api/products/show.json.jbuilder",
 		"/Users/ulflunge/projects/lunge_de/test/models/product_test.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_footer.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
 		"/Users/ulflunge/projects/lunge_de/.slim-lint.yml",
 		"/Users/ulflunge/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
 		"/Users/ulflunge/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
@@ -582,7 +582,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -591,15 +591,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6541,
+						"buffer_size": 6536,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3643,
-								3643
+								2820,
+								2820
 							]
 						],
 						"settings":
@@ -609,32 +609,32 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 776.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "app/views/pages/home.html.slim",
+					"file": "config/routes.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4647,
+						"buffer_size": 2481,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1624,
-								1624
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
+							"syntax": "Packages/Ruby/Ruby.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -658,8 +658,8 @@
 						"selection":
 						[
 							[
-								771,
-								771
+								446,
+								446
 							]
 						],
 						"settings":
@@ -672,7 +672,7 @@
 						"translation.y": 530.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				},
 				{

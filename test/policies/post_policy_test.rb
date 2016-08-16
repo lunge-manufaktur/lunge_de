@@ -4,7 +4,7 @@ class PostPolicyTest < PolicyTest
   setup do
     @admin = users(:admin_user)
     @user = users(:default_user)
-    @post = posts(:default_post)
+    @post = posts(:default)
   end
 
   test "valid admin permissions" do

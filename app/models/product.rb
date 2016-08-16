@@ -68,6 +68,8 @@ class Product < ActiveRecord::Base
     if product_images.exists?
       pi = product_images.featured.first || product_images.first
       pi.image.url(size)
+    else
+      "missing.png"
     end
   end
 

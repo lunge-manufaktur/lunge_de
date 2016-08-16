@@ -8,7 +8,6 @@ class ProductImagesControllerTest < ActionController::TestCase
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:product_images)
   end
 
   test "should get new" do
@@ -18,30 +17,30 @@ class ProductImagesControllerTest < ActionController::TestCase
 
   test "should create product_image" do
     assert_difference('ProductImage.count') do
-      post :create, product_image: { product_id: @product_image.product }
+      post :create, params: { product_image: @product_image.attributes }
     end
-
-    assert_redirected_to product_image_path(assigns(:product_image))
   end
 
   test "should show product_image" do
-    get :show, id: @product_image
+    get :show, params: { id: @product_image }
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @product_image
+    get :edit, params: { id: @product_image }
     assert_response :success
   end
 
   test "should update product_image" do
-    patch :update, id: @product_image, product_image: { product_id: @product_image.product_id }
-    assert_redirected_to product_image_path(assigns(:product_image))
+    patch :update, params: {
+      id: @product_image,
+      product_image: @product_image.attributes
+    }
   end
 
   test "should destroy product_image" do
     assert_difference('ProductImage.count', -1) do
-      delete :destroy, id: @product_image
+      delete :destroy, params: { id: @product_image }
     end
     assert_redirected_to product_images_path
   end

@@ -8,24 +8,19 @@ module Api
     # GET /products
     def index
       @products = Product.all.includes(:size, :stocks, :brand, :stores, :product_images, :tags).page(params[:page]).per(100)
-
       authorize @products
     end
 
     def changed_since
       date = params[:date].to_datetime
-
       @products = Product.where("updated_at >= ?", date).includes(:size, :stocks, :brand, :stores, :product_images, :tags).page(params[:page]).per(100)
-
       authorize @products
       render "index"
     end
 
     def stock_changed_since
       date = params[:date].to_datetime
-
       @products = Product.joins(:stocks).where("stocks.updated_at >= ?", date).includes(:size, :stocks, :brand, :stores, :product_images, :tags).page(params[:page]).per(100)
-
       authorize @products
       render "index"
     end
@@ -33,7 +28,6 @@ module Api
     # GET /products/1
     def show
       @product = Product.includes(:size, :stocks, :brand, :stores, :product_images, :tags).find(params[:id])
-
       authorize @product
     end
 
@@ -42,7 +36,9 @@ module Api
       @product = Product.new(product_params)
       authorize @product
       if @product.save
-        render nothing: true, status: :created
+        render json: @product, status: :created
+      else
+        render json: @product.errors, status: :unprocessable_entity
       end
     end
 
@@ -50,7 +46,11 @@ module Api
     def update
       @product = Product.find(params[:id])
       authorize @product
-      respond_with @product.update(product_params)
+      if @product.update(product_params)
+        render json: @product
+      else
+        render json: @product.errors, status: :unprocessable_entity
+      end
     end
 
     # DELETE /products/1

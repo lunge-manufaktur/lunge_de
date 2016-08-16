@@ -64,7 +64,8 @@ LungeDe::Application.routes.draw do
   resources :products, concerns: [:paginatable, :searchable] do
     get "featured" => "products#show_featured", :as => "featured"
     collection do
-      get "tags/:tags", to: "products#index", as: :tag
+      get "tags/:tags", action: "index", as: :tag
+      get '/tags/:tags/search', action: :index, as: :tagged_search
       get "remove_tag/:tag", :action => "remove_tag", :as => "remove_tag"
     end
     resources :product_images

@@ -21,6 +21,10 @@ class Brand < ActiveRecord::Base
   extend FriendlyId
   friendly_id :name, use: :slugged
 
+  # Scopes
+  scope :active, -> { joins(:products).distinct.merge(Product.published) }
+  scope :has_logo, -> { where.not(logo_file_name: nil) }
+
   # Paperclip
   require "paperclip/storage/ftp"
 
@@ -60,7 +64,4 @@ class Brand < ActiveRecord::Base
   def logo_present?
     self.logo.present?
   end
-
-  # Scopes
-  scope :active, -> { joins(:products).distinct.merge(Product.published) }
 end

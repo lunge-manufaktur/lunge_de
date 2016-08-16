@@ -19,7 +19,7 @@
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-default_post:
+default:
   slug: a-sample-post
   title: A sample post
   subtitle: with a subtitle

@@ -1,10 +1,10 @@
 h4 Tags
 #tag-cloud
   - if @tags
-    - tag_cloud Product.published.tagged_with(@tags).tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class|
+    - tag_cloud @search.result.tagged_with(@tags).tag_counts_on(:tags).order(:name), %w[xs s m l xl] do |tag, css_class|
       = tag_cloud_item(tag.name)
   - else
-    - tag_cloud Product.published.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class|
+    - tag_cloud @search.result.tag_counts_on(:tags).order(:name), %w[xs s m l xl] do |tag, css_class|
       = tag_cloud_item(tag.name)
 hr
 = link_to "Filter aufheben", products_path, class: "small button expand"

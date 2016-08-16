@@ -2,13 +2,12 @@ require 'test_helper'
 
 class CategorizationsControllerTest < ActionController::TestCase
   setup do
-    @categorization = categorizations(:one)
+    @categorization = categorizations(:default)
   end
 
   test "should get index" do
     get :index
     assert_response :success
-    assert_not_nil assigns(:categorizations)
   end
 
   test "should get new" do
@@ -18,32 +17,39 @@ class CategorizationsControllerTest < ActionController::TestCase
 
   test "should create categorization" do
     assert_difference('Categorization.count') do
-      post :create, categorization: { category_id: @categorization.category_id, post_id: @categorization.post_id }
+      post :create, params: {
+        categorization: @categorization.attributes
+      }
     end
-
-    assert_redirected_to categorization_path(assigns(:categorization))
   end
 
   test "should show categorization" do
-    get :show, id: @categorization
+    get :show, params: {
+      id: @categorization
+    }
     assert_response :success
   end
 
   test "should get edit" do
-    get :edit, id: @categorization
+    get :edit, params: {
+      id: @categorization
+    }
     assert_response :success
   end
 
   test "should update categorization" do
-    patch :update, id: @categorization, categorization: { category_id: @categorization.category_id, post_id: @categorization.post_id }
-    assert_redirected_to categorization_path(assigns(:categorization))
+    patch :update, params: {
+      id: @categorization,
+      categorization: @categorization.attributes
+    }
   end
 
   test "should destroy categorization" do
     assert_difference('Categorization.count', -1) do
-      delete :destroy, id: @categorization
+      delete :destroy, params: {
+        id: @categorization
+      }
     end
-
     assert_redirected_to categorizations_path
   end
 end

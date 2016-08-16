@@ -1,7 +1,6 @@
 module Api
   class StoresController < ApplicationController
     protect_from_forgery except: [:create, :update]
-    before_action :current_user
     after_action :verify_authorized
     respond_to :json
 
@@ -22,7 +21,9 @@ module Api
       @store = Store.new(store_params)
       authorize @store
       if @store.save
-        render nothing: true, status: :created
+        render json: @store, status: :created
+      else
+        render json: @store.errors, status: :unprocessable_entity
       end
     end
 
@@ -30,24 +31,25 @@ module Api
     def update
       @store = Store.find(params[:id])
       authorize @store
-      respond_with @store.update(store_params)
+      if @store.update(store_params)
+        render json: @store
+      else
+        render json: @store.errors, status: :unprocessable_entity
+      end
     end
 
     # DELETE /stores/1
     def destroy
       @store = Store.find(params[:id])
       authorize @store
-      respond_with @store.destroy
+      if @store.destroy
+        head :no_content
+      else
+        render json: @store.errors, status: :unprocessable_entity
+      end
     end
 
     private
-
-    def current_user
-      authenticate_or_request_with_http_token do |token, options|
-        key = ApiKey.find_by_key(token)
-        user = key.user if key
-      end
-    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def store_params

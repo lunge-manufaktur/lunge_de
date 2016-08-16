@@ -8,10 +8,10 @@ class ProductsController < ApplicationController
   def index
     if params[:tags]
       @tags = params[:tags].split('+').map { |tag| tag.gsub('-', '/') }
-      @search = Product.published.search(params[:q])
+      @search = Product.published.tagged_with(@tags).search(params[:q])
       @products = @search.result
                          .includes(:brand, :product_images, :tags)
-                         .prefer_with_image.newest.tagged_with(@tags)
+                         .prefer_with_image.newest
                          .page(params[:page]).per(12)
     else
       @search = Product.published.search(params[:q])

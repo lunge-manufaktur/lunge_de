@@ -75,9 +75,7 @@ class CategoriesController < ApplicationController
         :name,
         :slug,
         :parent_id,
-        :lft,
         :right,
-        :depth
       )
     end
 end

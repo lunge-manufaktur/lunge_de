@@ -22,7 +22,9 @@ module Api
       @brand = Brand.create(brand_params)
       authorize @brand
       if @brand.save
-        render nothing: true, status: 201
+        render json: @brand, status: :created
+      else
+        render json: @brand.errors, status: :unprocessable_entity
       end
     end
 
@@ -30,7 +32,11 @@ module Api
     def update
       @brand = Brand.find(params[:id])
       authorize @brand
-      respond_with @brand.update(brand_params)
+      if @brand.update(brand_params)
+        render json: @brand
+      else
+        render json: @brand.errors, status: :unprocessable_entity
+      end
     end
 
     # DELETE /brands/1
