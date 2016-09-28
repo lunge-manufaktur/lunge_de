@@ -33,4 +33,5 @@ Procfile.dev
 /docs
 
 # Sublime Project Files
-/lunge_de.sublime-project
+lunge_de.sublime-project
+lunge_de.sublime-workspace
