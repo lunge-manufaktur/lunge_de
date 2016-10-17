@@ -10,6 +10,7 @@ json.sku product.sku
 json.description product.description
 json.current_price product.current_price
 json.regular_price product.regular_price
+json.use_in_lia_campaign product.use_in_lia_campaign
 json.tags product.tags do |tag|
   json.id tag.id
   json.name tag.name

@@ -19,6 +19,14 @@
 #  is_on_frontpage      :boolean
 #  is_featured          :boolean
 #  slug                 :string(255)
+#  use_in_lia_campaign  :boolean          default(FALSE)
+#
+# Indexes
+#
+#  index_products_on_brand_id             (brand_id)
+#  index_products_on_size_id              (size_id)
+#  index_products_on_slug                 (slug)
+#  index_products_on_use_in_lia_campaign  (use_in_lia_campaign)
 #
 
 class Product < ActiveRecord::Base

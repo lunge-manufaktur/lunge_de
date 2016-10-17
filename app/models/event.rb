@@ -16,6 +16,11 @@
 #  custom_status :string(255)
 #  manager       :boolean          default(FALSE)
 #
+# Indexes
+#
+#  index_events_on_employee_id  (employee_id)
+#  index_events_on_store_id     (store_id)
+#
 
 class Event < ActiveRecord::Base
 	# simple_calendar gem

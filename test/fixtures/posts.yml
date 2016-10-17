@@ -16,6 +16,10 @@
 #  icon_file_size    :integer
 #  icon_updated_at   :datetime
 #
+# Indexes
+#
+#  index_posts_on_slug  (slug)
+#
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 

@@ -41,6 +41,11 @@
 #  created_at :datetime
 #  updated_at :datetime
 #
+# Indexes
+#
+#  index_stocks_on_product_id  (product_id)
+#  index_stocks_on_store_id    (store_id)
+#
 
 require 'test_helper'
 

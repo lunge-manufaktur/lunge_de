@@ -22,6 +22,7 @@ class ProductsController < ApplicationController
     end
   end
 
+
   def search
     index
     render 'index'
@@ -140,6 +141,7 @@ class ProductsController < ApplicationController
       :is_published,
       :is_featured,
       :is_on_frontpage,
+      :use_in_lia_campaign,
       :sku,
       :description,
       :brand_id,

@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -11,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428063734) do
+ActiveRecord::Schema.define(version: 20161017092020) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,9 +20,8 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["user_id"], name: "index_api_keys_on_user_id", using: :btree
   end
-
-  add_index "api_keys", ["user_id"], name: "index_api_keys_on_user_id", using: :btree
 
   create_table "brands", force: :cascade do |t|
     t.string   "name",              limit: 255
@@ -34,9 +32,8 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.integer  "logo_file_size"
     t.datetime "logo_updated_at"
     t.string   "slug",              limit: 255
+    t.index ["slug"], name: "index_brands_on_slug", unique: true, using: :btree
   end
-
-  add_index "brands", ["slug"], name: "index_brands_on_slug", unique: true, using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -47,19 +44,17 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.integer  "rgt"
     t.integer  "depth"
     t.string   "slug",       limit: 255
+    t.index ["slug"], name: "index_categories_on_slug", using: :btree
   end
-
-  add_index "categories", ["slug"], name: "index_categories_on_slug", using: :btree
 
   create_table "categorizations", force: :cascade do |t|
     t.integer  "post_id"
     t.integer  "category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["category_id"], name: "index_categorizations_on_category_id", using: :btree
+    t.index ["post_id"], name: "index_categorizations_on_post_id", using: :btree
   end
-
-  add_index "categorizations", ["category_id"], name: "index_categorizations_on_category_id", using: :btree
-  add_index "categorizations", ["post_id"], name: "index_categorizations_on_post_id", using: :btree
 
   create_table "delayed_jobs", force: :cascade do |t|
     t.integer  "priority",   default: 0, null: false
@@ -73,9 +68,8 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.string   "queue"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
   end
-
-  add_index "delayed_jobs", ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
 
   create_table "employees", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -83,10 +77,9 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["active"], name: "index_employees_on_active", using: :btree
+    t.index ["user_id"], name: "index_employees_on_user_id", using: :btree
   end
-
-  add_index "employees", ["active"], name: "index_employees_on_active", using: :btree
-  add_index "employees", ["user_id"], name: "index_employees_on_user_id", using: :btree
 
   create_table "events", force: :cascade do |t|
     t.integer  "employee_id"
@@ -101,10 +94,9 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.datetime "updated_at"
     t.string   "custom_status", limit: 255
     t.boolean  "manager",                   default: false
+    t.index ["employee_id"], name: "index_events_on_employee_id", using: :btree
+    t.index ["store_id"], name: "index_events_on_store_id", using: :btree
   end
-
-  add_index "events", ["employee_id"], name: "index_events_on_employee_id", using: :btree
-  add_index "events", ["store_id"], name: "index_events_on_store_id", using: :btree
 
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string   "slug",           limit: 255, null: false
@@ -112,12 +104,11 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.string   "sluggable_type", limit: 50
     t.string   "scope",          limit: 255
     t.datetime "created_at"
+    t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
+    t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
+    t.index ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
+    t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
   end
-
-  add_index "friendly_id_slugs", ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true, using: :btree
-  add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type", using: :btree
-  add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id", using: :btree
-  add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
 
   create_table "post_images", force: :cascade do |t|
     t.integer  "post_id"
@@ -128,9 +119,8 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.string   "image_content_type", limit: 255
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.index ["post_id"], name: "index_post_images_on_post_id", using: :btree
   end
-
-  add_index "post_images", ["post_id"], name: "index_post_images_on_post_id", using: :btree
 
   create_table "posts", force: :cascade do |t|
     t.string   "title",             limit: 255
@@ -145,9 +135,8 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.string   "icon_content_type", limit: 255
     t.integer  "icon_file_size"
     t.datetime "icon_updated_at"
+    t.index ["slug"], name: "index_posts_on_slug", using: :btree
   end
-
-  add_index "posts", ["slug"], name: "index_posts_on_slug", using: :btree
 
   create_table "product_categories", force: :cascade do |t|
     t.string  "name",      limit: 255
@@ -155,22 +144,20 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.integer "lft"
     t.integer "rgt"
     t.integer "depth"
+    t.index ["depth"], name: "index_product_categories_on_depth", using: :btree
+    t.index ["lft"], name: "index_product_categories_on_lft", using: :btree
+    t.index ["parent_id"], name: "index_product_categories_on_parent_id", using: :btree
+    t.index ["rgt"], name: "index_product_categories_on_rgt", using: :btree
   end
-
-  add_index "product_categories", ["depth"], name: "index_product_categories_on_depth", using: :btree
-  add_index "product_categories", ["lft"], name: "index_product_categories_on_lft", using: :btree
-  add_index "product_categories", ["parent_id"], name: "index_product_categories_on_parent_id", using: :btree
-  add_index "product_categories", ["rgt"], name: "index_product_categories_on_rgt", using: :btree
 
   create_table "product_categorizations", force: :cascade do |t|
     t.integer  "product_id"
     t.integer  "product_category_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["product_category_id"], name: "index_product_categorizations_on_product_category_id", using: :btree
+    t.index ["product_id"], name: "index_product_categorizations_on_product_id", using: :btree
   end
-
-  add_index "product_categorizations", ["product_category_id"], name: "index_product_categorizations_on_product_category_id", using: :btree
-  add_index "product_categorizations", ["product_id"], name: "index_product_categorizations_on_product_id", using: :btree
 
   create_table "product_images", force: :cascade do |t|
     t.integer  "product_id"
@@ -182,9 +169,8 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
     t.string   "image"
+    t.index ["product_id"], name: "index_product_images_on_product_id", using: :btree
   end
-
-  add_index "product_images", ["product_id"], name: "index_product_images_on_product_id", using: :btree
 
   create_table "products", force: :cascade do |t|
     t.string   "name",                 limit: 255
@@ -203,11 +189,12 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.boolean  "is_on_frontpage"
     t.boolean  "is_featured"
     t.string   "slug",                 limit: 255
+    t.boolean  "use_in_lia_campaign",                                      default: false
+    t.index ["brand_id"], name: "index_products_on_brand_id", using: :btree
+    t.index ["size_id"], name: "index_products_on_size_id", using: :btree
+    t.index ["slug"], name: "index_products_on_slug", using: :btree
+    t.index ["use_in_lia_campaign"], name: "index_products_on_use_in_lia_campaign", using: :btree
   end
-
-  add_index "products", ["brand_id"], name: "index_products_on_brand_id", using: :btree
-  add_index "products", ["size_id"], name: "index_products_on_size_id", using: :btree
-  add_index "products", ["slug"], name: "index_products_on_slug", using: :btree
 
   create_table "properties", force: :cascade do |t|
     t.integer  "product_id"
@@ -215,9 +202,8 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.string   "value",      limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["product_id"], name: "index_properties_on_product_id", using: :btree
   end
-
-  add_index "properties", ["product_id"], name: "index_properties_on_product_id", using: :btree
 
   create_table "sizes", force: :cascade do |t|
     t.string   "name",       limit: 255
@@ -296,10 +282,9 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.integer  "g19"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["product_id"], name: "index_stocks_on_product_id", using: :btree
+    t.index ["store_id"], name: "index_stocks_on_store_id", using: :btree
   end
-
-  add_index "stocks", ["product_id"], name: "index_stocks_on_product_id", using: :btree
-  add_index "stocks", ["store_id"], name: "index_stocks_on_store_id", using: :btree
 
   create_table "store_images", force: :cascade do |t|
     t.integer  "store_id"
@@ -309,9 +294,8 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.string   "image_content_type", limit: 255
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.index ["store_id"], name: "index_store_images_on_store_id", using: :btree
   end
-
-  add_index "store_images", ["store_id"], name: "index_store_images_on_store_id", using: :btree
 
   create_table "stores", force: :cascade do |t|
     t.string   "name",         limit: 255
@@ -328,9 +312,8 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.float    "longitude"
     t.text     "description"
     t.string   "slug",         limit: 255
+    t.index ["slug"], name: "index_stores_on_slug", unique: true, using: :btree
   end
-
-  add_index "stores", ["slug"], name: "index_stores_on_slug", unique: true, using: :btree
 
   create_table "taggings", force: :cascade do |t|
     t.integer  "tag_id"
@@ -340,17 +323,15 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.string   "tagger_type",   limit: 255
     t.string   "context",       limit: 128
     t.datetime "created_at"
+    t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
+    t.index ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
   end
-
-  add_index "taggings", ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true, using: :btree
-  add_index "taggings", ["taggable_id", "taggable_type", "context"], name: "index_taggings_on_taggable_id_and_taggable_type_and_context", using: :btree
 
   create_table "tags", force: :cascade do |t|
     t.string  "name",           limit: 255
     t.integer "taggings_count",             default: 0
+    t.index ["name"], name: "index_tags_on_name", unique: true, using: :btree
   end
-
-  add_index "tags", ["name"], name: "index_tags_on_name", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false
@@ -366,9 +347,8 @@ ActiveRecord::Schema.define(version: 20160428063734) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.boolean  "admin"
+    t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
-
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
 end

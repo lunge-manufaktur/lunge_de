@@ -12,6 +12,10 @@
 #  logo_updated_at   :datetime
 #  slug              :string(255)
 #
+# Indexes
+#
+#  index_brands_on_slug  (slug) UNIQUE
+#
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 

@@ -12,6 +12,10 @@
 #  image_file_size    :integer
 #  image_updated_at   :datetime
 #
+# Indexes
+#
+#  index_post_images_on_post_id  (post_id)
+#
 
 class PostImage < ActiveRecord::Base
   # Associations

@@ -18,6 +18,10 @@
 #  description  :text
 #  slug         :string(255)
 #
+# Indexes
+#
+#  index_stores_on_slug  (slug) UNIQUE
+#
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 

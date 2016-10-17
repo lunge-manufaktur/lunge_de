@@ -11,6 +11,10 @@
 #  image_file_size    :integer
 #  image_updated_at   :datetime
 #
+# Indexes
+#
+#  index_store_images_on_store_id  (store_id)
+#
 
 require 'test_helper'
 

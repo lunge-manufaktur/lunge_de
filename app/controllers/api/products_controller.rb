@@ -90,6 +90,7 @@ module Api
         :is_on_sale,
         :is_on_frontpage,
         :is_featured,
+        :use_in_lia_campaign,
         :tag_list,
         stocks_attributes: [
           :id,
