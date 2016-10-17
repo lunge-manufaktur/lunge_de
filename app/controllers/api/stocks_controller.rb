@@ -13,6 +13,7 @@ end
 def show
   @stock = Stock.find(params[:id])
   authorize @stock
+  render json: @stock
 end
 
 # POST /api/stocks
