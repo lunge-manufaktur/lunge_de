@@ -121,9 +121,8 @@ class ProductsController < ApplicationController
 
   private
 
-  # Use callbacks to share common setup or constraints between actions.
   def set_product
-    if current_user
+    if current_user || valid_api_key?
       @product = Product.friendly.find(params[:id])
     else
       @product = Product.published.friendly.find(params[:id])
