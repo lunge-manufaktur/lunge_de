@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-  before_action :set_product, only: [:show, :edit, :update, :destroy, :edit_product_images, :edit_properties, :save_properties]
+  before_action :set_product, only: [:show, :edit, :destroy, :edit_product_images, :edit_properties, :save_properties]
   before_action :authenticate_user!, only: [:new, :create, :edit, :edit_product_images, :edit_properties, :destroy], unless: :valid_api_key?
   protect_from_forgery except: [:create, :update]
 
@@ -92,6 +92,8 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
+    @product = Product.find(params[:id])
+
     respond_to do |format|
       if @product.update(product_params)
         format.html do
