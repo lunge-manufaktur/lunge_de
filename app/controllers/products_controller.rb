@@ -92,7 +92,7 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1
   # PATCH/PUT /products/1.json
   def update
-    @product = Product.find(params[:id])
+    @product = Product.friendly.find(params[:id])
 
     respond_to do |format|
       if @product.update(product_params)
