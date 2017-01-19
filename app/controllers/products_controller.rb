@@ -98,7 +98,7 @@ class ProductsController < ApplicationController
       if @product.update(product_params)
         format.html do
           if params[:product][:stay_on_page] == '1'
-            render action: 'edit_product_images', layout: false
+            redirect_to action: 'edit_product_images', layout: false
           else
             redirect_to @product, notice: 'Product was successfully updated.'
           end  
