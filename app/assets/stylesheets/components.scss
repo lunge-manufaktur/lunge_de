@@ -189,7 +189,11 @@ a.card:hover {
 
 .card__icon {
   margin: auto;
-  padding: 4rem;
+  padding: 2rem;
+
+  @include tablet-portrait {
+    padding: 4rem;
+  }
 }
 
 .card--large .card__icon {
@@ -314,6 +318,10 @@ a.brands__logo:hover {
 
 .category-list__item--active {
   font-weight: 700;
+}
+
+ul.list--disc {
+  list-style: disc;
 }
 
 

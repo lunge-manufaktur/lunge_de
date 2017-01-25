@@ -6,7 +6,7 @@
     .card__figure.card__figure--colored
       = image_tag post.icon.url, class: "card__icon"
   .card__description
-    h3.marginless--top = post.title
+    h4.marginless--bottom = post.title
     label = post.subtitle
     p = strip_tags(post.short_description(200))
     ul.inline-list
