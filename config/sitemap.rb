@@ -49,5 +49,5 @@ SitemapGenerator::Sitemap.create do
   end
 
   # Contact
-  add contact_path, priority: 0.5, changefreq: 'monthly'
+  add contact_path, priority: 0.4, changefreq: 'monthly'
 end
