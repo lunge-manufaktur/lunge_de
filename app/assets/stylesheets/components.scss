@@ -281,6 +281,10 @@ a.card:hover {
 
 
 /* --- LISTS --- */
+ul.list--unstyled {
+  list-style: none;
+}
+
 ul.vertical-list {
   list-style: none;
   margin-bottom: 2rem;
@@ -318,6 +322,10 @@ a.brands__logo {
 
 a.brands__logo:hover {
   background-color: $white;
+}
+
+ul.category-list {
+  list-style: none;
 }
 
 .category-list__item--active {
@@ -377,7 +385,6 @@ a.tag-to-remove {
 
 
 /* ----- PAGINATION ----- */
-
 ul.pagination {
   list-style: none;
   display: flex;

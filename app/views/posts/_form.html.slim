@@ -42,7 +42,7 @@
         h4 Einordnung
         - if @categories.any?
           = hidden_field_tag "post[category_ids][]", nil
-          ul.no-bullet
+          ul.list--unstyled
             - nested_set_options(Category, @category) do |category|
               li style="padding-left: #{category.level*2}rem"
                 = check_box_tag "post[category_ids][]", category.id, @post.category_ids.include?(category.id), id: dom_id(category)
