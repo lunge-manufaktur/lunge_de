@@ -1,47 +1,15 @@
-.fixed
-  nav.top-bar data-topbar=""
-    ul.title-area
-      li.name
-        = link_to image_tag("http://cdn.lunge.de/images/home/logo-titlebar.png"), :root
-      li.toggle-topbar.menu-icon
-        a href="#"
-          span menu
-
-    section.top-bar-section
-      ul.right
-        li.has-dropdown
-          = link_to "Sortiment", products_path
-          ul.dropdown
-            li = link_to "Artikel", products_path
-            li = link_to "Marken", brands_path
-        li.has-dropdown
-          = link_to "Beratung", "/categories/beratung"
-          ul.dropdown
-            li = link_to "Laufbandanalyse", "/categories/laufbandanalyse"
-            li = link_to "Ernährung", "/categories/ernahrung"
-            li = link_to "Training", "/categories/training"
-            li = link_to "Laufen", "/categories/laufen"
-            li = link_to "Regeneration", "/categories/regeneration"
-            li = link_to "Anatomie", "/categories/anatomie-ausflug"
-        li.has-dropdown
-          = link_to "Filialen", stores_path
-          ul.dropdown
-            li
-              label Hamburg
-            - Store.hamburg.each do |store|
-              li = link_to store.name, store_path(store)
-            li
-              label Berlin
-            - Store.berlin.each do |store|
-              li = link_to store.name, store_path(store)
-
-
-        li = link_to "Kontakt", contact_path
-        li = link_to "Jobs", jobs_path
-
-        - if current_user
-          li = link_to "Logout", destroy_user_session_path, method: :delete
-
-- if notice
-  .notice
-    = notice
+header
+  .container
+    .header__container
+      = link_to :root, class: "header__logo-container" do
+        = image_tag image_path("logo__text.svg"), class: "header__logo"
+      nav.header__nav
+        ul.header-nav
+          li.header-nav__item
+            = link_to "Sortiment", products_path, class: "link"
+          li.header-nav__item
+            = link_to "Beratung", "/categories/beratung", class: "link"
+          li.header-nav__item
+            = link_to "Filialen", stores_path, class: "link"
+          li.header-nav__item
+            = link_to "Kontakt", contact_path, class: "link"

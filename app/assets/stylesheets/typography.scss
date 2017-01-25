@@ -1,18 +1,69 @@
 /* ----- TYPOGRAPHY ----- */
+body {
+  font-family: $body-font;
+  font-size: 100%;
+  line-height: 1.5;
+  color: $black;
+}
+
 p {
   margin: 1.25rem 0;
+  width: 100%;
+  max-width: 50em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
 }
 
 h1 {
+  font-size: calc(1rem + 3.5vw);
   font-weight: 700;
+
+  @include desktop {
+    font-size: 4.7rem;
+  }
 }
 
-h6 {
-  font-weight: 400;
+h2 {
+  font-size: calc(1rem + 2.369vw);
+  font-weight: 700;
+
+  @include-desktop {
+    font-size: 2.369rem;
+  }
+}
+
+h3 {
+  font-size: 1.777rem;
+}
+
+h4 {
+  font-size: 1.333rem;
 }
 
 h5 {
-  font-weight: 700;
+  font-size: 1rem;
+}
+
+.marginless--top {
+  margin-top: 0;
+}
+
+.marginless--bottom {
+  margin-bottom: 0;
+}
+
+marginless--bottom {
+  margin-bottom: 0;
+}
+
+.title__brand {
+  margin-bottom: 0;
+}
+
+.title__product {
+  margin-top: 1rem;
 }
 
 .subtitle {
@@ -41,10 +92,7 @@ blockquote p {
 }
 
 label {
-  font-size: 0.875rem;
-  color: inherit;
-  opacity: 0.7;
-  text-rendering: auto;
+  color: #999;
 }
 
 .strike {
@@ -56,11 +104,12 @@ label {
 }
 
 a.link {
-  border-bottom: 1px dotted scale-color($primary-color, $lightness: 50%);
+  border-bottom: 1px solid $black;
+}
 
-  &:hover {
-    border-color: $primary-color;
-  }
+a.link:hover {
+  border-color: $primary-color;
+  color: $primary-color;
 }
 
 a.link--inverted {
@@ -75,4 +124,10 @@ a.link--inverted {
 code {
   background-color: $secondary-color;
   border: none;
+}
+
+.truncated {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }

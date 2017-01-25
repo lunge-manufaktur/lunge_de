@@ -116,8 +116,8 @@ de:
     pagination:
       first: "&laquo;"
       last: "&raquo;"
-      previous: "&lsaquo; Zurück"
-      next: "Weiter &rsaquo;"
+      previous: "&lsaquo;"
+      next: "&rsaquo;"
       truncate: "&hellip;"
   helpers:
     page_entries_info:

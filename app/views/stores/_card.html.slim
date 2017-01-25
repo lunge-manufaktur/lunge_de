@@ -1,0 +1,11 @@
+= link_to store, class: "card card--store" do
+  .card__figure
+    = image_tag store&.default_image(size: :thumb), class: "card__image"
+  .card__description
+    h4 = store.name
+    p
+      span = store.address_name
+      br
+      span = store.street
+      br
+      span = "#{store.zip} #{store.city}"

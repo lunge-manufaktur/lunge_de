@@ -1,7 +1,16 @@
-h1 = "#{@product.name} bearbeiten"
+.title
+  .container
+    h3.title__brand = @product.brand.name
+    h1.title__product = @product.name
+    section
+      ul.inline-list
+        li = submit_tag "Speichern", form: "edit_product_#{@product.id}", class: "button"
+        li = link_to "Abbrechen", @product, class: "link"
 
-= render "form"
+.container
+  = render "form"
 
-= link_to 'Show', @product
-|  | 
-= link_to 'Back', products_path
+  section
+    ul.inline-list
+      li = submit_tag "Speichern", form: "edit_product_#{@product.id}", class: "button"
+      li = link_to "Abbrechen", @product, class: "link"

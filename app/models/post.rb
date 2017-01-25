@@ -37,6 +37,7 @@ class Post < ActiveRecord::Base
 
   # Scopes
   scope :published, -> { where(is_published: true) }
+  scope :featured, -> { where(is_featured: true) }
   scope :homepage, -> { where(is_on_homepage: true) }
 
   # Paperclip
@@ -62,25 +63,11 @@ class Post < ActiveRecord::Base
     content.truncate(length, separator: " ") unless content.nil?
   end
 
-  def default_image(size=nil)
-    if self.post_images.any?
-      pi = self.post_images.first || self.post_images.first
-      pi.image.url(size)
+  def default_image(size: :large)
+    if post_images.any?
+      post_images.first.image.url(size)
     else
-      case size
-      when "full_width"
-        ""
-      when "large"
-        "http://placehold.it/1600&text=Kein+Bild+vorhanden"
-      when "medium"
-        "http://placehold.it/1024&text=Kein+Bild+vorhanden"
-      when "small"
-        "http://placehold.it/640&text=Kein+Bild+vorhanden"
-      when "thumb"
-        "http://placehold.it/300&text=Kein+Bild+vorhanden"
-      when "card"
-        "http://placehold.it/640&text=Kein+Bild+vorhanden"
-      end
+      "missing.png"
     end
   end
 

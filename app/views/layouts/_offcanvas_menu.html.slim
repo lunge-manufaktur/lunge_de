@@ -1,0 +1,12 @@
+.offcanvas__container
+  .offcanvas__menu
+    label Menü
+    ul.offcanvas-nav
+      li.offcanvas-nav__item
+        = link_to "Sortiment", products_path, class: "link"
+      li.offcanvas-nav__item
+        = link_to "Beratung", "/categories/beratung", class: "link"
+      li.offcanvas-nav__item
+        = link_to "Filialen", stores_path, class: "link"
+      li.offcanvas-nav__item
+        = link_to "Kontakt", contact_path, class: "link"

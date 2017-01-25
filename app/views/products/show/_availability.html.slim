@@ -1,17 +1,14 @@
-section
-	.row
-		.small-12.columns
-			h4 Verfügbarkeit
-			- @product.stocks.includes(:store).order_by_store.each do |stock|
-				section
-					.row
-						.small-12.columns
-							h6
-								= link_to stock.store.full_address, store_path(stock.store), class: "link"
-							- stock.sizes_hash.each do |key, value|
-								- if value.present?
-									div class="availability-badge #{stock.has_stock?(key)}" title=(stock.stock_in_words(key))
-										= value
-			small
-				.availability-badge.true Verfügbar
-				.availability-badge.false Nicht verfügbar
+h4 Verfügbarkeit
+p
+  label Größensystem
+  span = @product.size.name
+- @product.stocks.includes(:store).order_by_store.each do |stock|
+  section
+    p = link_to stock.store.full_address, store_path(stock.store), class: "link"
+    - stock.sizes_hash.each do |key, value|
+      - if value.present?
+        div class="availability-badge #{stock.has_stock?(key)}" title=(stock.stock_in_words(key))
+          = value
+small
+  .availability-badge.true Verfügbar
+  .availability-badge.false Nicht verfügbar

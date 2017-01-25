@@ -1,9 +1,6 @@
-li
-  a href=product_path(product)
-    .item-horizontal-card
-      .card-image-left
-        = image_tag product.default_image(:card), class: "card-image-top"
-      .card-content-right
-        h5 = product.name
-        p = product.color
-        h6 = number_to_currency(product.current_price, unit: "€ ")
+= link_to product, class: "card card--small" do
+  .card__figure
+    = image_tag product.default_image(:card), class: "card__image"
+  .card__description.truncated
+    label = product.brand.name
+    span = product.name

@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+hr {
+  border-style: solid;
+  border-color: $hairline-color;
+  margin-top: $gutter;
+  margin-bottom: $gutter;
+}
+
+.turbolinks-progress-bar {
+  height: 3px;
+  background-color: $primary-color;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}

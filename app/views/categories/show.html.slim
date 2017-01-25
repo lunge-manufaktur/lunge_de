@@ -1,28 +1,28 @@
-- content_for :title_bar do
-  .title_bar
-    .row
-      .small-12.columns
-        h6 class="subtitle" Beiträge aus der Kategorie
-        h1 = @category.name
+.title
+  .container
+    h4.marginless--bottom Beiträge aus der Kategorie
+    h1.marginless--top = @category.name
+    p Hier finden Sie einige Beiträge zu den verschiedensten Themen rund um den Laufsport und gesunde Bewegung.
 
-.row
-	.small-12.columns
-		p Hier finden Sie einige Beiträge zu den verschiedensten Themen rund um den Laufsport und gesunde Bewegung.
+.container
+  main
+    article
+      .cards__container
+        - @posts.each do |post|
+          = render partial: "posts/card_large", locals: { post: post }
 
-.row
-  .small-12.medium-8.large-9.columns
-    ul.small-block-grid-1.medium-block-grid-1
-      - @posts.each do |post|
-        = render partial: "posts/card", locals: { post: post }
-
-  .small-12.medium-4.large-3.columns
-    section
-      = search_form_for @search do |f|
-        .row.collapse
-          .small-8.columns
-            = f.search_field :title_or_subtitle_or_content_cont, placeholder: "In Beiträgen suchen..."
-          .small-4.columns
-            = f.submit "Suchen", class: "button postfix"
-  	section
-      h4 Kategorien
-      = render "categories/nested_list"
+    aside
+      section
+        = search_form_for @search do |f|
+          .inline-form
+            = f.search_field :title_or_subtitle_or_content_cont, placeholder: "Suchen...", class: "inline-form__input"
+            = f.submit "Suchen", class: "button postfix", class: "inline-form__submit"
+      section
+        h4 Kategorien
+        = render "categories/nested_list"
+      
+      - if policy(@posts).create?
+        hr
+        section
+          h4 Bearbeiten
+          = link_to "Beitrag erstellen", new_post_path, class: "link"

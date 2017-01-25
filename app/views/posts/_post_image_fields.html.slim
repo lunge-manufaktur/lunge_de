@@ -1,0 +1,10 @@
+.fields
+  - if f.object.new_record?
+    = f.file_field :image, class: "button"
+  - else
+    = image_tag (f.object.image.url(:small))
+  
+  = f.check_box :default
+  = f.label :default, "Titelbild", class: "label--inline"
+
+= f.link_to_remove "Löschen", class: "link"

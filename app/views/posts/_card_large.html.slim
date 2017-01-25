@@ -1,0 +1,14 @@
+= link_to post, class: "card card--large" do
+  - if post.post_images.any?
+    .card__figure
+      = image_tag post.default_image(size: :medium), class: "card__image"
+  - elsif post.icon?
+    .card__figure.card__figure--colored
+      = image_tag post.icon.url, class: "card__icon"
+  .card__description
+    h3.marginless--top = post.title
+    label = post.subtitle
+    p = strip_tags(post.short_description(200))
+    ul.inline-list
+      - post.categories.each do |category|
+        span.label = category.name

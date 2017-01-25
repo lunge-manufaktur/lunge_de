@@ -1,63 +1,63 @@
-= content_for :title_bar
-  .title_bar
-    .row
-      .small-12.columns
-        h1 Kontakt
+.container
+  .title
+    h1 Kontakt
 
-.row
-  .small-12.medium-8.columns
+  section
     p
       | Sie haben Fragen, Anregungen, Kritik oder Lob? Kontaktieren Sie uns einfach. 
-    = form_for @contact_form, url: "contact", method: "post" do |f|
-      .fields
-        = f.label :name, "Name"
-        = f.text_field :name
 
-      .fields
-        = f.label :email, "E-Mail"
-        = f.email_field :email
+  main
+    article
+      = form_for @contact_form, url: "contact", method: "post" do |f|
+        .fields
+          = f.label :name, "Name"
+          = f.text_field :name
 
-      .fields
-        = f.label :message, "Mitteilung"
-        = f.text_area :message, rows: 10
+        .fields
+          = f.label :email, "E-Mail"
+          = f.email_field :email
 
-      = f.submit "Senden", class: "button"
+        .fields
+          = f.label :message, "Mitteilung"
+          = f.text_area :message, rows: 10
 
-  .small-12.medium-3.large-3.columns
-    p
-      label Anschrift
-      | Lunge - Der Laufladen GmbH
-      br
-      | Fuhlsbüttler Straße 29
-      br
-      | 22305 Hamburg
-      br
-      | Deutschland
+        = f.submit "Senden", class: "button"
 
-    p
-      label Geschäftsführer
-      | Ulf Lunge, Lars Lunge
-    p
-      label Registergericht
-      | Hamburg
-    p
-      label Registernummer
-      | HRB 53652
-    p
-      label USt-ID
-      | DE296781694
-
-    p
-      label Filialen:
-      - @stores.each do |store|
-        = link_to "#{store.name} (#{store.city})", store_path(store)
+    aside
+      p
+        label Anschrift
+        | Lunge - Der Laufladen GmbH
         br
+        | Fuhlsbüttler Straße 29
+        br
+        | 22305 Hamburg
+        br
+        | Deutschland
 
-    hr
-    p
-      label Credit
-      small
-        |  Location designed by 
-        a href="http://www.thenounproject.com/skatakila" target="_blank" Ricardo Moreira
-        |  from the 
-        a href="http://www.thenounproject.com" target="_blank" Noun Project
+      p
+        label Geschäftsführer
+        | Ulf Lunge, Lars Lunge
+      p
+        label Registergericht
+        | Hamburg
+      p
+        label Registernummer
+        | HRB 53652
+      p
+        label USt-ID
+        | DE296781694
+
+      p
+        label Filialen
+        - @stores.each do |store|
+          = link_to store.name, store_path(store), class: "link"
+          br
+
+      hr
+      p
+        label Credit
+        small
+          |  Location designed by 
+          a href="http://www.thenounproject.com/skatakila" target="_blank" Ricardo Moreira
+          |  from the 
+          a href="http://www.thenounproject.com" target="_blank" Noun Project

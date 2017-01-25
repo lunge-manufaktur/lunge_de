@@ -1,34 +1,30 @@
-= content_for :full_width_content
-  - if @post.post_images.any?
-    .image style="background-image: url(#{@post.post_images.jpg.image.url(:large)}); background-size: cover; background-position: center center"
-      .icon_with_overlay style="background-image: url(#{@post.icon.url(:original)});" 
-  - else
-    .featured_icon style="background-image: url(#{@post.icon.url(:original)})"
+.title
+  .container
+    h1.marginless--bottom = @post.title
+    h3.marginless--top = @post.subtitle
 
-= content_for :title_bar
-  .title_bar
-    .row
-      .small-12.columns
-        h1 = @post.title
-        h2.subtitle
-          small = @post.subtitle
+- if @post.post_images.any?
+  section
+    = image_tag @post&.post_images&.first.image.url(:large)
 
-.row
-  .small-12.medium-8.large-8.columns
-    = @post.content.html_safe
-  .small-12.medium-3.large-3.columns
-    .fields
-      label Veröffentlicht am
-      = l @post.created_at, format: :date_only
-    - if @post.categories.any?
+.container
+  main
+    article
+      = simple_format(@post.content)
+    aside
       .fields
-        label Eingeordnet in
-        ul.no-bullet
-          - @post.categories.each do |category|
-            li = link_to category.name, category_path(category), class: "link"
-    .fields
-      - if policy(@post).edit?
-        label Bearbeiten
-        ul.no-bullet
-          li = link_to "Bearbeiten", edit_post_path(@post)
-          li = link_to "Löschen", post_path(@post), method: :delete, data: { confirm: "Wirklich löschen? Diese Aktion ist nicht rückgängig zu machen." }, class: "alert"
+        label Veröffentlicht am
+        = l @post.created_at, format: :date_only
+      .fields
+        - if @post.categories.any?
+          .fields
+            label Eingeordnet in
+            ul.no-bullet
+              - @post.categories.each do |category|
+                li = link_to category.name, category_path(category), class: "link"
+      hr
+      section
+        - if policy(@post).edit?
+          label Bearbeiten
+          ul.no-bullet
+            li = link_to "Bearbeiten", edit_post_path(@post), class: "link"

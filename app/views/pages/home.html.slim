@@ -1,94 +1,79 @@
-= content_for :full_width_content do
-  .intro
+.title
+  .container
+    h1 Der Laufladen in Hamburg und Berlin.
+    p Ganz gleich ob Einsteiger oder Profi - Unsere Fachberater führen Dich mit kompetenter Beratung und langjähriger Erfahrung zu den besten Marken und Artikeln rund um den Laufsport.
+    ul.inline-list
+      li = link_to "Unsere Beratung...", @featured_post, class: "button"
+section
+  .panel__grid
+    .panel__container
+      .panel style="background-image: url(#{image_path("frontpage01.jpg")})"
+      .panel__container.panel__container--vertical
+        .panel style="background-image: url(#{image_path("frontpage02.jpg")})"
+        .panel__container
+          .panel style="background-image: url(#{image_path("frontpage05.jpg")})"
+          .panel style="background-image: url(#{image_path("frontpage03.jpg")})"
+
+.container
+  section
     .row
-      .small-12.columns
-        .logo.bounceInDown.animated
-          = image_tag "http://cdn.lunge.de/images/home/logo-intro.png"
-    .intro-middle
-      .row
-        .small-12.columns
-          h3.inverted
-            span Mit individueller Fachberatung 
-            br
-            span#rotate.bold zum optimalen Laufschuh. | zu winterfester Laufbekleidung. | zum neuen Lieblingsshirt. | zur bequemsten Laufsocke. | dauerhaft beschwerdefrei Laufen.
-          hr
-          p.inverted Ganz gleich ob Einsteiger oder Profi - Unsere Fachberater führen Dich mit kompetenter Laufbandanalyse und langjähriger Erfahrung zu den besten Marken & Artikeln rund um den Laufsport.
-          = link_to "Sortiment zeigen", products_path, class: "button inverted"
-          = link_to "Warum Lunge?", post_path(@posts.first), class: "button inverted"
-    .intro-footer.bounceInUp.animated
-      .row
-        .small-12.columns
-          ul.intro-item-list
-            li
-              h3.bold.inverted Filialen
-              p
-                ul.no-bullet
-                  - Store.all.order(city: :desc).each do |store|
-                    li.inverted
-                      = link_to "#{store.city} / #{store.street}", store_path(store), class: "link inverted"
-            li
-              h3.bold.inverted Öffnungszeiten
-              p
-                label Montag - Freitag:
-                | 10:30 Uhr - 19:00 Uhr
-              p
-                label Samstag
-                | 10:00 Uhr - 18:00 Uhr
+      .col-xs-12.col-md-6.col-lg-4
+        h3 Filialen
+        label Hamburg
+        ul.vertical-list
+          - Store.hamburg.each do |store|
+            li = link_to store.name, store_path(store), class: "link"
+        label Berlin
+        ul.vertical-list
+          - Store.berlin.each do |store|
+            li= link_to store.name, store_path(store), class: "link"
+      .col-xs-12.col-md-6.col-lg-4
+        h3 Öffnungszeiten
+        .fields
+          label Montag - Freitag:
+          | 10:30 Uhr - 19:00 Uhr
+        .fields
+          label Samstag
+          | 10:00 Uhr - 18:00 Uhr
 
+  hr
+  section
+    h1 Sortiment
+    section
+      .two-columns
+        aside.aside--left
+          h4 Tags
+          p Durchsuche unser Sortiment nach Stichworten - Du kannst beliebig viele Tags kombinieren um Deine Auswahl einzugrenzen
+        article
+          section
+            - tag_cloud Product.published.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class|
+              = tag_cloud_item(tag.name)
+          section
+            = link_to "Sortiment ansehen...", products_path, class: "button"
 
+    section
+      .two-columns
+        aside.aside--left
+          h4 Highlights
+          p Einige unserer beliebtesten Artikel
+        article
+          .cards__container
+            - @products.each do |product|
+              = render "/products/card", product: product
 
-section.space-top
-  .row
-    .small-12.columns
-      section
-        h1.text-center.space-bottom Sortiment
-        section.space-bottom
-          .row data-equalizer=""
-            .small-12.medium-3.columns data-equalizer-watch=""
-              h5 Tags
-              p Durchsuche unser Sortiment nach Stichworten - Du kannst beliebig viele Tags kombinieren um Deine Auswahl einzugrenzen
-            .small-12.medium-9.columns.border-left data-equalizer-watch=""
-              p
-                - tag_cloud Product.published.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class|
-                  = tag_cloud_item(tag.name)
-        section
-          .row data-equalizer=""
-            .small-12.medium-3.columns data-equalizer-watch=""
-              h5 Highlights
-              p Einige unserer beliebtesten Artikel
-            .small-12.medium-9.columns.border-left data-equalizer-watch=""
-              ul.small-block-grid-1.medium-block-grid-2.large-block-grid-3
-                - @products.each do |product|
-                  = render "/products/card", product: product
-        section
-          .row data-equalizer=""
-            .small-12.medium-3.columns data-equalizer-watch=""
-              h5 Marken
-              p 
-               = "Egal ob etablierte Marken, innovative Neulinge oder spezialisierte Hersteller von Nischenprodukten - wenn jemand den Laufsport mit seinen Produkten bereichert, ist er bei uns zu finden."
-            .small-12.medium-9.columns.border-left data-equalizer-watch=""
-              ul.small-block-grid-2.medium-block-grid-3.large-block-grid-4.text-center
-                - @brands.each do |brand|
-                  li.text-center
-                    = link_to image_tag(brand.logo.url(:thumb)), brand_path(brand), class: "brand_logo"
+    section
+      .two-columns
+        aside.aside--left
+          h4 Marken
+          p Egal ob etablierte Marken, innovative Neulinge oder spezialisierte Hersteller von Nischenprodukten - wenn jemand den Laufsport mit seinen Produkten bereichert, ist er bei uns zu finden.
+        article
+          ul.brands__list
+            - @brands.each do |brand|
+              li.brands__item = link_to image_tag(brand.logo.url(:thumb)), brand_path(brand), class: "brands__logo"
 
-.space-top style="margin-bottom: -5rem;"
-  - @posts.each_with_index do |post, index|
-    - if index.even?
-      .post.full-width style="background-image: url(#{post.icon.url(:original)}); background-size: auto 150%; background-position: center; background-color: rgba(240, 240, 236, 0.8); background-repeat: no-repeat; background-position-x: 5%;"
-        .overlay
-          .row
-            .small-12.large-3.columns
-            .small-12.large-8.columns
-              h1 = post.title
-              p = strip_tags(post.short_description(300)).html_safe
-              = link_to "Mehr...", post_path(post), class: "button"
-    - else
-      .post.full-width style="background-image: url(#{post.icon.url(:original)}); background-size: auto 150%; background-position: center; background-color: rgba(240, 240, 236, 0.8); background-repeat: no-repeat; background-position-x: 95%;"
-        .overlay
-          .row
-            .small-12.large-8.columns
-              h1 = post.title
-              p = strip_tags(post.short_description(300)).html_safe
-              = link_to "Mehr...", post_path(post), class: "button"
-            .small-12.large-3.columns
+  hr
+  section
+    h1 Beratung
+    .cards__container
+      - @posts.each do |post|
+        = render "posts/card_medium", post: post

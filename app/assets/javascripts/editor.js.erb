@@ -1,0 +1,6 @@
+document.addEventListener("turbolinks:load", function() {
+  console.log("found wysiwyg-editor")
+  $('.wysiwyg-editor').trumbowyg({
+    svgPath: '<%= image_path("icons.svg") %>'
+  });
+})

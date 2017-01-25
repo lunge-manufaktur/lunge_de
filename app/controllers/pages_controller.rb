@@ -2,8 +2,8 @@ class PagesController < ApplicationController
   def home
     @products = Product.on_frontpage.published.limit(8)
     @brands = Brand.active.has_logo.order(:name)
-    @posts = Post.homepage.published
-    @new_store = Store.where(street: "Bismarckstraße 101").first
+    @posts = Post.homepage.published.limit(4)
+    @featured_post = Post.featured.first
   end
 
   def gutschein

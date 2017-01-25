@@ -7,4 +7,4 @@
 / per_page:      number of items to fetch per page
 / remote:        data-remote
 
-li = link_to_unless current_page.first?, t('views.pagination.first').html_safe, url, :remote => remote
+li.pagination__item = link_to_unless current_page.first?, t('views.pagination.first').html_safe, url, class: "pagination__link", :remote => remote

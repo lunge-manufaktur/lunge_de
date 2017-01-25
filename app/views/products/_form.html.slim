@@ -1,50 +1,57 @@
 = nested_form_for(@product) do |f|
-  .row
-    .small-12.columns
-      - if @product.errors.any?
-        #error_explanation
-          h2 = pluralize(@product.errors.count, "error")
-           | prohibited this product from being saved:
-          ul.no-bullets
-            - @product.errors.full_messages.each do |msg|
-              li = msg
+  - if @product.errors.any?
+    section#error_explanation
+      h2 = pluralize(@product.errors.count, "error")
+       | prohibited this product from being saved:
+      ul.no-bullets
+        - @product.errors.full_messages.each do |msg|
+          li = msg
+  main
+    article
+      section
+        h4 Beschreibung
+        .fields
+          = f.label :name, "Bezeichnung"
+          = f.text_field :name
+        .fields
+          = f.label :description, "Beschreibung"
+          = f.text_area :description, rows: 12, class: "wysiwyg-editor"
 
-  .row
-    .small-12.medium-6.columns
-      .field
-        = f.label :name, "Bezeichnung"
-        = f.text_field :name
-      .field
-        = f.label :sku, "Artikelnummer"
-        = f.text_field :sku
-      .field
-        = f.label :brand_id, "Hersteller"
-        = f.collection_select( :brand_id, Brand.all.sort_by { |brand| brand.name }, :id, :name )
-      .field
-        = f.label :size_id, "Größensystem"
-        = f.collection_select( :size_id, Size.all, :id, :name )
-      .field
-        = f.check_box :is_published
-        = f.label :is_published, "Veröffentlicht?"
+      section
+        h4 Bilder
+        = f.fields_for :product_images
+        = f.link_to_add "Bild hinzufügen", :product_images, class: "link"
 
-    .small-12.medium-6.columns
-      .field
-        = f.label :description, "Beschreibung"
-        = f.text_area :description, rows: 10
-      .field
-        = f.label :tag_list, "Tags"
-        = f.text_field :tag_list
+      section
+        h4 Eigenschaften
+        - if @product.properties.any?
+          .row
+            .col-xs-6
+              = f.label :name, "Eigenschaft"
+            .col-xs-6
+              = f.label :value, "Wert"
+        = f.fields_for :properties
+        = f.link_to_add "Eigenschaft hinzufügen", :properties, class: "link"
 
-  .row
-    .small-12.medium-6.columns
-      = f.fields_for :product_images
-      = f.link_to_add "Bild hinzufügen", :product_images, class: "tiny button"
-
-    .small-12.medium-6.columns
-      = f.fields_for :properties
-      = f.link_to_add "Eigenschaft hinzufügen", :properties, class: "tiny button"
-
-  .row
-    .small-12.columns
-      .actions
-        = f.submit "Speichern", class: "button"
+    aside
+      section
+        h4 Sichtbarkeit
+        .fields
+          = f.check_box :is_published
+          = f.label :is_published, "Veröffentlicht", class: "label--inline"
+      section
+        h4 Artikeldaten
+        .fields
+          = f.label :sku, "Artikelnummer"
+          = f.text_field :sku
+        .fields
+          = f.label :brand_id, "Hersteller"
+          = f.collection_select( :brand_id, Brand.all.sort_by { |brand| brand.name }, :id, :name )
+        .fields
+          = f.label :size_id, "Größensystem"
+          = f.collection_select( :size_id, Size.all, :id, :name )
+      section
+        h4 Tags
+        .fields
+          = f.label :tag_list, "Tags"
+          = f.text_field :tag_list, value: f.object.tag_list.to_s

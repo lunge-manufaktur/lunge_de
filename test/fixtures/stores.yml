@@ -2,21 +2,22 @@
 #
 # Table name: stores
 #
-#  id           :integer          not null, primary key
-#  name         :string(255)
-#  address_name :string(255)
-#  street       :string(255)
-#  zip          :string(255)
-#  city         :string(255)
-#  phone        :string(255)
-#  email        :string(255)
-#  active       :boolean          default(TRUE)
-#  created_at   :datetime
-#  updated_at   :datetime
-#  latitude     :float
-#  longitude    :float
-#  description  :text
-#  slug         :string(255)
+#  id                   :integer          not null, primary key
+#  name                 :string(255)
+#  address_name         :string(255)
+#  street               :string(255)
+#  zip                  :string(255)
+#  city                 :string(255)
+#  phone                :string(255)
+#  email                :string(255)
+#  active               :boolean          default(TRUE)
+#  created_at           :datetime
+#  updated_at           :datetime
+#  latitude             :float
+#  longitude            :float
+#  description          :text
+#  slug                 :string(255)
+#  google_maps_place_id :string
 #
 # Indexes
 #

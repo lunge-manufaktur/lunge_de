@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161017092020) do
+ActiveRecord::Schema.define(version: 20170124110543) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -135,6 +135,8 @@ ActiveRecord::Schema.define(version: 20161017092020) do
     t.string   "icon_content_type", limit: 255
     t.integer  "icon_file_size"
     t.datetime "icon_updated_at"
+    t.boolean  "is_featured"
+    t.index ["is_featured"], name: "index_posts_on_is_featured", using: :btree
     t.index ["slug"], name: "index_posts_on_slug", using: :btree
   end
 
@@ -298,20 +300,21 @@ ActiveRecord::Schema.define(version: 20161017092020) do
   end
 
   create_table "stores", force: :cascade do |t|
-    t.string   "name",         limit: 255
-    t.string   "address_name", limit: 255
-    t.string   "street",       limit: 255
-    t.string   "zip",          limit: 255
-    t.string   "city",         limit: 255
-    t.string   "phone",        limit: 255
-    t.string   "email",        limit: 255
-    t.boolean  "active",                   default: true
+    t.string   "name",                 limit: 255
+    t.string   "address_name",         limit: 255
+    t.string   "street",               limit: 255
+    t.string   "zip",                  limit: 255
+    t.string   "city",                 limit: 255
+    t.string   "phone",                limit: 255
+    t.string   "email",                limit: 255
+    t.boolean  "active",                           default: true
     t.datetime "created_at"
     t.datetime "updated_at"
     t.float    "latitude"
     t.float    "longitude"
     t.text     "description"
-    t.string   "slug",         limit: 255
+    t.string   "slug",                 limit: 255
+    t.string   "google_maps_place_id"
     t.index ["slug"], name: "index_stores_on_slug", unique: true, using: :btree
   end
 

@@ -1,0 +1,80 @@
+/* --- COLORS --- */
+$green: #B6BE00;
+$white: #FFF;
+$mintgray: #F7F7F9;
+$black: #333; 
+$lightgray: #e3e3e3;
+
+$primary-color: $green;
+$secondary-color: $white;
+$hairline-color: $lightgray;
+$background-color: $mintgray;
+$alert-color: #E40D46;
+
+/* --- FONTS ---*/
+$body-font: "Libre Franklin", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+$header-font: "Vesper Libre","Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+
+/* --- BREAKPOINTS --- */
+$end-phone: 767px;
+$start-tablet-portrait: 768px;
+$end-tablet-portrait: 1023px;
+$start-tablet-landscape: 1024px;
+$end-tablet-landscape: 1279px;
+$start-desktop: 1280px;
+
+/* -- SPACING --- */
+$gutter: 1rem;
+
+@mixin tablet-portrait() {
+  @media screen and (min-width: $start-tablet-portrait) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape() {
+  @media screen and (min-width: $start-tablet-landscape) {
+    @content;
+  }
+}
+
+@mixin desktop() {
+  @media screen and (min-width: $start-desktop) {
+    @content;
+  }
+}
+
+.l {
+  background-color: #FF9999;
+  color: #fff;
+}
+
+.c {
+  background-color: #616E74;
+  color: #fff;
+}
+
+.f {
+  background-color: #35DD5F;
+  color: #fff;
+}
+
+.s {
+  background-color: #FF9966;
+  color: #fff;
+}
+
+.b1 {
+  background-color: #00CCFF;
+  color: #fff;
+}
+
+.m {
+  background-color: #4D2566;
+  color: #fff;
+}
+
+// animation
+#rotate > .fadeInUp {
+  @include animation-duration(400ms);
+}

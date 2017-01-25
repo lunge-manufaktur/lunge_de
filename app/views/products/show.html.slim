@@ -1,105 +1,76 @@
-- meta_keywords(@product.meta_keywords)
 - meta_description(@product.short_description(150))
 - meta_title(@product.name_with_brand)
 
-- content_for :full_width_content do
-  - if @product.product_images.any?
-    .featured_image data-interchange="[#{@product.default_image('full')}, (default)], [#{@product.default_image('small')}, (small)], [#{@product.default_image('medium')}, (medium)], [#{@product.default_image('large')}, (large)]"
+.title
+  .container
+    h3.title__brand = link_to @product.brand.name, @product.brand, class: "link"
+    h1.title__product = @product.name
 
-- content_for :title_bar
-  .title_bar
-    .row
-      .small-12.columns
-        h2.subtitle
-          small = link_to @product.brand.name,  brand_path(@product.brand)
-        h1 = @product.name
+- if @product.product_images.any?
+  section
+    = image_tag @product.default_image(:large)
 
 
-.row
-  .small-12.medium-8.large-8.columns
-    section
-      .row
-        .small-12.columns
-          h4 Beschreibung
-          p = simple_format(@product.description)
+.container
+  main
+    article
+      section
+        p = simple_format(@product.description)
+      - if @product.eligible_for_running_course?
+        section
+          p
+            em
+              | Kostenloser Laufkurs bei Kauf dieses Artikels - 
+              = link_to "Mehr erfahren...", "/gutschein", class: "link"
 
-          - if @product.official_description.present?
-            h6 Herstellerbeschreibung
+      - if @product.stocks.any?
+        section
+          = render "products/show/availability"
+
+      section
+        h4 Vorschläge & Alternativen
+        .cards__container
+          - @related_products.each do |related_product|
+            = render partial: "products/minicard", locals: { product: related_product }
+
+    aside
+      section
+        h4 Artikeldaten
+        p
+          label Artikelnummer
+          = @product.sku
+        p
+          label Hersteller
+          = link_to @product.brand.name, brand_path(@product.brand), class: "link"
+        p
+          label Farbe
+          = @product.color
+        p
+          label Preis
+          = number_to_currency(@product.current_price, unit: "€ ")
+          - if @product.is_on_sale?
+            br
+            span.strike.light = number_to_currency(@product.try(:regular_price), unit: "€ ")
+
+      - if @product.properties.any?
+        section
+          h4 Eigenschaften
+          - @product.properties.order(:name).each do |property|
             p
-              blockquote
-                = simple_format(@product.official_description)
-                cite = @product.brand.name
-          
-          - if @product.eligible_for_running_course?
-            .panel
-              p
-                em
-                  | Kostenloser Laufkurs bei Kauf dieses Artikels - 
-                  = link_to "Mehr erfahren...", "/gutschein", class: "link"
+              label = property.name
+              = property.value
 
-          
+      - if @product.tag_list.any?
+        section
+          h4 Tags
+          - @product.tag_list.each do |tag|
+            = link_to tag, tag_products_path(tag), class: "label"
 
-    - if @product.product_images.any?
-      section
-        .row
-          .small-12.columns
-            h4 Bilder
-            ul.clearing-thumbs.small-block-grid-3.medium-block-grid-5 data-clearing=""
-              - @product.product_images.each do |product_image|
-                li = link_to (image_tag product_image.image.url(:small), class: "with-border"), product_image.image.url(:large)
-
-    - if @product.stocks.any?
-      = render "products/show/availability"
-
-    section
-      h4 Vorschläge & Alternativen
-      ul.small-block-grid-1.large-block-grid-2
-        - @related_products.each do |related_product|
-          = render partial: "products/minicard", locals: { product: related_product }
-
-  .small-12.medium-4.large-3.large-offset-1.columns
-    section
-      h4 Artikeldaten
-      p
-        label Artikelnummer
-        = @product.sku
-      p
-        label Hersteller
-        = link_to @product.brand.name, brand_path(@product.brand), class: "link"
-      p
-        label Farbe
-        = @product.color
-      p
-        label Preis
-        = number_to_currency(@product.current_price, unit: "€ ")
-        - if @product.is_on_sale?
-          br
-          span.strike.light = number_to_currency(@product.try(:regular_price), unit: "€ ")
-
-    - if @product.properties.any?
-      section
-        .row
-          .small-12.columns
-            h4 Eigenschaften
-            - @product.properties.order(:name).each do |property|
-              p
-                label = property.name
-                = property.value
-
-    - if @product.tag_list.any?
-      section
-        .row
-          .small-12.columns
-            h4 Tags
-            - @product.tag_list.each do |tag|
-              = link_to tag, tag_products_path(tag), class: "label"
-
-    - if policy(@product).update?
-      hr
-        .panel
-          label Bearbeiten
-          = link_to 'Bearbeiten', edit_product_path(@product)
-          br
-          = link_to 'Löschen', @product, method: :delete, data: { confirm: 'Are you sure?' }
+      - if policy(@product).update?
+        hr
+        label Bearbeiten
+        = link_to 'Bearbeiten', edit_product_path(@product)
+        br
+        = link_to 'Löschen', @product, method: :delete, data: { confirm: 'Are you sure?' }
 
 

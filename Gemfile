@@ -8,6 +8,7 @@ gem "rake"
 gem "pg"
 gem "puma"
 gem "rack-timeout"
+gem "rack-rewrite"
 gem "devise"
 gem "pundit"
 gem "minitest-rails"
@@ -39,7 +40,6 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'foundation-rails', "~> 5.4.0"
 gem "bourbon"
 gem 'ransack'
 gem 'annotate'
@@ -60,11 +60,12 @@ end
 gem 'awesome_nested_set'
 gem 'acts-as-taggable-on'
 gem 'kaminari'
-gem "tinymce-rails"
-gem "tinymce-rails-langs"
 gem 'friendly_id'
 gem "simple_calendar", "~> 1.1.0"
 gem "browser"
+gem 'canonical-rails', github: 'jumph4x/canonical-rails'
+gem 'sitemap_generator'
+gem "autoprefixer-rails"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'

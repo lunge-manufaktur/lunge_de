@@ -1,62 +1,54 @@
-- content_for :full_width_content
-  #map-google data-store-id=@store.id data-longitude=@store.longitude data-latitude=@store.latitude
+.title
+  .container
+    h3.marginless--bottom = @store.city
+    h1.marginless--top = @store.name
 
-= content_for :title_bar
-  .title_bar
-    .row
-      .small-12.columns
-        h2.subtitle
-          small Filiale
-        h1 = "#{@store.street} / #{@store.zip} #{@store.city}"
+  - if @store.store_images.any?
+    section
+      = image_tag @store.default_image(size: "large")
 
-.row
-  .small-12.medium-8.large-8.columns
-    - if @store.store_images.any?
+.container
+  main
+    article
       section
-        ul.clearing-thumbs.small-block-grid-2.medium-block-grid-3.large-block-grid-4 data-clearing=""
-          - @store.store_images.each do |store_image|
-            li = link_to image_tag(store_image.image.url(:small), class: 'with-border'), store_image.image.url(:large)
-
-    - if @store.description.present?
+        iframe width="100%" height="450" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/place?q=place_id:#{@store.google_maps_place_id}&key=AIzaSyCKOv-V-kBbd2dT5VrNMMQwXNiSGdFJK4A" allowfullscreen
+      
+      - if @store.description.present?
+        section
+          p = simple_format(@store.description)
+    
+    aside
       section
-        h4 Beschreibung
-        p = simple_format(@store.description)
+        h4 Adresse
+        p
+          = @store.address_name
+          br
+          = @store.street
+          br
+          = "#{@store.zip} #{@store.city}"
 
-    section
-      h4 So finden Sie uns mit öffentlichen Verkehrsmitteln
-      = form_tag("/stores/#{@store.id}/get_directions")
-        = label_tag(:origin, 'Geben Sie Ihren Wohnort, Straße oder ganze Adresse an')
-        = text_field_tag(:origin)
-        = submit_tag('Verbindungen suchen', class: 'button')
+      section
+        h4 Öffnungszeiten
+        p
+          label Montag - Freitag:
+          | 10:30 Uhr - 19:00 Uhr
+        p
+          label Samstag:
+          | 10:00 Uhr - 18:00 Uhr
 
-    - if @directions
-      = render '/stores/show/directions'
+      section
+        h4 Kontakt
+        p
+          label Telefon:
+          = @store.phone
 
-  .small-12.medium-4.large-3.large-offset-1.columns
-    section
-      h4 Adresse
-      p
-        = @store.address_name
-        br
-        = @store.street
-        br
-        = "#{@store.zip} #{@store.city}"
+        p
+          label Mail:
+          = @store.email
 
-    section
-      h4 Öffnungszeiten
-      p
-        label Montag - Freitag:
-        | 10:30 Uhr - 19:00 Uhr
-      p
-        label Samstag:
-        | 10:00 Uhr - 18:00 Uhr
+      - if policy(@store).edit?
+        hr
+        section
+          label Bearbeiten
+          = link_to "Bearbeiten", edit_store_path(@store), class: "link"
 
-    section
-      h4 Kontakt
-      p
-        label Telefon:
-        = @store.phone
-
-      p
-        label Mail:
-        = @store.email

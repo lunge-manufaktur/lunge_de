@@ -1,0 +1,25 @@
+.title
+  .container
+    h1 Kategorien
+
+<ul class="no-bullet">
+  <% nested_set_options(Category, @category) do |category| %>
+    <li style="padding-left:<%= "#{category.level*2}rem" %>">
+      <div class="row">
+        <div class="small-7 columns">
+          <%= link_to category.name, category_path(category) %>
+        </div>
+        <div class="small-5 columns">
+          <% if current_user %>
+            <%= link_to 'Bearbeiten', edit_category_path(category) %> | 
+            <%= link_to 'Löschen', category, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <% end %>
+        </div>
+      </div>
+      <hr>
+    </li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Neue Kategorie", new_category_path, class: "button" %>

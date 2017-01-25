@@ -12,13 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require foundation
 //= require events
 //= require jquery_nested_form
-//= require morphext
-//= require_tree
-
-$(document).foundation();
+//= require trumbowyg
+//= require editor
+//= require turbolinks
 
 // Hide notices after a few seconds
 $('.notice').slideDown(500).delay(5000).slideUp(500);

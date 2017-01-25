@@ -90,6 +90,7 @@ class StoresController < ApplicationController
         :active,
         :latitude,
         :longitude,
+        :google_maps_place_id,
         store_images_attributes: [
           :store_id,
           :image,

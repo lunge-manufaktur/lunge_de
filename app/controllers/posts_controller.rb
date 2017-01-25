@@ -79,6 +79,7 @@ class PostsController < ApplicationController
         :subtitle,
         :content,
         :is_published,
+        :is_featured,
         :is_on_homepage,
         :icon,
         :category_ids => [],
