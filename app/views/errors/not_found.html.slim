@@ -1,23 +1,10 @@
-- content_for :full_width_content
-  .featured_icon style="height: 33%; background-image: url(http://cdn.lunge.de/images/misc/icon_44040.svg)"
+.container
+  .title
+    h1 404
+    h4 Seite nicht gefunden.
 
-- content_for :title_bar
-  .title_bar
-    .row
-      .small-12.columns
-        h1 404
-        h4 Seite nicht gefunden.
-
-.row
-  .small-12.medium-9.large-8.columns
-    p
-      | Leider konnten wir die angeforderte Seite nicht finden. Hast Du Dich eventuell vertippt?
-    p
-      | Falls Du Dir sicher bist, dass es sich hier um einen Fehler handelt, informiere uns bitte damit wir uns das Problem genauer anschauen können.
-    = link_to "Kontakt", contact_path, class: "button"
-
-    hr
-    section
-      small
-        | Creative Commons: 
-        = link_to "Sick designed by Julien Deveaux from the Noun Project", "http://thenounproject.com/term/sick/44040/", target: "_blank"
+  .row
+    col-xs-12.col-md-6
+      p Leider konnten wir die angeforderte Seite nicht finden. Hast Du Dich eventuell vertippt?
+      p Falls Du Dir sicher bist, dass es sich hier um einen Fehler handelt, informiere uns bitte damit wir uns das Problem genauer anschauen können.
+      = link_to "Kontakt", contact_path, class: "button"
