@@ -10,9 +10,11 @@
 #  image_content_type :string(255)
 #  image_file_size    :integer
 #  image_updated_at   :datetime
+#  default            :boolean          default(FALSE)
 #
 # Indexes
 #
+#  index_store_images_on_default   (default)
 #  index_store_images_on_store_id  (store_id)
 #
 

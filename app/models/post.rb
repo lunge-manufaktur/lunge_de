@@ -15,10 +15,12 @@
 #  icon_content_type :string(255)
 #  icon_file_size    :integer
 #  icon_updated_at   :datetime
+#  is_featured       :boolean
 #
 # Indexes
 #
-#  index_posts_on_slug  (slug)
+#  index_posts_on_is_featured  (is_featured)
+#  index_posts_on_slug         (slug)
 #
 
 class Post < ActiveRecord::Base

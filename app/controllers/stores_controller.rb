@@ -92,7 +92,9 @@ class StoresController < ApplicationController
         :longitude,
         :google_maps_place_id,
         store_images_attributes: [
+          :id,
           :store_id,
+          :default,
           :image,
           :_destroy
         ]

@@ -64,7 +64,7 @@ class Store < ActiveRecord::Base
 
   def default_image(size: :thumb)
     if store_images.exists?
-      store_images.first.image.url(size)
+      store_images&.default&.first&.image&.url(size) || store_images&.first&.image&.url(size)
     else
       "missing.png"
     end
