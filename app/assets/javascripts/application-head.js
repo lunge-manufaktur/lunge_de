@@ -1,2 +1,1 @@
-//= require trumbowyg
-//= editor
+//= require jquery_nested_form
