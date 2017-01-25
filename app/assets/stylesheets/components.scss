@@ -107,6 +107,7 @@ nav.header__nav {
 }
 
 ul.header-nav {
+  list-style: none;
   display: flex;
   font-size: 1.2rem;
   font-weight: 700;
@@ -286,6 +287,8 @@ ul.vertical-list {
 }
 
 ul.inline-list {
+  list-style: none;
+  margin-bottom: 0;
   display: flex;
   flex-flow: row wrap;
   align-items: center;
@@ -297,6 +300,7 @@ ul.inline-list li {
 }
 
 ul.brands__list {
+  list-style: none;
   display: flex;
   margin-left: -1rem;
   meign-right: -1rem;
@@ -375,6 +379,7 @@ a.tag-to-remove {
 /* ----- PAGINATION ----- */
 
 ul.pagination {
+  list-style: none;
   display: flex;
   justify-content: center;
   align-items: center;
