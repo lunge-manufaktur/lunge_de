@@ -1,81 +1,82 @@
-- content_for :title_bar
-  .title_bar
-    .row
-      .small-12.columns
-        h1 Kostenfreie Laufkurse für Lunge-Kunden
+.container
+  .title
+    h1 Kostenfreie Laufkurse für Lunge-Kunden
 
-.row
-  .small-12.medium-8.large-8.columns
-    p 
-      | Zur neuen Saison belohnen wir unsere Kunden: Beim Kauf eines Laufschuhes erhalten Sie einen Gutschein für die Teilnahme an einem Laufkurs in Hamburg oder Berlin. Der Gutschein gibt Ihnen die Möglichkeit, 3x kostenfrei am Laufkurs der Experten von 
-      = link_to "Boie Sports (Hamburg)", "http://www.ralf-boie.de", target: "_blank", class: "link"
-      |  oder 
-      = link_to "Ruth Abendschein Personal Training (Berlin)", "http://www.ruth-abendschein.de/", target: "_blank", class: "link"
-      |  teilzunehmen.
-    p
-      | Ganz gleich ob Einsteiger oder erfahrener Läufer - Die Kurse helfen Ihnen, einen ganz natürlichen und beschwerdefreien Laufstil zu entwickeln und die Freude am Laufsport langfristig aufrecht zu halten - all das findet wöchentlich in lockerer Atmosphäre statt. Als Lunge-Kunde bedarf Ihre kostenlose Teilnahme zudem keiner weiteren Anmeldung - unkomplizierter geht's nicht.
-    section
-      h4 Hamburg
+  main
+    article
+      p 
+        | Zur neuen Saison belohnen wir unsere Kunden: Beim Kauf eines Laufschuhes erhalten Sie einen Gutschein für die Teilnahme an einem Laufkurs in Hamburg oder Berlin. Der Gutschein gibt Ihnen die Möglichkeit, 3x kostenfrei am Laufkurs der Experten von 
+        = link_to "Boie Sports (Hamburg)", "http://www.ralf-boie.de", target: "_blank", class: "link"
+        |  oder 
+        = link_to "Ruth Abendschein Personal Training (Berlin)", "http://www.ruth-abendschein.de/", target: "_blank", class: "link"
+        |  teilzunehmen.
       p
-        | Der Kurs von Ralf Boie unterstützt den Läufer dabei zu seiner natürlichen Laufbewegung zu finden und durch gezielte Technik Schmerzen zu vermeiden und Freude am Laufen zu entwickeln. Lernen Sie bei 
-        = link_to "Boie Sports", "http://www.ralf-boie.de", target: "_blank", class: "link"
-        |  alles was Sie für ein effektives und beschwerdefreies Lauftraining benötigen. Die Trainingseinheiten thematisieren verschiedene Trainingsschwerpunkte (z.B. Core Stability, Lauf ABC, Laufstil, Laufökonomisierung, Kraft, Sprinttechniken, etc) und ermöglichen auf diese Weise einen Einstieg zu jeder Zeit.
-      h6 Termine &amp; Treffpunkt
-      p
-        | Der Treffpunkt für die Laufschulung ist jeweils Montags 19 Uhr an der Außenalster: 
-      p
-        | Boie Sports
-        br
-        | Schöne Aussicht 14
-        br
-        | 22085 Hamburg
-      p
-        = link_to "Auf Karte zeigen", "http://maps.google.de/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Sch%C3%B6ne+Aussicht+14,+Hamburg&amp;aq=0&amp;sll=51.151786,10.415039&amp;sspn=25.015902,67.631836&amp;ie=UTF8&amp;hq=&amp;hnear=Sch%C3%B6ne+Aussicht+14,+Hamburg+22085+Hamburg&amp;z=16&amp;iwloc=A", target: "_blank", class: "link"
-      .panel
+        | Ganz gleich ob Einsteiger oder erfahrener Läufer - Die Kurse helfen Ihnen, einen ganz natürlichen und beschwerdefreien Laufstil zu entwickeln und die Freude am Laufsport langfristig aufrecht zu halten - all das findet wöchentlich in lockerer Atmosphäre statt. Als Lunge-Kunde bedarf Ihre kostenlose Teilnahme zudem keiner weiteren Anmeldung - unkomplizierter geht's nicht.
+      section
+        h3 Hamburg
+        p
+          | Der Kurs von Ralf Boie unterstützt den Läufer dabei zu seiner natürlichen Laufbewegung zu finden und durch gezielte Technik Schmerzen zu vermeiden und Freude am Laufen zu entwickeln. Lernen Sie bei 
+          = link_to "Boie Sports", "http://www.ralf-boie.de", target: "_blank", class: "link"
+          |  alles was Sie für ein effektives und beschwerdefreies Lauftraining benötigen. Die Trainingseinheiten thematisieren verschiedene Trainingsschwerpunkte (z.B. Core Stability, Lauf ABC, Laufstil, Laufökonomisierung, Kraft, Sprinttechniken, etc) und ermöglichen auf diese Weise einen Einstieg zu jeder Zeit.
+        h4 Termine & Treffpunkt
+        p
+          label Zeitpunkt
+          span Jeden Montag, 19 Uhr
+        p
+          label Treffpunkt
+          | Boie Sports
+          br
+          | Schöne Aussicht 14
+          br
+          | Außenalster
+          br
+          | 22085 Hamburg
+        p
+          = link_to "Auf Karte zeigen", "https://goo.gl/maps/j5gZ6etFwLB2", target: "_blank", class: "link"
         p
           | Beachten Sie bitte: Sollte es Terminänderungen oder sonstige relevante Ankündigungen zu Zeit und Treffpunkt geben, finden Sie diese stets unter 
           = link_to "www.ralf-boie.de", "http://www.ralf-boie.de", target: "_blank"
-      p
-        | Bitte bringen Sie bei Ihrer ersten Teilnahme den Kaufbeleg mit.
-    hr
-    section
-      h4 Berlin
-      p Der Berliner Laufkurs findet jeden Dienstag 18 Uhr mit Lauftrainerin Kay Leonie Tscharnke statt. Treffpunkt ist der Lunge Laufladen in der Bismarckstraße. Gelaufen wird etwa eine Stunde zum und durch den Tiergarten.
-      p
-        label Zeitpunkt
-        span Jeden Dienstag 18 Uhr
-      p
-        label Treffpunkt
-        span Lunge Laufladen
-        br
-        span Bismarckstraße 101
-        br
-        span 10625 Berlin
-      p
-        label Kontakt
-        span Kay Leonie Tscharnke:
-        br
-        = link_to "kaytscharnke@gmx.de", "mailto: kaytscharnke@gmx.de"
-        br
-        br
-        span oder telefonisch im Lunge Laufladen:
-        br
-        span 030 91555959
-
-  .small-12.medium-3.large-3.columns
-    .panel
-      label Bedingungen
+        p
+          | Bitte bringen Sie bei Ihrer ersten Teilnahme den Kaufbeleg mit.
+      hr
       section
+        h3 Berlin
+        p Der Berliner Laufkurs findet jeden Dienstag 18 Uhr mit Lauftrainerin Kay Leonie Tscharnke statt. Treffpunkt ist der Lunge Laufladen in der Bismarckstraße. Gelaufen wird etwa eine Stunde zum und durch den Tiergarten.
         p
-          ul
-            li Das Angebot gilt nur für Herren- und Damen-Laufschuhe, die nicht reduziert sind
-            li Der Gutschein hat eine Gültigkeit von 6 Monaten ab Kaufdatum
-            li Mit Beginn der ersten Teilnahme am Laufkurs können Sie innerhalb von 4 Wochen 3x kostenfrei teilnehmen
-            li Der Gutschein kann nicht ausgezahlt oder übertragen werden
+          label Zeitpunkt
+          span Jeden Dienstag 18 Uhr
         p
-          | Diese Dokumente benötigen Sie bei Ihrer ersten Teilnahme:
-          ul
-            li den Kaufbeleg Ihrer bei Lunge erworbenen, nicht reduzierten Laufschuhe (Zur Teilnahme berechtigte Käufer finden einen Hinweis auf Ihrer Quittung)
-            li
-              | für den Berliner Laufkurs den ausgefüllten Haftungsausschluss
-              = link_to "Berlin", "http://cdn.lunge.de/files/laufkurse/haftungsausschluss_berlin.pdf", target: "_blank", class: "link"
+          label Treffpunkt
+          span Lunge Laufladen
+          br
+          span Bismarckstraße 101
+          br
+          span 10625 Berlin
+        p
+          label Kontakt
+          span Kay Leonie Tscharnke:
+          br
+          = link_to "kaytscharnke@gmx.de", "mailto: kaytscharnke@gmx.de"
+          br
+          br
+          span oder telefonisch im Lunge Laufladen:
+          br
+          span 030 91555959
+
+    aside
+      section
+        label Bedingungen
+        section
+          p
+            ul.list--disc
+              li Das Angebot gilt nur für Herren- und Damen-Laufschuhe, die nicht reduziert sind
+              li Der Gutschein hat eine Gültigkeit von 6 Monaten ab Kaufdatum
+              li Mit Beginn der ersten Teilnahme am Laufkurs können Sie innerhalb von 4 Wochen 3x kostenfrei teilnehmen
+              li Der Gutschein kann nicht ausgezahlt oder übertragen werden
+          p
+            | Diese Dokumente benötigen Sie bei Ihrer ersten Teilnahme:
+            ul.list--disc
+              li den Kaufbeleg Ihrer bei Lunge erworbenen, nicht reduzierten Laufschuhe (Zur Teilnahme berechtigte Käufer finden einen Hinweis auf Ihrer Quittung)
+              li
+                | für den Berliner Laufkurs den ausgefüllten 
+                = link_to "Haftungsausschluss", "http://cdn.lunge.de/files/laufkurse/haftungsausschluss_berlin.pdf", target: "_blank", class: "link"
