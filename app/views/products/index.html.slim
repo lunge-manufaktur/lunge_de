@@ -1,6 +1,5 @@
-- meta_title(@tags ? "Alle Artikel mit den Tags #{@tags.join(", ").capitalize}" : "Sortiment")
-- if @tags
-  - meta_keywords(@tags.join(", "))
+- set_meta_tags title: @tags ? "Alle Artikel mit den Tags #{@tags.join(", ").capitalize}" : "Alle Artikel",
+                description: "Entdecken Sie die Laufschuhe, Laufbekleidung und Zubehör in unserem umfangreichen Sortiment."
 
 .title
   .container

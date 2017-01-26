@@ -66,6 +66,7 @@ gem "browser"
 gem 'canonical-rails', github: 'jumph4x/canonical-rails'
 gem 'sitemap_generator'
 gem "autoprefixer-rails"
+gem "meta-tags"
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.1.2'
