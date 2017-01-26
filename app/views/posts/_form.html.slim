@@ -22,6 +22,11 @@
           = f.label :content, "Inhalt"
           = f.text_area :content, rows: 20, class: "wysiwyg-editor"
       section
+        h4 SEO
+        .fields
+          = f.label :meta_description, "Meta Beschreibung"
+          = f.text_area :meta_description, rows: 5
+      section
         h4 Bilder
         = f.fields_for :post_images
         = f.link_to_add "Bild hinzufügen", :post_images, class: "link"

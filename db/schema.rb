@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170125093823) do
+ActiveRecord::Schema.define(version: 20170126094325) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -136,6 +136,7 @@ ActiveRecord::Schema.define(version: 20170125093823) do
     t.integer  "icon_file_size"
     t.datetime "icon_updated_at"
     t.boolean  "is_featured"
+    t.text     "meta_description"
     t.index ["is_featured"], name: "index_posts_on_is_featured", using: :btree
     t.index ["slug"], name: "index_posts_on_slug", using: :btree
   end

@@ -78,6 +78,7 @@ class PostsController < ApplicationController
         :title,
         :subtitle,
         :content,
+        :meta_description,
         :is_published,
         :is_featured,
         :is_on_homepage,
