@@ -5,7 +5,11 @@ class PostsController < ApplicationController
 
   # GET /posts
   def index
-    @search = Post.published.search(params[:q])
+    if user_signed_in?
+      @search = Post.search(params[:q])
+    else
+      @search = Post.published.search(params[:q])
+    end
     @posts = @search.result(distinct: true).order(created_at: :desc)
     @categories = Category.all
   end
@@ -32,6 +36,7 @@ class PostsController < ApplicationController
   # POST /posts.json
   def create
     @post = Post.new(post_params)
+    authorize @post
 
     respond_to do |format|
       if @post.save
@@ -47,6 +52,8 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1
   # PATCH/PUT /posts/1.json
   def update
+    authorize @post
+
     respond_to do |format|
       if @post.update(post_params)
         format.html { redirect_to @post, notice: 'Post was successfully updated.' }
@@ -61,6 +68,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
+    authorize @post
     @post.destroy
     respond_to do |format|
       format.html { redirect_to posts_url }

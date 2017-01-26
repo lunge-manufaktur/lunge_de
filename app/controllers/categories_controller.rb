@@ -10,7 +10,12 @@ class CategoriesController < ApplicationController
   # GET /categories/1
   # GET /categories/1.json
   def show
-    @search = Post.published.joins(:categories).where("categories.lft" => @category.lft..@category.rgt).search(params[:q])
+    if user_signed_in?
+      @search = Post.joins(:categories).where("categories.lft" => @category.lft..@category.rgt).search(params[:q])
+    else
+      @search = Post.published.joins(:categories).where("categories.lft" => @category.lft..@category.rgt).search(params[:q])
+    end
+    
     @posts = @search.result(distinct: true).order(created_at: :desc)
   end
 
