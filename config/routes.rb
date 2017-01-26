@@ -3,6 +3,9 @@ LungeDe::Application.routes.draw do
   devise_for :users
   root :to => "pages#home"
 
+  # sitemap
+  get "sitemap", controller: "sitemaps", action: "show", format: "xml"
+
   # error pages
   get "/404", to: "errors#not_found"
   get "/422", to: "errors#unacceptable"
