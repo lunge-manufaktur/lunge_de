@@ -1,13 +1,11 @@
-= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => false
-= javascript_include_tag "vendor/modernizr"
-= csrf_meta_tags
-script type="text/javascript" src="//use.typekit.net/acr5efa.js"
-javascript:
-  try{Typekit.load();}catch(e){}
+- set_meta_tags noindex: true
 
-= nested_form_for @product do |f|
-  .row
-    .small-12.columns
+= stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => false
+= csrf_meta_tags
+
+.container
+  = nested_form_for @product do |f|
+    section
       - if @product.errors.any?
         #error_explanation
           h2 = "#{pluralize(@product.errors.count, 'error')} prohibited this product from being saved:"
@@ -15,16 +13,13 @@ javascript:
           - @product.errors.full_messages.each do |msg|
             li = msg
 
-  .row
-    .small-12.columns
+    section
       = f.fields_for :product_images
       = f.link_to_add "Bild hinzufügen", :product_images, class: "small button expand"
       hr
 
-  .row
-    .small-12.columns
-      .actions
-        = f.hidden_field :stay_on_page, value: 1
-        = f.submit "Speichern", class: "button large expand"
+    section
+      = f.hidden_field :stay_on_page, value: 1
+      = f.submit "Speichern", class: "button large expand"
 
-= javascript_include_tag "application", "data-turbolinks-track" => false
+  = javascript_include_tag "application", "data-turbolinks-track" => false
