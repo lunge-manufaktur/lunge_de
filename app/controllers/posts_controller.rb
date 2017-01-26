@@ -1,6 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  after_action :verify_authorized
 
   # GET /posts
   def index
@@ -11,6 +12,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
+    authorize @post
   end
 
   # GET /posts/new

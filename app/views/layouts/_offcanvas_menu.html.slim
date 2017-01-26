@@ -1,12 +1,20 @@
 .offcanvas__container
   .offcanvas__menu
-    label Menü
-    ul.offcanvas-nav
-      li.offcanvas-nav__item
-        = link_to "Sortiment", products_path, class: "link"
-      li.offcanvas-nav__item
-        = link_to "Beratung", "/categories/beratung", class: "link"
-      li.offcanvas-nav__item
-        = link_to "Filialen", stores_path, class: "link"
-      li.offcanvas-nav__item
-        = link_to "Kontakt", contact_path, class: "link"
+    section
+      label Menü
+      ul.offcanvas-nav
+        li.offcanvas-nav__item
+          = link_to "Sortiment", products_path, class: "link"
+        li.offcanvas-nav__item
+          = link_to "Beratung", "/categories/beratung", class: "link"
+        li.offcanvas-nav__item
+          = link_to "Filialen", stores_path, class: "link"
+        li.offcanvas-nav__item
+          = link_to "Kontakt", contact_path, class: "link"
+    
+    - if user_signed_in?
+      section
+        label Account
+        ul.vertical-list
+          li = link_to "Einstellungen", edit_user_registration_path, class: "link"
+          li = link_to "Abmelden", destroy_user_session_path, method: :delete, class: "link"
