@@ -306,11 +306,13 @@ ul.inline-list li {
 ul.brands__list {
   list-style: none;
   display: flex;
+  flex-flow: row wrap;
   margin-left: -1rem;
-  meign-right: -1rem;
+  margin-right: -1rem;
 }
 
 li.brands__item {
+  flex: 0 0 auto;
   margin-left: 1rem;
   margin-right: 1rem;
 }
