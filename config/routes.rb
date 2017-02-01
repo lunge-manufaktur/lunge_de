@@ -52,7 +52,7 @@ LungeDe::Application.routes.draw do
   resources :categorizations
   resources :categories, except: "index"
   resources :events
-  resources :posts
+  resources :posts, except: :index
   resources :properties
   resources :stocks
   resources :stores do
@@ -60,7 +60,7 @@ LungeDe::Application.routes.draw do
       post :get_directions
     end
   end
-  resources :brands
+  resources :brands, except: :index
   resources :product_images
   resources :product_categories
   resources :sizes
