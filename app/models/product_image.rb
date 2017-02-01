@@ -32,7 +32,7 @@ class ProductImage < ActiveRecord::Base
 
   has_attached_file :image,
     styles: {
-      thumb: "300x300>",
+      thumb: "300x300#",
       small: "640x640>",
       medium: "1024x1024>",
       large: "2000x2000>",
