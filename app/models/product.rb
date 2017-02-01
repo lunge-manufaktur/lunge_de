@@ -91,10 +91,22 @@ class Product < ActiveRecord::Base
   end
 
   def name_with_brand
-    if self.brand
-      "#{self.brand.name} #{name}"
+    "#{brand&.name} #{name}"
+  end
+
+  def name_with_color
+    if color.present?
+      "#{name} in #{color.titleize}"
     else
       name
+    end
+  end
+
+  def name_with_brand_and_color
+    if color.present?
+      "#{name_with_brand} in #{color.titleize}"
+    else
+      name_with_brand
     end
   end
 
