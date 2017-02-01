@@ -10,7 +10,7 @@
 
 - if @product.product_images.any?
   section
-    = image_tag @product.default_image(:large)
+    = image_tag @product.default_image(:large), alt: @product.name_with_brand_and_color
 
 
 .container
