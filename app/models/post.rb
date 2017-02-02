@@ -16,6 +16,7 @@
 #  icon_file_size    :integer
 #  icon_updated_at   :datetime
 #  is_featured       :boolean
+#  meta_description  :text
 #
 # Indexes
 #
@@ -60,9 +61,8 @@ class Post < ActiveRecord::Base
   validates_attachment_content_type :icon, :content_type => /\Aimage\/.*\Z/
 
   # Methods
-  def short_description(length=nil)
-    length ||= 200
-    content.truncate(length, separator: " ") unless content.nil?
+  def short_description(length=200)
+    meta_description&.truncate(length, separator: " ") || content&.truncate(length, separator: " ")
   end
 
   def default_image(size: :large)

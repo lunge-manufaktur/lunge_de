@@ -20,6 +20,7 @@
 #  is_featured          :boolean
 #  slug                 :string(255)
 #  use_in_lia_campaign  :boolean          default(FALSE)
+#  meta_description     :text
 #
 # Indexes
 #
@@ -85,9 +86,8 @@ class Product < ActiveRecord::Base
     current_price < regular_price
   end
 
-  def short_description(length=nil)
-    @length = length || 200
-    description.truncate(@length, separator: " ") unless description.nil?
+  def short_description(length=200)
+    meta_description&.truncate(length, separator: " ") || description&.truncate(length, separator: " ")
   end
 
   def name_with_brand
