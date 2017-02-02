@@ -145,6 +145,7 @@ class ProductsController < ApplicationController
       :use_in_lia_campaign,
       :sku,
       :description,
+      :meta_description,
       :brand_id,
       :size_id,
       :current_price,

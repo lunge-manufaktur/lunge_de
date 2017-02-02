@@ -1,5 +1,6 @@
 - set_meta_tags title: @post.title,
-                description: @post.meta_description.presence || @post.short_description(160)
+                description: @post.meta_description.presence || @post.short_description(160),
+                og: { title: @post.title, type: 'article', url: request.url, image: @post.default_image(size: :medium), description: @post.meta_description.presence || strip_tags(@post.short_description(160)) }
 
 .title
   .container

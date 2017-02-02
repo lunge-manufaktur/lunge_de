@@ -1,7 +1,6 @@
 - set_meta_tags title: @product.name_with_brand,
                 description: @product.short_description(160),
-                og: { title: @product.name_with_brand, type: 'product', url: request.url, image: @product.default_image(:medium) },
-                product: { brand: @product.brand.name, color: @product.color, price: { amount: @product.current_price, currency: "EUR" } }
+                og: { title: @product.name_with_brand, type: 'product', url: request.url, image: @product.default_image(:medium), product: { brand: @product.brand.name, color: @product.color, price: { amount: @product.current_price, currency: "EUR" } } }
 
 .title
   .container

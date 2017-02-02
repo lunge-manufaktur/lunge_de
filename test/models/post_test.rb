@@ -16,6 +16,7 @@
 #  icon_file_size    :integer
 #  icon_updated_at   :datetime
 #  is_featured       :boolean
+#  meta_description  :text
 #
 # Indexes
 #

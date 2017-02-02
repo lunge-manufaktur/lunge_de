@@ -20,6 +20,7 @@
 #  is_featured          :boolean
 #  slug                 :string(255)
 #  use_in_lia_campaign  :boolean          default(FALSE)
+#  meta_description     :text
 #
 # Indexes
 #
