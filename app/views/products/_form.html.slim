@@ -16,6 +16,9 @@
         .fields
           = f.label :description, "Beschreibung"
           = f.text_area :description, rows: 12, class: "wysiwyg-editor"
+        .field
+          = f.label :meta_description, "Kurzbeschreibung"
+          = f.text_area :meta_description, rows: 3
 
       section
         h4 Bilder
