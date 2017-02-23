@@ -3,14 +3,12 @@
     h3.marginless--bottom = @store.city
     h1.marginless--top = @store.name
 
-  - if @store.store_images.any?
+  - if @store.panorama_embed_url.present?
+      section
+        iframe.panorama__container src=@store.panorama_embed_url allowfullscreen="true"
+  - elsif @store.store_images.any?
     section
       = image_tag @store.default_image(size: "large")
-
-- if @store.panorama_embed_url.present?
-  .container
-    section
-      iframe.panorama__container src=@store.panorama_embed_url allowfullscreen="true"
 
 .container
   main
