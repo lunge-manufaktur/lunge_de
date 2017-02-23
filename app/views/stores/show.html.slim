@@ -7,8 +7,9 @@
     section
       = image_tag @store.default_image(size: "large")
 
-.container
-  iframe.panorama__container src=@store.panorama_embed_url allowfullscreen="true"
+- if @store.panorama_embed_url.present?
+  .container
+    iframe.panorama__container src=@store.panorama_embed_url allowfullscreen="true"
 
 .container
   main
