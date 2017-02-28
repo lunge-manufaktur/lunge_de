@@ -8,12 +8,10 @@
     h3.title__brand = link_to @product.brand.name, @product.brand, class: "link"
     h1.title__product = @product.name
 
-- if @product.product_images.any?
-  section
-    = image_tag @product.default_image(:large), alt: @product.name_with_brand_and_color
-
-
 .container
+  - if @product.product_images.any?
+    section
+      = image_tag @product.default_image(:large), alt: @product.name_with_brand_and_color
   main
     article
       section
