@@ -188,63 +188,10 @@
 	"buffers":
 	[
 		{
-			"file": "app/views/pages/jobs.html.slim",
-			"settings":
-			{
-				"buffer_size": 2844,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "app/views/stores/show.html.slim",
 			"settings":
 			{
-				"buffer_size": 1409,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/components.scss",
-			"settings":
-			{
-				"buffer_size": 7185,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/assets/stylesheets/base.scss",
-			"settings":
-			{
-				"buffer_size": 393,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "db/migrate/20170223121325_add_panorama_embed_url_to_store.rb",
-			"settings":
-			{
-				"buffer_size": 138,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/stores/_form.html.slim",
-			"settings":
-			{
-				"buffer_size": 1893,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/controllers/stores_controller.rb",
-			"settings":
-			{
-				"buffer_size": 2684,
+				"buffer_size": 1405,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -253,8 +200,16 @@
 			"file": "app/views/products/show.html.slim",
 			"settings":
 			{
-				"buffer_size": 2474,
+				"buffer_size": 2478,
 				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/product_image.rb",
+			"settings":
+			{
+				"buffer_size": 1693,
 				"line_ending": "Unix"
 			}
 		}
@@ -363,6 +318,14 @@
 	],
 	"file_history":
 	[
+		"/Users/ulflunge/projects/lunge_de/app/views/pages/jobs.html.slim",
+		"/Users/ulflunge/projects/lunge_de/app/views/stores/show.html.slim",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/components.scss",
+		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/base.scss",
+		"/Users/ulflunge/projects/lunge_de/db/migrate/20170223121325_add_panorama_embed_url_to_store.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/stores/_form.html.slim",
+		"/Users/ulflunge/projects/lunge_de/app/controllers/stores_controller.rb",
+		"/Users/ulflunge/projects/lunge_de/app/views/products/show.html.slim",
 		"/Users/ulflunge/projects/lunge_de/README.rdoc",
 		"/Users/ulflunge/projects/lunge_de/app/controllers/products_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/_form.html.slim",
@@ -371,7 +334,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/products/_minicard.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/models/post.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/posts/show.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/views/products/show.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/product_categories/_form.html.erb",
 		"/Users/ulflunge/projects/lunge_de/app/views/sitemaps/show.xml.builder",
 		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/application.js",
@@ -383,7 +345,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/views/kaminari/_next_page.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/products/index.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/pages/home.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/components.scss",
 		"/Users/ulflunge/projects/lunge_de/public/robots.txt",
 		"/Users/ulflunge/projects/lunge_de/app/models/product_image.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/brands/show.html.slim",
@@ -427,18 +388,15 @@
 		"/Users/ulflunge/projects/lunge_de/app/models/store.rb",
 		"/Users/ulflunge/projects/lunge_de/public/sitemap.xml.gz",
 		"/Users/ulflunge/projects/lunge_de/public/sitemap.xml",
-		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/base.scss",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_footer.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/categories/_nested_list.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/categories/show.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/ios-webapp.js",
 		"/Users/ulflunge/projects/lunge_de/app/models/store_image.rb",
-		"/Users/ulflunge/projects/lunge_de/app/controllers/stores_controller.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/pages/gutschein.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/posts/_card_large.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/errors/not_found.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/posts/_card_medium.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/views/stores/_form.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/_store_image_fields.html.slim",
 		"/Users/ulflunge/projects/lunge_de/public/404.html",
 		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/menu.js",
@@ -456,7 +414,6 @@
 		"/Users/ulflunge/projects/lunge_de/app/assets/stylesheets/forms.scss",
 		"/Users/ulflunge/projects/lunge_de/app/views/layouts/_header.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/brands/index.html.slim",
-		"/Users/ulflunge/projects/lunge_de/app/views/stores/show.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/views/stores/edit.html.slim",
 		"/Users/ulflunge/projects/lunge_de/app/policies/store_policy.rb",
 		"/Users/ulflunge/projects/lunge_de/app/views/contact_form/new.html.slim",
@@ -488,9 +445,7 @@
 		"/Users/ulflunge/projects/lunge_de/config/initializers/assets.rb",
 		"/Users/ulflunge/projects/lunge_de/app/assets/javascripts/home.js.erb",
 		"/Users/ulflunge/projects/lunge_de/app/models/user.rb",
-		"/Users/ulflunge/projects/lunge_de/app/models/stock.rb",
-		"/Users/ulflunge/projects/lunge_de/app/models/size.rb",
-		"/Users/ulflunge/projects/lunge_de/app/models/property.rb"
+		"/Users/ulflunge/projects/lunge_de/app/models/stock.rb"
 	],
 	"find":
 	{
@@ -665,119 +620,29 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "app/views/pages/jobs.html.slim",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2844,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								918,
-								918
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 347.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "app/views/stores/show.html.slim",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1409,
+						"buffer_size": 1405,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								825,
-								825
+								96,
+								96
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 48.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "app/assets/stylesheets/components.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 7185,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								7180,
-								7180
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 12547.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "app/assets/stylesheets/base.scss",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 393,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								391,
-								391
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Sass/Syntaxes/Sass.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -789,48 +654,20 @@
 					"type": "text"
 				},
 				{
-					"buffer": 4,
-					"file": "db/migrate/20170223121325_add_panorama_embed_url_to_store.rb",
+					"buffer": 1,
+					"file": "app/views/products/show.html.slim",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 138,
+						"buffer_size": 2478,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								127,
-								127
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby/Ruby.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "app/views/stores/_form.html.slim",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1893,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1590,
-								1590
+								671,
+								671
 							]
 						],
 						"settings":
@@ -840,27 +677,27 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 347.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "app/controllers/stores_controller.rb",
+					"buffer": 2,
+					"file": "app/models/product_image.rb",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2684,
+						"buffer_size": 1693,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2524,
-								2524
+								0,
+								0
 							]
 						],
 						"settings":
@@ -870,40 +707,10 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1297.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "app/views/products/show.html.slim",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2474,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								382,
-								382
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Ruby Slim/Syntaxes/Ruby Slim.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 0,
 					"type": "text"
 				}
 			]
@@ -962,6 +769,18 @@
 		"selected_items":
 		[
 			[
+				"product_image",
+				"app/models/product_image.rb"
+			],
+			[
+				"productsshow",
+				"app/views/products/show.html.slim"
+			],
+			[
+				"storesshow",
+				"app/views/stores/show.html.slim"
+			],
+			[
 				"base",
 				"app/assets/stylesheets/base.scss"
 			],
@@ -980,10 +799,6 @@
 			[
 				"pano",
 				"db/migrate/20170223121325_add_panorama_embed_url_to_store.rb"
-			],
-			[
-				"storesshow",
-				"app/views/stores/show.html.slim"
 			],
 			[
 				"productssho",
@@ -1024,10 +839,6 @@
 			[
 				"productsminica",
 				"app/views/products/_minicard.html.slim"
-			],
-			[
-				"productsshow",
-				"app/views/products/show.html.slim"
 			],
 			[
 				"productsindex",
@@ -1468,10 +1279,6 @@
 			[
 				"gemfil",
 				"Gemfile"
-			],
-			[
-				"pos",
-				"app/models/post.rb"
 			]
 		],
 		"width": 0.0
