@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby "2.3.3"
+ruby "2.4.0"
 
-gem "rails", "~> 5.0.0"
+gem "rails", "~> 5.0.2"
 gem "rails-i18n"
 gem "rake"
 gem "pg"
@@ -42,7 +42,7 @@ end
 
 gem "bourbon"
 gem 'ransack'
-gem 'annotate'
+gem 'annotate', git: 'https://github.com/ctran/annotate_models.git', branch: 'develop'
 gem "paperclip"
 gem "paperclip-storage-ftp"
 gem "delayed_paperclip"

@@ -217,7 +217,7 @@
 			"file": "app/views/pages/home.html.slim",
 			"settings":
 			{
-				"buffer_size": 2989,
+				"buffer_size": 2969,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -728,15 +728,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2989,
+						"buffer_size": 2969,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								198,
-								198
+								542,
+								542
 							]
 						],
 						"settings":

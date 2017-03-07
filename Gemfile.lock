@@ -1,46 +1,55 @@
 GIT
   remote: git://github.com/jumph4x/canonical-rails.git
-  revision: 935448c7272048336f745361c6604c2e42324cba
+  revision: d0d558df562de790bd4723da50de35a9fe389ad1
   specs:
     canonical-rails (0.1.1)
       rails (>= 4.1, < 5.1)
 
+GIT
+  remote: https://github.com/ctran/annotate_models.git
+  revision: 8341983f263e662c5e528b04d0eeec908daec1ad
+  branch: develop
+  specs:
+    annotate (2.7.1)
+      activerecord (>= 3.2, < 6.0)
+      rake (>= 10.4)
+
 GEM
   remote: https://rubygems.org/
   specs:
-    actioncable (5.0.1)
-      actionpack (= 5.0.1)
-      nio4r (~> 1.2)
+    actioncable (5.0.2)
+      actionpack (= 5.0.2)
+      nio4r (>= 1.2, < 3.0)
       websocket-driver (~> 0.6.1)
-    actionmailer (5.0.1)
-      actionpack (= 5.0.1)
-      actionview (= 5.0.1)
-      activejob (= 5.0.1)
+    actionmailer (5.0.2)
+      actionpack (= 5.0.2)
+      actionview (= 5.0.2)
+      activejob (= 5.0.2)
       mail (~> 2.5, >= 2.5.4)
       rails-dom-testing (~> 2.0)
-    actionpack (5.0.1)
-      actionview (= 5.0.1)
-      activesupport (= 5.0.1)
+    actionpack (5.0.2)
+      actionview (= 5.0.2)
+      activesupport (= 5.0.2)
       rack (~> 2.0)
       rack-test (~> 0.6.3)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    actionview (5.0.1)
-      activesupport (= 5.0.1)
+    actionview (5.0.2)
+      activesupport (= 5.0.2)
       builder (~> 3.1)
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
-      rails-html-sanitizer (~> 1.0, >= 1.0.2)
-    activejob (5.0.1)
-      activesupport (= 5.0.1)
+      rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    activejob (5.0.2)
+      activesupport (= 5.0.2)
       globalid (>= 0.3.6)
-    activemodel (5.0.1)
-      activesupport (= 5.0.1)
-    activerecord (5.0.1)
-      activemodel (= 5.0.1)
-      activesupport (= 5.0.1)
+    activemodel (5.0.2)
+      activesupport (= 5.0.2)
+    activerecord (5.0.2)
+      activemodel (= 5.0.2)
+      activesupport (= 5.0.2)
       arel (~> 7.0)
-    activesupport (5.0.1)
+    activesupport (5.0.2)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
       minitest (~> 5.1)
@@ -49,22 +58,19 @@ GEM
       activerecord (>= 4.0)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
-    annotate (2.7.1)
-      activerecord (>= 3.2, < 6.0)
-      rake (>= 10.4, < 12.0)
     arel (7.1.4)
-    autoprefixer-rails (6.6.1)
+    autoprefixer-rails (6.7.6)
       execjs
     awesome_nested_set (3.1.1)
       activerecord (>= 4.0.0, < 5.1)
     bcrypt (3.1.11)
-    bourbon (4.2.7)
+    bourbon (4.3.3)
       sass (~> 3.4)
       thor (~> 0.19)
     browser (2.3.0)
     builder (3.2.3)
     callsite (0.0.11)
-    capybara (2.11.0)
+    capybara (2.12.1)
       addressable
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -81,7 +87,7 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.12.2)
-    concurrent-ruby (1.0.4)
+    concurrent-ruby (1.0.5)
     delayed_job (4.1.2)
       activesupport (>= 3.0, < 5.1)
     delayed_job_active_record (4.1.1)
@@ -102,12 +108,12 @@ GEM
       thor (~> 0.19.1)
     friendly_id (5.2.0)
       activerecord (>= 4.0.0)
-    geocoder (1.4.1)
+    geocoder (1.4.3)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-    i18n (0.7.0)
-    jbuilder (2.6.1)
-      activesupport (>= 3.0.0, < 5.1)
+    i18n (0.8.1)
+    jbuilder (2.6.3)
+      activesupport (>= 3.0.0, < 5.2)
       multi_json (~> 1.2)
     jquery-rails (4.2.2)
       rails-dom-testing (>= 1, < 3)
@@ -165,7 +171,7 @@ GEM
       minitest-rails (~> 3.0)
     multi_json (1.12.1)
     nested_form (0.3.2)
-    nio4r (1.2.1)
+    nio4r (2.0.0)
     nokogiri (1.7.0.1)
       mini_portile2 (~> 2.1.0)
     orm_adapter (0.5.0)
@@ -181,7 +187,7 @@ GEM
     polyamorous (1.3.1)
       activerecord (>= 3.0)
     public_suffix (2.0.5)
-    puma (3.6.2)
+    puma (3.7.1)
     pundit (1.1.0)
       activesupport (>= 3.0.0)
     rack (2.0.1)
@@ -191,24 +197,24 @@ GEM
     rack-test (0.6.3)
       rack (>= 1.0)
     rack-timeout (0.4.2)
-    rails (5.0.1)
-      actioncable (= 5.0.1)
-      actionmailer (= 5.0.1)
-      actionpack (= 5.0.1)
-      actionview (= 5.0.1)
-      activejob (= 5.0.1)
-      activemodel (= 5.0.1)
-      activerecord (= 5.0.1)
-      activesupport (= 5.0.1)
+    rails (5.0.2)
+      actioncable (= 5.0.2)
+      actionmailer (= 5.0.2)
+      actionpack (= 5.0.2)
+      actionview (= 5.0.2)
+      activejob (= 5.0.2)
+      activemodel (= 5.0.2)
+      activerecord (= 5.0.2)
+      activesupport (= 5.0.2)
       bundler (>= 1.3.0, < 2.0)
-      railties (= 5.0.1)
+      railties (= 5.0.2)
       sprockets-rails (>= 2.0.0)
     rails-dom-testing (2.0.2)
       activesupport (>= 4.2.0, < 6.0)
       nokogiri (~> 1.6)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
-    rails-i18n (5.0.2)
+    rails-i18n (5.0.3)
       i18n (~> 0.7)
       railties (~> 5.0)
     rails_12factor (0.0.3)
@@ -216,13 +222,13 @@ GEM
       rails_stdout_logging
     rails_serve_static_assets (0.0.5)
     rails_stdout_logging (0.0.5)
-    railties (5.0.1)
-      actionpack (= 5.0.1)
-      activesupport (= 5.0.1)
+    railties (5.0.2)
+      actionpack (= 5.0.2)
+      activesupport (= 5.0.2)
       method_source
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rake (11.3.0)
+    rake (12.0.0)
     ransack (1.8.2)
       actionpack (>= 3.0)
       activerecord (>= 3.0)
@@ -244,14 +250,14 @@ GEM
       rdoc (~> 4.0)
     simple_calendar (1.1.10)
       rails (>= 3.0)
-    sitemap_generator (5.2.0)
+    sitemap_generator (5.3.1)
       builder (~> 3.0)
     skylight (1.0.1)
       activesupport (>= 3.0.0)
     slim (3.0.7)
       temple (~> 0.7.6)
       tilt (>= 1.3.3, < 2.1)
-    slim-rails (3.1.1)
+    slim-rails (3.1.2)
       actionpack (>= 3.1)
       railties (>= 3.1)
       slim (~> 3.0)
@@ -264,18 +270,18 @@ GEM
       sprockets (>= 3.0.0)
     temple (0.7.7)
     thor (0.19.4)
-    thread_safe (0.3.5)
-    tilt (2.0.5)
+    thread_safe (0.3.6)
+    tilt (2.0.6)
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
-    uglifier (3.0.4)
+    uglifier (3.1.4)
       execjs (>= 0.3.0, < 3)
-    warden (1.2.6)
+    warden (1.2.7)
       rack (>= 1.0)
-    websocket-driver (0.6.4)
+    websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
     xpath (2.0.0)
@@ -287,7 +293,7 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on
-  annotate
+  annotate!
   autoprefixer-rails
   awesome_nested_set
   bourbon
@@ -317,7 +323,7 @@ DEPENDENCIES
   pundit
   rack-rewrite
   rack-timeout
-  rails (~> 5.0.0)
+  rails (~> 5.0.2)
   rails-i18n
   rails_12factor
   rake
@@ -333,7 +339,7 @@ DEPENDENCIES
   yajl-ruby
 
 RUBY VERSION
-   ruby 2.3.3p222
+   ruby 2.4.0p0
 
 BUNDLED WITH
-   1.13.6
+   1.14.6
