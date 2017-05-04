@@ -10,13 +10,15 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  transform: translateX(0);
+}
+
+body.offcanvas {
+  transform: translateX(250px);
 }
 
 body.offcanvas .content,
 body.offcanvas .offcanvas__container,
 body.offcanvas .border {
-  transform: translateX(250px);
 }
 
 .offcanvas__container {

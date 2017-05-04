@@ -1,15 +1,14 @@
 /* --- OVERLAY --- */
 .overlay {
+  display: none;
   background-color: $background-color;
   z-index: 1;
   transition: 140ms ease-in-out;
-  opacity: 0;
 }
 
-.overlay--offcanvas {
+body.offcanvas .overlay {
   opacity: 0.6;
   display: block;
-  transform: translateX(250px);
   position: absolute;
   left: 4rem;
   right: 0;
@@ -121,6 +120,7 @@ li.header-nav__item {
 ul.offcanvas-nav {
   font-size: 2rem;
   font-weight: 700;
+  list-style: none;
 }
 
 
