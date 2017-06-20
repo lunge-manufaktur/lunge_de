@@ -357,6 +357,11 @@ ul.list--disc {
   border: 1px solid $hairline-color;
 }
 
+.label--draft {
+  background-color: $primary-color;
+  color: $white;
+}
+
 a.label:hover {
   background-color: $primary-color;
   color: $white;

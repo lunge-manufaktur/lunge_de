@@ -1,13 +1,21 @@
 class ProductPolicy < ApplicationPolicy
   attr_reader :user, :record
-
-  def initialize(user, record)
-    @user = user
-    @record = record
-  end
   
-  def index?
-    true
+  class Scope
+    attr_reader :user, :scope
+
+    def initialize(user, scope)
+      @user = user
+      @scope = scope
+    end
+
+    def resolve
+      if user&.admin?
+        scope.all
+      else
+        scope.where(is_published: true)
+      end
+    end
   end
 
   def changed_since?
