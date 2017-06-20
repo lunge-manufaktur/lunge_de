@@ -20,8 +20,6 @@ class ProductsController < ApplicationController
                          .prefer_with_image.newest
                          .page(params[:page]).per(12)
     end
-
-    authorize @products
   end
 
 
