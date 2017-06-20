@@ -20,6 +20,8 @@ class ProductsController < ApplicationController
                          .prefer_with_image.newest
                          .page(params[:page]).per(12)
     end
+
+    authorize @products
   end
 
 
@@ -56,19 +58,23 @@ class ProductsController < ApplicationController
 
   # GET /products/1/edit
   def edit
+    authorize @product
   end
 
   # GET /products/1/edit_product_images
   def edit_product_images
+    authorize @product
     render 'edit_product_images', layout: false
   end
 
   # GET /products/1/edit_properties
   def edit_properties
+    authorize @product
     render 'edit_properties', layout: false
   end
 
   def save_properties
+    authorize @product
     @product.update(product_params)
     redirect_to edit_properties_product_path(@product)
   end
@@ -77,6 +83,7 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(product_params)
+    authorize @product
 
     respond_to do |format|
       if @product.save
@@ -93,6 +100,7 @@ class ProductsController < ApplicationController
   # PATCH/PUT /products/1.json
   def update
     @product = Product.friendly.find(params[:id])
+    authorize @product
 
     respond_to do |format|
       if @product.update(product_params)
@@ -115,6 +123,8 @@ class ProductsController < ApplicationController
   # DELETE /products/1.json
   def destroy
     @product.destroy
+    authorize @product
+
     respond_to do |format|
       format.html { redirect_to products_url }
       format.json { head :no_content }

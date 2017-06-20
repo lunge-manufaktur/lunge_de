@@ -34,7 +34,7 @@ class ProductPolicy < ApplicationPolicy
     update?
   end
 
-  def update?
+  def updat?
     user.try(:admin?)
   end
 
