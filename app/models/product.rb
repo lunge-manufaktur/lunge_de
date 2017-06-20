@@ -137,9 +137,8 @@ class Product < ActiveRecord::Base
     running_shoe_tag = "laufschuh"
 
     is_running_shoe = self.tags.where(name: running_shoe_tag).any?
-    is_not_reduced = current_price >= regular_price
 
-    if is_running_shoe && is_not_reduced
+    if is_running_shoe && !is_on_sale
       true
     else
       false
