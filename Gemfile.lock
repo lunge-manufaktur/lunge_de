@@ -7,12 +7,12 @@ GIT
 
 GIT
   remote: https://github.com/ctran/annotate_models.git
-  revision: 8341983f263e662c5e528b04d0eeec908daec1ad
+  revision: 134b833ec90830b95628defcc162536d3670b9fa
   branch: develop
   specs:
-    annotate (2.7.1)
+    annotate (2.7.2)
       activerecord (>= 3.2, < 6.0)
-      rake (>= 10.4)
+      rake (>= 10.4, < 13.0)
 
 GEM
   remote: https://rubygems.org/
@@ -111,7 +111,7 @@ GEM
     geocoder (1.4.3)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-    i18n (0.8.1)
+    i18n (0.8.4)
     jbuilder (2.6.3)
       activesupport (>= 3.0.0, < 5.2)
       multi_json (~> 1.2)
@@ -154,7 +154,7 @@ GEM
     mime-types-data (3.2016.0521)
     mimemagic (0.3.2)
     mini_portile2 (2.1.0)
-    minitest (5.10.1)
+    minitest (5.10.2)
     minitest-capybara (0.8.2)
       capybara (~> 2.2)
       minitest (~> 5.0)
@@ -275,7 +275,7 @@ GEM
     turbolinks (5.0.1)
       turbolinks-source (~> 5)
     turbolinks-source (5.0.0)
-    tzinfo (1.2.2)
+    tzinfo (1.2.3)
       thread_safe (~> 0.1)
     uglifier (3.1.4)
       execjs (>= 0.3.0, < 3)

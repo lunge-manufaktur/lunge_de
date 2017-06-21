@@ -13,10 +13,6 @@
 #  image_updated_at   :datetime
 #  image              :string
 #
-# Indexes
-#
-#  index_product_images_on_product_id  (product_id)
-#
 
 class ProductImage < ActiveRecord::Base
 

@@ -8,11 +8,6 @@
 #  created_at          :datetime
 #  updated_at          :datetime
 #
-# Indexes
-#
-#  index_product_categorizations_on_product_category_id  (product_category_id)
-#  index_product_categorizations_on_product_id           (product_id)
-#
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 

@@ -42,6 +42,12 @@
         .fields
           = f.check_box :is_published
           = f.label :is_published, "Veröffentlicht", class: "label--inline"
+        .fields
+          = f.check_box :is_on_frontpage
+          = f.label :is_on_frontpage, "Auf Startseite zeigen", class: "label--inline"
+          br
+          = f.check_box :is_featured
+          = f.label :is_featured, "Hervorheben", class: "label--inline"
       section
         h4 Artikeldaten
         .fields

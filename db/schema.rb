@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170620072528) do
+ActiveRecord::Schema.define(version: 20170621093237) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -186,11 +186,11 @@ ActiveRecord::Schema.define(version: 20170620072528) do
     t.decimal  "regular_price",                    precision: 8, scale: 2
     t.decimal  "current_price",                    precision: 8, scale: 2
     t.string   "color",                limit: 255
-    t.boolean  "is_published"
+    t.boolean  "is_published",                                             default: false
     t.text     "official_description"
-    t.boolean  "is_on_sale"
-    t.boolean  "is_on_frontpage"
-    t.boolean  "is_featured"
+    t.boolean  "is_on_sale",                                               default: false
+    t.boolean  "is_on_frontpage",                                          default: false
+    t.boolean  "is_featured",                                              default: false
     t.string   "slug",                 limit: 255
     t.boolean  "use_in_lia_campaign",                                      default: false
     t.text     "meta_description"

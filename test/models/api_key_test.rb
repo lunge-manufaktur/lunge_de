@@ -8,10 +8,6 @@
 #  created_at :datetime
 #  updated_at :datetime
 #
-# Indexes
-#
-#  index_api_keys_on_user_id  (user_id)
-#
 
 require 'test_helper'
 

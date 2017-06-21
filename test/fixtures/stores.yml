@@ -18,10 +18,7 @@
 #  description          :text
 #  slug                 :string(255)
 #  google_maps_place_id :string
-#
-# Indexes
-#
-#  index_stores_on_slug  (slug) UNIQUE
+#  panorama_embed_url   :text
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

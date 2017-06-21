@@ -12,10 +12,6 @@
 #  logo_updated_at   :datetime
 #  slug              :string(255)
 #
-# Indexes
-#
-#  index_brands_on_slug  (slug) UNIQUE
-#
 
 class Brand < ActiveRecord::Base
   # Associations

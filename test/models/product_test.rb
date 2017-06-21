@@ -13,21 +13,14 @@
 #  regular_price        :decimal(8, 2)
 #  current_price        :decimal(8, 2)
 #  color                :string(255)
-#  is_published         :boolean
+#  is_published         :boolean          default(FALSE)
 #  official_description :text
-#  is_on_sale           :boolean
-#  is_on_frontpage      :boolean
-#  is_featured          :boolean
+#  is_on_sale           :boolean          default(FALSE)
+#  is_on_frontpage      :boolean          default(FALSE)
+#  is_featured          :boolean          default(FALSE)
 #  slug                 :string(255)
 #  use_in_lia_campaign  :boolean          default(FALSE)
 #  meta_description     :text
-#
-# Indexes
-#
-#  index_products_on_brand_id             (brand_id)
-#  index_products_on_size_id              (size_id)
-#  index_products_on_slug                 (slug)
-#  index_products_on_use_in_lia_campaign  (use_in_lia_campaign)
 #
 
 require 'test_helper'

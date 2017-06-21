@@ -18,11 +18,6 @@
 #  is_featured       :boolean
 #  meta_description  :text
 #
-# Indexes
-#
-#  index_posts_on_is_featured  (is_featured)
-#  index_posts_on_slug         (slug)
-#
 
 class Post < ActiveRecord::Base
 
