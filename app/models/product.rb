@@ -80,7 +80,11 @@ class Product < ActiveRecord::Base
   end
 
   def short_description(length=200)
-    meta_description&.truncate(length, separator: " ") || description&.truncate(length, separator: " ")
+    if meta_description.blank?
+      description&.truncate(length, separator: " ")
+    else
+      meta_description&.truncate(length, separator: " ")
+    end
   end
 
   def name_with_brand
