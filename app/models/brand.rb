@@ -24,6 +24,7 @@ class Brand < ActiveRecord::Base
   # Scopes
   scope :active, -> { joins(:products).distinct.merge(Product.published) }
   scope :has_logo, -> { where.not(logo_file_name: nil) }
+  scope :ordered_by_name, -> { order(:name) }
 
   # Paperclip
   require "paperclip/storage/ftp"
