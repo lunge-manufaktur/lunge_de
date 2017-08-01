@@ -79,6 +79,7 @@ module Api
         :name,
         :sku,
         :description,
+        :created_at,
         :updated_at,
         :size_id,
         :brand_id,

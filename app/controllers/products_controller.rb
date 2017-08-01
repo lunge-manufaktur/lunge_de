@@ -11,13 +11,13 @@ class ProductsController < ApplicationController
       @search = policy_scope(Product).tagged_with(@tags).search(params[:q])
       @products = @search.result
                          .includes(:brand, :product_images, :tags)
-                         .prefer_with_image.newest
+                         .newest.prefer_with_image
                          .page(params[:page]).per(12)
     else
       @search = policy_scope(Product).search(params[:q])
       @products = @search.result
                          .includes(:brand, :product_images, :tags)
-                         .prefer_with_image.newest
+                         .newest.prefer_with_image
                          .page(params[:page]).per(12)
     end
   end
@@ -35,7 +35,7 @@ class ProductsController < ApplicationController
   end
 
   def index_with_tag
-    @products = Product.published.where(tag_list: params[:tag])
+    @products = Product.published.newest.where(tag_list: params[:tag])
     render 'index'
   end
 
