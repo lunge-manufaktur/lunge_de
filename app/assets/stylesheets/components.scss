@@ -129,19 +129,14 @@ ul.offcanvas-nav {
 
 /* ----- CARDS ----- */
 .cards__container {
-  display: flex;
-  flex-flow: row wrap;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  grid-gap: $gutter;
 }
 
 .card {
   position: relative;
   background-color: $white;
-  margin-right: 1rem;
-  margin-left: 1rem;
-  margin-bottom: 2rem;
-  flex: 1 0;
   transition: 140ms ease-in-out;
 }
 
@@ -153,15 +148,9 @@ a.card:hover {
 .card--medium {
   max-width: 100%;
   flex-basis: 250px;
-
-  @include tablet-portrait {
-    max-width: 316px;
-  }
 }
 
 .card--store {
-  width: 300px;
-  flex: 0 1 auto;
 }
 
 .card--small {

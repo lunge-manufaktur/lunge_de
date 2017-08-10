@@ -3,12 +3,6 @@
     h1 Filialen
 
   section
-    h4 Hamburg
     .cards__container
-      - @stores.hamburg.each do |store|
-        = render "/stores/card", store: store
-  section
-    h4 Berlin
-    .cards__container
-      - @stores.berlin.each do |store|
+      - @stores.each do |store|
         = render "/stores/card", store: store

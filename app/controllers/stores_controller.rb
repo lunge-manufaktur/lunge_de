@@ -6,7 +6,7 @@ class StoresController < ApplicationController
   # GET /stores
   # GET /stores.json
   def index
-    @stores = Store.all
+    @stores = Store.order(city: :desc)
   end
 
   # GET /stores/1
