@@ -9,9 +9,12 @@
   - if @tags
     section
       .panel
-        h4 Aktive Filter: 
-        - @tags.each do |tag|
-          = tag_to_remove(tag)
+        h4 Aktive Filter
+        ul.inline-list
+          li Tags:
+          li 
+            - @tags.each do |tag|
+              = tag_to_remove(tag)
         hr
         = link_to "Alle Artikel anzeigen", products_path
   .two-columns

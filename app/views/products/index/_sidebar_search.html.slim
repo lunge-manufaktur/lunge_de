@@ -1,10 +1,31 @@
 h4 Suchen
 = search_form_for @search, url: @tags ? tagged_search_products_path : search_products_path, method: :get do |f|
-  p
+  .fields
     = f.label :name_or_sku_or_description_cont, "Artikel"
     = f.text_field :name_or_sku_or_description_cont
-  p
+  .fields
     = f.label :brand_id_eq, "Marke"
     = f.collection_select(:brand_id_eq, Brand.active.ordered_by_name, :id, :name, {prompt: "Marke auswählen..."})
-  p
-    = f.submit "Suchen", class: "small button expand"
+  .fields
+  	= f.check_box :on_sale
+  	= f.label :on_sale, "Reduziert", class: "label--inline"
+
+  - if current_user
+		.fields
+			= f.check_box :has_no_image
+			= f.label :has_no_image, "Ohne Bild", class: "label--inline"
+		.fields
+			= f.check_box :has_image
+			= f.label :has_image, "Mit Bild", class: "label--inline"
+		.fields
+			= f.check_box :published
+			= f.label :published, "Veröffentlicht", class: "label--inline"
+		.fields
+			= f.check_box :draft
+			= f.label :draft, "Entwurf", class: "label--inline"
+
+  ul.inline-list
+    li = f.submit "Suchen", class: "small button expand"
+    - if params[:q].present?
+    	li = link_to "Aufheben", @tags.present? ? tag_products_path(tags: parameterize_tags(@tags)) : products_path, class: "link"
+    		

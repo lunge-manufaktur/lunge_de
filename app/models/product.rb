@@ -48,15 +48,20 @@ class Product < ActiveRecord::Base
 
   # scopes
   scope :published, -> { where(is_published: true) }
+  scope :draft, -> { where(is_published: false) }
   scope :on_sale, -> { where("current_price < regular_price") }
   scope :featured, -> { where(is_featured: true) }
   scope :on_frontpage, -> { where(is_on_frontpage: true) }
   scope :newest, -> { order(created_at: :desc) }
-  scope :has_image, -> { includes(:product_images).where.not(product_images: { id: nil } ) }
+  scope :has_image, -> { joins("JOIN product_images ON products.id = product_images.product_id") }
+  scope :has_no_image, -> { joins("LEFT OUTER JOIN product_images ON products.id = product_images.product_id").where(product_images: { id: nil }) }
   scope :prefer_with_image, -> { includes(:product_images).order('product_images.created_at DESC NULLS LAST') }
 
   # callbacks
   after_validation :hide_unavailable_product, on: [:create, :update]
+
+  # ransack
+  
 
   # methods
   include IconHelper
@@ -179,11 +184,15 @@ class Product < ActiveRecord::Base
       stocks.maximum(:updated_at).to_time
     end
   end
-end
 
+  private
 
-
-private
   def hide_unavailable_product
     self.is_published = false unless has_stock?
   end
+
+  def self.ransackable_scopes(auth_object = nil)
+    [:on_sale, :has_no_image, :has_image, :published, :draft]
+  end
+
+end

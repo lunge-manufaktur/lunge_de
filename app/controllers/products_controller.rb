@@ -6,32 +6,24 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
-    if params[:tags]
-      @tags = params[:tags].split('+').map { |tag| tag.gsub('-', '/') }
-      @search = policy_scope(Product).tagged_with(@tags).search(params[:q])
-      @products = @search.result
-                         .includes(:brand, :product_images, :tags)
-                         .newest.prefer_with_image
-                         .page(params[:page]).per(12)
-    else
-      @search = policy_scope(Product).search(params[:q])
-      @products = @search.result
-                         .includes(:brand, :product_images, :tags)
-                         .newest.prefer_with_image
-                         .page(params[:page]).per(12)
+    if params[:tags].present?
+      @tags = params[:tags]&.split('+')&.map { |tag| tag.gsub('-', ' ') }
     end
-  end
+    
+    if @tags.present?
+      @search = policy_scope(Product).includes(:brand, :product_images, :tags).tagged_with(@tags).search(params[:q])
+    else
+      @search = policy_scope(Product).includes(:brand, :product_images, :tags).search(params[:q])
+    end
 
+    @products = @search.result
+                       .newest
+                       .page(params[:page]).per(12)
+  end
 
   def search
     index
     render 'index'
-  end
-
-  def remove_tag
-    @original_tags = params[:tags]
-    @tags = @original_tags.delete(params[:to_remove])
-    render action: index
   end
 
   def index_with_tag

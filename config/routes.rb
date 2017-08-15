@@ -68,8 +68,7 @@ LungeDe::Application.routes.draw do
     get "featured" => "products#show_featured", :as => "featured"
     collection do
       get "tags/:tags", action: "index", as: :tag
-      get '/tags/:tags/search', action: :index, as: :tagged_search
-      get "remove_tag/:tag", :action => "remove_tag", :as => "remove_tag"
+      get '/tags/:tags/search', action: :search, as: :tagged_search
     end
     resources :product_images
     resources :properties

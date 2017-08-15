@@ -63,12 +63,28 @@ body.offcanvas .overlay {
 
 
 /* --- PANEL GRID --- */
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(8, minmax(150px, auto));
+  grid-gap: $gutter;
+  grid-auto-flow: dense;
+}
+
+.showcase__item {
+  background-color: $white;
+  padding: $gutter;
+}
+
+.showcase__description {
+  background-color: $white;
+}
+
 .panel__grid {
   height: 33vh;
   margin: -0.5rem;
 
   @include tablet-portrait {
-    height: 66vh;
   }
 }
 
