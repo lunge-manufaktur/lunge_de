@@ -55,7 +55,7 @@ class Product < ActiveRecord::Base
   scope :newest, -> { order(created_at: :desc) }
   scope :has_image, -> { joins("JOIN product_images ON products.id = product_images.product_id") }
   scope :has_no_image, -> { joins("LEFT OUTER JOIN product_images ON products.id = product_images.product_id").where(product_images: { id: nil }) }
-  scope :prefer_with_image, -> { includes(:product_images).order('product_images.created_at DESC NULLS LAST') }
+  scope :prefer_with_image, -> { includes(:product_images).order('product_images.product_id DESC NULLS LAST') }
 
   # callbacks
   after_validation :hide_unavailable_product, on: [:create, :update]
