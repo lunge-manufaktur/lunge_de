@@ -17,7 +17,7 @@ class ProductsController < ApplicationController
     end
 
     @products = @search.result
-                       .newest
+                       .newest.prefer_with_image
                        .page(params[:page]).per(12)
   end
 
