@@ -120,18 +120,18 @@ body.offcanvas .overlay {
 
 .grid-nav__stores {
   grid-area: stores;
-  background-image: url("frontpage_stores.jpg");
+  background-image: image-url("frontpage_stores.jpg");
 }
 
 .grid-nav__products {
   grid-area: products;
-  background-image: url("frontpage_products.jpg");
+  background-image: image-url("frontpage_products.jpg");
 }
 
 .grid-nav__clothing {
   display: none;
   grid-area: clothing;
-  background-image: url("frontpage_clothing.jpg");
+  background-image: image-url("frontpage_clothing.jpg");
 
   @include tablet-portrait {
     display: flex;
@@ -140,13 +140,13 @@ body.offcanvas .overlay {
 
 .grid-nav__blog {
   grid-area: blog;
-  background-image: url("frontpage_blog.jpg");
+  background-image: image-url("frontpage_blog.jpg");
 }
 
 .grid-nav__sale {
   grid-area: sale;
   background-color: $primary-color;
-  background-image: url("frontpage_sale.svg");
+  background-image: image-url("frontpage_sale.svg");
   background-size: 33%;
   background-position: center 80%;
   background-repeat: no-repeat;
@@ -155,7 +155,7 @@ body.offcanvas .overlay {
 .grid-nav__running-shoes {
   grid-area: running-shoes;
   display: none;
-  background-image: url("frontpage_running-shoes.jpg");
+  background-image: image-url("frontpage_running-shoes.jpg");
 
   @include tablet-portrait {
     display: flex;
