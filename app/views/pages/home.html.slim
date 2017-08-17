@@ -7,15 +7,39 @@
     ul.inline-list
       li = link_to "Sortiment entdecken", products_path, class: "button"
       li = link_to "Erfahre mehr über unsere Beratung...", @featured_post, class: "link"
-section
-  .panel__grid
-    .panel__container
-      .panel style="background-image: url(#{image_path("frontpage01.jpg")})"
-      .panel__container.panel__container--vertical
-        .panel style="background-image: url(#{image_path("frontpage02.jpg")})"
-        .panel__container
-          .panel style="background-image: url(#{image_path("frontpage05.jpg")})"
-          .panel style="background-image: url(#{image_path("frontpage03.jpg")})"
+.container
+  section
+    .grid-nav
+      = link_to stores_path, class: "grid-nav__item grid-nav__stores" do
+        .grid-nav__text
+          .grid-nav__header Filialen & Öffnungszeiten
+          .grid-nav__description
+            p Hier findest Du uns in Hamburg und Berlin. 
+      = link_to products_path, class: "grid-nav__item grid-nav__products" do
+        .grid-nav__text
+          .grid-nav__header Sortiment
+          .grid-nav__description
+            p Entdecke unser umfangreiches Sortiment. 
+      = link_to tag_products_path(tags: "bekleidung"), class: "grid-nav__item grid-nav__clothing" do
+        .grid-nav__text
+          .grid-nav__header Laufbekleidung
+          .grid-nav__description
+            p Laufbekleidung für jede Wetterlage.
+      = link_to category_path("beratung"), class: "grid-nav__item grid-nav__blog" do
+        .grid-nav__text
+          .grid-nav__header Beratung
+          .grid-nav__description
+            p Hilfreiche Tipps zur gesunden Bewegung.
+      = link_to "products/search?q[on_sale]=1", class: "grid-nav__item grid-nav__sale" do
+        .grid-nav__text
+          .grid-nav__header Angebote
+          .grid-nav__description
+            p Reduzierte Ware für den kleinen Geldbeutel.
+      = link_to tag_products_path(tags: "laufschuh"), class: "grid-nav__item grid-nav__running-shoes" do
+        .grid-nav__text
+          .grid-nav__header Laufschuhe
+          .grid-nav__description
+            p Finde den optimalen Laufschuh für Dich.
 
 .container
   section

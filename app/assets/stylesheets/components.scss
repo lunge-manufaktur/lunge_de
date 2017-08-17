@@ -80,32 +80,116 @@ body.offcanvas .overlay {
   background-color: $white;
 }
 
-.panel__grid {
-  height: 33vh;
-  margin: -0.5rem;
+.grid-nav {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:  "stores"
+                        "products"
+                        "sale"
+                        "blog";
+  grid-gap: $gutter;
+  grid-auto-flow: dense;
+  height: 100vh;
 
   @include tablet-portrait {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:  "stores stores products products"
+                          "stores stores clothing blog"
+                          "sale running-shoes running-shoes running-shoes";
+    height: 50vh;
   }
 }
 
-.panel__container {
+.grid-nav__item {
+  background-color: $white;
+  background-size: cover;
+  background-position: center;
   display: flex;
-  height: 100%;
+  flex-flow: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  transition: 140ms ease-in-out;
 }
 
-.panel__container--vertical {
-  flex-direction: column;
+.grid-nav__item:hover {
+  transform: translate(-8px, -8px);
+  box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.06);
 }
 
-.panel {
-  flex: 1 1 50%;
-  margin: 0.5rem;
+.grid-nav__stores {
+  grid-area: stores;
+  background-image: url("frontpage_stores.jpg");
+}
+
+.grid-nav__products {
+  grid-area: products;
+  background-image: url("frontpage_products.jpg");
+}
+
+.grid-nav__clothing {
+  display: none;
+  grid-area: clothing;
+  background-image: url("frontpage_clothing.jpg");
+
+  @include tablet-portrait {
+    display: flex;
+  }
+}
+
+.grid-nav__blog {
+  grid-area: blog;
+  background-image: url("frontpage_blog.jpg");
+}
+
+.grid-nav__sale {
+  grid-area: sale;
+  background-color: $primary-color;
+  background-image: url("frontpage_sale.svg");
+  background-size: 33%;
+  background-position: center 80%;
+  background-repeat: no-repeat;
+}
+
+.grid-nav__running-shoes {
+  grid-area: running-shoes;
+  display: none;
+  background-image: url("frontpage_running-shoes.jpg");
+
+  @include tablet-portrait {
+    display: flex;
+  }
+}
+
+.grid-nav__image {
+  flex: 1 1 auto;
   background-size: cover;
   background-position: center;
 }
 
-.panel__container > .panel__container {
-  flex-basis: 50%;
+.grid-nav__text {
+  padding: $gutter;
+  background-color: $white;
+  width: auto;
+  transition: 140ms ease-in-out;
+}
+
+.grid-nav__item:hover .grid-nav__text {
+  flex: 1 1 auto;
+  background: linear-gradient(to bottom, #fff, $white-transparent);
+}
+
+.grid-nav__header {
+  font-weight: 700;
+}
+
+.grid-nav__description {
+  display: none;
+}
+
+.grid-nav__item:hover .grid-nav__description {
+  display: block;
 }
 
 
@@ -146,8 +230,12 @@ ul.offcanvas-nav {
 /* ----- CARDS ----- */
 .cards__container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(200px, auto));
   grid-gap: $gutter;
+
+  @include desktop {
+    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  }
 }
 
 .card {
@@ -203,7 +291,6 @@ a.card:hover {
 }
 
 .card--large .card__icon {
-  width: 50%;
 }
 
 .card--medium .card__icon {
