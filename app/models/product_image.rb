@@ -36,11 +36,11 @@ class ProductImage < ActiveRecord::Base
     },
     default_url: "missing.png",
     convert_options: {
-      thumb: "-quality 80 -strip",
-      small: "-quality 80 -strip",
-      medium: "-quality 80 -strip",
-      large: "-quality 80 -strip",
-      card: "-quality 80 -strip"
+      thumb: "-quality 80 -background white -alpha remove -strip",
+      small: "-quality 80 -background white -alpha remove -strip",
+      medium: "-quality 80 -background white -alpha remove -strip",
+      large: "-quality 80 -background white -alpha remove -strip",
+      card: "-quality 80 -background white -alpha remove -strip"
     },
     storage: :ftp,
     path: "/lunge.de/www/images/:class/:product_id/:product_id_:id_:style.:extension",
