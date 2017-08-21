@@ -11,11 +11,12 @@
       span.label.label--draft Entwurf
 
 .container
-  - if @product.product_images.any?
-    section
-      = image_tag @product.default_image(:large), alt: @product.name_with_brand_and_color
   main
     article
+      - if @product.product_images.any?
+        section
+          = image_tag @product.default_image(:large), alt: @product.name_with_brand_and_color
+          
       section
         p = simple_format(@product.description)
       - if @product.eligible_for_running_course?
