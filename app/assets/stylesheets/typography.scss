@@ -103,11 +103,13 @@ label {
   opacity: 0.7;
 }
 
-a.link {
+a.link,
+p a {
   border-bottom: 1px solid $black;
 }
 
-a.link:hover {
+a.link:hover,
+p a:hover {
   border-color: $primary-color;
   color: $primary-color;
 }
