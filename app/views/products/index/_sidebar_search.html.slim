@@ -11,18 +11,21 @@ h4 Suchen
   	= f.label :on_sale, "Reduziert", class: "label--inline"
 
   - if current_user
-		.fields
-			= f.check_box :has_no_image
-			= f.label :has_no_image, "Ohne Bild", class: "label--inline"
-		.fields
-			= f.check_box :has_image
-			= f.label :has_image, "Mit Bild", class: "label--inline"
-		.fields
-			= f.check_box :published
-			= f.label :published, "Veröffentlicht", class: "label--inline"
-		.fields
-			= f.check_box :draft
-			= f.label :draft, "Entwurf", class: "label--inline"
+    .fields
+    	= f.check_box :has_no_image
+    	= f.label :has_no_image, "Ohne Bild", class: "label--inline"
+    .fields
+    	= f.check_box :has_image
+    	= f.label :has_image, "Mit Bild", class: "label--inline"
+    .fields
+    	= f.check_box :published
+    	= f.label :published, "Veröffentlicht", class: "label--inline"
+    .fields
+      = f.check_box :draft
+      = f.label :draft, "Entwurf", class: "label--inline"
+    .fields
+      = f.check_box :on_frontpage
+      = f.label :on_frontpage, "Auf Startseite", class: "label--inline"
 
   ul.inline-list
     li = f.submit "Suchen", class: "small button expand"

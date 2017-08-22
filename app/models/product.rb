@@ -192,7 +192,7 @@ class Product < ActiveRecord::Base
   end
 
   def self.ransackable_scopes(auth_object = nil)
-    [:on_sale, :has_no_image, :has_image, :published, :draft]
+    [:on_sale, :has_no_image, :has_image, :published, :draft, :on_frontpage]
   end
 
 end
