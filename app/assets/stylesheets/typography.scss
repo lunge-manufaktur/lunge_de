@@ -104,11 +104,13 @@ label {
 }
 
 a.link,
+.product__description a,
 p a {
   border-bottom: 1px solid $black;
 }
 
 a.link:hover,
+.product__description a:hover,
 p a:hover {
   border-color: $primary-color;
   color: $primary-color;

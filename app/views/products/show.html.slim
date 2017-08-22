@@ -17,7 +17,7 @@
         section
           = image_tag @product.default_image(:large), alt: @product.name_with_brand_and_color
 
-      section
+      section.product__description
         = simple_format(@product.description)
 
       - if @product.eligible_for_running_course?
