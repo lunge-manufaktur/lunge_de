@@ -29,6 +29,8 @@ class Category < ActiveRecord::Base
 	friendly_id :name, :use => :slugged
 
 	# Methods
-	
+	def post_count
+		posts.count
+	end
 	
 end
