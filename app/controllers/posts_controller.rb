@@ -11,6 +11,8 @@ class PostsController < ApplicationController
       @search = Post.published.search(params[:q])
     end
     @posts = @search.result(distinct: true).order(created_at: :desc)
+    authorize @posts
+    
     @categories = Category.all
   end
 

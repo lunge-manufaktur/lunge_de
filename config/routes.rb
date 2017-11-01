@@ -52,7 +52,7 @@ LungeDe::Application.routes.draw do
   resources :categorizations
   resources :categories, except: "index"
   resources :events
-  resources :posts, except: :index
+  resources :posts, concerns: [ :searchable ]
   resources :properties
   resources :stocks
   resources :stores do
