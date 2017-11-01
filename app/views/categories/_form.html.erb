@@ -18,7 +18,7 @@
   <div class="field">
     <p>
       <%= f.label :parent_id, "Übergeordnete Gruppe (optional)" %>
-      <%= f.select :parent_id, nested_set_options(Category, @category) {|i| "#{'-' * i.level} #{i.name}" }, prompt: "Wähle eine übergeordnete Kategorie..." %>
+      <%= f.select :parent_id, nested_set_options(Category, @category) {|i| "#{'-' * i.level} #{i.name}" }, include_blank: "Keine" %>
     </p>
   </div>
   <div class="actions">
