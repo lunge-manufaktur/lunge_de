@@ -14,7 +14,7 @@
 .container
   main
     article
-      = simple_format @post.content, sanitize: false
+      = simple_format @post.content, {}, sanitize: false
     aside
       .fields
         label Veröffentlicht am
