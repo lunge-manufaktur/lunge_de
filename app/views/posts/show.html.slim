@@ -6,11 +6,9 @@
   .container
     h1.marginless--bottom = @post.title
     h3.marginless--top = @post.subtitle
-
-- if @post.post_images.any?
-  section
-    = image_tag @post&.post_images&.first.image.url(:large)
-
+    - if @post.post_images.any?
+      section
+        = image_tag @post&.post_images&.first.image.url(:large)
 .container
   main
     article
