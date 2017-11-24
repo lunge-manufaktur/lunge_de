@@ -26,6 +26,9 @@ h4 Suchen
     .fields
       = f.check_box :on_frontpage
       = f.label :on_frontpage, "Auf Startseite", class: "label--inline"
+    .fields
+      = f.check_box :has_stock
+      = f.label :has_stock, "Mit Bestand", class: "label--inline"
 
   ul.inline-list
     li = f.submit "Suchen", class: "small button expand"
