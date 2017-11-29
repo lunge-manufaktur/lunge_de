@@ -14,7 +14,7 @@ module ProductsHelper
     tags&.split('+')&.map { |tag| tag.gsub('-', ' ') }
   end
 
-  def prepare_single_tag(tag: tag)
+  def prepare_single_tag(tag)
     tag.gsub(" ", "-")
   end
 
@@ -37,7 +37,7 @@ module ProductsHelper
 
 
   def tag_to_add(tag_name)
-    tag_url_part = tag_products_path(tags: "#{parameterize_tags(@tags)}+#{prepare_single_tag(tag: tag_name)}")
+    tag_url_part = tag_products_path(tags: "#{parameterize_tags(@tags)}+#{prepare_single_tag(tag_name)}")
     search_url_part = search_query_params
     link = "#{tag_url_part}#{search_url_part}"
 
@@ -55,7 +55,7 @@ module ProductsHelper
 
 
   def first_tag_to_add(tag_name)
-    tag_url_part = tag_products_path(tags: prepare_single_tag(tag: tag_name))
+    tag_url_part = tag_products_path(tags: prepare_single_tag(tag_name))
     search_url_part = search_query_params
     link = "#{tag_url_part}#{search_url_part}"
 
