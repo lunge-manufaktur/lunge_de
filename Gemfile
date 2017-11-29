@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby "2.4.1"
 
-gem "rails", "~> 5.0.2"
+gem "rails", "~> 5.1.4"
 gem "rails-i18n"
 gem "rake"
 gem "pg"
@@ -42,7 +42,7 @@ end
 
 gem "bourbon"
 gem 'ransack'
-gem 'annotate', git: 'https://github.com/ctran/annotate_models.git', branch: 'develop'
+gem 'annotate'
 gem "paperclip"
 gem "paperclip-storage-ftp"
 gem "delayed_paperclip"
@@ -54,7 +54,6 @@ gem "mail_form"
 # heroku
 group :production do
 	gem 'rails_12factor'
-  gem 'skylight'
 end
 
 gem 'awesome_nested_set'
@@ -63,7 +62,7 @@ gem 'kaminari'
 gem 'friendly_id'
 gem "simple_calendar", "~> 1.1.0"
 gem "browser"
-gem 'canonical-rails', github: 'jumph4x/canonical-rails'
+gem 'canonical-rails', git: 'https://github.com/jumph4x/canonical-rails.git'
 gem 'sitemap_generator'
 gem "autoprefixer-rails"
 gem "meta-tags"

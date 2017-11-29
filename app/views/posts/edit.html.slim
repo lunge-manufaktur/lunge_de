@@ -13,4 +13,4 @@
   ul.inline-list
     li = submit_tag "Speichern", form: "edit_post_#{@post.id}", class: "button"
     li = link_to "Abbrechen", @post, class: "link"
-    li = link_to "Beitrag löschen", post_path(@post), method: :delete, data: { confirm: "Wirklich löschen? Diese Aktion ist nicht rückgängig zu machen." }, class: "alert", class: "link"
+    li = link_to "Beitrag löschen", post_path(@post), method: :delete, data: { confirm: "Wirklich löschen? Diese Aktion ist nicht rückgängig zu machen." }, class: "link"

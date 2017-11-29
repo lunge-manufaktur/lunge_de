@@ -16,7 +16,7 @@
         = search_form_for @search do |f|
           .inline-form
             = f.search_field :title_or_subtitle_or_content_cont, placeholder: "Suchen...", class: "inline-form__input"
-            = f.submit "Suchen", class: "button postfix", class: "inline-form__submit"
+            = f.submit "Suchen", class: "inline-form__submit"
       section
         h4 Kategorien
         = render "categories/nested_list"
