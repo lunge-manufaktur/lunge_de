@@ -1,7 +1,7 @@
 module Api
   class PropertiesController < ApplicationController
     protect_from_forgery except: [:create, :update]
-    before_filter :restrict_access
+    before_action :restrict_access
     respond_to :json
 
     # GET /stocks

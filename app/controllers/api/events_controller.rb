@@ -1,6 +1,6 @@
 module Api
 	class EventsController < ApplicationController
-		before_filter :restrict_access
+		before_action :restrict_access
 		respond_to :json
 		protect_from_forgery except: [:create, :update]
 
