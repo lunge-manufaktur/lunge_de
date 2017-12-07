@@ -1,7 +1,7 @@
 h4 Suchen
 = search_form_for @search, url: @tags ? tagged_search_products_path : search_products_path, method: :get do |f|
   .fields
-    = f.label :name_or_sku_or_description_cont, "Artikel"
+    = f.label :name_or_sku_or_description_cont, "Suchbegriff"
     = f.text_field :name_or_sku_or_description_cont
   .fields
     = f.label :brand_id_eq, "Marke"
