@@ -51,6 +51,7 @@ class Product < ActiveRecord::Base
   scope :draft, -> { where(is_published: false) }
   scope :on_sale, -> { where("current_price < regular_price") }
   scope :featured, -> { where(is_featured: true) }
+  scope :prefer_featured, -> { order("is_featured DESC NULLS LAST") }
   scope :on_frontpage, -> { where(is_on_frontpage: true) }
   scope :newest, -> { order(created_at: :desc) }
   scope :has_image, -> { joins("JOIN product_images ON products.id = product_images.product_id") }
@@ -193,7 +194,7 @@ class Product < ActiveRecord::Base
   end
 
   def self.ransackable_scopes(auth_object = nil)
-    [:on_sale, :has_no_image, :has_image, :published, :draft, :on_frontpage, :has_stock]
+    [:on_sale, :has_no_image, :has_image, :published, :draft, :on_frontpage, :has_stock, :featured]
   end
 
 end

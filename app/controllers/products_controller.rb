@@ -16,8 +16,8 @@ class ProductsController < ApplicationController
       @search = policy_scope(Product).includes(:brand, :product_images, :tags).search(params[:q])
     end
 
-    @products = @search.result
-                       .newest
+    @products = @search.result(distinct: true)
+                       .prefer_featured.newest
                        .page(params[:page]).per(12)
   end
 
