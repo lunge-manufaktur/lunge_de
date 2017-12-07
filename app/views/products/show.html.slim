@@ -15,7 +15,7 @@
     article
       - if @product.product_images.any?
         section
-          = image_tag @product.default_image(:large), alt: @product.name_with_brand_and_color
+          = image_tag @product.default_image(:large), alt: @product.name_with_brand_and_color, class: "product-images__main-image"
 
       section.product__description
         = simple_format(@product.description)
@@ -38,6 +38,11 @@
             = render partial: "products/minicard", locals: { product: related_product }
 
     aside
+      section
+        - if @product.product_images.count > 1
+          - @product.product_images.each do |image|
+            = image_tag image.image.url(:small), class: "product-images__thumbnail", data: { "url-large": image.image.url(:large) }
+
       section
         h4 Artikeldaten
         p

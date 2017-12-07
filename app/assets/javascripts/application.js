@@ -18,4 +18,5 @@
 //= require menu
 //= require ios-webapp
 //= require trumbowyg
+//= require product-images
 //= require turbolinks

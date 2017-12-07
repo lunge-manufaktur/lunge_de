@@ -371,6 +371,23 @@ a.card:hover {
 
 
 
+/* --- PRODUCT PAGE --- */
+.product-images__thumbnail {
+  @include transition;
+  margin-bottom: 1rem;
+}
+
+.product-images__thumbnail:hover {
+  @include hover-effect;
+  cursor: pointer;
+}
+
+.product-images__thumbnail--active {
+}
+
+
+
+
 
 /* --- LISTS --- */
 ul.list--unstyled {

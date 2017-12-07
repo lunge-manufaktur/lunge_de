@@ -79,3 +79,12 @@ $gutter: 1rem;
 #rotate > .fadeInUp {
   @include animation-duration(400ms);
 }
+
+@mixin transition() {
+  transition: 140ms ease-in-out;
+}
+
+@mixin hover-effect() {
+  transform: translate(-8px, -8px);
+  box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.06);
+}
