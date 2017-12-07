@@ -38,8 +38,8 @@
             = render partial: "products/minicard", locals: { product: related_product }
 
     aside
-      section
-        - if @product.product_images.count > 1
+      - if @product.product_images.count > 1
+        section
           - @product.product_images.each do |image|
             = image_tag image.image.url(:small), class: "product-images__thumbnail", data: { "url-large": image.image.url(:large) }
 
