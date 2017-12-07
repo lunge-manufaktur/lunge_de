@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   def home
     @products = Product.on_frontpage.published.limit(8)
     @brands = Brand.active.has_logo.order(:name)
-    @posts = Post.homepage.published.order(created_at: :desc).limit(4)
+    @posts = Post.homepage.published.order(created_at: :desc).limit(16)
     @featured_post = Post.featured.first
   end
 
