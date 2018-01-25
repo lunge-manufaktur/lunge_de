@@ -3,7 +3,12 @@
 
 .container
   .title
-    h1 = @brand.name
+    .brand__container
+      .brand__name
+        h1 = @brand.name
+      - if @brand.logo.present?
+        .brand__logo
+          = image_tag @brand.logo.url(:small), width: "128"
 
   section
     h4 Artikel

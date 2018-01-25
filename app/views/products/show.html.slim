@@ -54,7 +54,7 @@
           - if @product.brand.logo.present?
             .brand__logo
               = link_to brand_path(@product.brand) do
-                = image_tag @product.brand.logo.url(:thumb), width: "60"
+                = image_tag @product.brand.logo.url(:thumb), width: "48"
           .brand__name
             = link_to @product.brand.name, brand_path(@product.brand), class: "link"
         p

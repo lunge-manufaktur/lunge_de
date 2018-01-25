@@ -391,16 +391,13 @@ a.card:hover {
 }
 
 .brand__logo {
-  flex: 0 1 4rem;
+  flex: 0 1 auto;
   margin-right: 0.5rem;
 }
 
 .brand__name {
-  flex: 0 1 auto;
+  flex: 1 1 auto;
 }
-
-
-
 
 
 /* --- LISTS --- */
