@@ -385,6 +385,20 @@ a.card:hover {
 .product-images__thumbnail--active {
 }
 
+.brand__container {
+  display: flex;
+  align-items: center;
+}
+
+.brand__logo {
+  flex: 0 1 4rem;
+  margin-right: 0.5rem;
+}
+
+.brand__name {
+  flex: 0 1 auto;
+}
+
 
 
 

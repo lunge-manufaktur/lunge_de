@@ -44,13 +44,19 @@
             = image_tag image.image.url(:small), class: "product-images__thumbnail", data: { "url-large": image.image.url(:large) }
 
       section
-        h4 Artikeldaten
+        h4.marginless--top Artikeldaten
         p
           label Artikelnummer
           = @product.sku
-        p
-          label Hersteller
-          = link_to @product.brand.name, brand_path(@product.brand), class: "link"
+
+        label Hersteller
+        .brand__container
+          - if @product.brand.logo.present?
+            .brand__logo
+              = link_to brand_path(@product.brand) do
+                = image_tag @product.brand.logo.url(:thumb), width: "60"
+          .brand__name
+            = link_to @product.brand.name, brand_path(@product.brand), class: "link"
         p
           label Farbe
           = @product.color
