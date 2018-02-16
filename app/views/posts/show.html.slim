@@ -8,7 +8,7 @@
     h3.marginless--top = @post.subtitle
     - if @post.post_images.any?
       section
-        = image_tag @post&.post_images&.first.image.url(:large)
+        = image_tag @post&.default_image(size: :large)
 .container
   main
     article
