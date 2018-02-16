@@ -18,7 +18,7 @@ class PostImage < ActiveRecord::Base
   belongs_to :post
 
   # scopes
-  scope :default, -> { where(default: true).first }
+  scope :default, -> { where(default: true) }
   scope :svg, -> { where(image_content_type: "image/svg+xml").first }
   scope :jpg, -> { where(image_content_type: "image/jpeg").first }
 

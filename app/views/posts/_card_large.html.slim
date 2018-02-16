@@ -1,7 +1,7 @@
 = link_to post, class: "card card--large" do
   - if post.post_images.any?
     .card__figure
-      = image_tag post.default_image(size: :medium), class: "card__image"
+      = image_tag post&.default_image(size: :medium), class: "card__image"
   - elsif post.icon?
     .card__figure.card__figure--colored
       = image_tag post.icon.url, class: "card__icon"

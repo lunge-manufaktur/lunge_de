@@ -61,8 +61,10 @@ class Post < ActiveRecord::Base
   end
 
   def default_image(size: :large)
-    if post_images.any?
-      post_images&.default&.image&.url(size) || post_images&.first&.image&.url(size)
+    if post_images.default.any?
+      post_images&.default&.first&.image&.url(size)
+    elsif post_images.any?
+      post_images&.first&.image&.url(size)
     else
       "missing.png"
     end
