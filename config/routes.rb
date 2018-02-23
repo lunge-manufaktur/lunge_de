@@ -60,7 +60,7 @@ LungeDe::Application.routes.draw do
       post :get_directions
     end
   end
-  resources :brands, except: :index
+  resources :brands
   resources :product_images
   resources :product_categories
   resources :sizes
@@ -84,6 +84,7 @@ LungeDe::Application.routes.draw do
   post "contact", controller: "contact_form", action: "create"
   get "gutschein", controller: "pages", action: "gutschein"
   get "jobs", controller: "pages", action: "jobs"
+  get "privacy_policy", controller: "pages", action: "privacy_policy"
   get "docs/api", controller: "pages", action: "api_docs"
   
 end
