@@ -1,19 +1,16 @@
-- content_for :title_bar 
-  .title_bar
-    .row
-      .small-12.columns
-        h1 Marken
+.container
+  .title
+    h1 Marken
 
-- @brands.each do |brand|
-  section
-    .row
-      .small-12.columns
-        h4 = link_to brand.name, brand_path(brand)
-        - brand.products.tag_counts_on(:tags).each do |tag|
-          = link_to "#{tag.name}", tag_products_path(tag.name), class: "label"
-        hr
-        - if brand.products.any?
-          ul.small-block-grid-1.medium-block-grid-2.large-block-grid-3
-            - brand.products.published.limit(9).each do |product|
-              = render partial: "products/minicard", locals: { product: product }
-        = link_to "Alle Artikel von #{brand.name} anzeigen...", brand_path(brand), class: "button right"
+  - @brands.each do |brand|
+    section
+      h4 = link_to brand.name, brand_path(brand)
+      - brand.products.tag_counts_on(:tags).each do |tag|
+        = link_to "#{tag.name}", tag_products_path(tag.name), class: "label"
+      hr
+      - if brand.products.any?
+        .cards__container
+          - brand.products.published.limit(9).each do |product|
+            = render "products/minicard", product: product
+      hr
+      = link_to "Alle Artikel von #{brand.name} anzeigen...", brand_path(brand), class: "button right"

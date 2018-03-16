@@ -20,6 +20,10 @@
 #  google_maps_place_id :string
 #  panorama_embed_url   :text
 #
+# Indexes
+#
+#  index_stores_on_slug  (slug) UNIQUE
+#
 
 class Store < ActiveRecord::Base
 

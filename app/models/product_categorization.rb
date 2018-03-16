@@ -8,6 +8,11 @@
 #  created_at          :datetime
 #  updated_at          :datetime
 #
+# Indexes
+#
+#  index_product_categorizations_on_product_category_id  (product_category_id)
+#  index_product_categorizations_on_product_id           (product_id)
+#
 
 class ProductCategorization < ActiveRecord::Base
 

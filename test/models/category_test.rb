@@ -12,6 +12,10 @@
 #  depth      :integer
 #  slug       :string(255)
 #
+# Indexes
+#
+#  index_categories_on_slug  (slug)
+#
 
 require 'test_helper'
 

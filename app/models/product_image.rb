@@ -13,11 +13,18 @@
 #  image_updated_at   :datetime
 #  image              :string
 #
+# Indexes
+#
+#  index_product_images_on_product_id  (product_id)
+#
 
 class ProductImage < ActiveRecord::Base
 
   # Associations
   belongs_to :product
+
+  # scopes
+  scope :featured, -> { where(default: true) }
 
   # Paperclip
   require "paperclip/storage/ftp"
@@ -57,9 +64,5 @@ class ProductImage < ActiveRecord::Base
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
 
   process_in_background :image
-
-
-  # Scopes
-  scope :featured, -> { where(default: true) }
 
 end

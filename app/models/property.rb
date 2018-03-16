@@ -9,6 +9,10 @@
 #  created_at :datetime
 #  updated_at :datetime
 #
+# Indexes
+#
+#  index_properties_on_product_id  (product_id)
+#
 
 class Property < ActiveRecord::Base
 

@@ -15,12 +15,18 @@
 #  color                :string(255)
 #  is_published         :boolean          default(FALSE)
 #  official_description :text
-#  is_on_sale           :boolean          default(FALSE)
 #  is_on_frontpage      :boolean          default(FALSE)
 #  is_featured          :boolean          default(FALSE)
 #  slug                 :string(255)
 #  use_in_lia_campaign  :boolean          default(FALSE)
 #  meta_description     :text
+#
+# Indexes
+#
+#  index_products_on_brand_id             (brand_id)
+#  index_products_on_size_id              (size_id)
+#  index_products_on_slug                 (slug)
+#  index_products_on_use_in_lia_campaign  (use_in_lia_campaign)
 #
 
 class Product < ActiveRecord::Base
@@ -77,12 +83,7 @@ class Product < ActiveRecord::Base
   end 
 
   def default_image(size=nil)
-    if product_images.exists?
-      pi = product_images.featured.first || product_images.first
-      pi.image.url(size)
-    else
-      "missing.png"
-    end
+    pi = product_images&.where(default: true)&.first&.image&.url(size) || "missing.png"
   end
 
   def is_on_sale?
@@ -172,9 +173,9 @@ class Product < ActiveRecord::Base
   def eligible_for_running_course?
     running_shoe_tag = "laufschuh"
 
-    is_running_shoe = self.tags.where(name: running_shoe_tag).any?
+    is_running_shoe = tags.where(name: running_shoe_tag).any?
 
-    if is_running_shoe && !is_on_sale
+    if is_running_shoe && !is_on_sale?
       true
     else
       false
