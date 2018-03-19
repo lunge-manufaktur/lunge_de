@@ -83,7 +83,7 @@ class Product < ActiveRecord::Base
   end 
 
   def default_image(size=nil)
-    pi = product_images&.where(default: true)&.first&.image&.url(size) || "missing.png"
+    pi = product_images&.where(default: true)&.first&.image&.url(size) || product_images&.first&.image&.url(size) || "missing.png"
   end
 
   def is_on_sale?
