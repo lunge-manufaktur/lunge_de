@@ -33,13 +33,10 @@ class Product < ActiveRecord::Base
   # associations
   belongs_to :brand
   belongs_to :size
-  belongs_to :product_category
   has_many :product_images
   has_many :stocks, dependent: :destroy
   has_many :stores, through: :stocks
   has_many :properties, dependent: :destroy
-  has_many :product_categorizations, dependent: :destroy
-  has_many :product_categories, through: :product_categorizations
 
   accepts_nested_attributes_for :product_images, :allow_destroy => true
   accepts_nested_attributes_for :stocks, :allow_destroy => true

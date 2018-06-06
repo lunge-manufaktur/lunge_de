@@ -77,7 +77,7 @@ $gutter: 1rem;
 
 // animation
 #rotate > .fadeInUp {
-  @include animation-duration(400ms);
+  animation-duration: 400ms;
 }
 
 @mixin transition() {

@@ -2,11 +2,12 @@ source 'https://rubygems.org'
 
 ruby "2.4.1"
 
-gem "rails", "~> 5.1.4"
+gem "rails", "~> 5.2"
 gem "rails-i18n"
 gem "rake"
 gem "pg"
 gem "puma"
+gem "bootsnap"
 gem "rack-timeout"
 gem "rack-rewrite"
 gem "devise"
@@ -23,6 +24,7 @@ group :development, :test do
 end
 
 group :development do
+	gem "listen"
   gem 'meta_request'
 end
 

@@ -13,6 +13,9 @@ module LungeDe
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
 
+    # Initialize configuration defaults for originally generated Rails version.
+    config.load_defaults 5.2
+
     # serve compressed content
     config.middleware.use Rack::Deflater
 
@@ -61,5 +64,8 @@ module LungeDe
     config.middleware.insert_before(Rack::Runtime, Rack::Rewrite) do
       r301 %r{^/(.*)/$}, '/$1'
     end
+
+    # logger
+    config.logger = Logger.new(STDOUT)
   end
 end

@@ -15,7 +15,7 @@ class Api::StocksControllerTest < ActionController::TestCase
 
   test "should create stock" do
     assert_difference('Stock.count') do
-      post :create, format: :json, params: { stock: { g1: @stock.g1 } }
+      post :create, format: :json, params: { stock: { product_id: @stock.product_id, store_id: @stock.store_id, g1: @stock.g1 } }
     end
     assert_response :success
   end

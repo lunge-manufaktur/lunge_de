@@ -13,7 +13,7 @@ class Api::ProductsControllerTest < ActionController::TestCase
 
   test "should create product" do
     assert_difference('Product.count') do
-      post :create, format: :json, params: { product: { name: @product.name } }
+      post :create, format: :json, params: { product: { name: @product.name, brand_id: @product.brand_id, size_id: @product.size_id } }
     end
   end
 
@@ -25,7 +25,7 @@ class Api::ProductsControllerTest < ActionController::TestCase
   test "should update product" do
     patch :update, format: :json, params: {
       id: @product,
-      product: { name: @product.attributes }
+      product: @product.attributes
     }
   end
 
