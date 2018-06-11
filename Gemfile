@@ -59,7 +59,7 @@ group :production do
 end
 
 gem 'awesome_nested_set'
-gem 'acts-as-taggable-on'
+gem 'acts-as-taggable-on', github: 'Fodoj/acts-as-taggable-on', branch: 'rails-5.2'
 gem 'kaminari'
 gem 'friendly_id'
 gem "simple_calendar", "~> 1.1.0"
