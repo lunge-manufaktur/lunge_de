@@ -1,4 +1,6 @@
 class ContactFormController < ApplicationController
+  protect_from_forgery with: :exception
+
   def new
     @contact_form = ContactForm.new
     @stores = Store.active

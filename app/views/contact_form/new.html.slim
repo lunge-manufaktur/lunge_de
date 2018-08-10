@@ -2,28 +2,8 @@
   .title
     h1 Kontakt
 
-  section
-    p
-      | Sie haben Fragen, Anregungen, Kritik oder Lob? Kontaktieren Sie uns einfach. 
-
   main
     article
-      = form_for @contact_form, url: "contact", method: "post" do |f|
-        .fields
-          = f.label :name, "Name"
-          = f.text_field :name
-
-        .fields
-          = f.label :email, "E-Mail"
-          = f.email_field :email
-
-        .fields
-          = f.label :message, "Mitteilung"
-          = f.text_area :message, rows: 10
-
-        = f.submit "Senden", class: "button"
-
-    aside
       p
         label Verwaltungssitz
         | Lunge - Der Laufladen GmbH
@@ -54,6 +34,13 @@
           br
 
       hr
+
+      p
+        | Sie haben Fragen, Anregungen, Kritik oder Lob? Schreiben Sie uns einfach: 
+        = link_to "info@lunge.de", "mail_to: info@lunge.de", class: "link"
+
+      hr
+
       p
         label Credit
         small
