@@ -54,14 +54,19 @@
         ul.vertical-list
           - Store.berlin.each do |store|
             li= link_to store.name, store_path(store), class: "link"
-      .col-xs-12.col-md-6.col-lg-4
+      .col-xs-12.col-md-6.col-lg-8
         h3 Öffnungszeiten
-        .fields
-          label Montag - Freitag:
-          | 10:30 Uhr - 19:00 Uhr
-        .fields
-          label Samstag
-          | 10:00 Uhr - 18:00 Uhr
+        .row
+          .col-xs-12.col-md-6
+            .fields
+              label Montag - Freitag:
+              | 10:30 Uhr - 19:00 Uhr
+            .fields
+              label Samstag
+              | 10:00 Uhr - 18:00 Uhr
+          .col-xs-12.col-md-6
+            h5.marginless--top Wir bieten unsere Laufanalyse in allen Filialen ohne vorherige Terminabsprache an
+            p So können wir den für Sie optimalen Laufschuh für Ihre individuellen Bedürfnisse ganz ohne Zeitdruck ermitteln. Erahrungsgemäß ist die Laufanalyse und Beratung mit einem zeitlichen Aufwand von ca. 30-40 Minuten verbunden, weshalb wir empfehlen, rechtzeitig vor Geschäftsschluss eine unserer Filialen aufzusuchen. Gerne kann der derzeitige Laufschuh und, falls vorhanden, auch Ihre individuelle Innensohle, so wie Laufsocken, mitgebracht werden.
 
   hr
   section
