@@ -18,3 +18,7 @@
         ul.vertical-list
           li = link_to "Einstellungen", edit_user_registration_path, class: "link"
           li = link_to "Abmelden", destroy_user_session_path, method: :delete, class: "link"
+
+  .offcanvas__footer
+    = link_to "https://www.sazsport.de/bildergalerie/die-haendler-des-jahres-in-der-kategorie-running-1624840.html", target: "_blank" do
+      = image_tag image_url("saz_sport_award.svg"), width: 128

@@ -27,10 +27,20 @@ body.offcanvas .border {
   bottom: 0;
   left: -250px;
   width: 250px;
+  display: flex;
+  flex-direction: column;
   border-right: 1px solid $hairline-color;
   background-color: $white;
   padding: 1rem;
   transition: 140ms ease-in-out;
+}
+
+.offcanvas__menu {
+  flex: 1 0 auto;
+}
+
+.offcanvas__footer {
+  flex: 0 0 auto;
 }
 
 .border {
