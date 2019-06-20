@@ -51,7 +51,7 @@ class ProductImage < ActiveRecord::Base
     },
     storage: :ftp,
     path: "/lunge.de/www/images/:class/:product_id/:product_id_:id_:style.:extension",
-    url: "http://cdn.lunge.de/images/:class/:product_id/:product_id_:id_:style.:extension",
+    url: "https://cdn.lunge.de/images/:class/:product_id/:product_id_:id_:style.:extension",
     ftp_servers: [
       {
         host: ENV["FTP_HOST"],
