@@ -53,7 +53,7 @@ class Brand < ActiveRecord::Base
     },
     storage: :ftp,
     path: "/lunge.de/www/images/:class/:name/:name_:id_:style.:extension",
-    url: "http://cdn.lunge.de/images/:class/:name/:name_:id_:style.:extension",
+    url: "https://cdn.lunge.de/images/:class/:name/:name_:id_:style.:extension",
     ftp_servers: [
       {
         host: ENV["FTP_HOST"],
