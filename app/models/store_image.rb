@@ -48,7 +48,7 @@ class StoreImage < ActiveRecord::Base
     },
     :storage => :ftp,
     :path => "/lunge.de/www/images/:class/:store_id/:store_id_:id_:style.:extension",
-    :url => "http://cdn.lunge.de/images/:class/:store_id/:store_id_:id_:style.:extension",
+    :url => "https://cdn.lunge.de/images/:class/:store_id/:store_id_:id_:style.:extension",
     :ftp_servers => [
       {
         :host     => ENV["FTP_HOST"],
