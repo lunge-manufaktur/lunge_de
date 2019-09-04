@@ -18,7 +18,7 @@
           = image_tag @product.default_image(:large), alt: @product.name_with_brand_and_color, class: "product-images__main-image"
 
       section.product__description
-        = simple_format(@product.description)
+        = simple_format @product.description, {}, sanitize: false
 
       - if @product.eligible_for_running_course?
         section
