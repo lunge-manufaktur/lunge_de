@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby "2.5.3"
+ruby "2.6.1"
 
 gem "rails", "~> 5.2"
 gem "rails-i18n"
@@ -28,7 +28,7 @@ group :development do
   gem 'meta_request'
 end
 
-gem 'sass-rails'
+gem 'sassc-rails'
 gem 'uglifier'
 gem 'coffee-rails'
 gem 'jquery-rails'
