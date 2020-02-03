@@ -1,4 +1,4 @@
-class AddMoreAttributesToProducts < ActiveRecord::Migration
+class AddMoreAttributesToProducts < ActiveRecord::Migration[4.2]
   def change
     add_column :products, :published_on, :timestamp
     add_column :products, :regular_price, :decimal, precision: 8, scale: 2

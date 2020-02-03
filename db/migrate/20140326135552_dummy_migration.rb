@@ -1,4 +1,4 @@
-class DummyMigration < ActiveRecord::Migration
+class DummyMigration < ActiveRecord::Migration[4.2]
   def self.up
     # nothing
   end

@@ -1,4 +1,4 @@
-class AddAttachmentIconToPosts < ActiveRecord::Migration
+class AddAttachmentIconToPosts < ActiveRecord::Migration[4.2]
   def self.up
     change_table :posts do |t|
       t.attachment :icon
