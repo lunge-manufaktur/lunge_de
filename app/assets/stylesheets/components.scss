@@ -252,6 +252,15 @@ ul.offcanvas-nav {
   transition: 140ms ease-in-out;
 }
 
+.card--shadow {
+  box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.06);
+}
+
+.card--narrow {
+  width: 100;
+  max-width: 50em;
+}
+
 a.card:hover {
   transform: translate(-8px, -8px);
   box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.06);

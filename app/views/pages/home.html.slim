@@ -3,6 +3,25 @@
 .title
   .container
     h1 Der Laufladen in Hamburg und Berlin.
+    .card.card--narrow.card--shadow.space-bottom
+      .card__image
+        iframe width="100%" height="315" src="https://www.youtube.com/embed/-lirFvSb9BY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+      .card__description
+        h4.marginless--top Aufgrund der Corona-Krise: Beratung und Bestellung per Telefon und E-Mail
+        p Aufgrund der Corona Einschränkungen mussten wir unsere Geschäfte schließen und bieten Ihnen jetzt eine Beratung und Bestellung per Telefon oder Mail an. Nutzen Sie unsere kompetente Beratung am Telefon. Damit Ihnen das Laufen weiterhin Spaß macht und Sie gesund bleiben.
+        p Rufen Sie uns an oder schreiben Sie uns eine Mail - wir liefern versandkostenfrei.
+        p.bold
+          span Telefon: 040 297728
+          br
+          span E-Mail: 
+          =link_to "info@lunge.de", "mailto:info@lunge.de", class: "link"
+        p.bold
+          span Geschäftszeiten:
+          br
+          span Montag - Freitag: 10:30 - 19:00 Uhr
+          br
+          span Samstag: 10:00 - 18:00 Uhr
+    hr
     p Ganz gleich ob Einsteiger oder Profi - unsere Fachberater führen dich mit kompetenter Beratung und langjähriger Erfahrung zu den besten Marken und Artikeln rund um den Laufsport.
     ul.inline-list
       li = link_to "Sortiment entdecken", products_path, class: "button"

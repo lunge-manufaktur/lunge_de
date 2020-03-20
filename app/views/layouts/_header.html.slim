@@ -1,7 +1,11 @@
 header
   .notice
     .container
-      span Unsere Filialen bleiben aufgrund der Corona-Krise vorerst geschlossen.
+      span
+        | Wir sind für Sie da! Beratung und Bestellungen telefonisch unter 040 297728 und via E-Mail an 
+      = link_to "info@lunge.de", "mailto:info@lunge.de", class: "link"
+      span
+        | .
   .container
     .header__container
       = link_to :root, class: "header__logo-container" do
