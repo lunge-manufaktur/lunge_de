@@ -1,7 +1,7 @@
 require_relative 'boot'
 
 require 'rails/all'
-require 'multi_json'
+require 'sprockets/railtie'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
@@ -57,7 +57,7 @@ module LungeDe
     config.active_job.queue_adapter = :delayed_job
 
     # Jbuilder
-    MultiJson.use :yajl
+    # MultiJson.use :yajl
 
     # remove trailing slashes in URLs
     config.action_controller.default_url_options = { trailing_slash: false }
