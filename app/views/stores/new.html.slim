@@ -1,0 +1,15 @@
+- set_meta_tags noindex: true
+
+.title
+  .container
+    h1 Filiale erstellen
+    ul.inline-list
+      li = submit_tag "Speichern", form: "new_store", class: "button"
+      li = link_to "Abbrechen", stores_path, class: "link"
+
+.container
+  = render 'form'
+
+  ul.inline-list
+    li = submit_tag "Speichern", form: "new_store", class: "button"
+    li = link_to "Abbrechen", stores_path, class: "link"
