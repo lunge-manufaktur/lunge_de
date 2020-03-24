@@ -2,8 +2,9 @@ source 'https://rubygems.org'
 
 ruby "2.6.5"
 
-gem "rails", "~> 5.2"
+gem "rails", "~>5.2"
 gem "rails-i18n"
+gem 'sprockets-rails', :require => 'sprockets/railtie'
 gem "rake"
 gem "pg"
 gem "puma"
