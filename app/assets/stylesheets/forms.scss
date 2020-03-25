@@ -5,6 +5,7 @@ input[type="submit"] {
   display: inline-block;
   appearance: none;
   font-size: 1rem;
+  font-weight: 700;
   background-color: $primary-color;
   color: $white;
   border: none;
@@ -18,6 +19,13 @@ input[type="submit"] {
   }
 }
 
+.button:disabled, 
+button:disabled,
+input[type="submit"]:disabled {
+  background-color: $lightgray;
+  color: $black;
+  cursor: no-drop;
+}
 
 .fields {
   margin-bottom: 2rem;

@@ -27,6 +27,8 @@
               | Kostenloser Laufkurs bei Kauf dieses Artikels - 
               = link_to "Mehr erfahren...", "/gutschein", class: "link"
 
+      = render "products/show/add_to_cart_button"
+
       - if @product.stocks.any?
         section
           = render "products/show/availability"
@@ -42,6 +44,8 @@
         section
           - @product.product_images.each do |image|
             = image_tag image.image.url(:small), class: "product-images__thumbnail", data: { "url-large": image.image.url(:large) }
+
+      = render "products/show/add_to_cart_button"
 
       section
         h4.marginless--top Artikeldaten

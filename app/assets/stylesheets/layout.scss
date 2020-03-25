@@ -17,7 +17,6 @@ body.offcanvas {
 }
 
 body.offcanvas .content,
-body.offcanvas .offcanvas__container,
 body.offcanvas .border {
 }
 
@@ -44,22 +43,54 @@ body.offcanvas .border {
 }
 
 .border {
+  @include transition();
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   background-color: $white;
   position: fixed;
   top: 0;
-  bottom: 0;
-  border-right: 1px solid $hairline-color;
-  width: 4rem;
-  transition: 140ms ease-in-out;
+  height: 4rem;
+  border-bottom: 1px solid $hairline-color;
+  width: 100%;
+  z-index: 1;
+
+  @include tablet-portrait {
+    flex-direction: column;
+    width: 4rem;
+    height: auto;
+    bottom: 0;
+    border-right: 1px solid $hairline-color;
+    border-bottom: none;
+  }
+}
+
+.border:hover {
+  border-color: $green;
+  @include shadow();
+}
+
+.border__nav {
+  display: flex;
+  align-items: center;
+
+
+  @include tablet-portrait {
+    flex-direction: column;
+    flex: 1 1 auto;
+  }
 }
 
 .border__logo {
   flex: 0 0 auto;
   padding: 1rem;
-  width: 100%;
+  width: 4rem;
+  order: 2;
+
+  @include tablet-portrait {
+    order: 1;
+  }
 }
 
 .border__logo img {
@@ -71,9 +102,32 @@ body.offcanvas .border {
 }
 
 .border__menu-toggle {
-  flex: 1 1 auto;
+  flex: 0 0 auto;
   padding: 1rem;
-  margin: auto;
+  cursor: e-resize;
+  order: 1;
+
+  @include tablet-portrait {
+    flex: 1 1 auto;
+    margin: auto;
+    order: 2;
+  }
+}
+
+.border__cart-button {
+  order: 3;
+  display: flex;
+  align-items: center;
+  font-weight: 700;
+  padding: 1rem;
+
+  @include tablet-portrait {
+    display: none;
+  }
+}
+
+body.offcanvas .border__menu-toggle {
+  cursor: w-resize;
 }
 
 .border__menu-icon {
@@ -84,14 +138,19 @@ body.offcanvas .border {
   display: flex;
   flex-direction: column;
   position: fixed;
-  left: 4rem;
+  left: 0;
   right: 0;
-  top: 0;
+  top: 4rem;
   bottom: 0;
   overflow-y: scroll;
   overflow-x: hidden;
   transition: 140ms ease-in-out;
   -webkit-overflow-scrolling: touch;
+
+  @include tablet-portrait {
+    left: 4rem;
+    top: 0;
+  }
 }
 
 .yield {

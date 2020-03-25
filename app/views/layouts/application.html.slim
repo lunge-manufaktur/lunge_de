@@ -1,12 +1,16 @@
 doctype html
-html
+html lang="de"
   head
     = render "layouts/shared/meta"
     = favicon_link_tag "favicon.ico"
 
     = stylesheet_link_tag "application"
     = csrf_meta_tags
-    = stylesheet_link_tag "https://fonts.googleapis.com/css?family=Libre+Franklin:400,400i,700|Vesper+Libre:400,700"
+    = stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+    = stylesheet_link_tag "https://cdn.snipcart.com/themes/v3.0.10/default/snipcart.css"
+    = stylesheet_link_tag "snipcart_overrides"
+    = javascript_include_tag "application", data: { "turbolinks-eval": "false" }
+    = javascript_include_tag "application-track"
     = render "layouts/shared/ga"
 
   body
@@ -18,6 +22,6 @@ html
       .yield
         = yield
       = render "layouts/footer"
+    #snipcart hidden=true data-api-key="#{ENV.fetch("SNIPCART_API_KEY")}"
 
-    = javascript_include_tag "application", data: { "turbolinks-eval": "false" }
-    = javascript_include_tag "application-track"
+    = javascript_include_tag "https://cdn.snipcart.com/themes/v3.0.10/default/snipcart.js"

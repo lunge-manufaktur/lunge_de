@@ -13,8 +13,8 @@ $background-color: $mintgray;
 $alert-color: #E40D46;
 
 /* --- FONTS ---*/
-$body-font: "Libre Franklin", "Helvetica Neue", "Helvetica", "Arial", "sans-serif";
-$header-font: "Vesper Libre","Helvetica Neue", "Helvetica", "Arial", "sans-serif";
+$body-font: "Inter", "Helvetica Neue", "Arial", "sans-serif";
+$header-font: "Inter", "Helvetica Neue", "Arial", "sans-serif";
 
 /* --- BREAKPOINTS --- */
 $end-phone: 767px;
@@ -87,4 +87,8 @@ $gutter: 1rem;
 @mixin hover-effect() {
   transform: translate(-8px, -8px);
   box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.06);
+}
+
+@mixin shadow() {
+  box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.08);
 }

@@ -1,0 +1,18 @@
+<% if current_user.try(:admin) %>
+	<section>
+		<%= if @product.has_stock?(store: 1)
+			button_tag "Jetzt bestellen", type: "button", class: "snipcart-add-item", data: {
+				"item-id": @product.id,
+				"item-price": @product.current_price,
+				"item-url": request.fullpath,
+				"item-description": strip_tags(@product.short_description(200)),
+				"item-image": @product.default_image(:small),
+				"item-name": @product.name_with_brand_and_color,
+				"item-custom1-name": "Größe",
+				"item-custom1-options": @product.stocks.l.available_sizes_array.join("|")
+			}	
+		else
+			button_tag "Online nicht verfügbar", type: "button", disabled: true
+		end %>
+	</section>
+<% end %>

@@ -12,16 +12,22 @@
   background-color: $background-color;
   z-index: 1;
   transition: 140ms ease-in-out;
+  cursor: w-resize;
 }
 
 body.offcanvas .overlay {
   opacity: 0.6;
   display: block;
   position: absolute;
-  left: 4rem;
+  left: 0;
   right: 0;
-  top: 0;
+  top: 4rem;
   bottom: 0;
+
+  @include tablet-portrait {
+    left: 4rem;
+    top: 0;
+  }
 }
 
 
@@ -31,6 +37,7 @@ body.offcanvas .overlay {
 /* --- HEADER --- */
 .header__container {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 1rem 0;
 }
@@ -40,6 +47,7 @@ body.offcanvas .overlay {
   align-items: center;
   flex: 0 1 auto;
   height: 2rem;
+  margin-right: 2rem;
 }
 
 .header__logo {
@@ -206,9 +214,10 @@ body.offcanvas .overlay {
 /* --- NAVIGATION --- */
 nav.header__nav {
   display: none;
+  align-items: center;
   flex: 0 0 auto;
 
-  @include desktop {
+  @include tablet-portrait {
     display: block;
   }
 }
@@ -216,7 +225,7 @@ nav.header__nav {
 ul.header-nav {
   list-style: none;
   display: flex;
-  font-size: 1.2rem;
+  align-items: center;
   font-weight: 700;
   margin: 0;
 }
@@ -225,10 +234,42 @@ li.header-nav__item {
   margin-left: 1rem;
 }
 
+li.header-nav__item:first-child {
+  margin: 0;
+}
+
 ul.offcanvas-nav {
   font-size: 2rem;
   font-weight: 700;
   list-style: none;
+}
+
+
+
+/* --- CART BUTTON --- */
+.cart-button {
+  @include transition();
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  background-color: #fff;
+  padding: 0.5rem 0.5rem;
+  border: 1px solid $hairline-color;
+}
+
+.cart-button:hover {
+  border-color: $green;
+  @include shadow();
+}
+
+.cart-button__icon {
+  width: 16px;
+  fill: white;
+}
+
+.cart-button__count {
+  margin-left: 0.5rem;
+  font-size: 0.825rem;
 }
 
 

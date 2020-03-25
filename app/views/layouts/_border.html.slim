@@ -1,5 +1,10 @@
 .border
-  = link_to :root, class: "border__logo" do
-    = image_tag(image_url("logo__figure.svg"))
-  = link_to "#", class: "border__menu-toggle" do
-    = image_tag image_url("menu.svg"), class: "border__menu-icon"
+	.border__nav
+		= link_to :root, class: "border__logo" do
+			= image_tag(image_url("logo__figure.svg"))
+		= link_to "#", class: "border__menu-toggle" do
+			= image_tag image_url("menu.svg"), class: "border__menu-icon"
+	- if current_user.try(:admin)
+		= link_to "#", class: "snipcart-checkout border__cart-button" do
+			= image_tag image_path("shopping-cart--filled"), class: "cart-button__icon"
+			span class="cart-button__count snipcart-total-price"

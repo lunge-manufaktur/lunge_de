@@ -101,7 +101,7 @@ class Product < ActiveRecord::Base
 
   def name_with_color
     if color.present?
-      "#{name} in #{color.titleize}"
+      "#{name} (#{color.titleize})"
     else
       name
     end
@@ -109,7 +109,7 @@ class Product < ActiveRecord::Base
 
   def name_with_brand_and_color
     if color.present?
-      "#{name_with_brand} in #{color.titleize}"
+      "#{name_with_brand} (#{color.titleize})"
     else
       name_with_brand
     end

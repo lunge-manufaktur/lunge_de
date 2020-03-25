@@ -1,0 +1,82 @@
+@import "variables";
+
+.snipcart {
+	font-family: $body-font;
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.snipcart__font--black,
+.snipcart__font--subtitle {
+	font-family: $body-font;
+	font-weight: 700;
+}
+
+.snipcart__font--regular {
+	font-weight: 400;
+}
+
+.snipcart__font--std {
+	font-size: 1rem;
+}
+
+.snipcart__font--secondary {
+	font-family: $body-font;
+}
+
+.snipcart__font--slim {
+	font-weight: 400;
+}
+
+.snipcart__font--tiny {
+	font-size: 0.825rem;
+}
+
+.snipcart__font--bold {
+	font-weight: 700;
+}
+
+.snipcart-form__select {
+	border: 1px solid $hairline-color;
+	font-weight: 700;
+}
+
+.snipcart-item-quantity__quantity {
+	border: 1px solid $hairline-color;
+	color: $black;
+	font-weight: 700;
+}
+
+.snipcart__actions--link {
+	color: $green;
+	border-bottom: 1px solid $green;
+	font-weight: 700;
+}
+
+.snipcart button:hover {
+	background-color: inherit;
+}
+
+.snipcart-modal__close {
+	font-family: $body-font;
+	font-weight: 700;
+}
+
+.snipcart-cart-header {
+	background-color: $white;
+	border-bottom: 1px solid $hairline-color;
+	margin-bottom: 0;
+	height: 4rem;
+
+	@include tablet-portrait {
+		background-color: transparent;
+	}
+}
+
+.snipcart-item-line__media {
+	margin-right: 1rem;
+
+	@include tablet-landscape {
+		margin-right: 2rem;
+	}
+}
