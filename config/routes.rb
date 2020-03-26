@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   # sitemap
   get "sitemap", controller: "sitemaps", action: "show", format: "xml"
+  post "payment", controller: "pages", action: "payment", format: "json"
 
   # error pages
   get "/404", to: "errors#not_found"

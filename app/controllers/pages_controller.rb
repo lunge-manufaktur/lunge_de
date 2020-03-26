@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  protect_from_forgery except: [:payments]
+
   def home
     @products = Product.on_frontpage.published.limit(8)
     @brands = Brand.active.has_logo.order(:name)
@@ -13,6 +15,10 @@ class PagesController < ApplicationController
   end
 
   def api_docs
+  end
+
+  def payments
+
   end
 
 end
