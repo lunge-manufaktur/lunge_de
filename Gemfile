@@ -4,7 +4,7 @@ ruby "2.6.5"
 
 gem "rails", "~>5.2"
 gem "rails-i18n"
-gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem "sprockets", "~> 3.5"
 gem "rake"
 gem "pg"
 gem "puma"

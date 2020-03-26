@@ -41,6 +41,7 @@ Rails.application.configure do
   # test precompilation
   # config.assets.compile = false
   # config.public_file_server.enabled = true
+  # config.assets.digest = true
   # config.assets.prefix = "/assets"
 
   # Raise an error on page load if there are pending migrations.
