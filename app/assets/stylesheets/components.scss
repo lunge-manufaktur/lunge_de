@@ -279,7 +279,7 @@ ul.offcanvas-nav {
 /* ----- CARDS ----- */
 .cards__container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-gap: $gutter;
 
   @include desktop {
@@ -320,7 +320,6 @@ a.card:hover {
   flex-flow: row nowrap;
   align-items: center;
   flex: 1 0 auto;
-  width: 250px;
 }
 
 .card--large {
