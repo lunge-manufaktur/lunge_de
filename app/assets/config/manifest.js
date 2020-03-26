@@ -1,6 +1,5 @@
 //= link_tree ../images
+//= link_tree ../fonts
 //= link application.css
+//= link application.js
 //= link snipcart_overrides.css
-//= link_directory ../javascripts .js
-//= link_directory ../stylesheets .scss
-//= link_directory ../../../vendor/assets .css

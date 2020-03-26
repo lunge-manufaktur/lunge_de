@@ -38,6 +38,11 @@ Rails.application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
+  # test precompilation
+  # config.assets.compile = false
+  # config.public_file_server.enabled = true
+  # config.assets.prefix = "/assets"
+
   # Raise an error on page load if there are pending migrations.
   config.active_record.migration_error = :page_load
 
