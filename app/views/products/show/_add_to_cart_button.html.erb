@@ -4,7 +4,7 @@
 			button_tag "Jetzt bestellen", type: "button", class: "snipcart-add-item", data: {
 				"item-id": @product.id,
 				"item-price": @product.current_price,
-				"item-url": request.fullpath,
+				"item-url": product_url(@product),
 				"item-description": strip_tags(@product.short_description(200)),
 				"item-image": @product.default_image(:small),
 				"item-name": @product.name_with_brand_and_color,
