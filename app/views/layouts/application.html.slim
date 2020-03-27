@@ -9,8 +9,6 @@ html lang="de"
     = stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
     = stylesheet_link_tag "https://cdn.snipcart.com/themes/v3.0.10/default/snipcart.css"
     = stylesheet_link_tag "snipcart_overrides"
-    = javascript_include_tag "application", data: { "turbolinks-eval": "false" }
-    = javascript_include_tag "application-track"
     = render "layouts/shared/ga"
 
   body
@@ -23,4 +21,7 @@ html lang="de"
         = yield
       = render "layouts/footer"
     #snipcart hidden=true data-api-key="#{ENV.fetch("SNIPCART_API_KEY")}"
-    = javascript_include_tag "https://cdn.snipcart.com/themes/v3.0.10/default/snipcart.js"
+    
+    = javascript_include_tag "application", data: { "turbolinks-eval": "false" }
+    = javascript_include_tag "application-track"
+    = javascript_include_tag "https://cdn.snipcart.com/themes/v3.0.10/default/snipcart.js", data: { "turbolinks-track": "reload" }
