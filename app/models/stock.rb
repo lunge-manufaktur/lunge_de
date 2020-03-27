@@ -154,44 +154,44 @@ class Stock < ActiveRecord::Base
 
   def quantities_hash
     quantity_hash = {
-      product.size.g1 => g1,
-      product.size.g1h => g1h,
-      product.size.g2 => g2,
-      product.size.g2h => g2h,
-      product.size.g3 => g3,
-      product.size.g3h => g3h,
-      product.size.g4 => g4,
-      product.size.g4h => g4h,
-      product.size.g5 => g5,
-      product.size.g5h => g5h,
-      product.size.g6 => g6,
-      product.size.g6h => g6h,
-      product.size.g7 => g7,
-      product.size.g7h => g7h,
-      product.size.g8 => g8,
-      product.size.g8h => g8h,
-      product.size.g9 => g9,
-      product.size.g9h => g9h,
-      product.size.g10 => g10,
-      product.size.g10h => g10h,
-      product.size.g11 => g11,
-      product.size.g11h => g11h,
-      product.size.g12 => g12,
-      product.size.g12h => g12h,
-      product.size.g13 => g13,
-      product.size.g13h => g13h,
-      product.size.g14 => g14,
-      product.size.g14h => g14h,
-      product.size.g15 => g15,
-      product.size.g16 => g16,
-      product.size.g17 => g17,
-      product.size.g18 => g18,
-      product.size.g19 => g19
+      product.size.g1 => g1 || 0,
+      product.size.g1h => g1h || 0,
+      product.size.g2 => g2 || 0,
+      product.size.g2h => g2h || 0,
+      product.size.g3 => g3 || 0,
+      product.size.g3h => g3h || 0,
+      product.size.g4 => g4 || 0,
+      product.size.g4h => g4h || 0,
+      product.size.g5 => g5 || 0,
+      product.size.g5h => g5h || 0,
+      product.size.g6 => g6 || 0,
+      product.size.g6h => g6h || 0,
+      product.size.g7 => g7 || 0,
+      product.size.g7h => g7h || 0,
+      product.size.g8 => g8 || 0,
+      product.size.g8h => g8h || 0,
+      product.size.g9 => g9 || 0,
+      product.size.g9h => g9h || 0,
+      product.size.g10 => g10 || 0,
+      product.size.g10h => g10h || 0,
+      product.size.g11 => g11 || 0,
+      product.size.g11h => g11h || 0,
+      product.size.g12 => g12 || 0,
+      product.size.g12h => g12h || 0,
+      product.size.g13 => g13 || 0,
+      product.size.g13h => g13h || 0,
+      product.size.g14 => g14 || 0,
+      product.size.g14h => g14h || 0,
+      product.size.g15 => g15 || 0,
+      product.size.g16 => g16 || 0,
+      product.size.g17 => g17 || 0,
+      product.size.g18 => g18 || 0,
+      product.size.g19 => g19 || 0
     }
   end
 
   def available_quantites_hash
-    quantities_hash.delete_if{|key, value| value.nil?}
+    quantities_hash.keep_if{|key, value| value > 0}
   end
 
   def available_sizes_array

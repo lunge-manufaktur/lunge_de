@@ -456,6 +456,47 @@ a.card:hover {
   flex: 1 1 auto;
 }
 
+.product__add-to-cart-container {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid $hairline-color;
+  align-items: flex-start;
+
+  @include tablet-portrait {
+    flex-direction: row;
+    padding: 2rem;
+  }
+}
+
+.product__add-to-cart-button {
+  flex: 0 0 auto;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $hairline-color;
+
+  @include tablet-portrait {
+    padding-right: 2rem;
+    padding-bottom: 0;
+    border-right: 1px solid $hairline-color;
+    border-bottom: 0;
+  }
+}
+
+.product__add-to-cart-help {
+  padding-top: 1rem;
+
+  @include tablet-portrait {
+    padding-top: 0;
+    padding-left: 2rem;
+  }
+}
+
+.product__vat-notice {
+  font-size: 0.825rem;
+  margin-bottom: 1rem;
+}
+
 
 /* --- LISTS --- */
 ul.list--unstyled {
