@@ -283,7 +283,7 @@ ul.offcanvas-nav {
   grid-gap: $gutter;
 
   @include desktop {
-    grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
 
