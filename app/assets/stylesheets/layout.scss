@@ -73,7 +73,7 @@ body.offcanvas .border {
 
 .border__nav {
   display: flex;
-  align-items: center;
+  align-items: stretch;
 
 
   @include tablet-portrait {
@@ -106,11 +106,14 @@ body.offcanvas .border {
   padding: 1rem;
   cursor: e-resize;
   order: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   @include tablet-portrait {
     flex: 1 1 auto;
-    margin: auto;
     order: 2;
+    align-items: flex-start;
   }
 }
 
