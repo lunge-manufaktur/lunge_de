@@ -14,8 +14,8 @@
 //= require jquery_ujs
 //= require jquery_nested_form
 //= require events
-//= require editor
 //= require menu
 //= require ios-webapp
 //= require trumbowyg
+//= require editor
 //= require product-images
