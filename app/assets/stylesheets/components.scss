@@ -429,6 +429,11 @@ a.card:hover {
 
 
 /* --- PRODUCT PAGE --- */
+.product-images__main-image,
+.product-images__thumbnail {
+  border: 1px solid $hairline-color;
+}
+
 .product-images__thumbnail {
   @include transition;
   margin-bottom: 1rem;
@@ -436,6 +441,7 @@ a.card:hover {
 
 .product-images__thumbnail:hover {
   @include hover-effect;
+  border-color: $green;
   cursor: pointer;
 }
 
