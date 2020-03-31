@@ -509,6 +509,10 @@ ul.list--unstyled {
   list-style: none;
 }
 
+ul.list--inside {
+  list-style-position: inside;
+}
+
 ul.vertical-list {
   list-style: none;
   margin-bottom: 2rem;
