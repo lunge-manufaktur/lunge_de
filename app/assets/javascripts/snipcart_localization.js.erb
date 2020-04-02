@@ -1,0 +1,15 @@
+document.addEventListener('snipcart.ready', function() {
+	Snipcart.ready.then(function() {
+		Snipcart.api.session.setLanguage('de', {
+			"payment": {
+		  	"form":{
+		    	"card_label": "Kreditkarte",
+		      "card_number": "Kartennummer",
+		      "card_expiration": "MM/JJ",
+		      "card_cvv": "CVV",
+		      "card_postal_code": "PLZ"
+		    }
+		  }
+  	});
+	});
+});

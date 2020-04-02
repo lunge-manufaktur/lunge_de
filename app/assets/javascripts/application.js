@@ -19,3 +19,4 @@
 //= require trumbowyg
 //= require editor
 //= require product-images
+//= require snipcart_localization
