@@ -1,9 +1,7 @@
 = link_to product, class: "card card--medium" do
   .card__figure
-    / - if product.is_on_sale?
-    /   .folded-top-right
-    /     span.folded-top-right-text %
-    .product__on-sale-badge %
+    - if product.is_on_sale?
+      .product__on-sale-badge %
     .product__badge-container
       .product__badge-list
         - if product.available_online?
