@@ -167,6 +167,10 @@ class Product < ActiveRecord::Base
     stock > 0
   end
 
+  def available_online?
+    has_stock?(store: 1)
+  end
+
   def eligible_for_running_course?
     running_shoe_tag = "laufschuh"
 

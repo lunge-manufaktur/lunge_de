@@ -11,9 +11,9 @@ class ProductsController < ApplicationController
     end
     
     if @tags.present?
-      @search = policy_scope(Product).includes(:brand, :product_images, :tags).tagged_with(@tags).search(params[:q])
+      @search = policy_scope(Product).includes(:brand, :stocks, :product_images, :tags).tagged_with(@tags).search(params[:q])
     else
-      @search = policy_scope(Product).includes(:brand, :product_images, :tags).search(params[:q])
+      @search = policy_scope(Product).includes(:brand, :stocks, :product_images, :tags).search(params[:q])
     end
 
     @products = @search.result(distinct: true)

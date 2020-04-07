@@ -7,6 +7,11 @@
   .container
     h3.title__brand = link_to @product.brand.name, @product.brand, class: "link"
     h1.title__product = @product.name
+    .product__badge-list
+      - if @product.available_online?
+        .product__badge Online verfügbar
+      - if @product.is_featured
+        .product__badge Empfehlung
     - unless @product.is_published?
       span.label.label--draft Entwurf
 
@@ -14,7 +19,7 @@
   main
     article
       - if @product.product_images.any?
-        section
+        section.product__image
           = image_tag @product.default_image(:large), alt: @product.name_with_brand_and_color, class: "product-images__main-image"
 
       section
