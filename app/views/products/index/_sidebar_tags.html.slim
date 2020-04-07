@@ -1,5 +1,5 @@
 h4 Tags
-#tag-cloud
+.tag-cloud
   - if @tags
     - @search.result.tags_on(:tags).order(:name).each do |tag|
       = tag_cloud_item(tag.name)
