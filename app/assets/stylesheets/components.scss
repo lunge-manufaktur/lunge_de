@@ -259,7 +259,7 @@ ul.offcanvas-nav {
 
 .cart-button:hover {
   border-color: $green;
-  @include shadow();
+  @include hover-effect--tiny();
 }
 
 .cart-button__icon {
@@ -606,16 +606,17 @@ ul.list--disc {
 /* ----- TAGS ----- */
 
 .label {
+  @include transition();
   background-color: $white;
-  margin-right: 0.25rem;
-  margin-bottom: 0.25rem;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
   display: inline-block;
   position: relative;
   padding: 0.25rem 0.5rem;
-  font-size: 0.8125rem;
+  font-size: 0.8rem;
   border: 1px solid $hairline-color;
 }
 
@@ -625,8 +626,8 @@ ul.list--disc {
 }
 
 a.label:hover {
-  background-color: $primary-color;
-  color: $white;
+  @include hover-effect--tiny();
+  border-color: $black;
 }
 
 .suffix {
@@ -634,17 +635,61 @@ a.label:hover {
   padding-left: 0.5rem;
 }
 
+#tag-cloud {
+  display: flex;
+  flex-wrap: wrap;
+
+  .tag-item {
+    padding: 0 0.5rem;
+
+    &:hover {
+      background-color: steelblue;
+    }
+  }
+
+  .xs {
+    opacity: 0.3;
+  }
+  .s {
+    opacity: 0.5;
+  }
+  .m { opacity: 0.7; }
+  .l { opacity: 0.8; }
+  .xl {
+    opacity: 1;
+  }
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+}
+
 .tag-to-add {
 }
 
 a.tag-to-remove {
-  background-color: $primary-color;
-  color: #fff;
-
-  &:hover {
-    background-color: scale-color($primary-color, $lightness: -20%)
-  }
+  border-color: $black;
+  background-color: $black;
+  color: $white;
 }
+
+.tag__name {
+}
+
+.tag__icon {
+  width: 10px;
+  margin-left: 0.5rem;
+}
+
+.tag__icon--remove {
+  filter: invert(100%);
+}
+
+.label:hover .tag__icon {
+}
+
+
 
 
 
@@ -789,29 +834,7 @@ table.calendar {
 
 }
 
-#tag-cloud {
-  line-height: 1.5rem;
 
-  .tag-item {
-    padding: 0 0.5rem;
-
-    &:hover {
-      background-color: steelblue;
-    }
-  }
-
-  .xs {
-    opacity: 0.3;
-  }
-  .s {
-    opacity: 0.5;
-  }
-  .m { opacity: 0.7; }
-  .l { opacity: 0.8; }
-  .xl {
-    opacity: 1;
-  }
-}
 
 
 /* --- PANORAMA --- */

@@ -26,11 +26,11 @@ module ProductsHelper
 
     link_to(
       (
-        content_tag(:span, tag_name).concat(
-        content_tag(:span, "", class: "ion-close suffix"))
+        content_tag(:span, tag_name, class: "tag__name").concat(
+        image_tag "remove.svg", class: "tag__icon tag__icon--remove")
       ),
       link,
-      class: "label tag-to-remove"
+      class: "label tag tag-to-remove"
     )
   end
 
@@ -44,11 +44,11 @@ module ProductsHelper
 
     link_to(
       (
-        content_tag(:span, tag_name).concat(
-        content_tag(:span, "", class: "ion-plus suffix"))
+        content_tag(:span, tag_name, class: "tag__name").concat(
+        image_tag "add.svg", class: "tag__icon")
       ),
       link,
-      class: "label tag-to-add"
+      class: "label tag tag-to-add"
     )
   end
 
@@ -61,11 +61,11 @@ module ProductsHelper
 
     link_to(
       (
-        content_tag(:span, tag_name).concat(
-        content_tag(:span, "", class: "ion-plus suffix"))
+        content_tag(:span, tag_name, class: "tag__name").concat(
+        image_tag "add.svg", class: "tag__icon")
       ),
       link,
-      class: "label tag-to-add"
+      class: "label tag tag-to-add"
     )
   end
 
