@@ -287,6 +287,8 @@ ul.offcanvas-nav {
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   position: relative;
   background-color: $white;
   transition: 140ms ease-in-out;
@@ -294,6 +296,10 @@ ul.offcanvas-nav {
 
 .card--shadow {
   box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.06);
+}
+
+.card--bordered {
+  border: 1px solid $hairline-color;
 }
 
 .card--narrow {
@@ -356,6 +362,12 @@ a.card:hover {
 
 .card__description {
   padding: 1rem;
+  flex: 1 1 auto;
+}
+
+.card__footer {
+  padding: 1rem;
+  flex: 0 0 auto;
 }
 
 .card--small .card__figure {

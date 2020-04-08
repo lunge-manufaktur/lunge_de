@@ -41,8 +41,8 @@
 
       - if @product.eligible_for_running_course?
         section
-          p
-            em
+          .card.card--bordered
+            .card__description
               | Kostenloser Laufkurs bei Kauf dieses Artikels - 
               = link_to "Mehr erfahren...", "/gutschein", class: "link"
 
