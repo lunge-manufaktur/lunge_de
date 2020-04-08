@@ -109,8 +109,9 @@
           p Durchsuche unser Sortiment nach Stichworten - Du kannst beliebig viele Tags kombinieren um Deine Auswahl einzugrenzen
         article
           section
-            - tag_cloud Product.published.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class|
-              = tag_cloud_item(tag.name)
+            .tag-cloud
+              - tag_cloud Product.published.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class|
+                = tag_cloud_item(tag.name)
           section
             = link_to "Sortiment ansehen...", products_path, class: "button"
 
