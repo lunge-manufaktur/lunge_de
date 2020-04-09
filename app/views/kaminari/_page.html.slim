@@ -7,5 +7,4 @@
 /   per_page:      number of items to fetch per page
 /   remote:        data-remote
 
-li class=("pagination__item pagination__item--number #{' pagination__item--current' if page.current?}")
-  = link_to page, url, class: "pagination__link", rel: page.next? ? 'next' : page.prev? ? 'prev' : nil
+= link_to page, url, class: "pagination__link pagination__item pagination__item--number #{' pagination__item--current' if page.current?}", remote: remote, rel: page.next? ? 'next' : page.prev? ? 'prev' : nil

@@ -715,38 +715,46 @@ ul.pagination {
   list-style: none;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: stretch;
 }
 
-li.pagination__item {
+.pagination__item {
+  display: flex;
+  align-items: center;
   margin: 0.5rem;
 }
 
-li.pagination__item--current a {
-  background-color: $primary-color;
+.pagination__icon {
+  width: 0.8rem;
+}
+
+a.pagination__item--current {
+  background-color: $black;
   color: $white;
 }
 
-li.pagination__item--number,
-li.pagination__item--gap {
+.pagination__item--number,
+.pagination__item--gap {
   display: none;
   
   @include tablet-portrait {
-    display: block;
+    display: flex;
   }
 }
 
-a.pagination__link {
-  display: block;
+.pagination__link {
   background-color: $white;
   padding: 0.5rem 1rem;
 }
 
 a.pagination__link:hover {
-  background-color: $primary-color;
+  background-color: $black;
   color: $white;
 }
 
+a.pagination__link:hover .pagination__icon {
+  filter: invert(100%);
+}
 
 
 
