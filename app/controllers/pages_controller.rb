@@ -11,6 +11,9 @@ class PagesController < ApplicationController
   def gutschein
   end
 
+  def retoure
+  end
+
   def jobs
   end
 
