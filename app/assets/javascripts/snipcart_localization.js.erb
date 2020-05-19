@@ -2,12 +2,17 @@ document.addEventListener('snipcart.ready', function() {
 	Snipcart.ready.then(function() {
 		Snipcart.api.session.setLanguage('de', {
 			"payment": {
+				"methods": {
+					"deferred_payment": "Überweisung/Vorkasse"
+				},
 		  	"form":{
 		    	"card_label": "Kreditkarte",
 		      "card_number": "Kartennummer",
 		      "card_expiration": "MM/JJ",
 		      "card_cvv": "CVV",
-		      "card_postal_code": "PLZ"
+		      "card_postal_code": "PLZ",
+		      "deferred_payment_title": "Überweisung/Vorkasse",
+		      "deferred_payment_instructions": "Wir versenden Ihre Bestellung sobald wir Ihren Zahlungseingang auf unserem Konto verzeichnen können. Die Bankverbindung erhalten Sie mit der Versandbestätigung.",
 		    }
 		  }
   	});
