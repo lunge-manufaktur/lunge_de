@@ -32,9 +32,9 @@
             = render "products/show/add_to_cart_button"
           .product__add-to-cart-help
             p.marginless--top 
-              | Sie benötigen eine Beratung oder haben Fragen zum Produkt? Wir helfen Ihnen telefonisch unter 040 297728 oder via E-Mail an 
-              = link_to "info@lunge.de", "mailto: info@lunge.de", class: "link"
-              | .
+              | Sie benötigen eine Beratung, haben Fragen zum Produkt oder wünschen eine ausführliche Laufband-Analyse? Besuchen Sie unsere 
+              = link_to "Filialen in Hamburg und Berlin", "/stores", class: "link"
+              |  und nehmen Sie unsere kompetente Fachberatung vor Ort in Anspruch.
 
       section.product__description
         = simple_format @product.description, {}, sanitize: false

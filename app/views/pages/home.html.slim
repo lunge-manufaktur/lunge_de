@@ -9,17 +9,12 @@
       .card__description
         h4.marginless--top Unsere Laufläden in Hamburg und Berlin sind ab sofort wieder wie gewohnt für Sie geöffnet.
         p
-          | Bestellen Sie weiterhin bequem in unserem 
+          | Sie können jetzt wieder unsere ausführliche  
+          = link_to "Beratung", "/posts/die-laufschuhberatung-bei-lunge", class: "link"
+          |  in unseren Läden in Anspruch nehmen. Darüber hinaus können Sie sich unser Sortiment auch bequem via Bestellung in unserem 
           = link_to "Online Shop", "/products"
-          |  und genießen Sie dennoch die gewohnt kompetente Expertise unserer Fachberater. Wir beraten Sie telefonisch unter 
-          = link_to "040 297728", "tel:040297728", class: "link"
-          | .
+          |  liefern lassen:
         ul.list--inside
-          li
-            | Bestellungen und Beratungen via 
-            = link_to "Online Shop", "/product", class: "link"
-            |  und 
-            = link_to "Telefon", "tel:040297728", class: "link"
           li Bundesweiter Versand durch DHL - Lieferung an Packstationen möglich
           li ab 50€ Bestellwert versandkostenfreie Lieferung
           li Click & Collect: Abholung in der Filiale möglich
