@@ -21,7 +21,9 @@ class PagesController < ApplicationController
   end
 
   def payments
+  end
 
+  def terms
   end
 
 end

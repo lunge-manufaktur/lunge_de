@@ -88,5 +88,6 @@ Rails.application.routes.draw do
   get "privacy_policy", controller: "pages", action: "privacy_policy"
   get "docs/api", controller: "pages", action: "api_docs"
   get "retoure", controller: "pages", action: "retoure"
+  get "terms", controller: "pages", action: "terms"
   
 end
