@@ -2,8 +2,14 @@
 
 .title
   .container
-    h1 Der Laufladen in Hamburg und Berlin.
-    .card.card--narrow.card--shadow.space-bottom
+    .space-bottom
+      h1 Der Laufladen in Hamburg und Berlin.
+      p Ganz gleich ob Einsteiger oder Profi - unsere Fachberater führen dich mit kompetenter Beratung und langjähriger Erfahrung zu den besten Marken und Artikeln rund um den Laufsport.
+      ul.inline-list
+        li = link_to "Sortiment entdecken", products_path, class: "button"
+        li = link_to "Der Weg zum richtigen Laufschuh...", "/posts/die-laufschuhberatung-bei-lunge", class: "link"
+    hr
+    .card.card--narrow.card--shadow.space-bottom.space-top
       .card__image
         = image_tag image_path("running_course/lunge_running_course_hannah.jpg")
       .card__description
@@ -15,11 +21,7 @@
           = link_to "ausdauer-coaches.de", "https://www.ausdauer-coaches.de/", class: "link", target: "_blank"
           |  wird Euch dann mit Unterstützung in kleinen Gruppen die richtigen Tipps zur Lauftechnik geben.
         = link_to "Mehr erfahren...", "/gutschein", class: "button"
-    hr
-    p Ganz gleich ob Einsteiger oder Profi - unsere Fachberater führen dich mit kompetenter Beratung und langjähriger Erfahrung zu den besten Marken und Artikeln rund um den Laufsport.
-    ul.inline-list
-      li = link_to "Sortiment entdecken", products_path, class: "button"
-      li = link_to "Der Weg zum richtigen Laufschuh...", "/posts/die-laufschuhberatung-bei-lunge", class: "link"
+    
 .container
   section
     .grid-nav
