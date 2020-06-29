@@ -5,25 +5,16 @@
     h1 Der Laufladen in Hamburg und Berlin.
     .card.card--narrow.card--shadow.space-bottom
       .card__image
-        iframe width="100%" height="400" src="https://www.youtube.com/embed/POOdoqg55nA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen
+        = image_tag image_path("running_course/lunge_running_course_hannah.jpg")
       .card__description
-        h4.marginless--top Unsere Laufläden in Hamburg und Berlin sind ab sofort wieder wie gewohnt für Sie geöffnet.
-        p
-          | Sie können jetzt wieder unsere ausführliche  
-          = link_to "Beratung", "/posts/die-laufschuhberatung-bei-lunge", class: "link"
-          |  in unseren Läden in Anspruch nehmen. Darüber hinaus können Sie sich unser Sortiment auch bequem via Bestellung in unserem 
-          = link_to "Online Shop", "/products"
-          |  liefern lassen:
-        ul.list--inside
-          li Bundesweiter Versand durch DHL - Lieferung an Packstationen möglich
-          li ab 50€ Bestellwert versandkostenfreie Lieferung
-          li Click & Collect: Abholung in der Filiale möglich
-        p
-          span Geschäftszeiten:
-          br
-          span Montag - Freitag: 10:30 - 19:00 Uhr
-          br
-          span Samstag: 10:00 - 18:00 Uhr
+        h4.marginless--top Der Laufkurs in Berlin findet ab sofort wieder statt
+        p 
+          | Ab dem 30.6.2020 findet unser Laufkurs in Berlin wieder statt - 
+          span.bold jeden Dienstag um 18.00 Uhr
+          | . Unter Einhaltung aller Auflagen und Sicherheitsabstände freuen wir uns, Euch wieder zum Laufen begrüßen zu können. Die Laufkursleiterin Hannah Brandner von 
+          = link_to "ausdauer-coaches.de", "https://www.ausdauer-coaches.de/", class: "link", target: "_blank"
+          |  wird Euch dann mit Unterstützung in kleinen Gruppen die richtigen Tipps zur Lauftechnik geben.
+        = link_to "Mehr erfahren...", "/gutschein", class: "button"
     hr
     p Ganz gleich ob Einsteiger oder Profi - unsere Fachberater führen dich mit kompetenter Beratung und langjähriger Erfahrung zu den besten Marken und Artikeln rund um den Laufsport.
     ul.inline-list
