@@ -28,7 +28,7 @@
             h4.marginless--top.marginless--bottom = number_to_currency(@product.current_price, unit: "€ ")
             - if @product.is_on_sale?
               span.strike.light = number_to_currency(@product.try(:regular_price), unit: "€ ")
-            .product__vat-notice inkl. 19% Mehrwertsteuer
+            .product__vat-notice inkl. 16% Mehrwertsteuer
             = render "products/show/add_to_cart_button"
           .product__add-to-cart-help
             p.marginless--top 
