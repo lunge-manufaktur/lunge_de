@@ -2,27 +2,23 @@
 #
 # Table name: stores
 #
-#  id                   :integer          not null, primary key
-#  name                 :string(255)
-#  address_name         :string(255)
-#  street               :string(255)
-#  zip                  :string(255)
-#  city                 :string(255)
-#  phone                :string(255)
-#  email                :string(255)
+#  id                   :bigint           not null, primary key
+#  name                 :string
+#  address_name         :string
+#  street               :string
+#  zip                  :string
+#  city                 :string
+#  phone                :string
+#  email                :string
 #  active               :boolean          default(TRUE)
-#  created_at           :datetime
-#  updated_at           :datetime
+#  created_at           :datetime         not null
+#  updated_at           :datetime         not null
 #  latitude             :float
 #  longitude            :float
 #  description          :text
-#  slug                 :string(255)
+#  slug                 :string
 #  google_maps_place_id :string
 #  panorama_embed_url   :text
-#
-# Indexes
-#
-#  index_stores_on_slug  (slug) UNIQUE
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

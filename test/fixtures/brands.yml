@@ -2,19 +2,15 @@
 #
 # Table name: brands
 #
-#  id                :integer          not null, primary key
-#  name              :string(255)
-#  created_at        :datetime
-#  updated_at        :datetime
-#  logo_file_name    :string(255)
-#  logo_content_type :string(255)
-#  logo_file_size    :integer
+#  id                :bigint           not null, primary key
+#  name              :string
+#  created_at        :datetime         not null
+#  updated_at        :datetime         not null
+#  logo_file_name    :string
+#  logo_content_type :string
+#  logo_file_size    :bigint
 #  logo_updated_at   :datetime
-#  slug              :string(255)
-#
-# Indexes
-#
-#  index_brands_on_slug  (slug) UNIQUE
+#  slug              :string
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

@@ -2,24 +2,19 @@
 #
 # Table name: events
 #
-#  id            :integer          not null, primary key
-#  employee_id   :integer
-#  store_id      :integer
+#  id            :bigint           not null, primary key
+#  employee_id   :bigint
+#  store_id      :bigint
 #  starts_at     :datetime
 #  ends_at       :datetime
 #  pause         :time
 #  vacation      :boolean          default(FALSE)
 #  sick          :boolean          default(FALSE)
 #  comment       :text
-#  created_at    :datetime
-#  updated_at    :datetime
-#  custom_status :string(255)
+#  created_at    :datetime         not null
+#  updated_at    :datetime         not null
+#  custom_status :string
 #  manager       :boolean          default(FALSE)
-#
-# Indexes
-#
-#  index_events_on_employee_id  (employee_id)
-#  index_events_on_store_id     (store_id)
 #
 
 require 'spec_helper'

@@ -2,19 +2,15 @@
 #
 # Table name: post_images
 #
-#  id                 :integer          not null, primary key
-#  post_id            :integer
+#  id                 :bigint           not null, primary key
+#  post_id            :bigint
 #  default            :boolean
-#  created_at         :datetime
-#  updated_at         :datetime
-#  image_file_name    :string(255)
-#  image_content_type :string(255)
-#  image_file_size    :integer
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  image_file_name    :string
+#  image_content_type :string
+#  image_file_size    :bigint
 #  image_updated_at   :datetime
-#
-# Indexes
-#
-#  index_post_images_on_post_id  (post_id)
 #
 
 require 'spec_helper'

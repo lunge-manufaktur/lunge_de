@@ -2,19 +2,15 @@
 #
 # Table name: categories
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)
-#  created_at :datetime
-#  updated_at :datetime
+#  id         :bigint           not null, primary key
+#  name       :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #  parent_id  :integer
 #  lft        :integer
 #  rgt        :integer
 #  depth      :integer
-#  slug       :string(255)
-#
-# Indexes
-#
-#  index_categories_on_slug  (slug)
+#  slug       :string
 #
 
 class Category < ActiveRecord::Base

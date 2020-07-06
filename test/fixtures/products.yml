@@ -2,31 +2,26 @@
 #
 # Table name: products
 #
-#  id                   :integer          not null, primary key
-#  name                 :string(255)
-#  sku                  :string(255)
-#  description          :text             default("Beschreibung folgt")
-#  created_at           :datetime
-#  updated_at           :datetime
-#  size_id              :integer
-#  brand_id             :integer
-#  regular_price        :decimal(8, 2)
-#  current_price        :decimal(8, 2)
-#  color                :string(255)
-#  is_published         :boolean          default(FALSE)
-#  official_description :text
-#  is_on_frontpage      :boolean          default(FALSE)
-#  is_featured          :boolean          default(FALSE)
-#  slug                 :string(255)
-#  use_in_lia_campaign  :boolean          default(FALSE)
-#  meta_description     :text
-#
-# Indexes
-#
-#  index_products_on_brand_id             (brand_id)
-#  index_products_on_size_id              (size_id)
-#  index_products_on_slug                 (slug)
-#  index_products_on_use_in_lia_campaign  (use_in_lia_campaign)
+#  id                                  :integer          not null, primary key
+#  name                                :string
+#  fmid                                :integer
+#  sku                                 :string
+#  description                         :text             default("Beschreibung folgt")
+#  created_at                          :datetime
+#  updated_at                          :datetime
+#  size_id                             :integer
+#  brand_id                            :bigint
+#  regular_price                       :decimal(8, 2)
+#  current_price                       :decimal(8, 2)
+#  color                               :string
+#  is_published                        :boolean          default(FALSE)
+#  official_description                :text
+#  is_on_frontpage                     :boolean          default(FALSE)
+#  is_featured                         :boolean          default(FALSE)
+#  slug                                :string
+#  use_in_lia_campaign                 :boolean          default(FALSE)
+#  meta_description                    :text
+#  current_price_without_tax_reduction :decimal(8, 2)
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

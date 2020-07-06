@@ -2,15 +2,11 @@
 #
 # Table name: api_keys
 #
-#  id         :integer          not null, primary key
-#  key        :string(255)
-#  user_id    :integer
-#  created_at :datetime
-#  updated_at :datetime
-#
-# Indexes
-#
-#  index_api_keys_on_user_id  (user_id)
+#  id         :bigint           not null, primary key
+#  key        :string
+#  user_id    :bigint
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 
 class ApiKey < ActiveRecord::Base

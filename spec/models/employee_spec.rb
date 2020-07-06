@@ -2,17 +2,12 @@
 #
 # Table name: employees
 #
-#  id         :integer          not null, primary key
-#  name       :string(255)
+#  id         :bigint           not null, primary key
+#  name       :string
 #  active     :boolean          default(TRUE)
 #  user_id    :integer
-#  created_at :datetime
-#  updated_at :datetime
-#
-# Indexes
-#
-#  index_employees_on_active   (active)
-#  index_employees_on_user_id  (user_id)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 
 require 'spec_helper'

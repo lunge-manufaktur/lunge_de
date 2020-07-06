@@ -2,9 +2,9 @@
 #
 # Table name: stocks
 #
-#  id         :integer          not null, primary key
-#  product_id :integer
-#  store_id   :integer
+#  id         :bigint           not null, primary key
+#  product_id :bigint
+#  store_id   :bigint
 #  g1         :integer
 #  g1h        :integer
 #  g2         :integer
@@ -38,13 +38,8 @@
 #  g17        :integer
 #  g18        :integer
 #  g19        :integer
-#  created_at :datetime
-#  updated_at :datetime
-#
-# Indexes
-#
-#  index_stocks_on_product_id  (product_id)
-#  index_stocks_on_store_id    (store_id)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html

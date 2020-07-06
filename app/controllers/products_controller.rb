@@ -149,6 +149,7 @@ class ProductsController < ApplicationController
       :brand_id,
       :size_id,
       :current_price,
+      :current_price_without_tax_reduction,
       :regular_price,
       :color,
       :tag_list,

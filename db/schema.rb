@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_03_16_061313) do
+ActiveRecord::Schema.define(version: 2020_07_06_100705) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -194,6 +194,7 @@ ActiveRecord::Schema.define(version: 2018_03_16_061313) do
     t.string "slug"
     t.boolean "use_in_lia_campaign", default: false
     t.text "meta_description"
+    t.decimal "current_price_without_tax_reduction", precision: 8, scale: 2
     t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["size_id"], name: "index_products_on_size_id"
     t.index ["slug"], name: "index_products_on_slug"

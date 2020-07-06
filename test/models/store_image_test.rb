@@ -2,20 +2,15 @@
 #
 # Table name: store_images
 #
-#  id                 :integer          not null, primary key
-#  store_id           :integer
-#  created_at         :datetime
-#  updated_at         :datetime
-#  image_file_name    :string(255)
-#  image_content_type :string(255)
-#  image_file_size    :integer
+#  id                 :bigint           not null, primary key
+#  store_id           :bigint
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  image_file_name    :string
+#  image_content_type :string
+#  image_file_size    :bigint
 #  image_updated_at   :datetime
 #  default            :boolean          default(FALSE)
-#
-# Indexes
-#
-#  index_store_images_on_default   (default)
-#  index_store_images_on_store_id  (store_id)
 #
 
 require 'test_helper'

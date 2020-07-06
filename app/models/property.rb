@@ -2,16 +2,12 @@
 #
 # Table name: properties
 #
-#  id         :integer          not null, primary key
+#  id         :bigint           not null, primary key
 #  product_id :integer
-#  name       :string(255)
-#  value      :string(255)
-#  created_at :datetime
-#  updated_at :datetime
-#
-# Indexes
-#
-#  index_properties_on_product_id  (product_id)
+#  name       :string
+#  value      :string
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
 #
 
 class Property < ActiveRecord::Base

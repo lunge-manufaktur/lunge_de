@@ -85,6 +85,7 @@ module Api
         :brand_id,
         :regular_price,
         :current_price,
+        :current_price_without_tax_reduction,
         :color,
         :is_published,
         :official_description,
