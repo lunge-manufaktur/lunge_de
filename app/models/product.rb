@@ -79,7 +79,7 @@ class Product < ActiveRecord::Base
   end
 
   def is_on_sale?
-    current_price < regular_price
+    current_price_without_tax_reduction < regular_price
   end
 
   def short_description(length=200)
