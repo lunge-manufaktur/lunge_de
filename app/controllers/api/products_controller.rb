@@ -88,6 +88,7 @@ module Api
         :current_price_without_tax_reduction,
         :color,
         :is_published,
+        :orderable,
         :official_description,
         :is_on_sale,
         :is_on_frontpage,

@@ -22,6 +22,7 @@
 #  use_in_lia_campaign                 :boolean          default(FALSE)
 #  meta_description                    :text
 #  current_price_without_tax_reduction :decimal(8, 2)
+#  orderable                           :boolean          default(TRUE), not null
 #
 
 require 'test_helper'

@@ -22,6 +22,7 @@
 #  use_in_lia_campaign                 :boolean          default(FALSE)
 #  meta_description                    :text
 #  current_price_without_tax_reduction :decimal(8, 2)
+#  orderable                           :boolean          default(TRUE), not null
 #
 
 class Product < ActiveRecord::Base
@@ -163,7 +164,7 @@ class Product < ActiveRecord::Base
   end
 
   def available_online?
-    has_stock?(store: 1)
+    orderable? && has_stock?(store: 1)
   end
 
   def eligible_for_running_course?

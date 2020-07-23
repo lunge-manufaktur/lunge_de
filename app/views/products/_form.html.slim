@@ -49,6 +49,11 @@
           = f.check_box :is_featured
           = f.label :is_featured, "Hervorheben", class: "label--inline"
       section
+        h4 Online Shop
+        .fields
+          = f.check_box :orderable
+          = f.label :orderable, "Kann bestellt werden", class: "label--inline"
+      section
         h4 Artikeldaten
         .fields
           = f.label :sku, "Artikelnummer"

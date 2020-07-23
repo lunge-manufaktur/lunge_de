@@ -1,4 +1,4 @@
-<%= if @product.has_stock?(store: 1)
+<%= if @product.available_online?
 	if @product.try(:size).try(:name) == "[Ohne]"
 		button_tag "Jetzt bestellen", type: "button", class: "snipcart-add-item", data: {
 			"item-id": @product.id,

@@ -141,6 +141,7 @@ class ProductsController < ApplicationController
       :name,
       :is_published,
       :is_featured,
+      :orderable,
       :is_on_frontpage,
       :use_in_lia_campaign,
       :sku,
