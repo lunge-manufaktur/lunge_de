@@ -4,10 +4,13 @@ html lang="de"
     = render "layouts/shared/meta"
     = favicon_link_tag "favicon.ico"
 
+    link rel="preconnect" href="https://app.snipcart.com"
+    link rel="preconnect" href="https://cdn.snipcart.com"
+
     = stylesheet_link_tag "application"
     = csrf_meta_tags
     = stylesheet_link_tag "https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
-    = stylesheet_link_tag "https://cdn.snipcart.com/themes/v3.0.15/default/snipcart.css"
+    = stylesheet_link_tag "https://cdn.snipcart.com/themes/v3.0.20/default/snipcart.css"
     = stylesheet_link_tag "snipcart_overrides"
     = javascript_include_tag "https://analytics.lunge.de/js/index.js", async: true, defer: true, data: { "domain": "lunge.de" }
 
@@ -24,4 +27,4 @@ html lang="de"
     
     = javascript_include_tag "application", data: { "turbolinks-eval": "false" }
     = javascript_include_tag "application-track"
-    = javascript_include_tag "https://cdn.snipcart.com/themes/v3.0.15/default/snipcart.js"
+    = javascript_include_tag "https://cdn.snipcart.com/themes/v3.0.20/default/snipcart.js"
