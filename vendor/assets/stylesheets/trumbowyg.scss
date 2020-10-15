@@ -375,8 +375,9 @@ body.trumbowyg-body-fullscreen {
 .trumbowyg-fullscreen {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
+  left: 4rem;
+  right: 0;
+  width: auto;
   height: 100%;
   margin: 0;
   padding: 0;
