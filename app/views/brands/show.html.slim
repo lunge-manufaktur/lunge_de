@@ -1,5 +1,7 @@
-- meta_description("Schuhe und Bekleidung von #{@brand.name} - umfangreiche Auswahl im Lunge Laufladen.")
-- meta_title(@brand.name)
+- set_meta_tags title: @brand.name,
+                description: "Schuhe und Bekleidung von #{@brand.name} - umfangreiche Auswahl im Lunge Laufladen.",
+                noindex: @products.empty? ? true : false
+
 
 .container
   .title
