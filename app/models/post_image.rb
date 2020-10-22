@@ -3,14 +3,18 @@
 # Table name: post_images
 #
 #  id                 :bigint           not null, primary key
-#  post_id            :bigint
 #  default            :boolean
-#  created_at         :datetime         not null
-#  updated_at         :datetime         not null
-#  image_file_name    :string
 #  image_content_type :string
+#  image_file_name    :string
 #  image_file_size    :bigint
 #  image_updated_at   :datetime
+#  created_at         :datetime         not null
+#  updated_at         :datetime         not null
+#  post_id            :bigint
+#
+# Indexes
+#
+#  index_post_images_on_post_id  (post_id)
 #
 
 class PostImage < ActiveRecord::Base

@@ -3,11 +3,18 @@
 # Table name: product_categories
 #
 #  id        :bigint           not null, primary key
-#  name      :string
-#  parent_id :integer
-#  lft       :integer
-#  rgt       :integer
 #  depth     :integer
+#  lft       :integer
+#  name      :string
+#  rgt       :integer
+#  parent_id :integer
+#
+# Indexes
+#
+#  index_product_categories_on_depth      (depth)
+#  index_product_categories_on_lft        (lft)
+#  index_product_categories_on_parent_id  (parent_id)
+#  index_product_categories_on_rgt        (rgt)
 #
 
 class ProductCategory < ActiveRecord::Base

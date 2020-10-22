@@ -3,26 +3,34 @@
 # Table name: products
 #
 #  id                                  :integer          not null, primary key
-#  name                                :string
-#  fmid                                :integer
-#  sku                                 :string
-#  description                         :text             default("Beschreibung folgt")
-#  created_at                          :datetime
-#  updated_at                          :datetime
-#  size_id                             :integer
-#  brand_id                            :bigint
-#  regular_price                       :decimal(8, 2)
-#  current_price                       :decimal(8, 2)
 #  color                               :string
-#  is_published                        :boolean          default(FALSE)
-#  official_description                :text
-#  is_on_frontpage                     :boolean          default(FALSE)
+#  current_price                       :decimal(8, 2)
+#  current_price_without_tax_reduction :decimal(8, 2)
+#  description                         :text             default("Beschreibung folgt")
+#  fmid                                :integer
 #  is_featured                         :boolean          default(FALSE)
+#  is_on_frontpage                     :boolean          default(FALSE)
+#  is_published                        :boolean          default(FALSE)
+#  meta_description                    :text
+#  name                                :string
+#  official_description                :text
+#  orderable                           :boolean          default(TRUE), not null
+#  regular_price                       :decimal(8, 2)
+#  sku                                 :string
 #  slug                                :string
 #  use_in_lia_campaign                 :boolean          default(FALSE)
-#  meta_description                    :text
-#  current_price_without_tax_reduction :decimal(8, 2)
-#  orderable                           :boolean          default(TRUE), not null
+#  created_at                          :datetime
+#  updated_at                          :datetime
+#  brand_id                            :bigint
+#  size_id                             :integer
+#
+# Indexes
+#
+#  index_products_on_brand_id             (brand_id)
+#  index_products_on_orderable            (orderable)
+#  index_products_on_size_id              (size_id)
+#  index_products_on_slug                 (slug)
+#  index_products_on_use_in_lia_campaign  (use_in_lia_campaign)
 #
 
 class Product < ActiveRecord::Base

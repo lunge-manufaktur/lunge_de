@@ -69,6 +69,7 @@ class BrandsController < ApplicationController
     params.require(:brand).permit(
       :id,
       :name,
+      :description,
       :logo
     )
   end

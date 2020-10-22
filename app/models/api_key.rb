@@ -4,9 +4,13 @@
 #
 #  id         :bigint           not null, primary key
 #  key        :string
-#  user_id    :bigint
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  user_id    :bigint
+#
+# Indexes
+#
+#  index_api_keys_on_user_id  (user_id)
 #
 
 class ApiKey < ActiveRecord::Base

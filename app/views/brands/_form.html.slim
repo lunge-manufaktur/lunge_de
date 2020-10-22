@@ -1,22 +1,28 @@
-= form_for(@brand) do |f|
-  - if @brand.errors.any?
-    #error_explanation
-      h2 
-        = pluralize(@brand.errors.count, "error")
-        | prohibited this brand from being saved:
+main
+  article
+    = form_for(@brand) do |f|
+      - if @brand.errors.any?
+        section
+          #error_explanation
+            h2 
+              = pluralize(@brand.errors.count, "error")
+              | prohibited this brand from being saved:
 
-      ul
-        - @brand.errors.full_messages.each do |msg|
-        li = msg
+            ul
+              - @brand.errors.full_messages.each do |msg|
+              li = msg
+      section
+        .fields
+          = f.label :name
+          = f.text_field :name
+        .fields
+          = f.label :description
+          = f.text_area :description, rows: 12, class: "wysiwyg-editor"
+      section
+        .fields
+          = f.label :logo
+          - if @brand.logo
+            = image_tag @brand.try(:logo).url(:thumb)
+          = f.file_field :logo, class: "button secondary"
 
-  .field
-    = f.label :name
-    = f.text_field :name
-  .fields
-    = f.label :logo
-    - if @brand.logo
-      = image_tag @brand.try(:logo).url(:thumb)
-    = f.file_field :logo, class: "button secondary"
-
-  .actions
-    = f.submit "Speichern", class: "button"
+  aside

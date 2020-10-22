@@ -3,10 +3,15 @@
 # Table name: product_categorizations
 #
 #  id                  :bigint           not null, primary key
-#  product_id          :bigint
-#  product_category_id :bigint
 #  created_at          :datetime         not null
 #  updated_at          :datetime         not null
+#  product_category_id :bigint
+#  product_id          :bigint
+#
+# Indexes
+#
+#  index_product_categorizations_on_product_category_id  (product_category_id)
+#  index_product_categorizations_on_product_id           (product_id)
 #
 
 class ProductCategorization < ActiveRecord::Base

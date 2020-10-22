@@ -1,7 +1,13 @@
-h1 Editing brand
+.container
+	.title
+		h1 = @brand.name
+		section
+		  ul.inline-list
+		    li = submit_tag "Speichern", form: "edit_brand_#{@brand.id}", class: "button"
+		    li = link_to "Abbrechen", @brand, class: "link"
 
-= render 'form'
+	= render 'form'
 
-= link_to 'Show', @brand
-span | 
-= link_to 'Back', brands_path
+	ul.inline-list
+	  li = submit_tag "Speichern", form: "edit_brand_#{@brand.id}", class: "button"
+	  li = link_to "Abbrechen", @brand, class: "link"
