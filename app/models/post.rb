@@ -43,7 +43,7 @@ class Post < ActiveRecord::Base
   has_attached_file :icon,
     storage: :ftp,
     path: "/lunge.de/www/images/PostImage/:id/:id.:extension",
-    url: "http://cdn.lunge.de/images/PostImage/:id/:id.:extension",
+    url: "https://cdn.lunge.de/images/PostImage/:id/:id.:extension",
     ftp_servers: [
       {
         :host     => ENV["FTP_HOST"],
