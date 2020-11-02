@@ -16,7 +16,7 @@ class CategoriesController < ApplicationController
       @search = Post.published.joins(:categories).where("categories.lft" => @category.lft..@category.rgt).search(params[:q])
     end
     
-    @posts = @search.result(distinct: true).order(created_at: :desc)
+    @posts = @search.result(distinct: true).prefer_featured.most_recently_updated
   end
 
   # GET /categories/new

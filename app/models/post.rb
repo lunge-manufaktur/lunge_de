@@ -42,6 +42,8 @@ class Post < ActiveRecord::Base
   scope :published, -> { where(is_published: true) }
   scope :featured, -> { where(is_featured: true) }
   scope :homepage, -> { where(is_on_homepage: true) }
+  scope :prefer_featured, -> { order("is_featured DESC NULLS LAST") }
+  scope :most_recently_updated, -> { order(updated_at: :desc) }
 
   # Paperclip
   require "paperclip/storage/ftp"

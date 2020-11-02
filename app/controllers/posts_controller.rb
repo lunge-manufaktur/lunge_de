@@ -10,7 +10,7 @@ class PostsController < ApplicationController
     else
       @search = Post.published.search(params[:q])
     end
-    @posts = @search.result(distinct: true).order(created_at: :desc)
+    @posts = @search.result(distinct: true).prefer_featured.most_recently_updated
     authorize @posts
     
     @categories = Category.all
@@ -89,6 +89,7 @@ class PostsController < ApplicationController
       params.require(:post).permit(
         :title,
         :subtitle,
+        :slug,
         :content,
         :meta_description,
         :is_published,
