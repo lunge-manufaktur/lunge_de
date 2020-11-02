@@ -12,7 +12,7 @@
         .brand__logo
           = image_tag @brand.logo.url(:small), width: "128"
 
-    = simple_format @brand.description, {}, sanitize: false
+    = simple_format @brand.description
 
   section
     h4 Artikel
