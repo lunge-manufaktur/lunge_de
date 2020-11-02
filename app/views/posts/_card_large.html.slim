@@ -6,6 +6,8 @@
     .card__figure.card__figure--colored
       = image_tag post.icon.url, class: "card__icon"
   .card__description
+    - unless post.is_published?
+      span.label.label--draft Entwurf
     h4.marginless--bottom = post.title
     label = post.subtitle
     p = strip_tags(post.short_description(200))
