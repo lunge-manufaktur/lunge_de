@@ -4,7 +4,7 @@
       = image_tag post&.default_image(size: :medium), class: "card__image"
   - elsif post.icon?
     .card__figure.card__figure--colored
-      = image_tag post.icon.url, alt, post.title, class: "card__icon"
+      = image_tag post.icon.url, alt: post.title, class: "card__icon"
   .card__description
     - unless post.is_published?
       span.label.label--draft Entwurf
