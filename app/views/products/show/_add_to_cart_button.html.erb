@@ -1,6 +1,6 @@
 <%= if @product.available_online?
 	if @product.try(:size).try(:name) == "[Ohne]"
-		button_tag "Jetzt bestellen", type: "button", class: "snipcart-add-item", data: {
+		button_tag "In den Warenkorb", type: "button", class: "snipcart-add-item", data: {
 			"item-id": @product.id,
 			"item-price": @product.current_price,
 			"item-url": product_url(@product),
@@ -9,7 +9,7 @@
 			"item-name": @product.name_with_brand_and_color
 		}
 	else
-		button_tag "Jetzt bestellen", type: "button", class: "snipcart-add-item", data: {
+		button_tag "In den Warenkorb", type: "button", class: "snipcart-add-item", data: {
 			"item-id": @product.id,
 			"item-price": @product.current_price,
 			"item-url": product_url(@product),
