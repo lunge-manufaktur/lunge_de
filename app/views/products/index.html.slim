@@ -35,3 +35,7 @@
         = render "products/index/sidebar_search"
       section
         = render "products/index/sidebar_tags"
+
+- if @tags
+  javascript:
+    plausible('Tag Page', {props: {tag: '#{@tags.join(", ").to_s}'}})
