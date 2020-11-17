@@ -7,9 +7,12 @@
 .container
   main
     article
-      .cards__container
-        - @posts.each do |post|
-          = render partial: "posts/card_large", locals: { post: post }
+      section
+        .cards__container
+          - @posts.each do |post|
+            = render partial: "posts/card_large", locals: { post: post }
+      section
+        = paginate @posts, params: { authenticity_token: nil, commit: nil, utf8: nil }
 
     aside
       section

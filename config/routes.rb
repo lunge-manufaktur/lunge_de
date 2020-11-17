@@ -53,7 +53,7 @@ Rails.application.routes.draw do
   resources :categorizations
   resources :categories, except: "index"
   resources :events
-  resources :posts, concerns: [ :searchable ]
+  resources :posts, concerns: [:paginatable, :searchable]
   resources :properties
   resources :stocks
   resources :stores do

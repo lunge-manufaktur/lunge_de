@@ -10,7 +10,11 @@ class PostsController < ApplicationController
     else
       @search = Post.published.search(params[:q])
     end
-    @posts = @search.result(distinct: true).prefer_featured.most_recently_updated
+    @posts = @search.result(distinct: true)
+                    .prefer_featured
+                    .most_recently_updated
+                    .page(params[:page]).per(24)
+
     authorize @posts
     
     @categories = Category.all
