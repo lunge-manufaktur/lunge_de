@@ -1,0 +1,36 @@
+@keyframes slide-up {
+	0% {
+		top: 100%;
+	}
+
+	100% {
+		top: 4rem;
+	}
+}
+
+@include tablet-portrait {
+	@keyframes slide-up {
+		0% {
+			top: 100%;
+		}
+
+		100% {
+			top: 0;
+		}
+	}
+}
+
+@keyframes slide-down {
+	100% {
+		top: 100%;
+		display: none;
+	}
+}
+
+.animation--slide-up {
+	animation: slide-up 250ms cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}
+
+.animation--slide-down {
+	animation: slide-down 250ms cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+}

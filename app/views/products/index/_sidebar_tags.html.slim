@@ -6,5 +6,3 @@ h4 Tags
   - else
     - @search.result.tags_on(:tags).order(:name).each do |tag|
       = tag_cloud_item(tag.name)
-hr
-= link_to "Filter aufheben", products_path, class: "small button expand"

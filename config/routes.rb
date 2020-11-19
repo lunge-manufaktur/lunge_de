@@ -69,7 +69,7 @@ Rails.application.routes.draw do
     get "featured" => "products#show_featured", :as => "featured"
     collection do
       get "tags/:tags", action: "index", as: :tag
-      get '/tags/:tags/search', action: :search, as: :tagged_search
+      match '/tags/:tags/search', action: :search, via: [:get, :post], as: :tagged_search
     end
     resources :product_images
     resources :properties

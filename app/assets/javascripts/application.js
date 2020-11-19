@@ -19,4 +19,5 @@
 //= require trumbowyg
 //= require editor
 //= require product-images
+//= require product-filter
 //= require snipcart_localization

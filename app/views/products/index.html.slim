@@ -7,15 +7,26 @@
     h1 Shop
 
 .container
+  = search_form_for @search, class: "product_search--mobile", url: @tags ? tagged_search_products_path : search_products_path, method: :get do |f|
+    .fields
+      .inline-form
+        = f.text_field :name_or_sku_or_brand_name_cont_any
+        = f.submit "Suchen", class: "button expand"
+    ul.inline-list
+      li
+        button.button--secondary.product-filter__open Erweiterte Suche
+      - if params[:q].present?
+        li = link_to "Alle anzeigen", @tags.present? ? tag_products_path(tags: parameterize_tags(@tags)) : products_path, class: "link"
+
   - if @tags
     section
       .panel
-        h4 Aktive Filter
+        h5 Aktive Filter
         .tag-cloud
           - @tags.each do |tag|
             = tag_to_remove(tag)
         hr
-        = link_to "Alle Artikel anzeigen", products_path
+        = link_to "Alle Artikel anzeigen", products_path, class: "link"
   .two-columns
     article
       section
@@ -30,11 +41,18 @@
             = render "products/card", product: product
       section
         = paginate @products, params: { authenticity_token: nil, commit: nil, utf8: nil }
-    aside
+    aside.product-filter
       section
         = render "products/index/sidebar_search"
       section
         = render "products/index/sidebar_tags"
+
+    - content_for :popover do
+      aside.product-filter--mobile
+        section
+          = render "products/index/sidebar_search"
+        section
+          = render "products/index/sidebar_tags"
 
 - if @tags
   - @tags.each do |tag|

@@ -471,6 +471,85 @@ a.card:hover {
   font-style: italic;
 }
 
+aside.product-filter {
+  display: none;
+  position: relative;
+  left: auto;
+  top: auto;
+  right: auto;
+  bottom: auto;
+  margin-left: 4rem;
+  padding-left: 4rem;
+
+  @include tablet-landscape {
+    display: block;
+  }
+}
+
+aside.product-filter--mobile {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 4rem;
+  right: 0;
+  bottom: 0;
+  overflow-y: scroll;
+  background-color: $background-color;
+  margin-left: 0;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @include tablet-portrait {
+    left: 4rem;
+    top: 0;
+  }
+}
+
+aside.product-filter--enabled {
+  display: block;
+}
+
+.product-filter__open {
+  display: block;
+
+  @include tablet-landscape {
+    display: none;
+  }
+}
+
+.product-filter__close {
+  display: block;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+
+  @include tablet-landscape {
+    display: none;
+  }
+}
+
+.product_search--mobile {
+  border-top: 1px solid #e3e3e3;
+  padding-top: 2rem;
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 2rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  @include tablet-portrait {
+    margin-left: -2rem;
+    margin-right: -2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  @include tablet-landscape {
+    display: none;
+  }
+}
+
 
 
 

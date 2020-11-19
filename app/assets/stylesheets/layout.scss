@@ -155,6 +155,10 @@ body.offcanvas .border__menu-toggle {
   }
 }
 
+.content--overlay-enabled {
+  position: fixed;
+}
+
 .yield {
   flex: 1 0 auto;
 }
@@ -194,7 +198,6 @@ main,
 }
 
 .title {
-  margin: 4rem 0;
 }
 
 

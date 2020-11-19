@@ -8,8 +8,9 @@ a {
 }
 
 hr {
-  border-style: solid;
-  border-color: $hairline-color;
+  height: 1px;
+  border: none;
+  background-color: $hairline-color;
   margin-top: $gutter;
   margin-bottom: $gutter;
 }

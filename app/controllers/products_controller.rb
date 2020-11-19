@@ -6,6 +6,11 @@ class ProductsController < ApplicationController
   # GET /products
   # GET /products.json
   def index
+    # search param to array
+    if params[:q].present?
+      params[:q][:name_or_sku_or_brand_name_cont_any] = params[:q][:name_or_sku_or_brand_name_cont_any]&.split
+    end
+
     if params[:tags].present?
       @tags = params[:tags]&.split('+')&.map { |tag| tag.gsub('-', ' ') }
     end
@@ -13,12 +18,17 @@ class ProductsController < ApplicationController
     if @tags.present?
       @search = policy_scope(Product).includes(:brand, :stocks, :product_images, :tags).tagged_with(@tags).search(params[:q])
     else
-      @search = policy_scope(Product).includes(:brand, :stocks, :product_images, :tags).search(params[:q])
+      @search = policy_scope(Product).includes(:brand, :stocks, :product_images, :tags).ransack(params[:q])
     end
 
     @products = @search.result(distinct: true)
                        .prefer_featured.newest
                        .page(params[:page]).per(12)
+
+    # search param to string
+    if params[:q].present?
+      params[:q][:name_or_sku_or_brand_name_cont_any] = params[:q][:name_or_sku_or_brand_name_cont_any]&.join(" ")
+    end
   end
 
   def search
