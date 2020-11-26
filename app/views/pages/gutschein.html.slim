@@ -4,62 +4,68 @@
 
   main
     article
-      p 
-        | Zur neuen Saison belohnen wir unsere Kunden: Beim Kauf eines Laufschuhes erhalten Sie einen Gutschein für die Teilnahme an einem Laufkurs in Hamburg oder Berlin. Der Gutschein gibt Ihnen die Möglichkeit, 3x kostenfrei am Laufkurs der Experten von 
-        = link_to "Boie Sports (Hamburg)", "http://www.ralf-boie.de", target: "_blank", class: "link"
-        |  oder Hannah Brandner (Berlin) teilzunehmen.
-      p
-        | Ganz gleich ob Einsteiger oder erfahrener Läufer - Die Kurse helfen Ihnen, einen ganz natürlichen und beschwerdefreien Laufstil zu entwickeln und die Freude am Laufsport langfristig aufrecht zu halten - all das findet wöchentlich in lockerer Atmosphäre statt. Als Lunge-Kunde bedarf Ihre kostenlose Teilnahme zudem keiner weiteren Anmeldung - unkomplizierter geht's nicht.
       section
-        h3 Hamburg
-        p
-          | Der Kurs von Ralf Boie unterstützt den Läufer dabei zu seiner natürlichen Laufbewegung zu finden und durch gezielte Technik Schmerzen zu vermeiden und Freude am Laufen zu entwickeln. Lernen Sie bei 
-          = link_to "Boie Sports", "http://www.ralf-boie.de", target: "_blank", class: "link"
-          |  alles was Sie für ein effektives und beschwerdefreies Lauftraining benötigen. Die Trainingseinheiten thematisieren verschiedene Trainingsschwerpunkte (z.B. Core Stability, Lauf ABC, Laufstil, Laufökonomisierung, Kraft, Sprinttechniken, etc) und ermöglichen auf diese Weise einen Einstieg zu jeder Zeit.
-        h4 Termine & Treffpunkt
-        .card.card--bordered
+        .card.card--bordered.card--narrow
           .card__description
-            | Der Laufkurs in Hamburg findet ab 13.07.2020 wieder statt.
+            h4.marginless--top Hinweis
+            | Aufgrund der derzeitigen Corona-bedingten Einschränkungen finden die Laufkurse bis auf Weiteres nicht statt.
+      strike
+        p 
+          | Zur neuen Saison belohnen wir unsere Kunden: Beim Kauf eines Laufschuhes erhalten Sie einen Gutschein für die Teilnahme an einem Laufkurs in Hamburg oder Berlin. Der Gutschein gibt Ihnen die Möglichkeit, 3x kostenfrei am Laufkurs der Experten von 
+          = link_to "Boie Sports (Hamburg)", "http://www.ralf-boie.de", target: "_blank", class: "link"
+          |  oder Hannah Brandner (Berlin) teilzunehmen.
         p
-          label Zeitpunkt
-          span Jeden Montag, 18 Uhr
-        p
-          label Treffpunkt
-          | Lunge Laufladen
-          br
-          | Ferdinandstraße 55-57
-          br
-          | 20095 Hamburg
-        p
-          = link_to "Auf Karte zeigen", "https://goo.gl/maps/Q8icHALJ6Ts", target: "_blank", class: "link"
-        p
-          | Beachten Sie bitte: Sollte es Terminänderungen oder sonstige relevante Ankündigungen zu Zeit und Treffpunkt geben, finden Sie diese stets unter 
-          = link_to "www.ralf-boie.de", "http://www.ralf-boie.de", target: "_blank"
-        p
-          | Bitte bringen Sie bei Ihrer ersten Teilnahme den Kaufbeleg mit.
-      hr
-      section
-        h3 Berlin
-        p
-          label Zeitpunkt
-          span Jeden Dienstag 18 Uhr
-        p
-          label Treffpunkt
-          span Lunge Laufladen
-          br
-          span Bismarckstraße 101
-          br
-          span 10625 Berlin
-        p
-          label Kontakt
-          span Hannah von den Ausdauer Coaches
-          br
-          = link_to "kontakt@ausdauer-coaches.de", "mailto: kontakt@ausdauer-coaches.de"
-          br
-          br
-          span oder telefonisch im Lunge Laufladen:
-          br
-          span 030 91555959
+          | Ganz gleich ob Einsteiger oder erfahrener Läufer - Die Kurse helfen Ihnen, einen ganz natürlichen und beschwerdefreien Laufstil zu entwickeln und die Freude am Laufsport langfristig aufrecht zu halten - all das findet wöchentlich in lockerer Atmosphäre statt. Als Lunge-Kunde bedarf Ihre kostenlose Teilnahme zudem keiner weiteren Anmeldung - unkomplizierter geht's nicht.
+        section
+          h3 Hamburg
+          p
+            | Der Kurs von Ralf Boie unterstützt den Läufer dabei zu seiner natürlichen Laufbewegung zu finden und durch gezielte Technik Schmerzen zu vermeiden und Freude am Laufen zu entwickeln. Lernen Sie bei 
+            = link_to "Boie Sports", "http://www.ralf-boie.de", target: "_blank", class: "link"
+            |  alles was Sie für ein effektives und beschwerdefreies Lauftraining benötigen. Die Trainingseinheiten thematisieren verschiedene Trainingsschwerpunkte (z.B. Core Stability, Lauf ABC, Laufstil, Laufökonomisierung, Kraft, Sprinttechniken, etc) und ermöglichen auf diese Weise einen Einstieg zu jeder Zeit.
+          h4 Termine & Treffpunkt
+          .card.card--bordered
+            .card__description
+              | Der Laufkurs in Hamburg findet ab 13.07.2020 wieder statt.
+          p
+            label Zeitpunkt
+            span Jeden Montag, 18 Uhr
+          p
+            label Treffpunkt
+            | Lunge Laufladen
+            br
+            | Ferdinandstraße 55-57
+            br
+            | 20095 Hamburg
+          p
+            = link_to "Auf Karte zeigen", "https://goo.gl/maps/Q8icHALJ6Ts", target: "_blank", class: "link"
+          p
+            | Beachten Sie bitte: Sollte es Terminänderungen oder sonstige relevante Ankündigungen zu Zeit und Treffpunkt geben, finden Sie diese stets unter 
+            = link_to "www.ralf-boie.de", "http://www.ralf-boie.de", target: "_blank"
+          p
+            | Bitte bringen Sie bei Ihrer ersten Teilnahme den Kaufbeleg mit.
+        hr
+        section
+          h3 Berlin
+          p
+            label Zeitpunkt
+            span Jeden Dienstag 18 Uhr
+          p
+            label Treffpunkt
+            span Lunge Laufladen
+            br
+            span Bismarckstraße 101
+            br
+            span 10625 Berlin
+          p
+            label Kontakt
+            span Hannah von den Ausdauer Coaches
+            br
+            = link_to "kontakt@ausdauer-coaches.de", "mailto: kontakt@ausdauer-coaches.de"
+            br
+            br
+            span oder telefonisch im Lunge Laufladen:
+            br
+            span 030 91555959
 
     aside
       section

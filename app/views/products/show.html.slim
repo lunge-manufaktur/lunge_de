@@ -39,13 +39,6 @@
       section.product__description
         = simple_format @product.description, {}, sanitize: false
 
-      - if @product.eligible_for_running_course?
-        section
-          .card.card--bordered
-            .card__description
-              | Kostenloser Laufkurs bei Kauf dieses Artikels - 
-              = link_to "Mehr erfahren...", "/gutschein", class: "link"
-
       - if @product.stocks.any?
         section
           = render "products/show/availability"
