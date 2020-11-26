@@ -58,6 +58,7 @@ class Product < ActiveRecord::Base
   # scopes
   scope :published, -> { where(is_published: true) }
   scope :draft, -> { where(is_published: false) }
+  scope :archived, -> { where(is_archived: true) }
   scope :on_sale, -> { where("current_price_without_tax_reduction < regular_price") }
   scope :featured, -> { where(is_featured: true) }
   scope :prefer_featured, -> { order("is_featured DESC NULLS LAST") }
@@ -202,7 +203,7 @@ class Product < ActiveRecord::Base
   end
 
   def self.ransackable_scopes(auth_object = nil)
-    [:on_sale, :has_no_image, :has_image, :published, :draft, :on_frontpage, :has_stock, :featured]
+    [:on_sale, :has_no_image, :has_image, :published, :draft, :archived, :on_frontpage, :has_stock, :featured]
   end
 
 end
