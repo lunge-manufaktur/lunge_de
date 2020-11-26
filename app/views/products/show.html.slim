@@ -12,8 +12,11 @@
         .product__badge Online verfügbar
       - if @product.is_featured
         .product__badge Empfehlung
-    - unless @product.is_published?
-      span.label.label--draft Entwurf
+      - if current_user && (!@product.is_published? || @product.is_archived?)
+        - unless @product.is_published?
+          .product__badge.product__badge--alert Entwurf
+        - if @product.is_archived?
+          .product__badge.product__badge--alert Archiv
 
 .container
   main

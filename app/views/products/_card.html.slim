@@ -3,9 +3,13 @@
     - if product.is_on_sale?
       .product__on-sale-badge %
     = image_tag product.default_image("card") || "missing.png", class: "card__image", alt: product.name_with_brand_and_color
+    - if current_user && (!product.is_published? || product.is_archived?)
+      .product__badge-list.product__badge-list--bottom-left
+        - unless product.is_published?
+          .product__badge.product__badge--alert Entwurf
+        - if product.is_archived?
+          .product__badge.product__badge--alert Archiv
   .card__description
-    - unless product.is_published?
-      span.label.label--draft Entwurf
     label = product.brand.name
     h4.marginless--top = product.name
     = strip_tags(product.short_description(100))

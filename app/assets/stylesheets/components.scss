@@ -400,6 +400,12 @@ a.card:hover {
   display: flex;
 }
 
+.product__badge-list--bottom-left {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+}
+
 .product__badge {
   background-color: $black;
   color: $white;
@@ -409,6 +415,10 @@ a.card:hover {
   &:last-child {
     margin-right: 0;
   }
+}
+
+.product__badge--alert {
+  background-color: $alert-color;
 }
 
 .product__on-sale-badge {

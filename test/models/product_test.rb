@@ -8,6 +8,7 @@
 #  current_price_without_tax_reduction :decimal(8, 2)
 #  description                         :text             default("Beschreibung folgt")
 #  fmid                                :integer
+#  is_archived                         :boolean          default(FALSE)
 #  is_featured                         :boolean          default(FALSE)
 #  is_on_frontpage                     :boolean          default(FALSE)
 #  is_published                        :boolean          default(FALSE)
@@ -27,6 +28,7 @@
 # Indexes
 #
 #  index_products_on_brand_id             (brand_id)
+#  index_products_on_is_archived          (is_archived)
 #  index_products_on_orderable            (orderable)
 #  index_products_on_size_id              (size_id)
 #  index_products_on_slug                 (slug)

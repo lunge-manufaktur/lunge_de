@@ -149,6 +149,7 @@ class ProductsController < ApplicationController
   def product_params
     params.require(:product).permit(
       :name,
+      :is_archived,
       :is_published,
       :is_featured,
       :orderable,
