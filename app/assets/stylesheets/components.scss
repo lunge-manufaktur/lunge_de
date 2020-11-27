@@ -307,6 +307,11 @@ ul.offcanvas-nav {
   max-width: 50em;
 }
 
+.card--alert {
+  background-color: $alert-color;
+  color: $white;
+}
+
 a.card:hover {
   transform: translate(-8px, -8px);
   box-shadow: 2px 2px 12px 1px rgba(0, 0, 0, 0.06);
