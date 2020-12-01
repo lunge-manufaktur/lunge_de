@@ -119,8 +119,10 @@ body.offcanvas .border {
 
 .border__cart-button {
   order: 3;
+  width: 8rem;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: space-between;
   font-weight: 700;
   padding: 1rem;
 
