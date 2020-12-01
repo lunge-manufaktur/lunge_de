@@ -250,7 +250,7 @@ ul.offcanvas-nav {
 .cart-button {
   @include transition();
   display: flex;
-  width: 7rem;
+  min-width: 7rem;
   align-items: flex-start;
   flex-direction: row;
   justify-content: space-between;
