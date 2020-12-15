@@ -31,3 +31,13 @@ html lang="de"
     = javascript_include_tag "application", data: { "turbolinks-eval": "false" }
     = javascript_include_tag "application-track"
     = javascript_include_tag "https://cdn.snipcart.com/themes/v3.0.20/default/snipcart.js"
+
+    javascript:
+      document.addEventListener('snipcart.ready', function() {
+        Snipcart.ready.then(function() {
+          Snipcart.events.on('item.updated', (cartItem) => {
+            var size = $('.snipcart-dropdown-custom-field').val();
+            console.log('item ' + size + ' was updated');
+          });
+        });
+      });

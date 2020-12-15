@@ -26,4 +26,7 @@ class PagesController < ApplicationController
   def terms
   end
 
+  def lockdown
+  end
+
 end

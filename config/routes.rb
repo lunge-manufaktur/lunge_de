@@ -89,5 +89,6 @@ Rails.application.routes.draw do
   get "docs/api", controller: "pages", action: "api_docs"
   get "retoure", controller: "pages", action: "retoure"
   get "terms", controller: "pages", action: "terms"
+  get "lockdown", controller: "pages", action: "lockdown"
   
 end
