@@ -175,7 +175,25 @@ class Product < ActiveRecord::Base
   end
 
   def available_online?
-    orderable? && has_stock?(store: 1)
+    orderable? && has_stock?
+  end
+
+  def total_stocks
+    stocks_array = stocks.flat_map{|s| s.quantities_hash}
+
+    sums = Hash.new(0)
+
+    stocks_array.each_with_object(sums) do |hash, sums|
+      hash.each { |key, value| sums[key] += value }
+    end
+  end
+
+  def available_stocks
+    total_stocks.keep_if{ |key, value| value > 0 }
+  end
+
+  def available_sizes
+    available_stocks.keys
   end
 
   def eligible_for_running_course?

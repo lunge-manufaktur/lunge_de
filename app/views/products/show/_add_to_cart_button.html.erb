@@ -6,7 +6,8 @@
 			"item-url": product_url(@product),
 			"item-description": strip_tags(@product.short_description(200)),
 			"item-image": @product.default_image(:small),
-			"item-name": @product.name_with_brand_and_color
+			"item-name": @product.name_with_brand_and_color,
+			"item-custom1-name": "Bemerkung (optional)"
 		}
 	else
 		button_tag "In den Warenkorb", type: "button", class: "snipcart-add-item", data: {
@@ -17,7 +18,9 @@
 			"item-image": @product.default_image(:small),
 			"item-name": @product.name_with_brand_and_color,
 			"item-custom1-name": "Größe (#{@product.size.name})",
-			"item-custom1-options": @product.stocks.l.available_sizes_array.join("|")
+			"item-custom1-options": @product.available_sizes.join("|"),
+			"item-custom2-name": "Bemerkung (optional)",
+			"item-metadata": @product.stocks.l.quantities_hash
 		}	
 	end
 else
