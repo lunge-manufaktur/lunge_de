@@ -15,9 +15,6 @@
       = simple_format @post.content, {}, sanitize: false
     aside
       .fields
-        label Veröffentlicht am
-        = l @post.created_at, format: :date_only
-      .fields
         - if @post.categories.any?
           .fields
             label Eingeordnet in
