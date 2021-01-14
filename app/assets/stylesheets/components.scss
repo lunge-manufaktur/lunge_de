@@ -428,16 +428,25 @@ a.card:hover {
   background-color: $alert-color;
 }
 
+.product__badge--new {
+  background-color: $lime;
+  color: $black;
+}
+
 .product__on-sale-badge {
   position: absolute;
-  background-color: $green;
-  color: $white;
+  background-color: $lime;
+  color: $black;
   top: 1rem;
   right: 1rem;
   padding: 0.25rem 0.5rem;
   font-weight: 700;
   width: 2rem;
+  height: 2rem;
   text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 

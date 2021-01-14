@@ -94,6 +94,10 @@ class Product < ActiveRecord::Base
     current_price < regular_price
   end
 
+  def is_new?
+    created_at >= 30.days.ago
+  end
+
   def short_description(length=200)
     if meta_description.blank?
       description&.truncate(length, separator: " ")
