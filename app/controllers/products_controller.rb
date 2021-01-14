@@ -151,6 +151,7 @@ class ProductsController < ApplicationController
       :name,
       :is_archived,
       :is_published,
+      :published_at,
       :is_featured,
       :orderable,
       :is_on_frontpage,

@@ -16,6 +16,7 @@
 #  name                                :string
 #  official_description                :text
 #  orderable                           :boolean          default(TRUE), not null
+#  published_at                        :datetime
 #  regular_price                       :decimal(8, 2)
 #  sku                                 :string
 #  slug                                :string
@@ -30,6 +31,7 @@
 #  index_products_on_brand_id             (brand_id)
 #  index_products_on_is_archived          (is_archived)
 #  index_products_on_orderable            (orderable)
+#  index_products_on_published_at         (published_at)
 #  index_products_on_size_id              (size_id)
 #  index_products_on_slug                 (slug)
 #  index_products_on_use_in_lia_campaign  (use_in_lia_campaign)

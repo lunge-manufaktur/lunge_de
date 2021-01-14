@@ -43,6 +43,10 @@
           = f.check_box :is_published
           = f.label :is_published, "Veröffentlicht", class: "label--inline"
         .fields
+          = f.label :published_at, "Veröffentlichtszeitpunkt"
+          = f.date_field :published_at
+        hr
+        .fields
           = f.check_box :is_on_frontpage
           = f.label :is_on_frontpage, "Auf Startseite zeigen", class: "label--inline"
         .fields

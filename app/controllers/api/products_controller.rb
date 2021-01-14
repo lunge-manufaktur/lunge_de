@@ -81,6 +81,7 @@ module Api
         :description,
         :created_at,
         :updated_at,
+        :published_at,
         :size_id,
         :brand_id,
         :regular_price,

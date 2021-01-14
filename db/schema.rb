@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_26_105111) do
+ActiveRecord::Schema.define(version: 2021_01_14_120937) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -198,9 +198,11 @@ ActiveRecord::Schema.define(version: 2020_11_26_105111) do
     t.decimal "current_price_without_tax_reduction", precision: 8, scale: 2
     t.boolean "orderable", default: true, null: false
     t.boolean "is_archived", default: false
+    t.datetime "published_at"
     t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["is_archived"], name: "index_products_on_is_archived"
     t.index ["orderable"], name: "index_products_on_orderable"
+    t.index ["published_at"], name: "index_products_on_published_at"
     t.index ["size_id"], name: "index_products_on_size_id"
     t.index ["slug"], name: "index_products_on_slug"
     t.index ["use_in_lia_campaign"], name: "index_products_on_use_in_lia_campaign"
