@@ -18,7 +18,7 @@
     h4 Artikel
     ul.inline-list.sort-section.light
       li Sortieren nach
-      li = sort_link @search, :created_at, "Hinzugefügt", default_order: :desc
+      li = sort_link @search, :published_at_sort_link, "Hinzugefügt", default_order: :desc
       li = sort_link @search, :current_price, "Preis"
   section
     .cards__container

@@ -16,7 +16,7 @@ class ProductsController < ApplicationController
     end
     
     if @tags.present?
-      @search = policy_scope(Product).includes(:brand, :stocks, :product_images, :tags).tagged_with(@tags).search(params[:q])
+      @search = policy_scope(Product).includes(:brand, :stocks, :product_images, :tags).tagged_with(@tags).ransack(params[:q])
     else
       @search = policy_scope(Product).includes(:brand, :stocks, :product_images, :tags).ransack(params[:q])
     end
