@@ -65,9 +65,9 @@ class Product < ActiveRecord::Base
   scope :featured, -> { where(is_featured: true) }
   scope :prefer_featured, -> { order("is_featured DESC NULLS LAST") }
   scope :on_frontpage, -> { where(is_on_frontpage: true) }
-  scope :newest, -> { order("published_at DESC NULLS LAST, created_at DESC NULLS LAST") }
-  scope :sort_by_published_at_sort_link_desc, -> { order("published_at DESC NULLS LAST, created_at DESC NULLS LAST") }
-  scope :sort_by_published_at_sort_link_asc, -> { order("published_at ASC NULLS LAST, created_at ASC NULLS LAST") }
+  scope :newest, -> { order("products.published_at DESC NULLS LAST, products.created_at DESC NULLS LAST") }
+  scope :sort_by_published_at_sort_link_desc, -> { order("products.published_at DESC NULLS LAST, products.created_at DESC NULLS LAST") }
+  scope :sort_by_published_at_sort_link_asc, -> { order("products.published_at ASC NULLS LAST, products.created_at ASC NULLS LAST") }
   scope :has_image, -> { joins("JOIN product_images ON products.id = product_images.product_id") }
   scope :has_no_image, -> { joins("LEFT OUTER JOIN product_images ON products.id = product_images.product_id").where(product_images: { id: nil }) }
   scope :prefer_with_image, -> { includes(:product_images).order('product_images.product_id DESC NULLS LAST') }
