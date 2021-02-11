@@ -60,12 +60,12 @@ group :production do
 end
 
 gem 'awesome_nested_set'
-gem 'acts-as-taggable-on', github: 'Fodoj/acts-as-taggable-on', branch: 'rails-5.2'
+gem 'acts-as-taggable-on', '~> 7.0.0'
 gem 'kaminari'
 gem 'friendly_id'
 gem "simple_calendar", "~> 1.1.0"
 gem "browser"
-gem 'canonical-rails', git: 'https://github.com/jumph4x/canonical-rails.git'
+gem 'canonical-rails', '~> 0.2'
 gem 'sitemap_generator'
 gem "autoprefixer-rails"
 gem "meta-tags"
