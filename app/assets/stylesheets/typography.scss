@@ -17,19 +17,19 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: calc(2rem + 3.4vw);
+  font-size: 2rem;
   font-weight: 700;
 
-  @include desktop {
-    font-size: 4.7rem;
+  @include tablet-landscape {
+    font-size: 4rem;
   }
 }
 
 h2 {
-  font-size: calc(1rem + 2.369vw);
+  font-size: 1.8rem;
   font-weight: 700;
 
-  @include-desktop {
+  @include tablet-landscape {
     font-size: 2.369rem;
   }
 }
