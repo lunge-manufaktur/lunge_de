@@ -8,14 +8,14 @@
     article
       section
         p
-          | Auch wir müssen vom 16.12.2020 bis voraussichtlich 07.03.2021 erneut unsere Filialen schließen. Während der Zeit bieten wir für dich allerdings in jeder Filiale eine telefonische Beratung an. Und auch unser  
+          | Auch wir müssen bis voraussichtlich 07.03.2021 erneut unsere Filialen schließen. Während der Zeit bieten wir für dich allerdings in jeder Filiale eine telefonische Beratung an. Und auch unser  
           = link_to "Online Shop", "/products", class: "link"
           |  bleibt selbstverständlich rund um die Uhr geöffnet.
 
         h3 Dein direkter Draht in unsere Filialen
-        p Du erreichst uns Montag bis Freitag von 11 bis 18 Uhr und Samstag von 10 bis 15 Uhr.
+        p Du erreichst uns Montag bis Freitag von 11 bis 18 Uhr und Samstag von 10 bis 17 Uhr.
         h4 Hamburg
-        ul.list--circle 
+        ul.list--disc 
           li 
             span Fuhlsbüttler Straße 29: 
             = link_to "040 297728", "tel:040297728", class: "link"
@@ -27,15 +27,21 @@
             = link_to "040 27866878", "tel:04027866878", class: "link"
 
         h4 Berlin
-        ul.list--circle
+        ul.list--disc
           li
             span Bismarckstraße 101: 
             = link_to "030 91555959", "tel:03091555959", class: "link"
 
         p Wir freuen uns auf deinen Anruf und hoffen, dass du gesund bleibst!
 
+      section
         h3 Bestellungen jederzeit in unserem Online Shop
         p 
-          | Während des Lockdowns kannst du natürlich weiterhin uneingeschränkt und zu jeder Zeit in unserem 
-          = link_to "Online Shop", "/products", class: "link"
-          |  einkaufen.
+          | Während des Lockdowns kannst du natürlich weiterhin uneingeschränkt und zu jeder Zeit in unserem Online Shop einkaufen.
+        = link_to "Jetzt online bestellen", "/products", class: "button"
+
+      section
+        h3 Beratung und Verkauf für Großhandelskunden
+        p Als Großhändler bieten wir nach vorheriger Terminvereinbarung Beratung und Verkauf für gewerbliche Kunden, Freiberufler, Institutionen und weitere Kundengruppen an.
+
+        = link_to "Jetzt Termin buchen", "/beratungstermine", class: "button"

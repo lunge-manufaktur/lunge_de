@@ -29,4 +29,7 @@ class PagesController < ApplicationController
   def lockdown
   end
 
+  def beratungstermine
+  end
+
 end
