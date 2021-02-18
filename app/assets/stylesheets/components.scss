@@ -277,6 +277,27 @@ ul.offcanvas-nav {
 
 
 
+/* ----- FULL WIDTH PANEL ----- */
+.full-width-panel {
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  background: #fff;
+  padding: 2rem 0;
+  border-top: 1px solid #e3e3e3;
+  border-bottom: 1px solid #e3e3e3;
+
+  @include tablet-portrait {
+    width: calc(100vw - 4rem);
+    margin-left: calc(-50vw + 2rem);
+  }
+}
+
+
+
 
 /* ----- CARDS ----- */
 .cards__container {
