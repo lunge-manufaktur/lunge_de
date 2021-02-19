@@ -17,33 +17,45 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 2rem;
+  font-size: 1.802rem;
   font-weight: 700;
 
   @include tablet-landscape {
-    font-size: 4rem;
+    font-size: 3.052rem;
   }
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.602rem;
   font-weight: 700;
 
   @include tablet-landscape {
-    font-size: 2.369rem;
+    font-size: 2.441rem;
   }
 }
 
 h3 {
-  font-size: 1.777rem;
+  font-size: 1.424rem;
+
+  @include tablet-landscape {
+    font-size: 1.953rem;
+  }
 }
 
 h4 {
-  font-size: 1.333rem;
+  font-size: 1.266rem;
+
+  @include tablet-landscape {
+    font-size: 1.563rem;
+  }
 }
 
 h5 {
-  font-size: 1rem;
+  font-size: 1.125rem;
+
+  @include tablet-landscape {
+    font-size: 1.25rem;
+  }
 }
 
 .marginless--top {
