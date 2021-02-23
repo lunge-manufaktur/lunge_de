@@ -10,6 +10,7 @@
         .container
           h4.marginless--top Umbauarbeiten
           p Wir nutzen den Lockdown und machen unsere Bahrenfelder Filiale schick für euch! Während des aktuellen Umbaus (voraussichtlich bis Ende März) kann es zu Einschränkungen kommen. Prüft daher bitte, ob ihr im Online-Shop bestellte Ware ggf. in einer der weiteren Hamburger Filialen abholen könnt. Danke für euer Verständnis.
+          = link_to "Mehr erfahren...", "/posts/wir-bauen-um-und-machen-unsere-bahrenfelder-filiale-schick-fuer-euch", class: "link"
   - if @store.panorama_embed_url.present?
     section
       iframe.panorama__container src=@store.panorama_embed_url allowfullscreen="true"
