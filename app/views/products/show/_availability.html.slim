@@ -2,13 +2,20 @@ h4 Verfügbarkeit
 p
   label Größensystem
   span = @product.size.name
+  - if @product.size.id == 1
+    span
+      |  (
+    = link_to "Größentabelle", "/groessentabelle", class: "link"
+    span )
+
 - @product.stocks.includes(:store).order_by_store.each do |stock|
   section
     p = link_to stock.store.full_address, store_path(stock.store), class: "link"
-    - stock.sizes_hash.each do |key, value|
-      - if value.present?
-        div class="availability-badge #{stock.has_stock?(key)}" title=(stock.stock_in_words(key))
-          = value
-small
-  .availability-badge.true Verfügbar
-  .availability-badge.false Nicht verfügbar
+    .availability-container
+      - stock.sizes_hash.each do |key, value|
+        - if value.present?
+          div class="availability-badge availability-badge--#{stock.has_stock?(key)}" title=(stock.stock_in_words(key))
+            = value
+.availability-container
+  .availability-badge.availability-badge--true Verfügbar
+  .availability-badge.availability-badge--false Nicht verfügbar

@@ -32,4 +32,7 @@ class PagesController < ApplicationController
   def beratungstermine
   end
 
+  def groessentabelle
+  end
+
 end

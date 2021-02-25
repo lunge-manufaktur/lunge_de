@@ -26,7 +26,7 @@ html lang="de"
         = yield
       = render "layouts/footer"
     = yield :popover
-    #snipcart hidden=true data-api-key="#{ENV.fetch("SNIPCART_API_KEY")}"
+    = render "layouts/snipcart_overrides"
     
     = javascript_include_tag "application", data: { "turbolinks-eval": "false" }
     = javascript_include_tag "application-track"

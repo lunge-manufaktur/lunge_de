@@ -91,5 +91,6 @@ Rails.application.routes.draw do
   get "terms", controller: "pages", action: "terms"
   get "lockdown", controller: "pages", action: "lockdown"
   get "beratungstermine", controller: "pages", action: "beratungstermine"
+  get "groessentabelle", controller: "pages", action: "groessentabelle"
   
 end

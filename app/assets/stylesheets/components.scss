@@ -896,25 +896,29 @@ a.pagination__link:hover .pagination__icon {
 
 
 /* ----- STOCK ----- */
+.availability-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(2rem, max-content));
+  grid-gap: 0.25rem;
+}
 
 .availability-badge {
   background-color: $white;
-  display: inline-block;
+  border: 1px solid $hairline-color;
   font-size: 0.825rem;
   padding: 0.25rem;
   min-width: 2rem;
   text-align: center;
-  margin: 0 0.5rem 0.5rem 0;
 }
 
-.true {
-  border-color: limegreen;
-  background-color: limegreen;
+.availability-badge--true {
+  border-color: $black;
+  background-color: $black;
   color: #fff;
 }
 
-.false {
-  color: #bbb;
+.availability-badge--false {
+  color: #999;
 }
 
 
