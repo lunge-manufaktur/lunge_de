@@ -5,7 +5,7 @@ p
   - if @product.size.id == 1
     span
       |  (
-    = link_to "Größentabelle", "/groessentabelle", class: "link"
+    = link_to "Größentabelle", "/groessentabelle", class: "link", target: "_blank"
     span )
 
 - @product.stocks.includes(:store).order_by_store.each do |stock|
