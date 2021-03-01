@@ -6,7 +6,7 @@
     section
       h4 = link_to brand.name, brand_path(brand)
       - brand.products.tag_counts_on(:tags).each do |tag|
-        = link_to "#{tag.name}", tag_products_path(tag.name), class: "label"
+        = link_to "#{tag.name}", tagged_search_products_path(tag.name, "q": {"brand_id_eq": brand.id}), class: "label"
       hr
       - if brand.products.any?
         .cards__container
