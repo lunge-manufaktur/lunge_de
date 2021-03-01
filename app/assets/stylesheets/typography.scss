@@ -61,14 +61,6 @@ h4 {
 
 h5 {
   font-size: 1.125rem;
-
-  @include tablet-landscape {
-    font-size: 1.25rem;
-  }
-
-  @include desktop {
-    font-size: 1.333rem;
-  }
 }
 
 .marginless--top {
