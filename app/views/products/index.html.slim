@@ -18,17 +18,13 @@
       - if params[:q].present?
         li = link_to "Alle anzeigen", @tags.present? ? tag_products_path(tags: parameterize_tags(@tags)) : products_path, class: "link"
 
-  - if @tags
-    section
-      .panel
-        h5 Aktive Filter
-        .tag-cloud
-          - @tags.each do |tag|
-            = tag_to_remove(tag)
-        hr
-        = link_to "Alle Artikel anzeigen", products_path, class: "link"
   .two-columns
     article
+      section
+        = render "products/index/sidebar_tags"
+        - if @tags
+          hr
+          = link_to "Alle Artikel anzeigen", products_path, class: "link"
       section
         h4 = page_entries_info @products
         ul.inline-list.sort-section.light
@@ -44,8 +40,6 @@
     aside.product-filter
       section
         = render "products/index/sidebar_search"
-      section
-        = render "products/index/sidebar_tags"
 
     - content_for :popover do
       aside.product-filter--mobile
