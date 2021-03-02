@@ -79,6 +79,7 @@ Rails.application.routes.draw do
       patch :save_properties
     end
   end
+  resources :tags
 
   # custom routes
   get "contact", controller: "contact_form", action: "new"

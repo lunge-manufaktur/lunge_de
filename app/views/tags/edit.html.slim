@@ -1,0 +1,17 @@
+- set_meta_tags noindex: true
+
+.container
+	.title
+    h1 = @tag.name
+
+	article
+		= form_for @tag, url: tag_path(@tag) do |f|
+			section 
+			  .fields
+			    = f.label :name
+			    = f.text_field :name
+			
+			section
+				ul.inline-list
+					li = f.submit class: 'button'
+					li = link_to "Abbrechen", tags_path, class: "link"

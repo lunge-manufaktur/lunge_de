@@ -1,0 +1,23 @@
+- set_meta_tags noindex: true
+
+.container
+	.title
+    h1 Tags
+
+	article
+		table
+			thead
+				th Tag
+				th Häufigkeit
+				th Optionen
+			tbody
+				- @tags.each do |tag|
+					tr
+						td = tag.name
+						td = tag.taggings_count
+						td
+							ul.inline-list
+								- if policy(tag).edit?
+									li = link_to "Bearbeiten", edit_tag_path(tag), class: "link"
+								- if policy(tag).destroy?
+									li = link_to 'Löschen', tag_path(tag), method: :delete, data: { confirm: 'Bist du sicher? Dieses Schritt kann nicht rückgängig gemacht werden' }, class: "link"
