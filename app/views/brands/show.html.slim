@@ -14,8 +14,8 @@
 
     = simple_format @brand.description
     h4 Beliebte Tags
-    - @brand.products.tag_counts_on(:tags).each do |tag|
-      = link_to "#{tag.name}", tagged_search_products_path(tag.name, "q": {"brand_id_eq": @brand.id}), class: "label"  
+    - @brand.products.tags_on(:tags).order(:name).each do |tag|
+      = link_to tag.name, tagged_search_products_path(tag.name, "q": {"brand_id_eq": @brand.id}), class: "label"  
 
   section
     h4 Artikel
