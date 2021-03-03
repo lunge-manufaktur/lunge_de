@@ -4,7 +4,7 @@
 
 .title
   .container
-    h1 Shop
+    h1.marginless--bottom Shop
 
 .container
   = search_form_for @search, class: "product_search--mobile", url: @tags ? tagged_search_products_path : search_products_path, method: :get do |f|
@@ -18,17 +18,16 @@
       - if params[:q].present?
         li = link_to "Alle anzeigen", @tags.present? ? tag_products_path(tags: parameterize_tags(@tags)) : products_path, class: "link"
 
+  = render "products/index/sidebar_tags"
+  - if @tags
+    = link_to "Alle Artikel anzeigen", products_path, class: "link"
+  hr
+
   .two-columns
     article
       section
-        = render "products/index/sidebar_tags"
-        - if @tags
-          hr
-          = link_to "Alle Artikel anzeigen", products_path, class: "link"
-      section
-        h4 = page_entries_info @products
-        ul.inline-list.sort-section.light
-          li Sortieren nach:
+        ul.inline-list.sort-section
+          li Sortierung:
           li = sort_link @search, :published_at_sort_link, "Neu eingetroffen", default_order: :desc
           li = sort_link @search, :current_price, "Preis"
       section

@@ -510,12 +510,15 @@ a.card:hover {
 
 .sort-section {
   font-size: 0.875rem;
-  font-weight: 300;
+}
+
+.sort_link {
+  border-bottom: 1px solid $black;
 }
 
 .sort_link.asc,
 .sort_link.desc {
-  font-style: italic;
+  font-weight: 700;
 }
 
 aside.product-filter {
