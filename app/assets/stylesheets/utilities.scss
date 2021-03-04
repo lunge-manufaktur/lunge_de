@@ -21,3 +21,12 @@
 .nowrap {
 	white-space: nowrap;
 }
+
+.anchor-target::before {
+  content: '';
+  display: block;
+  position: relative;
+  width: 0;
+  height: 6rem;
+  margin-top: -6rem 
+}

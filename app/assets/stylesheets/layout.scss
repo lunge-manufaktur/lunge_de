@@ -140,6 +140,7 @@ body.offcanvas .border__menu-toggle {
 }
 
 .content {
+  scroll-behavior: smooth;
   display: flex;
   flex-direction: column;
   position: fixed;
