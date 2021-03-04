@@ -38,13 +38,14 @@
           = "#{@store.zip} #{@store.city}"
 
       section
-        h4 Telefonische Erreichbarkeit
+        h4 Öffnungszeiten nach Terminvereinbarung
         p
           label Montag - Freitag:
-          | 11:00 Uhr - 17:00 Uhr
+          | 10:30 Uhr - 18:45 Uhr
         p
           label Samstag:
-          | 11:00 Uhr - 15:00 Uhr
+          | 10:00 Uhr - 18:15 Uhr
+        = link_to "Jetzt einen Termin buchen →", "/beratungstermine", class: "link"
 
       section
         h4 Kontakt
