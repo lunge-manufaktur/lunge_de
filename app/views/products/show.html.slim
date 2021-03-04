@@ -110,14 +110,14 @@
 
 
 javascript:
-  plausible('Single Product Page', {props:
-    {
+  plausible('Single Product Page',{
+    props: {
       Produkt: '#{@product.name_with_brand_and_color}',
       Marke: '#{@product.brand.name}',
       Reduziert: '#{@product.is_on_sale?}',
       Empfohlen: '#{@product.is_featured?}',
-      Preisbereich (auf 10€ gerundet): '#{(@product.current_price).round(-1)}'
+      Preisbereich: '#{(@product.current_price).round(-1).to_i}'
     }
-  })
+  });
 
 
