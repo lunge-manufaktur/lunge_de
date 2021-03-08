@@ -90,11 +90,11 @@
         - if policy(@product).update?
           p
             label Erstellt
-            = l @product.created_at.to_date
+            = l @product&.created_at&.to_date unless @product.created_at.blank?
 
           p
             label Veröffentlicht
-            = l @product.published_at.to_date
+            = l @product&.published_at&.to_date unless @product.published_at.blank?
 
       - if @product.properties.any?
         section
