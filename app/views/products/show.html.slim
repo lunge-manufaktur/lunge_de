@@ -87,6 +87,15 @@
             br
             span.strike.light = number_to_currency(@product.try(:regular_price), unit: "€ ")
 
+        - if policy(@product).update?
+          p
+            label Erstellt
+            = l @product.created_at.to_date
+
+          p
+            label Veröffentlicht
+            = l @product.published_at.to_date
+
       - if @product.properties.any?
         section
           h4 Eigenschaften
