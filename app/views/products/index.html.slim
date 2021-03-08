@@ -20,16 +20,23 @@
 
   = render "products/index/sidebar_tags"
   - if @tags
-    = link_to "Alle Artikel anzeigen", products_path, class: "link"
+    = link_to "Alle Artikel anzeigen", products_path, class: "link small"
   hr
 
   .two-columns
     article
       section
-        ul.inline-list.sort-section
-          li Sortierung:
-          li = sort_link @search, :published_at_sort_link, "Neu eingetroffen", default_order: :desc
-          li = sort_link @search, :current_price, "Preis"
+        .collection__header
+          .collection__sort-options
+            ul.inline-list.sort-section
+              li Sortierung:
+              li = sort_link @search, :published_at_sort_link, "Neu eingetroffen", default_order: :desc
+              li = sort_link @search, :current_price, "Preis"
+          .collection__info
+            = page_entries_info @products, entry_name: "Artikel"
+            - if @tags || params[:q].present?
+              |  - 
+              = link_to "Filter aufheben", products_path, class: "link"
       section
         .cards__container
           - @products.each do |product|

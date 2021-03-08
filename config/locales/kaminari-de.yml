@@ -11,7 +11,7 @@ de:
       one_page:
         display_entries:
           zero: "Keine %{entry_name} gefunden"
-          one: "Zeige <b>1</b> %{entry_name} an"
-          other: "Zeige <b>alle %{count}</b> %{entry_name} an"
+          one: "Deine Auswahl: <b>1</b> %{entry_name} an"
+          other: "Deine Auswahl: <b>%{count}</b> %{entry_name}"
       more_pages:
-        display_entries: "Zeige %{entry_name} <b>%{first}&nbsp;-&nbsp;%{last}</b> von insgesamt an <b>%{total}</b>"
+        display_entries: "Deine Auswahl: %{entry_name} <b>%{first} - %{last}</b> von <b>%{total}</b>"

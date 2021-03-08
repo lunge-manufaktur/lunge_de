@@ -421,6 +421,20 @@ a.card:hover {
   flex: 0 1 auto;
 }
 
+.collection__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.collection__sort-options {
+  font-size: 0.875rem;
+}
+
+.collection__info {
+  font-size: 0.875rem;
+}
+
 .product__badge-container {
   position: absolute;
   bottom: 1rem;
