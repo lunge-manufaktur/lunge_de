@@ -1,0 +1,13 @@
+document.addEventListener('snipcart.ready', function() {
+  Snipcart.ready.then(function() {
+    Snipcart.events.on('item.added', (cartItem) => {
+      console.log('Item added to cart:' + cartItem.name);
+      plausible('E-Commerce: Artikel zum Warenkorb hinzugefügt',{
+        props: {
+          Produkt: cartItem.name,
+          Einzelpreis: cartItem.unitPrice
+        }
+      });
+    });
+  });
+});
