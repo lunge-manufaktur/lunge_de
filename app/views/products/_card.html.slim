@@ -11,7 +11,7 @@
           .product__badge.product__badge--alert Archiv
   .card__description
     label = product.brand.name
-    h4.marginless--top = product.name
+    h4.marginless--top.truncated = product.name
     = strip_tags(product.short_description(100))
     p.marginless--bottom
       span.bold = number_to_currency(product.current_price, unit: "€ ")

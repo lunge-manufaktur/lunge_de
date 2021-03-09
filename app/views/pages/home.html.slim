@@ -3,11 +3,7 @@
 .full-width-panel
   .container
     h4.marginless--top Laufschuhberatung *Click & Meet* mit Terminvergabe wieder möglich
-    p Ab Montag, 08. März, sind wir wieder für euch da. Bucht bereits jetzt euren individuellen Termin.
-    p 
-      | Wir freuen uns sehr, euch endlich wieder beraten zu dürfen.
-      br Sportliche Grüße, euer gesamtes Lunge Der Laufladen Team
-    p Wichtig: Während des Aufenthaltes im Laufladen müssen medizinische Masken getragen werden. 
+    p Wir sind wieder für euch da! Bucht jetzt euren individuellen Beratungstermin.
     = link_to "Jetzt Termin buchen", "/beratungstermine", class: "button"
 
 .title
@@ -16,7 +12,7 @@
       h1 Der Laufladen in Hamburg und Berlin.
       p Ganz gleich ob Einsteiger oder Profi - unsere Fachberater führen dich mit kompetenter Beratung und langjähriger Erfahrung zu den besten Marken und Artikeln rund um den Laufsport.
       ul.inline-list
-        li = link_to "Sortiment entdecken", products_path, class: "button"
+        li = link_to "Shop entdecken", products_path, class: "button"
         li = link_to "Der Weg zum richtigen Laufschuh...", "/posts/die-laufschuhberatung-bei-lunge", class: "link"
     
 .container
@@ -29,7 +25,7 @@
             p Hier findest Du uns in Hamburg und Berlin. 
       = link_to products_path, class: "grid-nav__item grid-nav__products" do
         .grid-nav__text
-          .grid-nav__header Sortiment
+          .grid-nav__header Shop
           .grid-nav__description
             p Entdecke unser umfangreiches Sortiment. 
       = link_to tag_products_path(tags: "laufbekleidung"), class: "grid-nav__item grid-nav__clothing" do
@@ -46,7 +42,7 @@
         .grid-nav__text
           .grid-nav__header Angebote
           .grid-nav__description
-            p Reduzierte Ware für den kleinen Geldbeutel.
+            p Laufschuhe, Laufbekleidung & Lauf-Accessoires zu stark reduzierten Preisen.
       = link_to tag_products_path(tags: "laufschuhe"), class: "grid-nav__item grid-nav__running-shoes" do
         .grid-nav__text
           .grid-nav__header Laufschuhe
@@ -55,7 +51,17 @@
 
   hr
   section
-    h1 Sortiment
+    h1 Shop
+    section
+      .two-columns
+        aside.aside--left
+          h4.marginless--top Highlights
+          p Einige unserer beliebtesten Artikel
+        article
+          .cards__container
+            - @products.each do |product|
+              = render "/products/card", product: product
+
     section
       .two-columns
         aside.aside--left
@@ -66,18 +72,6 @@
             .tag-cloud
               - tag_cloud Product.published.tag_counts.order(:name), %w[xs s m l xl] do |tag, css_class|
                 = tag_cloud_item(tag.name)
-          section
-            = link_to "Sortiment ansehen...", products_path, class: "button"
-
-    section
-      .two-columns
-        aside.aside--left
-          h4.marginless--top Highlights
-          p Einige unserer beliebtesten Artikel
-        article
-          .cards__container
-            - @products.each do |product|
-              = render "/products/card", product: product
 
     section
       .two-columns
