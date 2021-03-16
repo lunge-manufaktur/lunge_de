@@ -35,11 +35,8 @@
             = render "products/show/add_to_cart_button"
           .product__add-to-cart-help
             p.marginless--top 
-              | Du benötigst eine Beratung oder hast Fragen zum Produkt? Wir helfen dir gerne  
-              = link_to "telefonisch", "/lockdown", class: "link"
-              |  oder via Mail an 
-              = link_to "info@lunge.de", "mailto: info@lunge.de", class: "link"
-              |  weiter.
+              | Du benötigst eine Beratung, hast Fragen zum Produkt oder wünschst eine ausführliche Laufband-Analyse? 
+              = link_to "Buche noch heute einen Beratungstermin und nimm unsere kompetente Fachberatung in Hamburg oder Berlin in Anspruch.", "/beratungstermine", class: "link"
 
       section.product__description
         = simple_format @product.description, {}, sanitize: false
