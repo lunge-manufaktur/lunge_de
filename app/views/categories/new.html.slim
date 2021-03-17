@@ -1,0 +1,12 @@
+- set_meta_tags noindex: true
+
+.title
+  .container
+    h1 Kategorie erstellen
+
+.container
+  = render 'form'
+
+  ul.inline-list
+    li = submit_tag "Speichern", form: "new_category", class: "button"
+    li = link_to "Abbrechen", categories_path, class: "link"
