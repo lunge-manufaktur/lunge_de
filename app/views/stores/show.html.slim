@@ -31,13 +31,13 @@
           = "#{@store.zip} #{@store.city}"
 
       section
-        h4 Öffnungszeiten nach Terminvereinbarung
+        h4 Öffnungszeiten
         p
           label Montag - Freitag:
-          | 10:30 Uhr - 18:45 Uhr
+          | 10:30 Uhr - 19:00 Uhr
         p
           label Samstag:
-          | 10:00 Uhr - 18:15 Uhr
+          | 10:00 Uhr - 18:10 Uhr
         = link_to "Jetzt einen Termin buchen →", "/beratungstermine", class: "link"
 
       section
@@ -48,9 +48,7 @@
 
         p
           label Mail:
-          = @store.email
-
-        p Hinweis: Wir bieten unsere Laufanalyse in allen Filialen ohne vorherige Terminabsprache an.
+          = link_to @store.email, "mailto:#{@store.email}", class: "link"
 
       - if policy(@store).edit?
         hr
