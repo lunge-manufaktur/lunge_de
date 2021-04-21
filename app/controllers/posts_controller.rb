@@ -13,7 +13,7 @@ class PostsController < ApplicationController
     @posts = @search.result(distinct: true)
                     .prefer_featured
                     .most_recently_updated
-                    .page(params[:page]).per(24)
+                    .page(params[:page]).per(12)
 
     authorize @posts
     
