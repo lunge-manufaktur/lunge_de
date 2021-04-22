@@ -493,6 +493,20 @@ a.card:hover {
   justify-content: center;
 }
 
+.product__available-sizes-list {
+  display: grid;
+  font-size: 0.825rem;
+  grid-gap: 0.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(2rem, min-content));
+  margin-top: 0.5rem;
+}
+
+.product__available-sizes-item {
+  padding: 0.25rem;
+  background-color: $mintgray;
+  text-align: center;
+}
+
 
 .folded-top-right {
   display: block;

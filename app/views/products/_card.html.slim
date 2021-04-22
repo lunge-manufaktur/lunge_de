@@ -12,7 +12,12 @@
   .card__description
     label = product.brand.name
     h4.marginless--top.truncated = product.name
-    = strip_tags(product.short_description(100))
+    p = strip_tags(product.short_description(100))
+    - unless product.one_size?
+      label.small Verfügbare Größen
+      .product__available-sizes-list
+        - product.available_sizes.each do |size|
+          .product__available-sizes-item = size
     p.marginless--bottom
       span.bold = number_to_currency(product.current_price, unit: "€ ")
       - if product.is_on_sale?

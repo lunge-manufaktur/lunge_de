@@ -106,6 +106,14 @@ class Product < ActiveRecord::Base
     end
   end
 
+  def one_size?
+    if size.id == 23
+      true
+    else
+      false
+    end
+  end
+
   def short_description(length=200)
     if meta_description.blank?
       description&.truncate(length, separator: " ")
