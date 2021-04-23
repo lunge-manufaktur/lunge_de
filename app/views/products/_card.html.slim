@@ -12,7 +12,7 @@
   .card__description
     label = product.brand.name
     h4.marginless--top.truncated = product.name
-    p = strip_tags(product.short_description(100))
+    p = strip_tags(product.truncated_description(length: 100))
     - unless product.one_size? || product.available_sizes.blank?
       label.small Verfügbare Größen
       .product__available-sizes-list

@@ -122,6 +122,10 @@ class Product < ActiveRecord::Base
     end
   end
 
+  def truncated_description(length: 200)
+    description&.truncate(length, separator: " ")
+  end
+
   def name_with_brand
     "#{brand&.name} #{name}"
   end
