@@ -13,7 +13,7 @@ class BrandsController < ApplicationController
 
   def show
     @search = Product.published.where(brand_id: @brand.id).search(params[:q])
-    @products = @search.result.includes(:brand, :product_images).prefer_featured.newest.page(params[:page]).per(24)
+    @products = @search.result.includes(:brand, :product_images).newest.page(params[:page]).per(24)
   end
 
   def new
