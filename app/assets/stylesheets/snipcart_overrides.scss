@@ -1,5 +1,34 @@
 @import "variables";
 
+:root {
+	--bgColor-modal: #F7F7F9;
+
+	--bgColor-alt: #FFF;
+
+	--bgColor-buttonPrimary: #B6BE00;
+	--bgColor-buttonPrimary-hover: #333;
+
+	--color-link: #333;
+	--color-link-hover: #B6BE00;
+
+	--color-badge-active: #FFF;
+	--bgColor-badge-active: #333;
+
+	--color-badge-disabled: #333;
+	--borderColor-badge-disabled: transparent;
+	--bgColor-badge-disabled: #e6e6e6;
+
+	--color-badge: #FFF;
+	--bgColor-badge: #B6BE00;
+
+	--borderColor-input-focus: #B6BE00;
+
+	--bgColor-input-checked: #B6BE00;
+	--borderColor-input-checked: #B6BE00;
+
+	--color-icon: #333;
+}
+
 .snipcart {
 	font-family: $body-font;
 	font-size: 1rem;
@@ -53,8 +82,31 @@
 	font-weight: 700;
 }
 
+.snipcart button {
+	font-size: 1rem;
+	font-weight: 700;
+}
+
 .snipcart button:hover {
 	background-color: inherit;
+}
+
+button.snipcart-button-primary {
+	background-color: $primary-color;
+}
+
+button.snipcart-button-primary:hover {
+	background-color: $black;
+}
+
+.snipcart-button-link {
+	font-family: $body-font;
+}
+
+.snipcart-base-button__label {
+	font-family: unset;
+	font-size: unset;
+	font-weight: unset;
 }
 
 .snipcart-modal__close {
@@ -65,11 +117,11 @@
 .snipcart-cart-header {
 	background-color: $white;
 	border-bottom: 1px solid $hairline-color;
-	margin-bottom: 0;
+	margin-bottom: 2rem;
 	height: 4rem;
+	width: 100%;
 
 	@include tablet-portrait {
-		background-color: transparent;
 	}
 }
 
@@ -84,4 +136,8 @@
 .snipcart-cart__featured-payment-methods-container,
 .snipcart-featured-payment-methods {
 	display: none;
+}
+
+.snipcart__box {
+	margin-bottom: 1rem;
 }
