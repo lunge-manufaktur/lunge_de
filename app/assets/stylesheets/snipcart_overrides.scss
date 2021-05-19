@@ -91,12 +91,16 @@
 	background-color: inherit;
 }
 
-button.snipcart-button-primary {
+button.snipcart-button-primary,
+button.snipcart-button-secondary {
 	background-color: $primary-color;
+	color: #FFF;
 }
 
-button.snipcart-button-primary:hover {
+button.snipcart-button-primary:hover,
+button.snipcart-button-secondary:hover {
 	background-color: $black;
+	color: #FFF;
 }
 
 .snipcart-button-link {
