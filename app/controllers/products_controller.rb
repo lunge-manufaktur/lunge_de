@@ -21,8 +21,8 @@ class ProductsController < ApplicationController
       @search = policy_scope(Product).includes(:brand, :stocks, :size, :product_images, :tags).ransack(params[:q])
     end
 
-    @products = @search.result(distinct: true)
-                       .prefer_featured.not_on_sale.newest
+    @products = @search.result
+                       .prefer_featured.prefer_not_on_sale.newest
                        .page(params[:page]).per(12)
 
     # search param to string
