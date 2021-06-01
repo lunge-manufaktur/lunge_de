@@ -62,6 +62,7 @@ class Product < ActiveRecord::Base
   scope :draft, -> { where(is_published: false) }
   scope :archived, -> { where(is_archived: true) }
   scope :on_sale, -> { where("current_price < regular_price") }
+  scope :not_on_sale, -> { where("current_price >= regular_price") }
   scope :featured, -> { where(is_featured: true) }
   scope :prefer_featured, -> { order("is_featured DESC NULLS LAST") }
   scope :on_frontpage, -> { where(is_on_frontpage: true) }

@@ -16,13 +16,13 @@ class ProductsController < ApplicationController
     end
     
     if @tags.present?
-      @search = policy_scope(Product).includes(:brand, :stocks, :product_images, :tags).tagged_with(@tags).ransack(params[:q])
+      @search = policy_scope(Product).includes(:brand, :stocks, :size, :product_images, :tags).tagged_with(@tags).ransack(params[:q])
     else
-      @search = policy_scope(Product).includes(:brand, :stocks, :product_images, :tags).ransack(params[:q])
+      @search = policy_scope(Product).includes(:brand, :stocks, :size, :product_images, :tags).ransack(params[:q])
     end
 
     @products = @search.result(distinct: true)
-                       .prefer_featured.newest
+                       .prefer_featured.not_on_sale.newest
                        .page(params[:page]).per(12)
 
     # search param to string
