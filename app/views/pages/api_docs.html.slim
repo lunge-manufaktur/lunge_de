@@ -1,460 +1,603 @@
-= content_for :title_bar
-  .title_bar
-    .row
-      .small-12.columns
-        h1 Documentation
-        h3.subtitle Rest API
+- set_meta_tags noindex: true
+
+.container
+  .title
+    h1 Documentation
+    h3.subtitle Rest API
+
+  .two-columns
+    article
+      section#introduction
+        h2 Getting Started
+        h3 Introduction
+        p == "This API is built on #{link_to 'REST', 'http://en.wikipedia.org/wiki/Representational_state_transfer'} principles and attempts to provide predictable endpoints and results with valid HTTP status codes."
+
+        p All GET responses are delivered in JSON format. POST, PATCH and DELETE requests don't receive an answer with a content body, but their respective HTTP status codes - for successful requests that would be 200, 201 or 204.
+
+        h3#authentication Authentication
+        p
+          | We use HTTP authentication via API keys that are provided to you if we grant access to our API. Without or with an invalid API key you will receive a 401 error.
+        p 
+          | The API key has to be provided in the header of your request as 
+          code Authorization
+          |  parameter:
+
+        .panel
+          pre
+            code Authorization: Token token=[YOUR API KEY]
+
+        h3#format General formats
+        p
+          | Our JSON responses are always wrapped in a root node, followed by the singular or plural object resource, depending of the method requested. For example, the 
+          code SHOW
+          |  method, which returns a single object will use the following format:
+        .panel
+          pre
+            code
+              | {
+                  "product": {
+                    "key": "value",
+                    ... 
+                  }
+                }
+        p
+          | Meanwhile responses that return multiple objects will use the plural name of the resource and wrap the collection in an array, as shown below:
+        .panel
+          pre
+            code
+              | {
+                  "products": [
+                    {
+                      "key": "value",
+                      ...
+                    },
+                    {
+                      "key": "value",
+                      ...
+                    },
+                    ...
+                  ]
+                }
+      section
+        h2 Resources
+      section#products
+        h3 Products
+        p
+          | Products are the goods Lunge has in stock. Every requested product is provided with several related child and parent objects like the associated brand, size format and, most importantly, the available stock per store and size.
+        h6 Drafts and published products
+        p
+          | Please be aware of the boolean 
+          code published
+          |  key. Products that aren't published, or 
+          code false
+          | , should be treated as drafts. They are hidden from visitors on lunge.de and should not be used for public display.
+        p
+          | The following methods are available for products.
+
+        h5 Show
+        code GET /api/products/1
+        p Responds with a single product that provides the following body:
+        .panel
+          pre
+            code
+              | {
+                  "product": {
+                    "id": 29473,
+                    "created_at": "2021-03-13T01:30:57.755+01:00",
+                    "updated_at": "2021-04-23T08:54:01.068+02:00",
+                    "stock_updated_at": "2021-06-07T23:19:51.620+00:00",
+                    "published": true,
+                    "url": "https://www.lunge.de/products/saucony-muenchen-4-s2055455",
+                    "name": "München 4",
+                    "color": "cobalt citrus",
+                    "sku": "S2055455",
+                    "description": "...",
+                    "current_price": "150.0",
+                    "regular_price": "150.0",
+                    "use_in_lia_campaign": false,
+                    "tags": [
+                      {
+                        "id": 5,
+                        "name": "laufschuhe"
+                      },
+                      {
+                        "id": 41,
+                        "name": "herren"
+                      },
+                      {
+                        "id": 6,
+                        "name": "neutral"
+                      },
+                      {
+                        "id": 19,
+                        "name": "komfort"
+                      },
+                      {
+                        "id": 7,
+                        "name": "training"
+                      }
+                    ],
+                    "brand": {
+                      "id": 64,
+                      "name": "Saucony"
+                    },
+                    "size_set": {
+                      "id": 1,
+                      "name": "US Uni"
+                    },
+                    "product_images": [
+                      {
+                        "id": 16085,
+                        "url": "https://cdn.lunge.de/images/product_images/29473/29473_16085_original.png?1618039972",
+                        "default": true
+                      },
+                      {
+                        "id": 16084,
+                        "url": "https://cdn.lunge.de/images/product_images/29473/29473_16084_original.png?1618039968",
+                        "default": false
+                      },
+                      {
+                        "id": 16083,
+                        "url": "https://cdn.lunge.de/images/product_images/29473/29473_16083_original.png?1618039917",
+                        "default": false
+                      },
+                      {
+                        "id": 16082,
+                        "url": "https://cdn.lunge.de/images/product_images/29473/29473_16082_original.png?1618039912",
+                        "default": false
+                      },
+                      {
+                        "id": 16081,
+                        "url": "https://cdn.lunge.de/images/product_images/29473/29473_16081_original.png?1618039907",
+                        "default": false
+                      }
+                    ],
+                    "availability": [
+                      {
+                        "id": 86905,
+                        "updated_at": "2021-06-08T01:19:51.620+02:00",
+                        "store": {
+                          "id": 4,
+                          "short_name": "Bahrenfeld",
+                          "full_address": "LUNGE der LAUFLADEN, Bahrenfelder Steindamm 109, 22761 Hamburg",
+                          "latitude": 53.5637573213048,
+                          "longitude": 9.91914119571447
+                        },
+                        "g1": 0,
+                        "g1h": 0,
+                        "g2": 0,
+                        "g2h": 0,
+                        "g3": 0,
+                        "g3h": 0,
+                        "g4": 0,
+                        "g4h": 0,
+                        "g5": 0,
+                        "g5h": 0,
+                        "g6": 0,
+                        "g6h": 0,
+                        "g7": 0,
+                        "g7h": 0,
+                        "g8": 1,
+                        "g8h": 1,
+                        "g9": 3,
+                        "g9h": 3,
+                        "g10": 1,
+                        "g10h": 5,
+                        "g11": 5,
+                        "g11h": 5,
+                        "g12": 2,
+                        "g12h": 2,
+                        "g13": 2,
+                        "g13h": 0,
+                        "g14": 2,
+                        "g14h": 0,
+                        "g15": 1,
+                        "g16": 0,
+                        "g17": 0,
+                        "g18": 0,
+                        "g19": 0
+                      },
+                      {
+                        "id": 86906,
+                        "updated_at": "2021-06-06T01:23:04.471+02:00",
+                        "store": {
+                          "id": 5,
+                          "short_name": "Charlottenburg",
+                          "full_address": "LUNGE der LAUFLADEN, Bismarckstraße 101, 10625 Berlin",
+                          "latitude": 52.5117454,
+                          "longitude": 13.3129746
+                        },
+                        "g1": null,
+                        "g1h": null,
+                        "g2": null,
+                        "g2h": null,
+                        "g3": null,
+                        "g3h": null,
+                        "g4": null,
+                        "g4h": null,
+                        "g5": null,
+                        "g5h": null,
+                        "g6": null,
+                        "g6h": null,
+                        "g7": null,
+                        "g7h": null,
+                        "g8": 0,
+                        "g8h": 1,
+                        "g9": 2,
+                        "g9h": 0,
+                        "g10": 1,
+                        "g10h": 1,
+                        "g11": 0,
+                        "g11h": 1,
+                        "g12": 3,
+                        "g12h": 3,
+                        "g13": 2,
+                        "g13h": null,
+                        "g14": 1,
+                        "g14h": null,
+                        "g15": null,
+                        "g16": null,
+                        "g17": null,
+                        "g18": null,
+                        "g19": null
+                      },
+                      {
+                        "id": 86904,
+                        "updated_at": "2021-06-08T01:19:51.125+02:00",
+                        "store": {
+                          "id": 3,
+                          "short_name": "City",
+                          "full_address": "LUNGE der LAUFLADEN, Ferdinandstraße 55-57, 20095 Hamburg",
+                          "latitude": 53.55316,
+                          "longitude": 9.99859
+                        },
+                        "g1": 0,
+                        "g1h": 0,
+                        "g2": 0,
+                        "g2h": 0,
+                        "g3": 0,
+                        "g3h": 0,
+                        "g4": 0,
+                        "g4h": 0,
+                        "g5": 0,
+                        "g5h": 0,
+                        "g6": 0,
+                        "g6h": 0,
+                        "g7": 1,
+                        "g7h": 1,
+                        "g8": 1,
+                        "g8h": 2,
+                        "g9": 3,
+                        "g9h": 3,
+                        "g10": 3,
+                        "g10h": 4,
+                        "g11": 4,
+                        "g11h": 1,
+                        "g12": 0,
+                        "g12h": 3,
+                        "g13": 1,
+                        "g13h": 0,
+                        "g14": 2,
+                        "g14h": 0,
+                        "g15": 1,
+                        "g16": 0,
+                        "g17": 0,
+                        "g18": 0,
+                        "g19": 0
+                      },
+                      {
+                        "id": 86903,
+                        "updated_at": "2021-06-06T01:23:02.913+02:00",
+                        "store": {
+                          "id": 1,
+                          "short_name": "Barmbek",
+                          "full_address": "LUNGE der LAUFLADEN, Fuhlsbüttler Straße 29, 22305 Hamburg",
+                          "latitude": 53.58535,
+                          "longitude": 10.04607
+                        },
+                        "g1": 0,
+                        "g1h": 0,
+                        "g2": 0,
+                        "g2h": 0,
+                        "g3": 0,
+                        "g3h": 0,
+                        "g4": 0,
+                        "g4h": 0,
+                        "g5": 0,
+                        "g5h": 0,
+                        "g6": 0,
+                        "g6h": 0,
+                        "g7": 0,
+                        "g7h": 0,
+                        "g8": 0,
+                        "g8h": 0,
+                        "g9": 2,
+                        "g9h": 0,
+                        "g10": 2,
+                        "g10h": 3,
+                        "g11": 2,
+                        "g11h": 2,
+                        "g12": 2,
+                        "g12h": 1,
+                        "g13": 1,
+                        "g13h": 0,
+                        "g14": 0,
+                        "g14h": 0,
+                        "g15": 0,
+                        "g16": 0,
+                        "g17": 0,
+                        "g18": 0,
+                        "g19": 0
+                      }
+                    ]
+                  }
+                }
+
+        p
+          | Please see the further below section explaining how sizes and inventory stock work in our data model - it probably differs from the default product variations approach that you may be familiar with.
+
+        h5 Index
+        code GET /api/products/
+        br
+        code GET /api/products/page/2
+        p Returns a collection of products, each with the same data as described in the Show request above.
+
+        .panel
+          pre
+            code
+              | {
+                  "products": [
+                    {
+                      // product attributes
+                    },
+                    ...
+                  ]
+                }
+
+        p.italic Important: Product index actions are always paginated in order to keep the response time fast and snappy. That means products are listed in batches of 100. For example if you wanted to access products 201 - 300 your request should look like this:
+        code GET /api/products/page/3
+        p Without the page parameter in the URL your request will be answered with the first 100 products.
+
+        h5 Create
+        code POST /api/products/
+        p.light.italic Requires admin permissions
+        p Documentation will follow.
+
+        h5 Update
+        code PATCH /api/products/1
+        p.light.italic Requires admin permissions
+        p Documentation will follow.
+
+        h5 Destroy
+        code DELETE /api/products/1
+        p.light.italic Requires admin permissions
+        p Documentation will follow.
+
         hr
 
-.row
-  .small-12.medium-3.columns
-    h5 Getting Started
-    ul.side-nav
-      li = link_to "Introduction", "#introduction"
-      li = link_to "Authentication", "#authentication"
-      li = link_to "General format", "#format"
-
-    h5 Resources
-    ul.side-nav
-      li = link_to "Products", "#products"
-      li = link_to "Brands", "#brands"
-      li = link_to "Stores", "#stores"
-      li = link_to "Sizes", "#sizes"
-
-  .small-12.medium-9.columns.border-left
-    section#introduction
-      h2 Getting Started
-      h3 Introduction
-      p == "This API is built on #{link_to 'REST', 'http://en.wikipedia.org/wiki/Representational_state_transfer'} principles and attempts to provide predictable endpoints and results with valid HTTP status codes."
-
-      p All GET responses are delivered in JSON format. POST, PATCH and DELETE requests don't receive an answer with a content body, but their respective HTTP status codes - for successful requests that would be 200, 201 or 204.
-
-      h3#authentication Authentication
-      p
-        | We use HTTP authentication via API keys that are provided to you if we grant access to our API. Without or with an invalid API key you will receive a 401 error.
-      p 
-        | The API key has to be provided in the header of your request as 
-        code Authorization
-        |  parameter:
-
-      .panel
-        pre
-          code Authorization: Token token=[YOUR API KEY]
-
-      h3#format General formats
-      p
-        | Our JSON responses are always wrapped in a root node, followed by the singular or plural object resource, depending of the method requested. For example, the 
-        code SHOW
-        |  method, which returns a single object will use the following format:
-      .panel
-        pre
-          code
-            | {
-                "product": {
-                  "key": "value",
-                  ... 
-                }
-              }
-      p
-        | Meanwhile responses that return multiple objects will use the plural name of the resource and wrap the collection in an array, as shown below:
-      .panel
-        pre
-          code
-            | {
-                "products": [
-                  {
-                    "key": "value",
-                    ...
-                  },
-                  {
-                    "key": "value",
-                    ...
-                  },
-                  ...
-                ]
-              }
-    section
-      h2 Resources
-    section#products
-      h3 Products
-      p
-        | Products are the goods Lunge has in stock. Every requested product is provided with several related child and parent objects like the associated brand, size format and, most importantly, the available stock per store and size.
-      h6 Drafts and published products
-      p
-        | Please be aware of the boolean 
-        code published
-        |  key. Products that aren't published, or 
-        code false
-        | , should be treated as drafts. They are hidden from visitors on lunge.de and should not be used for public display.
-      p
-        | The following methods are available for products.
-
-      h5 Show
-      code GET /api/products/1
-      p Responds with a single product that provides the following body:
-      .panel
-        pre
-          code
-            | {
-                "product": {
-                  "id": 13056,
-                  "created_at": "2014-04-14T09:16:42.460+02:00",
-                  "updated_at": "2014-04-14T09:16:42.460+02:00",
-                  "stock_updated_at": "2014-04-14T09:16:42.460+02:00",
-                  "published": true,
-                  "url": "http://localhost:3000/products/13056",
-                  "name": "Adagio Herren schwarz",
-                  "color": "schwarz",
-                  "sku": "gls200sss",
-                  "description": "",
-                  "current_price": "200.0",
-                  "regular_price": "200.0",
-                  "use_in_lia_campaign": "true",
+      section#brands
+        h3 Brands
+        p 
+          | Every product belongs to a brand. For now the 
+          code Brand
+          |  object only contains 
+          code id
+          | ,
+          code name
+          | and 
+          code timestamps
+          | as outlined in the following example response:
+        h5 Show
+        p
+          code GET /api/brands/100
+        .panel
+          pre
+            code
+              | {
                   "brand": {
                     "id": 100,
-                    "name": "Lunge"
-                  },
-                  "size_set": {
-                    "id": 1,
-                    "name": "US Uni"
-                  },
-                  "product_images": [
-                    {
-                      "id": 1
-                      "url": "http://cdn.lunge.de/images/product_images/17077/17077_75_original.png"
-                    }
-                  ]
-                  "availability": [
-                    {
-                      "id": 14098,
-                      "store": {
-                        "id": 1,
-                        "short_name": "Lämmersieth",
-                        "full_address": "Lunge Laufladen, Lämmersieth 1, 22305 Hamburg",
-                        "latitude": 53.58391,
-                        "longitude": 10.0476
-                      },
-                      "g1": false,
-                      "g1h": false,
-                      "g2": false,
-                      "g2h": false,
-                      "g3": false,
-                      "g3h": false,
-                      ...
-                      "g19": false
-                    },
-                    {
-                      "id": 14100,
-                      "store": {
-                        "id": 3,
-                        "short_name": "Ferdinandstraße",
-                        "full_address": "Lunge Laufladen, Ferdinandstraße 55-57, 20095 Hamburg",
-                        "latitude": null,
-                        "longitude": null
-                      },
-                      "g1": false,
-                      "g1h": false,
-                      "g2": false,
-                      "g2h": false,
-                      "g3": false,
-                      "g3h": false,
-                      ...
-                      "g19": false
-                    },
-                    {
-                      "id": 14101,
-                      "store": {
-                        "id": 4,
-                        "short_name": "Bahrenfelder Steindamm",
-                        "full_address": "Lunge Laufladen, Bahrenfelder Steindamm 109, 22761 Hamburg",
-                        "latitude": 53.5637573213048,
-                        "longitude": 9.91914119571447
-                      },
-                      "g1": false,
-                      "g1h": false,
-                      "g2": false,
-                      "g2h": false,
-                      "g3": false,
-                      "g3h": false,
-                      ...
-                      "g19": false
-                    },
-                    {
-                      "id": 14102,
-                      "store": {
-                        "id": 5,
-                        "short_name": "Hohenzollerndamm",
-                        "full_address": "Lunge Laufladen, Hohenzollerndamm 10, 10717 Berlin",
-                        "latitude": 52.4950104,
-                        "longitude": 13.3263522
-                      },
-                      "g1": false,
-                      "g1h": false,
-                      "g2": false,
-                      "g2h": false,
-                      "g3": false,
-                      "g3h": false,
-                      ...
-                      "g19": false
-                    }
-                  ]
+                    "name": "Lunge",
+                    "created_at": "2015-05-11T11:19:50.975+02:00",
+                    "updated_at": "2015-05-11T11:19:50.975+02:00"
+                  }
                 }
-              }
 
-      p
-        | Please see the further below section explaining how sizes and inventory stock work in our data model - it probably differs from the default product variations approach that you may be familiar with.
+        h5 Index
+        p
+          code GET /api/brands/
+        p
+          | A collection of brands, each including the same attributes shown in the 
+          code Show
+          | method above.
 
-      h5 Index
-      code GET /api/products/
-      br
-      code GET /api/products/page/2
-      p Returns a collection of products, each with the same data as described in the Show request above.
+        h5 Create
+        code POST /api/brands/
+        p.light.italic Requires admin permissions
+        p Documentation will follow.
 
-      .panel
-        pre
-          code
+        h5 Update
+        code PATCH /api/brands/1
+        p.light.italic Requires admin permissions
+        p Documentation will follow.
+
+        h5 Destroy
+        code DELETE /api/brands/1
+        p.light.italic Requires admin permissions
+        p Documentation will follow.
+        
+        hr
+
+      section#stores
+        h3 Stores
+        p
+          | These are our store locations. They are also nested within a product's 
+          code availability
+          | -collection, but in case you need more information about our stores you can query it with the following methods:
+        h5 Show
+        p
+          code GET /api/stores/1
+        p 
+          | A single store with the usual contact and address information, as well as location data like 
+          code longitude
+          |  and 
+          code latitude
+          | . This is the full response:
+        .panel
+          pre
+            code
             | {
-                "products": [
-                  {
-                    // product attributes
-                  },
-                  ...
-                ]
-              }
-
-      p.italic Important: Product index actions are always paginated in order to keep the response time fast and snappy. That means products are listed in batches of 100. For example if you wanted to access products 201 - 300 your request should look like this:
-      code GET /api/products/page/3
-      p Without the page parameter in the URL your request will be answered with the first 100 products.
-
-      h5 Create
-      code POST /api/products/
-      p.light.italic Requires admin permissions
-      p Documentation will follow.
-
-      h5 Update
-      code PATCH /api/products/1
-      p.light.italic Requires admin permissions
-      p Documentation will follow.
-
-      h5 Destroy
-      code DELETE /api/products/1
-      p.light.italic Requires admin permissions
-      p Documentation will follow.
-
-      hr
-
-    section#brands
-      h3 Brands
-      p 
-        | Every product belongs to a brand. For now the 
-        code Brand
-        |  object only contains 
-        code id
-        | ,
-        code name
-        | and 
-        code timestamps
-        | as outlined in the following example response:
-      h5 Show
-      p
-        code GET /api/brands/1
-      .panel
-        pre
-          code
-            | {
-                "brand": {
-                  "id": 100,
-                  "name": "Lunge",
-                  "created_at": "2015-05-11T11:19:50.975+02:00",
-                  "updated_at": "2015-05-11T11:19:50.975+02:00"
-                }
-              }
-
-      h5 Index
-      p
-        code GET /api/brands/
-      p
-        | A collection of brands, each including the same attributes shown in the 
-        code Show
-        | method above.
-
-      h5 Create
-      code POST /api/brands/
-      p.light.italic Requires admin permissions
-      p Documentation will follow.
-
-      h5 Update
-      code PATCH /api/brands/1
-      p.light.italic Requires admin permissions
-      p Documentation will follow.
-
-      h5 Destroy
-      code DELETE /api/brands/1
-      p.light.italic Requires admin permissions
-      p Documentation will follow.
-      
-      hr
-
-    section#stores
-      h3 Stores
-      p
-        | These are our store locations. They are also nested within a product's 
-        code availability
-        | -collection, but in case you need more information about our stores you can query it with the following methods:
-      h5 Show
-      p
-        code GET /api/stores/1
-      p 
-        | A single store with the usual contact and address information, as well as location data like 
-        code longitude
-        |  and 
-        code latitude
-        | . This is the full response:
-      .panel
-        pre
-          code
-          | {
-              "store": {
-                "id": 1,
-                "created_at": "2014-03-31T07:19:30.231+02:00",
-                "updated_at": "2014-09-25T09:40:29.905+02:00",
-                "is_active": true,
-                "short_name": "Lämmersieth",
-                "address_name": "Lunge Laufladen",
-                "address_street": "Lämmersieth 1",
-                "address_zip": "22305",
-                "address_city": "Hamburg",
-                "longitude": 10.0476,
-                "latitude": 53.58391,
-                "phone": "040 297728",
-                "email": "l.hh@lunge.de",
-                "url": "http://localhost:3000/stores/hamburg-laemmersieth-1"
-              }
-            }
-
-      h5 Index
-      p
-        code GET /api/stores/
-      p
-        | Unsurprisingly this will list all stores.
-
-      h5 Create
-      code POST /api/stores/
-      p.light.italic Requires admin permissions
-      p Documentation will follow.
-
-      h5 Update
-      code PATCH /api/stores/1
-      p.light.italic Requires admin permissions
-      p Documentation will follow.
-
-      h5 Destroy
-      code DELETE /api/stores/1
-      p.light.italic Requires admin permissions
-      p Documentation will follow.
-      
-      hr
-    section#sizes
-      h3 Sizes
-      p
-        | We use a data model that differs from the standard product -> product_variations approach. One can think of these sizes as variations, except that a product belongs to a size and each size has a fixed range of properties. This data is needed to make sense of the available stock per product and store. Each size record and each stock record has a fixed number of columns that represent the various sizes in a set. This isn't as elegant as products with many variations as child records, but it works very well with the category of products we usually deal with: Shoes. Lots of size options that are mostly fixed and need to be compared against and related to other size system, like UK sizes vs the european format.
-      p
-        | Every size record is made of an 
-        code id
-        | , a 
-        code name
-        | and the size options for the particular set:
-        code g1
-        | ...
-        code g19
-        | .
-
-      h5 Show
-      p
-        code GET /api/sizes/1
-      p
-        | Here is a sample response for the US size system often used with running shoes.
-      .panel
-        pre
-          code
-            | {
-                "size": {
+                "store": {
                   "id": 1,
-                  "name": "US",
-                  "g1": "1",
-                  "g1h": "1½",
-                  "g2": "2",
-                  "g2h": "2½",
-                  "g3": "3",
-                  "g3h": "3½",
-
-                  ...
-
-                  "g19": "19",
-                  "created_at": "2014-03-31T11:51:45.591+02:00",
-                  "updated_at": "2014-09-03T10:08:25.552+02:00"
+                  "created_at": "2014-03-31T07:19:30.231+02:00",
+                  "updated_at": "2014-09-25T09:40:29.905+02:00",
+                  "is_active": true,
+                  "short_name": "Lämmersieth",
+                  "address_name": "Lunge Laufladen",
+                  "address_street": "Lämmersieth 1",
+                  "address_zip": "22305",
+                  "address_city": "Hamburg",
+                  "longitude": 10.0476,
+                  "latitude": 53.58391,
+                  "phone": "040 297728",
+                  "email": "l.hh@lunge.de",
+                  "url": "http://localhost:3000/stores/hamburg-laemmersieth-1"
                 }
               }
-      p
-        | Now the 
-        code availability
-        |  objects nested withing the 
-        code product
-        |  response make a lot more sense. Here they are again:
-      .panel
-        pre
-          code
-            | {
-                "product": {
-                  ...
-                  "availability": [
-                    {
-                      "id": 1,
-                      "store": {
-                        "id": 1,
-                        ...
-                      }
-                      "g1": false,
-                      "g1h": true,
-                      "g2": true,
-                      ...
-                      "g19": false
-                    },
+
+        h5 Index
+        p
+          code GET /api/stores/
+        p
+          | Unsurprisingly this will list all stores.
+
+        h5 Create
+        code POST /api/stores/
+        p.light.italic Requires admin permissions
+        p Documentation will follow.
+
+        h5 Update
+        code PATCH /api/stores/1
+        p.light.italic Requires admin permissions
+        p Documentation will follow.
+
+        h5 Destroy
+        code DELETE /api/stores/1
+        p.light.italic Requires admin permissions
+        p Documentation will follow.
+        
+        hr
+      section#sizes
+        h3 Sizes
+        p
+          | We use a data model that differs from the standard product -> product_variations approach. One can think of these sizes as variations, except that a product belongs to a size and each size has a fixed range of properties. This data is needed to make sense of the available stock per product and store. Each size record and each stock record has a fixed number of columns that represent the various sizes in a set. This isn't as elegant as products with many variations as child records, but it works very well with the category of products we usually deal with: Shoes. Lots of size options that are mostly fixed and need to be compared against and related to other size system, like UK sizes vs the european format.
+        p
+          | Every size record is made of an 
+          code id
+          | , a 
+          code name
+          | and the size options for the particular set:
+          code g1
+          | ...
+          code g19
+          | .
+
+        h5 Show
+        p
+          code GET /api/sizes/1
+        p
+          | Here is a sample response for the US size system often used with running shoes.
+        .panel
+          pre
+            code
+              | {
+                  "size": {
+                    "id": 1,
+                    "name": "US",
+                    "g1": "1",
+                    "g1h": "1½",
+                    "g2": "2",
+                    "g2h": "2½",
+                    "g3": "3",
+                    "g3h": "3½",
+
                     ...
-                  ]
+
+                    "g19": "19",
+                    "created_at": "2014-03-31T11:51:45.591+02:00",
+                    "updated_at": "2014-09-03T10:08:25.552+02:00"
+                  }
                 }
-              }
-      p
-        | Each of those boolean
-        code g1
-        |  to 
-        code g19
-        |  columns represents the status of a single size option and tells you whether that particular size is in stock (
-        code true
-        | ) or not (
-        code false
-        | ).
+        p
+          | Now the 
+          code availability
+          |  objects nested within the 
+          code product
+          |  response make a lot more sense. Here they are again:
+        .panel
+          pre
+            code
+              | {
+                  "product": {
+                    ...
+                    "availability": [
+                      {
+                        "id": 1,
+                        "store": {
+                          "id": 1,
+                          ...
+                        }
+                        "g1": false,
+                        "g1h": true,
+                        "g2": true,
+                        ...
+                        "g19": false
+                      },
+                      ...
+                    ]
+                  }
+                }
+        p
+          | Each of those boolean
+          code g1
+          |  to 
+          code g19
+          |  columns represents the status of a single size option and tells you whether that particular size is in stock (
+          code true
+          | ) or not (
+          code false
+          | ).
 
-      h5 Index
-      p
-        code GET /api/sizes/
-      p
-        | A collection of size sets.
+        h5 Index
+        p
+          code GET /api/sizes/
+        p
+          | A collection of size sets.
 
-      h5 Create
-      code POST /api/sizes/
-      p.light.italic Requires admin permissions
-      p Documentation will follow.
+        h5 Create
+        code POST /api/sizes/
+        p.light.italic Requires admin permissions
+        p Documentation will follow.
 
-      h5 Update
-      code PATCH /api/sizes/1
-      p.light.italic Requires admin permissions
-      p Documentation will follow.
+        h5 Update
+        code PATCH /api/sizes/1
+        p.light.italic Requires admin permissions
+        p Documentation will follow.
 
-      h5 Destroy
-      code DELETE /api/sizes/1
-      p.light.italic Requires admin permissions
-      p Documentation will follow.
+        h5 Destroy
+        code DELETE /api/sizes/1
+        p.light.italic Requires admin permissions
+        p Documentation will follow.
 
+    aside
+      h5 Getting Started
+      ul.list--unstyled
+        li = link_to "Introduction", "#introduction", class: "link"
+        li = link_to "Authentication", "#authentication", class: "link"
+        li = link_to "General format", "#format", class: "link"
 
-
+      h5 Resources
+      ul.list--unstyled
+        li = link_to "Products", "#products", class: "link"
+        li = link_to "Brands", "#brands", class: "link"
+        li = link_to "Stores", "#stores", class: "link"
+        li = link_to "Sizes", "#sizes", class: "link"

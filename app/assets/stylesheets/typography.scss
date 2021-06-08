@@ -144,9 +144,17 @@ a.link--inverted {
   }
 }
 
+pre {
+  background-color: $secondary-color;
+  padding: 0.5rem;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
 code {
   background-color: $secondary-color;
   border: none;
+  padding: 0.25rem;
 }
 
 .truncated {

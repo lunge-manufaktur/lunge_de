@@ -26,6 +26,7 @@ end
 json.product_images product.product_images do |image|
   json.id image.id
   json.url image.image.url
+  json.default image.default
 end
 json.availability product.stocks do |stock|
   json.id stock.id

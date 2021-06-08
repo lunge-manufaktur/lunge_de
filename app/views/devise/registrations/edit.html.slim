@@ -1,14 +1,11 @@
 - set_meta_tags noindex: true
 
-= content_for :title_bar
-  .title_bar
-    .row
-      .small-12.medium-9.columns
-        h1 Mein Account
+.container
+  .title
+    h1 Mein Account
 
-.row
-  .small-12.medium-6.columns
-
+  .two-columns
+    article
       h4 Einstellungen
       
       = form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f|
@@ -33,24 +30,21 @@
           = f.label :current_password, "Aktuelles Passwort (Benötigt)"
           = f.password_field :current_password, autocomplete: "off"
 
-        = link_to "Abbrechen", :root, class: "button"
-        = f.submit "Speichern", class: "button"
+        ul.inline-list
+          li = f.submit "Speichern", class: "button"
+          li = link_to "Abbrechen", :root, class: "link"
 
-  .small-12.medium-4.columns
-    .panel
+      hr
+        h4 Account löschen
+        p Hiermit kannst Du Deinen Account löschen.
+        = button_to "Account löschen", registration_path(resource_name), data: { confirm: "Bist du sicher?" }, method: :delete, class: "button tiny alert"
+
+    aside
       h4 API-Key
       - if @user.api_keys.any?
-        ul.no-bullet
+        ul.list--unstyled
           - @user.api_keys.each do |key|
             li = key.key
       - else
         p Für diesen Account wurden keine API-Keys erstellt. Hier kannst Du einen erstellen
         = button_to "Erstellen", api_keys_path("api_key": {user_id: @user.id}), action: "create", method: "post", class: "button"
-
-
-section
-  .row
-    .small-12.columns
-      h4 Cancel my account
-      p Hiermit kannst Du Deinen Account löschen.
-      = button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "button tiny alert"

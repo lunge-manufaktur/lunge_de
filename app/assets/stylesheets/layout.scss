@@ -207,6 +207,7 @@ main,
 
 article {
   width: 100%;
+  overflow-x: scroll;
 
   @include tablet-landscape {
     flex: 1 1 auto;
