@@ -64,7 +64,7 @@
         h3 Products
         p
           | Products are the goods Lunge has in stock. Every requested product is provided with several related child and parent objects like the associated brand, size format and, most importantly, the available stock per store and size.
-        h6 Drafts and published products
+        h5 Drafts and published products
         p
           | Please be aware of the boolean 
           code published
@@ -382,11 +382,11 @@
           code Brand
           |  object only contains 
           code id
-          | ,
+          | , 
           code name
-          | and 
+          |  and 
           code timestamps
-          | as outlined in the following example response:
+          |  as outlined in the following example response:
         h5 Show
         p
           code GET /api/brands/100
@@ -489,13 +489,13 @@
       section#sizes
         h3 Sizes
         p
-          | We use a data model that differs from the standard product -> product_variations approach. One can think of these sizes as variations, except that a product belongs to a size and each size has a fixed range of properties. This data is needed to make sense of the available stock per product and store. Each size record and each stock record has a fixed number of columns that represent the various sizes in a set. This isn't as elegant as products with many variations as child records, but it works very well with the category of products we usually deal with: Shoes. Lots of size options that are mostly fixed and need to be compared against and related to other size system, like UK sizes vs the european format.
+          | We use a data model that differs from the standard product -> product_variations approach. One can think of these sizes as variations, except that a product belongs to a size and each size has a fixed range of properties. This data is needed to make sense of the available stock per product and store. Each size record and each stock record has a fixed number of columns that represent the various sizes in a set. This isn't as elegant as products with many variations as child records, but it works very well with the category of products we usually deal with: Shoes. Lots of size options that are mostly fixed and need to be compared against and related to other size system, like UK sizes vs the european format. It's also part of a fundamental legacy structure which is hard to replace at this point.
         p
           | Every size record is made of an 
           code id
           | , a 
           code name
-          | and the size options for the particular set:
+          |  and the size options for the particular set:
           code g1
           | ...
           code g19
@@ -532,7 +532,7 @@
           code availability
           |  objects nested within the 
           code product
-          |  response make a lot more sense. Here they are again:
+          |  response make a lot more sense. The values refer to the current stock of each size/key. Here they are again:
         .panel
           pre
             code
@@ -546,11 +546,11 @@
                           "id": 1,
                           ...
                         }
-                        "g1": false,
-                        "g1h": true,
-                        "g2": true,
+                        "g1": 0,
+                        "g1h": 2,
+                        "g2": 1,
                         ...
-                        "g19": false
+                        "g19": 0
                       },
                       ...
                     ]
