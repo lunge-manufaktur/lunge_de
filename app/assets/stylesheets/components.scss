@@ -781,6 +781,10 @@ ul.list--disc {
   max-width: 50rem;
 }
 
+ul.list--disc li {
+  margin-bottom: 1rem;
+}
+
 ul.list--circle {
   list-style: circle;
   max-width: 50rem;
