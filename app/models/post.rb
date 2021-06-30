@@ -40,6 +40,7 @@ class Post < ActiveRecord::Base
 
   # Scopes
   scope :published, -> { where(is_published: true) }
+  scope :draft, -> { where(is_published: false) }
   scope :featured, -> { where(is_featured: true) }
   scope :homepage, -> { where(is_on_homepage: true) }
   scope :prefer_featured, -> { order("is_featured DESC NULLS LAST") }
@@ -76,5 +77,10 @@ class Post < ActiveRecord::Base
       "missing.png"
     end
   end
+
+  private
+    def self.ransackable_scopes(auth_object = nil)
+      [:published, :featured, :homepage, :prefer_featured, :most_recently_featured, :draft]
+    end
 
 end

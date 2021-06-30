@@ -16,9 +16,24 @@
     aside
       section
         = search_form_for @search do |f|
-          .inline-form
-            = f.search_field :title_or_subtitle_or_content_cont, placeholder: "Suchen...", class: "inline-form__input"
-            = f.submit "Suchen", class: "inline-form__submit"
+          .fields
+            .inline-form
+              = f.search_field :title_or_subtitle_or_content_cont, placeholder: "Suchen...", class: "inline-form__input"
+              = f.submit "Suchen", class: "inline-form__submit"
+          - if current_user
+            .fields
+              = f.check_box :published
+              = f.label :published, "Veröffentlicht", class: "label--inline"
+            .fields
+              = f.check_box :draft
+              = f.label :draft, "Entwurf", class: "label--inline"
+            .fields
+              = f.check_box :featured
+              = f.label :featured, "Hervorgehoben", class: "label--inline"
+            .fields
+              = f.check_box :homepage
+              = f.label :homepage, "Auf Startseite", class: "label--inline"
+
       section
         h4 Kategorien
         = render "categories/nested_list"
