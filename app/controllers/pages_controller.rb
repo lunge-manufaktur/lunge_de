@@ -35,4 +35,7 @@ class PagesController < ApplicationController
   def groessentabelle
   end
 
+  def umfrage
+  end
+
 end

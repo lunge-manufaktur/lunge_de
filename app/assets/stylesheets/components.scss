@@ -12,6 +12,18 @@
   border-color: inherit;
 }
 
+.poll-link {
+  position: fixed;
+  bottom: 0;
+  right: 2rem;
+  background-color: #ffff78;
+  padding: 0.5rem 1rem;
+  font-weight: 700;
+  font-size: 0.875rem;
+  border: 1px solid #e3e3e3;
+  border-bottom: 0;
+}
+
 /* --- OVERLAY --- */
 .overlay {
   display: none;
@@ -544,6 +556,21 @@ a.card:hover {
   right: -17px;
 }
 
+.product-search__container {
+  display: grid;
+  overflow-x: scroll;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(3, minmax(150px, auto));
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #e3e3e3;
+  padding-bottom: 1rem;
+}
+
+.product-search__section {
+}
+
+.product-search__section-header {
+}
 
 
 .sort-section {
