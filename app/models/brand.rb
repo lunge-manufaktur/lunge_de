@@ -27,10 +27,10 @@ class Brand < ActiveRecord::Base
   friendly_id :name, use: :slugged
 
   # Scopes
-  # scope :active, -> { joins(:products).distinct.merge(Product.published) }
-  scope :active, -> { includes(:products).where(products:{is_published: true}) }
+  scope :active, -> { joins(:products).distinct.merge(Product.published) }
+  # scope :active, -> { includes(:products).where(products:{is_published: true}) }
   scope :has_logo, -> { where.not(logo_file_name: nil) }
-  scope :ordered_by_name, -> { order('lower(brands.name)') }
+  scope :ordered_by_name, -> { order(:name) }
 
   # Paperclip
   require "paperclip/storage/ftp"
