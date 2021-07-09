@@ -61,7 +61,7 @@ group :production do
 end
 
 gem 'awesome_nested_set'
-gem 'acts-as-taggable-on', '~> 7.0.0'
+gem 'acts-as-taggable-on', '~> 8.1.0'
 gem 'kaminari'
 gem 'friendly_id'
 gem "simple_calendar", "~> 1.1.0"
