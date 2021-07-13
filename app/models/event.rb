@@ -22,11 +22,7 @@
 #  index_events_on_store_id     (store_id)
 #
 
-class Event < ActiveRecord::Base
-	# simple_calendar gem
-	extend SimpleCalendar
-	has_calendar
-	
+class Event < ActiveRecord::Base	
 	# associations
   belongs_to :user
   belongs_to :store
