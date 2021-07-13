@@ -1,8 +1,8 @@
 source 'https://rubygems.org'
 
-ruby "2.7.2"
+ruby "3.0.2"
 
-gem "rails", "~>5.2"
+gem "rails", "~>6.1"
 gem "rails-i18n"
 gem "sprockets", "~> 3.5"
 gem "rake"
@@ -27,7 +27,6 @@ end
 
 group :development do
 	gem "listen"
-  gem 'meta_request'
 end
 
 gem 'sassc-rails'
@@ -47,7 +46,8 @@ end
 gem "bourbon"
 gem 'ransack'
 gem 'annotate'
-gem "paperclip"
+# gem "paperclip"
+gem "kt-paperclip"
 gem "paperclip-storage-ftp"
 gem "delayed_paperclip"
 gem "nested_form"
@@ -64,7 +64,6 @@ gem 'awesome_nested_set'
 gem 'acts-as-taggable-on', '~> 8.1.0'
 gem 'kaminari'
 gem 'friendly_id'
-gem "simple_calendar", "~> 1.1.0"
 gem "browser"
 gem 'canonical-rails', '~> 0.2'
 gem 'sitemap_generator'
