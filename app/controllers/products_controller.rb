@@ -12,13 +12,13 @@ class ProductsController < ApplicationController
     end
 
     if params[:tags].present?
-      @tags = params[:tags]&.split('+')&.map { |tag| tag.gsub('-', ' ') }
+      @tags = params[:tags]&.gsub('-', ' ').split('+')
     end
     
     if @tags.present?
-      @search = policy_scope(Product).includes(:brand, :stocks, :size, :product_images, :tags).tagged_with(@tags).ransack(params[:q])
+      @search = policy_scope(Product).includes(:brand, :stocks, :size, :product_images, :default_product_images, :tags).tagged_with(@tags).ransack(params[:q])
     else
-      @search = policy_scope(Product).includes(:brand, :stocks, :size, :product_images, :tags).ransack(params[:q])
+      @search = policy_scope(Product).includes(:brand, :stocks, :size, :product_images, :default_product_images, :tags).ransack(params[:q])
     end
 
     @products = @search.result(distinct: true)

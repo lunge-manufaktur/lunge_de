@@ -42,6 +42,7 @@ class Product < ActiveRecord::Base
   belongs_to :brand
   belongs_to :size
   has_many :product_images
+  has_many :default_product_images, -> { where(default: true) }, class_name: "ProductImage"
   has_many :stocks, dependent: :destroy
   has_many :stores, through: :stocks
   has_many :properties, dependent: :destroy
@@ -92,7 +93,7 @@ class Product < ActiveRecord::Base
   end 
 
   def default_image(size=nil)
-    pi = product_images&.where(default: true)&.first&.image&.url(size) || product_images&.first&.image&.url(size) || "missing.png"
+    pi = default_product_images&.first&.image&.url(size) || product_images&.first&.image&.url(size) || "missing.png"
   end
 
   def is_on_sale?
