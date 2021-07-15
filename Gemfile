@@ -16,7 +16,6 @@ gem "devise"
 gem "pundit"
 gem "minitest-rails"
 gem "delayed_job_active_record"
-gem 'newrelic_rpm'
 
 group :test do
 	gem "minitest-rails-capybara"
