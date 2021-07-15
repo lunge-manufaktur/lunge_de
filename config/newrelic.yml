@@ -1,22 +1,25 @@
 #
 # This file configures the New Relic Agent.  New Relic monitors Ruby, Java,
-# .NET, PHP, Python and Node applications with deep visibility and low
+# .NET, PHP, Python, Node, and Go applications with deep visibility and low
 # overhead.  For more information, visit www.newrelic.com.
 #
-# Generated August 13, 2015
-# 
-# This configuration file is custom generated for app23845072@heroku.com_1
+# Generated July 15, 2021
+#
+# This configuration file is custom generated for NewRelic Administration
 #
 # For full documentation of agent configuration options, please refer to
 # https://docs.newrelic.com/docs/agents/ruby-agent/installation-configuration/ruby-agent-configuration
 
 common: &default_settings
   # Required license key associated with your New Relic account.
-  license_key: ENV["NEW_RELIC_LICENSE_KEY"]
+  license_key: 8400f1c85ab2cefefb4444bb4d1c01db8c1dNRAL
 
   # Your application name. Renaming here affects where data displays in New
   # Relic.  For more details, see https://docs.newrelic.com/docs/apm/new-relic-apm/maintenance/renaming-applications
-  app_name: Lunge Laufladen
+  app_name: lunge_de
+
+  distributed_tracing:
+    enabled: true
 
   # To disable the agent regardless of other settings, uncomment the following:
   # agent_enabled: false
@@ -30,11 +33,7 @@ common: &default_settings
 # If your application has other named environments, configure them here.
 development:
   <<: *default_settings
-  app_name: My Application (Development)
-
-  # NOTE: There is substantial overhead when running in developer mode.
-  # Do not use for production or load testing.
-  developer_mode: true
+  app_name: lunge_de (Development)
 
 test:
   <<: *default_settings
@@ -43,7 +42,7 @@ test:
 
 staging:
   <<: *default_settings
-  app_name: My Application (Staging)
+  app_name: lunge_de (Staging)
 
 production:
   <<: *default_settings

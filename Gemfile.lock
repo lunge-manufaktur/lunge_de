@@ -185,6 +185,7 @@ GEM
     msgpack (1.4.2)
     multi_json (1.15.0)
     nested_form (0.3.2)
+    newrelic_rpm (7.2.0)
     nio4r (2.5.7)
     nokogiri (1.11.7-x86_64-darwin)
       racc (~> 1.4)
@@ -339,6 +340,7 @@ DEPENDENCIES
   minitest-rails
   minitest-rails-capybara
   nested_form
+  newrelic_rpm
   paperclip-storage-ftp
   pg
   puma
