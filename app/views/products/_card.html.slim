@@ -13,11 +13,11 @@
     label = product.brand.name
     h4.marginless--top.truncated = product.name
     p = strip_tags(product.truncated_description(length: 100))
-    - unless product.one_size? || product.available_sizes.blank?
-      label.small Verfügbare Größen
-      .product__available-sizes-list
-        - product.available_sizes.each do |size|
-          .product__available-sizes-item = size
+    / - unless product.one_size? || product.available_sizes.blank?
+    /   label.small Verfügbare Größen
+    /   .product__available-sizes-list
+    /     - product.available_sizes.each do |size|
+    /       .product__available-sizes-item = size
     p.marginless--bottom
       span.bold = number_to_currency(product.current_price, unit: "€ ")
       - if product.is_on_sale?
