@@ -16,6 +16,7 @@ gem "devise"
 gem "pundit"
 gem "minitest-rails"
 gem "delayed_job_active_record"
+gem "skylight"
 
 group :test do
 	gem "minitest-rails-capybara"
