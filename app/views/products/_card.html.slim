@@ -2,7 +2,7 @@
   .card__figure
     - if product.is_on_sale?
       .product__on-sale-badge %
-    = image_tag product.default_image, class: "card__image", alt: product.name_with_brand_and_color
+    = image_tag product.default_image(:card), class: "card__image", alt: product.name_with_brand_and_color
     - if current_user && (!product.is_published? || product.is_archived?)
       .product__badge-list.product__badge-list--bottom-left
         - unless product.is_published?
