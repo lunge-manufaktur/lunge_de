@@ -1,23 +1,11 @@
-- content_for :full_width_content
-  .featured_icon style="height: 33%; background-image: url(http://cdn.lunge.de/images/misc/icon_44040.svg)"
+.container
+  .title
+    h1 500
+    h4 Huch...da ist etwas schief gegangen.
 
-- content_for :title_bar
-  .title_bar
-    .row
-      .small-12.columns
-        h1 500
-        h4 Huch...da ist etwas schief gegangen.
-
-.row
-  .small-12.medium-9.large-8.columns
+  article
     p
       | Entschuldige, aber leider scheint etwas schief gegangen zu sein. Sehr wahrscheinlich handelt es sich hierbei um einen Fehler unsererseits. Bitte versuche es später erneut oder weise uns auf das Problem hin. 
     p
       | Wenn Du uns helfen möchtest, dieses Problem zu beheben, schreibe uns bitte eine e-Mail:
     = link_to "Kontakt", contact_path, class: "button"
-
-    hr
-    section
-      small
-        | Creative Commons: 
-        = link_to "Sick designed by Julien Deveaux from the Noun Project", "http://thenounproject.com/term/sick/44040/", target: "_blank"
