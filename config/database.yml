@@ -16,10 +16,6 @@ test:
 
 
 production:
-  adapter: postgresql
-  host: [host]
-  database: [database]
-  user: [user name]
-  password: [password]
-  pool: 50
+  url:  <%= ENV["DATABASE_URL"] %>
+  pool: <%= ENV["DB_POOL"] || ENV['RAILS_MAX_THREADS'] || 5 %>
   timeout: 5000
