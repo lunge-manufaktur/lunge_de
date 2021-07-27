@@ -11,7 +11,11 @@ module Api
       @products = @products.where(is_published: params[:published]) unless params[:published].blank?
       @products = @products.where(is_on_frontpage: params[:highlight]) unless params[:highlight].blank?
       @products = @products.where(is_featured: params[:featured]) unless params[:featured].blank?
-      @products = params[:order] = "bestselling" ? @products.best_selling : @products.newest
+      @products =   if params[:order] = "bestselling"
+                      @products.best_selling
+                    else
+                      @products.newest
+                    end
       @products = @products.page(params[:page]).per(100).limit(params[:limit])
 
       authorize @products
