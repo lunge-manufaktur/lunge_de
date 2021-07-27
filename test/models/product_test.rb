@@ -18,6 +18,7 @@
 #  orderable                           :boolean          default(TRUE), not null
 #  published_at                        :datetime
 #  regular_price                       :decimal(8, 2)
+#  sales_over_90_days                  :integer
 #  sku                                 :string
 #  slug                                :string
 #  use_in_lia_campaign                 :boolean          default(FALSE)
@@ -32,6 +33,7 @@
 #  index_products_on_is_archived          (is_archived)
 #  index_products_on_orderable            (orderable)
 #  index_products_on_published_at         (published_at)
+#  index_products_on_sales_over_90_days   (sales_over_90_days)
 #  index_products_on_size_id              (size_id)
 #  index_products_on_slug                 (slug)
 #  index_products_on_use_in_lia_campaign  (use_in_lia_campaign)
