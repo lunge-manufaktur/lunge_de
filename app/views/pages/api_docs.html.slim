@@ -354,7 +354,50 @@
                   ]
                 }
 
-        p.italic Important: Product index actions are always paginated in order to keep the response time fast and snappy. That means products are listed in batches of 100. For example if you wanted to access products 201 - 300 your request should look like this:
+        h5 Optional parameters for index queries
+        p 
+          | Additional parameters are appended with a leading 
+          code ?
+          |  and separated by 
+          code &
+          | , as in:
+          br 
+          code https://www.lunge.de/api/products?published=true&limit=10
+
+        table
+          thead
+            tr
+              th Parameter
+              th Expected values
+              th Notes
+          tbody
+            tr
+              td limit
+              td integer
+              td limits the number of returned items to the value specified
+            tr
+              td published
+              td true, false
+              td Determines whether to return published products or drafts only. For public display this should always be set to true.
+            tr
+              td highlight
+              td true, false
+              td A limited number of products are categorized as highlights, which means they are promoted and shown on the frontpage as well as favored in listings.
+            tr
+              td featured
+              td true, false
+              td Similar to highlights (see above), but promoted to a lesser degree. These products are not shown on the frontpage but get preferential treatment in product listings as well as a public "Featured"-badge.
+            tr
+              td order
+              td bestselling
+              td By default the most recently published products are returned first. This behavior can be overwritten with the order parameter - by setting the value to "bestselling" the best selling products over the last 90 days are returned in descending order.
+
+        p Example: In order to retrieve the 10 best selling, published and featured products one would use the following query:
+        code GET /api/products?published=true&featured=true&order=bestselling&limit=10
+
+        h5 Pagination
+
+        p Product index actions are always paginated in order to keep the response time fast and snappy. That means products are listed in batches of 100. For example if you wanted to access products 201 - 300 your request should look like this:
         code GET /api/products/page/3
         p Without the page parameter in the URL your request will be answered with the first 100 products.
 

@@ -70,6 +70,7 @@ class Product < ActiveRecord::Base
   scope :prefer_not_on_sale, -> { order("current_price >= regular_price DESC NULLS LAST") }
   scope :on_frontpage, -> { where(is_on_frontpage: true) }
   scope :newest, -> { order("products.published_at DESC NULLS LAST, products.created_at DESC NULLS LAST") }
+  scope :best_selling, -> { order("sales_over_90_days DESC NULLS LAST") }
   scope :sort_by_published_at_sort_link_desc, -> { order("products.published_at DESC NULLS LAST, products.created_at DESC NULLS LAST") }
   scope :sort_by_published_at_sort_link_asc, -> { order("products.published_at ASC NULLS LAST, products.created_at ASC NULLS LAST") }
   scope :has_image, -> { joins("JOIN product_images ON products.id = product_images.product_id") }
