@@ -2,7 +2,6 @@ json.products @products do |product|
   json.id product.id
   json.created_at product.created_at
   json.updated_at product.updated_at
-  json.stock_updated_at product.stock_updated_at
   json.published product.is_published
   json.url product_url(product)
   json.name product.name
