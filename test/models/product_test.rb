@@ -31,6 +31,9 @@
 #
 #  index_products_on_brand_id             (brand_id)
 #  index_products_on_is_archived          (is_archived)
+#  index_products_on_is_featured          (is_featured)
+#  index_products_on_is_on_frontpage      (is_on_frontpage)
+#  index_products_on_is_published         (is_published)
 #  index_products_on_orderable            (orderable)
 #  index_products_on_published_at         (published_at)
 #  index_products_on_sales_over_90_days   (sales_over_90_days)

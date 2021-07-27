@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_27_062006) do
+ActiveRecord::Schema.define(version: 2021_07_27_094211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -230,6 +230,9 @@ ActiveRecord::Schema.define(version: 2021_07_27_062006) do
     t.integer "sales_over_90_days"
     t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["is_archived"], name: "index_products_on_is_archived"
+    t.index ["is_featured"], name: "index_products_on_is_featured"
+    t.index ["is_on_frontpage"], name: "index_products_on_is_on_frontpage"
+    t.index ["is_published"], name: "index_products_on_is_published"
     t.index ["orderable"], name: "index_products_on_orderable"
     t.index ["published_at"], name: "index_products_on_published_at"
     t.index ["sales_over_90_days"], name: "index_products_on_sales_over_90_days"
