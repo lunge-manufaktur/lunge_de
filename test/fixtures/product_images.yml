@@ -15,6 +15,7 @@
 #
 # Indexes
 #
+#  index_product_images_on_default     (default)
 #  index_product_images_on_product_id  (product_id)
 #
 
