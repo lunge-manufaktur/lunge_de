@@ -20,3 +20,7 @@ production:
   pool: <%= ENV["DB_POOL"] || ENV['RAILS_MAX_THREADS'] || 5 %>
   timeout: 5000
   prepared_statements: false
+  connect_timeout: 1
+  checkout_timeout: 1
+  variables:
+    statement_timeout: <%= ENV["STATEMENT_TIMEOUT"] || "5s" %>
