@@ -16,9 +16,9 @@ class ProductsController < ApplicationController
     end
     
     if @tags.present?
-      @search = policy_scope(Product).includes(:brand, :stocks, :size, :product_images, :default_product_images, :tags).tagged_with(@tags).ransack(params[:q])
+      @search = policy_scope(Product).includes(:brand, :stocks, :size, :product_images, :default_product_images, :tags, :taggings).tagged_with(@tags).ransack(params[:q])
     else
-      @search = policy_scope(Product).includes(:brand, :stocks, :size, :product_images, :default_product_images, :tags).ransack(params[:q])
+      @search = policy_scope(Product).includes(:brand, :stocks, :size, :product_images, :default_product_images, :tags, :taggings).ransack(params[:q])
     end
 
     @products = @search.result(distinct: true)
