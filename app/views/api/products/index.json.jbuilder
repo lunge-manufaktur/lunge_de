@@ -10,7 +10,6 @@ json.products @products do |product|
   json.description product.description
   json.current_price product.current_price
   json.regular_price product.regular_price
-  json.use_in_lia_campaign product.use_in_lia_campaign
   json.tags product.tags do |tag|
     json.id tag.id
     json.name tag.name
@@ -26,6 +25,7 @@ json.products @products do |product|
   json.product_images product.product_images do |image|
     json.id image.id
     json.url image.image.url
+    json.default image.default
   end
   json.availability product.stocks do |stock|
     json.id stock.id
