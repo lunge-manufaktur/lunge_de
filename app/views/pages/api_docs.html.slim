@@ -391,6 +391,10 @@
               td order
               td bestselling
               td By default the most recently published products are returned first. This behavior can be overwritten with the order parameter - by setting the value to "bestselling" the best selling products over the last 90 days are returned in descending order.
+            tr
+              td ids
+              td ids[]=1&ids[]=2&ids[]=3
+              td Will return only the products with the specified IDs
 
         p Example: In order to retrieve the 10 best selling, published and featured products one would use the following query:
         code GET /api/products?published=true&featured=true&order=bestselling&limit=10

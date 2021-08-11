@@ -7,11 +7,16 @@ module Api
 
     # GET /products
     def index
-      @products = Product.all.includes(:size, :stocks, :brand, :stores, :product_images, :tags)
+      if params[:ids]
+        @products = Product.where(id: params[:ids]).includes(:size, :stocks, :brand, :stores, :product_images, :tags)
+      else
+        @products = Product.all.includes(:size, :stocks, :brand, :stores, :product_images, :tags)
+      end
+
       @products = @products.where(is_published: params[:published]) unless params[:published].blank?
       @products = @products.where(is_on_frontpage: params[:highlight]) unless params[:highlight].blank?
       @products = @products.where(is_featured: params[:featured]) unless params[:featured].blank?
-      @products =   if params[:order] = "bestselling"
+      @products =   if params[:order] == "bestselling"
                       @products.best_selling
                     else
                       @products.newest
