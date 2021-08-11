@@ -93,6 +93,10 @@
             label Veröffentlicht
             = l @product&.published_at&.to_date unless @product.published_at.blank?
 
+          p
+            label ID
+            = @product.id
+
       - if @product.properties.any?
         section
           h4 Eigenschaften
