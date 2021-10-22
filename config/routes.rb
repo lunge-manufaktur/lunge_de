@@ -93,5 +93,22 @@ Rails.application.routes.draw do
   get "lockdown", controller: "pages", action: "lockdown"
   get "beratungstermine", controller: "pages", action: "beratungstermine"
   get "groessentabelle", controller: "pages", action: "groessentabelle"
+
+  # frontend routes
+  direct :frontend_root do
+    "https://www.lunge.de"
+  end
+  direct :frontend_appointments do
+    "https://www.lunge.de/termine/"
+  end
+  direct :frontend_stores do
+    "https://www.lunge.de/filialen/"
+  end
+  direct :frontend_blog do
+    "https://www.lunge.de/posts/"
+  end
+  direct :frontend_contact do
+    "https://www.lunge.de/kontakt/"
+  end
   
 end

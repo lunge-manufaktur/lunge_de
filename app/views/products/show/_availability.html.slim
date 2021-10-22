@@ -10,7 +10,7 @@ p
 
 - @product.stocks.includes(:store).order_by_store.each do |stock|
   section
-    p = link_to stock.store.full_address, store_path(stock.store), class: "link"
+    p = link_to stock.store.full_address, stock.store.frontend_url, class: "link"
     .availability-container
       - stock.sizes_hash.each do |key, value|
         - if value.present?
