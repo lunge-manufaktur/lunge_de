@@ -1,20 +1,20 @@
 header
   .container
     .header__container
-      = link_to :root, class: "header__logo-container" do
+      = link_to "https://www.lunge.de", class: "header__logo-container" do
         = image_tag image_path("logo__text.svg"), class: "header__logo"
       nav.header__nav
         ul.header-nav
           li.header-nav__item
             = link_to "Shop", products_path, class: "link"
           li.header-nav__item
-            = link_to "Termine", "/beratungstermine", class: "link"
+            = link_to "Termine", "https://www.lunge.de/termine/", class: "link"
           li.header-nav__item
-            = link_to "Blog", posts_path, class: "link"
+            = link_to "Blog", "https://www.lunge.de/posts/", class: "link"
           li.header-nav__item
-            = link_to "Filialen", stores_path, class: "link"
+            = link_to "Filialen", "https://www.lunge.de/filialen/", class: "link"
           li.header-nav__item
-            = link_to "Kontakt", contact_path, class: "link"
+            = link_to "Kontakt", "https://www.lunge.de/kontakt/", class: "link"
           li.header-nav__item
             = link_to "#", class: "snipcart-checkout cart-button" do
               = image_tag image_path("shopping_cart_filled.svg"), class: "cart-button__icon"
