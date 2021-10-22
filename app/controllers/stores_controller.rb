@@ -92,6 +92,7 @@ class StoresController < ApplicationController
         :longitude,
         :google_maps_place_id,
         :panorama_embed_url,
+        :frontend_url,
         store_images_attributes: [
           :id,
           :store_id,

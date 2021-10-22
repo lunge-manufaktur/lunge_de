@@ -7,11 +7,11 @@ footer
           label Hamburg
           ul.vertical-list
             - Store.hamburg.each do |store|
-              li = link_to store.name, store_path(store), class: "link"
+              li = link_to store.name, store.frontend_url, class: "link"
           label Berlin
           ul.vertical-list
             - Store.berlin.each do |store|
-              li= link_to store.name, store_path(store), class: "link"
+              li = link_to store.name, store.frontend_url, class: "link"
         h4 Laufkurs-Gutschein
         = link_to "Kostenloser Laufkurs beim Kauf eines Laufschuhs. Mehr erfahren →", "/gutschein", class: "link"
 

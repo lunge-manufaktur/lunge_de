@@ -8,6 +8,7 @@
 #  city                 :string
 #  description          :text
 #  email                :string
+#  frontend_url         :string
 #  latitude             :float
 #  longitude            :float
 #  name                 :string

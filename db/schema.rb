@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_07_28_065331) do
+ActiveRecord::Schema.define(version: 2021_10_22_094515) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -362,6 +362,7 @@ ActiveRecord::Schema.define(version: 2021_07_28_065331) do
     t.string "slug"
     t.string "google_maps_place_id"
     t.text "panorama_embed_url"
+    t.string "frontend_url"
     t.index ["slug"], name: "index_stores_on_slug", unique: true
   end
 
