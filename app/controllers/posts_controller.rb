@@ -23,6 +23,9 @@ class PostsController < ApplicationController
   # GET /posts/1
   def show
     authorize @post
+    if @post.frontend_url.present?
+      redirect_to @post.frontend_url, status: 301
+    end
   end
 
   # GET /posts/new
@@ -93,6 +96,7 @@ class PostsController < ApplicationController
       params.require(:post).permit(
         :title,
         :subtitle,
+        :frontend_url,
         :slug,
         :content,
         :meta_description,

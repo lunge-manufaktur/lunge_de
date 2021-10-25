@@ -4,6 +4,7 @@
 #
 #  id                :bigint           not null, primary key
 #  content           :text
+#  frontend_url      :string
 #  icon_content_type :string
 #  icon_file_name    :string
 #  icon_file_size    :bigint

@@ -19,6 +19,9 @@
           = f.label :subtitle, "Untertitel (optional)"
           = f.text_field :subtitle
         .fields
+          = f.label :frontend_url, "Wordpress URL"
+          = f.url_field :frontend_url
+        .fields
           = f.label :content, "Inhalt"
           = f.text_area :content, rows: 20, class: "wysiwyg-editor"
       section
