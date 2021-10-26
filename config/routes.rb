@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root to: "products#index"
+  root to: redirect('/products')
 
   # sitemap
   get "sitemap", controller: "sitemaps", action: "show", format: "xml"
