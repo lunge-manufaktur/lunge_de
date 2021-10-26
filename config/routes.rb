@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  root to: "pages#home"
+  root to: "products#index"
 
   # sitemap
   get "sitemap", controller: "sitemaps", action: "show", format: "xml"
