@@ -118,6 +118,10 @@ button.snipcart-button-secondary:hover {
 	font-weight: 700;
 }
 
+.snipcart-layout__header {
+	width: 100%;
+}
+
 .snipcart-cart-header {
 	background-color: $white;
 	border-bottom: 1px solid $hairline-color;
@@ -144,4 +148,8 @@ button.snipcart-button-secondary:hover {
 
 .snipcart__box {
 	margin-bottom: 1rem;
+}
+
+input[type="checkbox"].snipcart-input__visibility-toggle {
+	display: none;
 }
