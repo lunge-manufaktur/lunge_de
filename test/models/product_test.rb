@@ -11,6 +11,7 @@
 #  is_archived                         :boolean          default(FALSE)
 #  is_featured                         :boolean          default(FALSE)
 #  is_on_frontpage                     :boolean          default(FALSE)
+#  is_on_supersale                     :boolean          default(FALSE)
 #  is_published                        :boolean          default(FALSE)
 #  meta_description                    :text
 #  name                                :string
@@ -33,6 +34,7 @@
 #  index_products_on_is_archived          (is_archived)
 #  index_products_on_is_featured          (is_featured)
 #  index_products_on_is_on_frontpage      (is_on_frontpage)
+#  index_products_on_is_on_supersale      (is_on_supersale)
 #  index_products_on_is_published         (is_published)
 #  index_products_on_orderable            (orderable)
 #  index_products_on_published_at         (published_at)
