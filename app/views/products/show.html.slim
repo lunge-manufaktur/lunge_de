@@ -12,6 +12,10 @@
         .product__badge.product__badge--new Neu
       - if @product.is_featured
         .product__badge Empfehlung
+      - if @product.is_on_supersale?
+        .product__on-sale-container
+          .product__on-supersale-badge Supersale
+          .product__on-sale-icon %
       - if current_user && (!@product.is_published? || @product.is_archived?)
         - unless @product.is_published?
           .product__badge.product__badge--alert Entwurf

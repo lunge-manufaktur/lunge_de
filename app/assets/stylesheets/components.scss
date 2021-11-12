@@ -462,6 +462,7 @@ a.card:hover {
   font-size: 0.8rem;
   font-weight: 700;
   display: flex;
+  gap: 0.5rem;
 }
 
 .product__badge-list--bottom-left {
@@ -474,7 +475,6 @@ a.card:hover {
   background-color: $black;
   color: $white;
   padding: 0.25rem 0.5rem;
-  margin-right: 0.5rem;
 
   &:last-child {
     margin-right: 0;
@@ -490,20 +490,35 @@ a.card:hover {
   color: $black;
 }
 
-.product__on-sale-badge {
-  position: absolute;
+.product__badge--supersale {
   background-color: $lime;
   color: $black;
-  top: 1rem;
-  right: 1rem;
-  padding: 0.25rem 0.5rem;
+}
+
+.product__on-sale-container {
+  font-size: 0.8rem;
   font-weight: 700;
-  width: 2rem;
-  height: 2rem;
-  text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.product__on-sale-container--card {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.product__on-sale-icon {
+  background-color: $lime;
+  color: $black;
+  padding: 0.25rem 0.5rem;
+}
+
+.product__on-supersale-badge {
+  background-color: $black;
+  color: $lime;
+  padding: 0.25rem 0.5rem;
 }
 
 .product__available-sizes-list {
