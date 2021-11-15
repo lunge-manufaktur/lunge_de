@@ -32,15 +32,16 @@
       section
         .product__add-to-cart-container
           .product__add-to-cart-button
-            h4.marginless--top.marginless--bottom = number_to_currency(@product.current_price, unit: "€ ")
+            = render "products/show/add_to_cart_button"
+            h4.product__price.marginless--bottom = number_to_currency(@product.current_price, unit: "€ ")
             - if @product.is_on_sale?
               span.strike.light = number_to_currency(@product.try(:regular_price), unit: "€ ")
             .product__vat-notice inkl. 19% Mehrwertsteuer
-            = render "products/show/add_to_cart_button"
           .product__add-to-cart-help
             p.marginless--top 
-              | Du benötigst eine Beratung, hast Fragen zum Produkt oder wünschst eine ausführliche Laufband-Analyse? 
-              = link_to "Buche noch heute einen Beratungstermin und nimm unsere kompetente Fachberatung in Hamburg oder Berlin in Anspruch.", frontend_appointments_url, class: "link"
+              | Teste deine neuen Laufschuhe vor dem Kauf auf der Indoor-Laufbahn. Unsere kompetente Fachberatung mit Laufbandanalyse wird dich überzeugen. Komm einfach vorbei oder 
+              = link_to "reserviere online einen Termin", frontend_appointments_url, class: "link"
+              | .
 
       section.product__description
         = simple_format @product.description, {}, sanitize: false
