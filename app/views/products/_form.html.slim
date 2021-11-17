@@ -18,7 +18,7 @@
           = f.text_area :description, rows: 12, class: "wysiwyg-editor"
         .field
           = f.label :meta_description, "Kurzbeschreibung"
-          = f.text_area :meta_description, rows: 3, placeholder: "Wichtig für Suchmaschinenoptimierung - ca. 160 Zeichen."
+          = f.text_area :meta_description, rows: 3, maxlength: 160, placeholder: "Wichtig für Suchmaschinenoptimierung - max. 160 Zeichen."
 
       section
         h4 Bilder
