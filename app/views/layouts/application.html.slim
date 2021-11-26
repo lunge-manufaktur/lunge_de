@@ -33,53 +33,53 @@ html lang="de"
     = javascript_include_tag "snipcart.js"
 
     javascript:
-      document.addEventListener('snipcart.ready', function() {
-        Snipcart.ready.then(function() {
-          Snipcart.events.on('item.added', (cartItem) => {
-            plausible('E-Commerce: Artikel zum Warenkorb hinzugefügt',{
-              props: {
-                Produkt: cartItem.name,
-                Einzelpreis: cartItem.unitPrice
-              }
-            });
+      document.addEventListener('snipcart.ready', () => {
+        Snipcart.events.on('item.added', (cartItem) => {
+          plausible('E-Commerce: Artikel zum Warenkorb hinzugefügt',{
+            props: {
+              Produkt: cartItem.name,
+              Einzelpreis: cartItem.unitPrice
+            }
           });
-
-          Snipcart.events.on('item.removed', (cartItem) => {
-            plausible('E-Commerce: Artikel aus Warenkorb entfernt',{
-              props: {
-                Produkt: cartItem.name,
-                Einzelpreis: cartItem.unitPrice
-              }
-            });
-          });
-
-          Snipcart.events.on('shipping.selected', (shippingMethod) => {
-            plausible('E-Commerce: Versandmethode ausgewählt',{
-              props: {
-                Versandmethode: shippingMethod
-              }
-            });
-          });
-
-          Snipcart.events.on('cart.confirmed', (cartConfirmResponse) => {
-            plausible('E-Commerce: Bestellung abgeschlossen');
-          });
-
-          Snipcart.events.on('cart.confirm.error', (confirmError) => {
-            plausible('E-Commerce: Bestellung fehlgeschlagen',{
-              props: {
-                Fehler: confirmError
-              }
-            });
-          });
-
-          Snipcart.events.on('payment.failed', (paymentError) => {
-            plausible('E-Commerce: Zahlung fehlgeschlagen',{
-              props: {
-                Fehler: paymentError
-              }
-            });
-          });
-
+          console.log('item added to cart');
         });
+
+        Snipcart.events.on('item.removed', (cartItem) => {
+          plausible('E-Commerce: Artikel aus Warenkorb entfernt',{
+            props: {
+              Produkt: cartItem.name,
+              Einzelpreis: cartItem.unitPrice
+            }
+          });
+        });
+
+        Snipcart.events.on('shipping.selected', (shippingMethod) => {
+          plausible('E-Commerce: Versandmethode ausgewählt',{
+            props: {
+              Versandmethode: shippingMethod
+            }
+          });
+        });
+
+        Snipcart.events.on('cart.confirmed', (cartConfirmResponse) => {
+          plausible('E-Commerce: Bestellung abgeschlossen');
+          console.log('order completed');
+        });
+
+        Snipcart.events.on('cart.confirm.error', (confirmError) => {
+          plausible('E-Commerce: Bestellung fehlgeschlagen',{
+            props: {
+              Fehler: confirmError
+            }
+          });
+        });
+
+        Snipcart.events.on('payment.failed', (paymentError) => {
+          plausible('E-Commerce: Zahlung fehlgeschlagen',{
+            props: {
+              Fehler: paymentError
+            }
+          });
+        });
+
       });
