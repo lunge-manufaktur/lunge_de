@@ -1,16 +1,19 @@
+- set_meta_tags title: "Unsere Marken rund um den Laufsport",
+                description: "Unser Laufsport-Sortiment besteht aus mehr als 30 bekannten Marken mit tausenden Produkten rund um den Laufsport. Hier siehst du unsere Gesamtübersicht aller Marken für Laufschuhe, Laufbekleidung und Laufzubehör."
+
 .container
   .title
     h1 Marken
 
   - @brands.each do |brand|
     section
-      h4 = link_to brand.name, brand_path(brand)
+      h2 = link_to brand.name, brand_path(brand)
       - brand.products.tags_on(:tags).order(:name).each do |tag|
         = link_to tag.name, tagged_search_products_path(tag.name, "q": {"brand_id_eq": brand.id}), class: "label"
       hr
       - if brand.products.any?
         .cards__container
-          - brand.products.published.limit(9).each do |product|
-            = render "products/minicard", product: product
+          - brand.products.published.newest.limit(12).each do |product|
+            = render "products/card", product: product
       hr
       = link_to "Alle Artikel von #{brand.name} anzeigen...", brand_path(brand), class: "button right"
