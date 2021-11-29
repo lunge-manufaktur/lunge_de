@@ -41,6 +41,16 @@ class ProductsController < ApplicationController
     render 'index'
   end
 
+  def index_on_sale
+    @search = policy_scope(Product).includes(:brand, :stocks, :size, :product_images, :default_product_images, :tags, :taggings).ransack(params[:q])
+
+    @products = @search.result(distinct: true)
+                       .on_sale
+                       .prefer_featured.newest
+                       .page(params[:page]).per(12)
+    render "index"
+  end
+
   # GET /products/1
   # GET /products/1.json
   def show

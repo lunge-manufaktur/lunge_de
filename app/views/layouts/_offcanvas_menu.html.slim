@@ -12,7 +12,11 @@
         li.offcanvas-nav__item
           = link_to "Filialen", frontend_stores_url, class: "link"
         li.offcanvas-nav__item
+          = link_to "Jobs", frontend_jobs_url, class: "link"
+        li.offcanvas-nav__item
           = link_to "Kontakt", frontend_contact_url, class: "link"
+        li.offcanvas-nav__item
+          = link_to "Sale %", on_sale_products_path, class: "link"
     
     - if user_signed_in?
       section

@@ -70,6 +70,7 @@ Rails.application.routes.draw do
     collection do
       get "tags/:tags", action: "index", as: :tag
       match '/tags/:tags/search', action: :search, via: [:get, :post], as: :tagged_search
+      get "sale", action: "index_on_sale", as: "on_sale"
     end
     resources :product_images
     resources :properties
@@ -109,6 +110,9 @@ Rails.application.routes.draw do
   end
   direct :frontend_contact do
     "https://www.lunge.de/kontakt/"
+  end
+  direct :frontend_jobs do
+    "https://www.lunge.de/jobs/"
   end
   
 end
