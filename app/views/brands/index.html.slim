@@ -13,7 +13,7 @@
       hr
       - if brand.products.any?
         .cards__container
-          - brand.products.published.newest.limit(12).each do |product|
+          - brand.products.published.newest.limit(8).each do |product|
             = render "products/card", product: product
       hr
       = link_to "Alle Artikel von #{brand.name} anzeigen...", brand_path(brand), class: "button right"
