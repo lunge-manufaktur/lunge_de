@@ -334,6 +334,7 @@ ul.offcanvas-nav {
   overflow-x: scroll;
   grid-auto-flow: column;
   grid-auto-columns: 260px;
+  width: calc(100vw - 4rem);
   padding: 2rem 1rem;
   margin: 1rem -1rem;
 
