@@ -235,7 +235,7 @@ nav.header__nav {
   align-items: center;
   flex: 0 0 auto;
 
-  @include tablet-portrait {
+  @include tablet-landscape {
     display: block;
   }
 }
@@ -324,6 +324,27 @@ ul.offcanvas-nav {
   grid-gap: $gutter;
 
   @include desktop {
+  }
+}
+
+.cards__container--single-line {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 260px);
+  grid-gap: 1rem;
+  overflow-x: scroll;
+  grid-auto-flow: column;
+  grid-auto-columns: 260px;
+  padding: 2rem 1rem;
+  margin: 1rem -1rem;
+
+  @include tablet-portrait {
+    padding: 2rem 2rem;
+    margin: 1rem -2rem;
+  }
+
+  @include tablet-landscape {
+    padding: 2rem 4rem;
+    margin: 1rem -4rem;
   }
 }
 

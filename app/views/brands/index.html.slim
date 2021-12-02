@@ -12,8 +12,7 @@
         = link_to tag.name, tagged_search_products_path(tag.name, "q": {"brand_id_eq": brand.id}), class: "label"
       hr
       - if brand.products.any?
-        .cards__container
+        .cards__container--single-line
           - brand.products.published.newest.limit(8).each do |product|
-            = render "products/card", product: product
-      hr
+            = render "products/compact_card", product: product
       = link_to "Alle Artikel von #{brand.name} anzeigen...", brand_path(brand), class: "button right"
