@@ -18,7 +18,7 @@ header
           li.header-nav__item
             = link_to "Kontakt", frontend_contact_url, class: "link"
           li.header-nav__item
-            = link_to "Sale %", on_sale_products_path, class: "link"
+            = link_to "Sale %", "/products/search?q[on_sale]=1", class: "link"
           li.header-nav__item
             = link_to "#", class: "snipcart-checkout cart-button" do
               = image_tag image_path("shopping_cart_filled.svg"), class: "cart-button__icon"
