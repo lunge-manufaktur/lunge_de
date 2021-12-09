@@ -4,5 +4,6 @@ class SitemapsController < ApplicationController
     @products = Product.published
     @brands = Brand.active
     @posts = Post.published
+    @tags = ActsAsTaggableOn::Tag
   end
 end

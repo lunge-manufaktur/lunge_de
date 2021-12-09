@@ -23,4 +23,12 @@ xml.tag! 'urlset', 'xmlns' => 'http://www.sitemaps.org/schemas/sitemap/0.9' do
       xml.priority(1.0)
     }
   end
+
+  @tags.find_each do |tag|
+    xml.url {
+      xml.loc(tag_products_url(tag.name.gsub(' ', '-')))
+      xml.changefreq("daily")
+      xml.priority(0.8)
+    }
+  end
 end
