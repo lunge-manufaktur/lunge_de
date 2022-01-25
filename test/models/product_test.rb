@@ -9,6 +9,7 @@
 #  description                         :text             default("Beschreibung folgt")
 #  fmid                                :integer
 #  is_archived                         :boolean          default(FALSE)
+#  is_exclusive                        :boolean          default(FALSE)
 #  is_featured                         :boolean          default(FALSE)
 #  is_on_frontpage                     :boolean          default(FALSE)
 #  is_on_supersale                     :boolean          default(FALSE)
@@ -32,6 +33,7 @@
 #
 #  index_products_on_brand_id             (brand_id)
 #  index_products_on_is_archived          (is_archived)
+#  index_products_on_is_exclusive         (is_exclusive)
 #  index_products_on_is_featured          (is_featured)
 #  index_products_on_is_on_frontpage      (is_on_frontpage)
 #  index_products_on_is_on_supersale      (is_on_supersale)

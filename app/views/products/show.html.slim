@@ -12,6 +12,8 @@
         .product__badge.product__badge--new Neu
       - if @product.is_featured
         .product__badge Empfehlung
+      - if @product.is_exclusive
+        .product__badge Exklusiv
       - if @product.is_on_supersale?
         .product__on-sale-container
           .product__on-supersale-badge Supersale

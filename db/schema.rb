@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_02_100303) do
+ActiveRecord::Schema.define(version: 2022_01_24_131552) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -231,8 +231,10 @@ ActiveRecord::Schema.define(version: 2021_11_02_100303) do
     t.datetime "published_at"
     t.integer "sales_over_90_days"
     t.boolean "is_on_supersale", default: false
+    t.boolean "is_exclusive", default: false
     t.index ["brand_id"], name: "index_products_on_brand_id"
     t.index ["is_archived"], name: "index_products_on_is_archived"
+    t.index ["is_exclusive"], name: "index_products_on_is_exclusive"
     t.index ["is_featured"], name: "index_products_on_is_featured"
     t.index ["is_on_frontpage"], name: "index_products_on_is_on_frontpage"
     t.index ["is_on_supersale"], name: "index_products_on_is_on_supersale"

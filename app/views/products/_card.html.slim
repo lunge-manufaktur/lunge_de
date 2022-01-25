@@ -30,7 +30,7 @@
     .product__badge-list
       - if product.is_new?
         .product__badge.product__badge--new Neu
-      - if product.is_on_frontpage?
-        .product__badge Highlight
       - if product.is_featured
         .product__badge Empfehlung
+      - if product.is_exclusive
+        .product__badge Exklusiv

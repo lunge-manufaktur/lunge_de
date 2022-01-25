@@ -161,6 +161,7 @@ class ProductsController < ApplicationController
       :current_price_without_tax_reduction,
       :description,
       :is_archived,
+      :is_exclusive,
       :is_featured,
       :is_on_frontpage,
       :is_on_supersale,

@@ -31,11 +31,11 @@ h4 Suchen
       = f.check_box :archived
       = f.label :archived, "Archiviert", class: "label--inline"
     .fields
-      = f.check_box :on_frontpage
-      = f.label :on_frontpage, "Auf Startseite", class: "label--inline"
-    .fields
       = f.check_box :featured
-      = f.label :featured, "Hervorgehoben", class: "label--inline"
+      = f.label :featured, "Empfehlung", class: "label--inline"
+    .fields
+      = f.check_box :exclusive
+      = f.label :featured, "Exklusiv", class: "label--inline"
     .fields
       = f.check_box :has_stock
       = f.label :has_stock, "Mit Bestand", class: "label--inline"

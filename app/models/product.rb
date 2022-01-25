@@ -9,6 +9,7 @@
 #  description                         :text             default("Beschreibung folgt")
 #  fmid                                :integer
 #  is_archived                         :boolean          default(FALSE)
+#  is_exclusive                        :boolean          default(FALSE)
 #  is_featured                         :boolean          default(FALSE)
 #  is_on_frontpage                     :boolean          default(FALSE)
 #  is_on_supersale                     :boolean          default(FALSE)
@@ -32,6 +33,7 @@
 #
 #  index_products_on_brand_id             (brand_id)
 #  index_products_on_is_archived          (is_archived)
+#  index_products_on_is_exclusive         (is_exclusive)
 #  index_products_on_is_featured          (is_featured)
 #  index_products_on_is_on_frontpage      (is_on_frontpage)
 #  index_products_on_is_on_supersale      (is_on_supersale)
@@ -69,6 +71,7 @@ class Product < ActiveRecord::Base
   scope :published, -> { where(is_published: true) }
   scope :draft, -> { where(is_published: false) }
   scope :archived, -> { where(is_archived: true) }
+  scope :exclusive, -> { where(is_exclusive: true) }
   scope :on_sale, -> { where("current_price < regular_price") }
   scope :on_supersale, -> { where(is_on_supersale: true) }
   scope :featured, -> { where(is_featured: true) }
@@ -295,7 +298,7 @@ class Product < ActiveRecord::Base
     end
 
     def self.ransackable_scopes(auth_object = nil)
-      [:on_sale, :on_supersale, :has_no_image, :has_image, :published, :draft, :archived, :on_frontpage, :has_stock, :featured]
+      [:on_sale, :on_supersale, :has_no_image, :has_image, :published, :draft, :archived, :on_frontpage, :has_stock, :featured, :exclusive]
     end
 
 end
