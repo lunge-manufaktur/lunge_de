@@ -410,6 +410,7 @@ a.card:hover {
 
 .card__image {
   width: 100%;
+  height: auto;
 }
 
 .card__icon {
@@ -709,11 +710,15 @@ aside.product-filter--enabled {
 .product-images__main-image,
 .product-images__thumbnail {
   border: 1px solid $hairline-color;
+  width: 100%;
+  height: auto;
 }
 
 .product-images__thumbnail {
   @include transition;
   margin-bottom: 1rem;
+  width: 100%;
+  height: auto;
 }
 
 .product-images__thumbnail:hover {

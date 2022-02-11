@@ -29,7 +29,7 @@
     article
       - if @product.product_images.any?
         section.product__image
-          = image_tag @product.default_image(:large), alt: @product.name_with_brand_and_color, class: "product-images__main-image"
+          = image_tag @product.default_image(:large), alt: @product.name_with_brand_and_color, width: 1200, height: 1200, class: "product-images__main-image"
 
       section
         .product__add-to-cart-container
@@ -62,7 +62,7 @@
       - if @product.product_images.count > 1
         section
           - @product.product_images.each do |image|
-            = image_tag image.image.url(:small), class: "product-images__thumbnail", data: { "url-large": image.image.url(:large) }
+            = image_tag image.image.url(:small), width: 640, height: 640, class: "product-images__thumbnail", data: { "url-large": image.image.url(:large) }
 
       section
         = render "products/show/add_to_cart_button"
