@@ -12,6 +12,16 @@ class StoresController < ApplicationController
   # GET /stores/1
   # GET /stores/1.json
   def show
+    case @store.id
+    when 1
+      redirect_to "https://www.lunge.de/filialen/barmbek", status: 301
+    when 3
+      redirect_to "https://www.lunge.de/filialen/city", status: 301
+    when 4
+      redirect_to "https://www.lunge.de/filialen/bahrenfeld", status: 301
+    when 5
+      redirect_to "https://www.lunge.de/filialen/charlottenburg", status: 301
+    end
   end
 
   # GET /stores/new
