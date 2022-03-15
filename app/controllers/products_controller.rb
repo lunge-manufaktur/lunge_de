@@ -29,6 +29,17 @@ class ProductsController < ApplicationController
     if params[:q].present?
       params[:q][:name_or_sku_or_brand_name_cont_any] = params[:q][:name_or_sku_or_brand_name_cont_any]&.join(" ")
     end
+
+    # set noindex atrtribute
+    @noindex =  if @products.blank?
+                  true
+                elsif @tags&.many?
+                  true
+                elsif params[:q].present?
+                  true
+                else
+                  false
+                end
   end
 
   def search

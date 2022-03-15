@@ -1,6 +1,6 @@
 - set_meta_tags title: @tags ? "Alle Artikel mit den Tags #{@tags.join(', ').capitalize}" : "Online Shop",
                 description: "Willkommen im Online-Shop von Lunge Der Laufladen. Entdecke unser Laufsport-Sortiment mit tausenden Produkten rund um den Laufsport: Laufschuhe, Laufbekleidung und Laufzubehör.",
-                noindex: @products.blank? ? true : false,
+                noindex: @noindex,
                 keywords: "Laufschuhe, Laufbekleidung, Laufzubehör"
 
 .title
