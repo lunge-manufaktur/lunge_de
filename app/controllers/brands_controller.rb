@@ -12,7 +12,7 @@ class BrandsController < ApplicationController
   end
 
   def show
-    @search = Product.published.where(brand_id: @brand.id).search(params[:q])
+    @search = policy_scope(Product).where(brand_id: @brand.id).search(params[:q])
     @products = @search.result.includes(:brand, :product_images).newest.page(params[:page]).per(24)
   end
 
