@@ -18,7 +18,7 @@
       = link_to 'Bearbeiten', edit_brand_path(@brand), class: "button"
 
     h4 Beliebte Tags
-    - @brand.products.tags_on(:tags).order(:name).each do |tag|
+    - @brand.products.published.tags_on(:tags).order(:name).each do |tag|
       = link_to tag.name, tagged_search_products_path(tag.name, "q": {"brand_id_eq": @brand.id}), class: "label"  
 
   section
