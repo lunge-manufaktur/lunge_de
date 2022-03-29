@@ -1,5 +1,5 @@
-- set_meta_tags title: @brand.meta_title.blank? ? @brand.name : @brand.meta_title,
-                description: @brand.meta_description.blank? ? "Schuhe und Bekleidung von #{@brand.name} - umfangreiche Auswahl im Lunge Laufladen." : @brand.meta_description,
+- set_meta_tags title: @brand.meta_title.presence || @brand.name,
+                description: @brand.meta_description.presence || "Schuhe und Bekleidung von #{@brand.name} - umfangreiche Auswahl im Lunge Laufladen.",
                 noindex: @products.empty? ? true : false
 
 
