@@ -24,5 +24,13 @@ main
           - if @brand.logo
             = image_tag @brand.try(:logo).url(:thumb)
           = f.file_field :logo, class: "button secondary"
+      section
+        h3 SEO
+        .fields
+          = f.label :meta_title, "Titel"
+          = f.text_field :meta_title, placeholder: "Optional"
+        .fields
+          = f.label :meta_description, "Kurzbeschreibung"
+          = f.text_area :meta_description, rows: 3, maxlength: 160, placeholder: "Optional"
 
   aside

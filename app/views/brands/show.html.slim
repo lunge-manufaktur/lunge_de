@@ -1,5 +1,5 @@
-- set_meta_tags title: @brand.name,
-                description: "Schuhe und Bekleidung von #{@brand.name} - umfangreiche Auswahl im Lunge Laufladen.",
+- set_meta_tags title: @brand.meta_title.blank? ? @brand.name : @brand.meta_title,
+                description: @brand.meta_description.blank? ? "Schuhe und Bekleidung von #{@brand.name} - umfangreiche Auswahl im Lunge Laufladen." : @brand.meta_description,
                 noindex: @products.empty? ? true : false
 
 
@@ -13,6 +13,10 @@
           = image_tag @brand.logo.url(:small), width: "128"
 
     = simple_format @brand.description
+
+    - if policy(@brand).update?
+      = link_to 'Bearbeiten', edit_brand_path(@brand), class: "button"
+
     h4 Beliebte Tags
     - @brand.products.tags_on(:tags).order(:name).each do |tag|
       = link_to tag.name, tagged_search_products_path(tag.name, "q": {"brand_id_eq": @brand.id}), class: "label"  

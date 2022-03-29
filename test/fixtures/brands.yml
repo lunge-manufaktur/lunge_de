@@ -8,6 +8,8 @@
 #  logo_file_name    :string
 #  logo_file_size    :bigint
 #  logo_updated_at   :datetime
+#  meta_description  :text
+#  meta_title        :text
 #  name              :string
 #  slug              :string
 #  created_at        :datetime         not null

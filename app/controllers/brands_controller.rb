@@ -70,7 +70,9 @@ class BrandsController < ApplicationController
       :id,
       :name,
       :description,
-      :logo
+      :logo,
+      :meta_title,
+      :meta_description
     )
   end
 end
