@@ -8,11 +8,11 @@
   - @brands.each do |brand|
     section
       h2 = link_to brand.name, brand_path(brand)
-      - brand.products.tags_on(:tags).order(:name).each do |tag|
+      - brand.products.published.tags_on(:tags).order(:name).each do |tag|
         = link_to tag.name, tagged_search_products_path(tag.name, "q": {"brand_id_eq": brand.id}), class: "label"
       hr
       - if brand.products.any?
         .cards__container--single-line
-          - brand.products.published.newest.limit(8).each do |product|
+          - brand.products.published.newest.limit(5).each do |product|
             = render "products/compact_card", product: product
-      = link_to "Alle Artikel von #{brand.name} anzeigen...", brand_path(brand), class: "button right"
+      = link_to "Alle Artikel von #{brand.name} anzeigen ➜", brand_path(brand), class: "button right"

@@ -4,7 +4,7 @@ class BrandsController < ApplicationController
   protect_from_forgery except: :create
 
   def index
-    @brands = Brand.active.order(:name).includes(products: :product_images)
+    @brands = Brand.active.includes(products: [:product_images, :default_product_images]).order(:name)
   end
 
   def search
@@ -13,7 +13,7 @@ class BrandsController < ApplicationController
 
   def show
     @search = policy_scope(Product).where(brand_id: @brand.id).search(params[:q])
-    @products = @search.result.includes(:brand, :product_images).newest.page(params[:page]).per(24)
+    @products = @search.result.includes(:brand, :product_images, :stocks).newest.page(params[:page]).per(24)
   end
 
   def new

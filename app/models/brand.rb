@@ -23,6 +23,7 @@
 class Brand < ActiveRecord::Base
   # Associations
   has_many :products
+  has_many :product_images, through: :products
 
   # FriendlyID
   extend FriendlyId
