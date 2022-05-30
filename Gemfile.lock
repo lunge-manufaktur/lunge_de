@@ -206,7 +206,7 @@ GEM
     pundit (2.1.0)
       activesupport (>= 3.0.0)
     racc (1.6.0)
-    rack (2.2.3)
+    rack (2.2.3.1)
     rack-rewrite (1.5.1)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -304,7 +304,7 @@ GEM
     websocket-extensions (0.1.5)
     xpath (3.2.0)
       nokogiri (~> 1.8)
-    yajl-ruby (1.4.2)
+    yajl-ruby (1.4.3)
     zeitwerk (2.5.4)
 
 PLATFORMS
