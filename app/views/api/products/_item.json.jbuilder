@@ -3,11 +3,13 @@ json.created_at product.created_at
 json.updated_at product.updated_at
 json.stock_updated_at product.stock_updated_at
 json.published product.is_published
+json.published_at product.published_at
 json.url product_url(product)
 json.name product.name
 json.color product.color
 json.sku product.sku
 json.description product.description
+json.meta_description product.meta_description
 json.current_price product.current_price
 json.regular_price product.regular_price
 json.use_in_lia_campaign product.use_in_lia_campaign
