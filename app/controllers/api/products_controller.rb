@@ -10,7 +10,7 @@ module Api
       if params[:ids]
         @products = Product.where(id: params[:ids]).includes(:size, :stocks, :brand, :stores, :product_images, :tags)
       else
-        @products = Product.all.includes(:size, :stocks, :brand, :stores, :product_images, :tags)
+        @products = Product.all
       end
 
       @products = @products.where(is_published: params[:published]) unless params[:published].blank?
@@ -21,7 +21,7 @@ module Api
                     else
                       @products.newest
                     end
-      @products = @products.page(params[:page]).per(100).limit(params[:limit])
+      @products = @products.includes(:size, :stocks, :brand, :stores, :product_images, :tags).page(params[:page]).per(100).limit(params[:limit])
 
       authorize @products
     end
