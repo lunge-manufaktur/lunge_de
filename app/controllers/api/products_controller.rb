@@ -21,7 +21,8 @@ module Api
                     else
                       @products.newest
                     end
-      @products = @products.includes(:size, :stocks, :brand, :stores, :product_images, :tags).page(params[:page]).per(100).limit(params[:limit])
+      limit = params[:limit] || 100
+      @products = @products.includes(:size, :stocks, :brand, :stores, :product_images, :tags).page(params[:page]).per(100).limit(limit)
 
       authorize @products
     end
