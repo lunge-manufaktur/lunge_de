@@ -10,9 +10,6 @@ h4 Suchen
   .fields
   	= f.check_box :on_sale
   	= f.label :on_sale, "Reduziert", class: "label--inline"
-  .fields
-    = f.check_box :on_supersale
-    = f.label :on_supersale, "Supersale", class: "label--inline"
 
   - if current_user
     .fields
